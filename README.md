@@ -1,5 +1,12 @@
 # Discrete-Choice-Modeling
 
+- [Discrete-Choice-Modeling](#discrete-choice-modeling)
+  * [Background](#background)
+  * [Modeling Procedures](#modeling-procedures)
+    + [Random Utility Framework](#random-utility-framework)
+    + [Multinomial Logit (MNL) Modeling](#multinomial-logit--mnl--modeling)
+    + [NLOGIT Syntax for MNL](#nlogit-syntax-for-mnl)
+
 ## Background
 Stated Preference (SP) methods are widely applied to estimate the value of nonmarket commodities in the context of environmental policy and management. As survey-based methods, these approaches collect information about respondent preferences for the environmental amenities of interest by observing choices in hypothetical situations, aiming to know people's maximum willingness to pay (WTP) or minimum willingness to accept (WTA) compensation for changes in environmental quality.
 
