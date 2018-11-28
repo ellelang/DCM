@@ -1,0 +1,14 @@
+"READ; file="\\D:\OneDrive\Farm survey\Nlogit\dataset_nlogit.csv"; Nobs=7025; Nvar=22; 
+
+Names=id,Y,cset,task,alti,wld,cc,nm,pay,crent,votea,voteb,tax,lake,stream,gender,age,edu,area,income,incomef,county $ 
+
+dstat; rhs=* $
+
+sample; 2-7025 $
+
+nlogit
+;Lhs=Y,cset,alti
+;Choices=VolCons,Current
+;Rhs=wld,cc,nm,pay
+;show model$
+;
