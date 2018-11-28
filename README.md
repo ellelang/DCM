@@ -30,12 +30,8 @@ The econometric model that describes the stochastic outcomes of the observed cho
 In this model, the individual’s choice among J alternatives is the one with maximum utility, where the utility functions are
 
 <img src="/tex/776db559eafbf5cfb50abf950f2b23cc.svg?invert_in_darkmode&sanitize=true" align=middle width=116.17385504999999pt height=24.7161288pt/>
-where
-<img src="/tex/91d79fc058413bff469d160f74946464.svg?invert_in_darkmode&sanitize=true" align=middle width=21.979146749999988pt height=22.465723500000017pt/> = the utility of alternative j to individual i
-<img src="/tex/64f56542d8c96b6573f52b8e6135215f.svg?invert_in_darkmode&sanitize=true" align=middle width=20.15039564999999pt height=14.15524440000002pt/> = the union of all attributes that appear in the utility functions.
-<img src="/tex/f788adc08118684ef61355ec690b8c68.svg?invert_in_darkmode&sanitize=true" align=middle width=17.42779994999999pt height=14.15524440000002pt/> = random errors from independent type 1 extreme value distributions. <img src="/tex/ed35e2847f8d52d65e6f7a556b4bb6e8.svg?invert_in_darkmode&sanitize=true" align=middle width=173.05201979999998pt height=24.65753399999998pt/>
 
-Based on this specification, the choice probabilities are
+Based on this specification of random errors are from independent type 1 extreme value distributions, the choice probabilities are
 
 <img src="/tex/818b2fdc3323fd488665d7adf218a8f3.svg?invert_in_darkmode&sanitize=true" align=middle width=279.8032248pt height=24.65753399999998pt/>
 = <img src="/tex/6f4117ba7962d3edab16fce98ee75063.svg?invert_in_darkmode&sanitize=true" align=middle width=191.34422999999995pt height=39.017266199999995pt/>
