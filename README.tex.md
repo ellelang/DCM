@@ -11,6 +11,25 @@ Discrete choice experiments (DCE), one of the most popular ways to elicit the pr
 
 ### Random Utility Framework
 
+The random utility framework starts with a structural model,
+
+$U(choice 1) = f_1(attribute\ of\ choice 1, charactersitics\ of\ respondent, \epsilon_1, v, w)$
+...
+$U(choice J) = f_J(attribute\ of\ choice J, charactersitics\ of\ respondent, \epsilon_J, v, w)$
+
+where $\epsilon_1,...\epsilon_J$ denote the unobserved random elements of the random utility functions, v and w will represent the unobserved individual heterogeneity built into models such as the error components and random parameters (mixed logit) models. The assumption that the choice made is alternative j such that
+
+$U_j > U_q,\  \forall q \neq j$
+
+The econometric model that describes the stochastic outcomes of the observed choices will be
+
+$Prob(Y = j) = Prob (U_j > U_q,\ \forall q \neq j)$
+
+### Multinomial Logit (MNL) Modeling
+
+In this model, the individual’s choice among J alternatives is the one with maximum utility, where the utility functions are
+
+$u_{ij} = \beta'x_{ij} + \epsilon_{ij} $
 where
 $U_{ij}$ = utility of alternative j to individual i
 $x_{ij}$ = union of all attributes that appear in the utility functions.
