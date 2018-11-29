@@ -1,0 +1,83 @@
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1938.92494
+Estimation based on N =   2853, K =   6
+Inf.Cr.AIC  =   3889.8 AIC/N =    1.363
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1968.5087  .0150 .0116
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[ 5]          =     59.16749
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  3512, skipped  659 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|     .42119***      .10443     4.03  .0001      .21651    .62587
+     PAY|     .00127***      .00022     5.70  .0000      .00083    .00170
+COVERCRO|     .00370         .07592      .05  .9611     -.14509    .15250
+     ASC|    -.02968         .15585     -.19  .8490     -.33513    .27577
+  DEMS18|     .35268***      .07722     4.57  .0000      .20134    .50403
+ INCFARM|    -.05459*        .03124    -1.75  .0805     -.11581    .00663
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Nov 28, 2018 at 02:50:21 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  38 iterations. Status=0, F=    .1544344D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1544.34368
+Restricted log likelihood   -1977.54891
+Chi squared [ 10](P= .000)    866.41045
+Significance level               .00000
+McFadden Pseudo R-squared      .2190617
+Estimation based on N =   2853, K =  10
+Inf.Cr.AIC  =   3108.7 AIC/N =    1.090
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1977.5489  .2191 .2163
+Constants only  -1968.5087  .2155 .2127
+At start values -1938.9249  .2035 .2007
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. =1000
+Used Halton sequences in simulations.
+RPL model with panel has     439 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  3512, skipped  659 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ -WETLAND|   -1.35251*        .72590    -1.86  .0624    -2.77524    .07022
+     PAY|   -6.41375***      .23076   -27.79  .0000    -6.86603  -5.96147
+COVERCRO|    -.34960*        .18954    -1.84  .0651     -.72110    .02190
+        |Nonrandom parameters in utility functions...........................
+     ASC|    -.22817         .20511    -1.11  .2659     -.63018    .17384
+  DEMS18|     .48799***      .11968     4.08  .0000      .25342    .72256
+ INCFARM|    -.18753***      .04690    -4.00  .0001     -.27946   -.09561
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .06189**       .02914     2.12  .0337      .00476    .11901
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+LsWETLAN|    3.00529***      .78710     3.82  .0001     1.46260   4.54798
+   LsPAY|    2.96762***      .19798    14.99  .0000     2.57959   3.35566
+NsCOVERC|    1.29781***      .19441     6.68  .0000      .91678   1.67884
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Nov 28, 2018 at 03:10:43 PM
+-----------------------------------------------------------------------------
+

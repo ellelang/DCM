@@ -1,0 +1,440 @@
+id,cgender,cage,ceducation,cincome,cincomefromfarming,clandarea
+6954002510,Male,Over 70,High school diploma,None,0,1 to 100 acres
+6954000142,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,1 to 100 acres
+6952091365,Male,30-50,Some college but no 4-year degree,"$100,000 - $249,999",1%-25%,100 to 500 acres
+6950969532,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6950966877,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6950963846,Female,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6949522020,Male,Over 70,Some college but no 4-year degree,,75%-100%,"1,000 acres or more"
+6949520595,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,"500 to 1,000 acres"
+6949519165,Male,Over 70,High school diploma,"$1 -$24,999",50%-75%,100 to 500 acres
+6949517026,Female,Over 70,Some college but no 4-year degree,,,
+6949515466,Male,50-70,High school diploma,"$1 -$24,999",25%-50%,100 to 500 acres
+6949513982,Male,Over 70,Graduate degree,None,0,1 to 100 acres
+6949512250,Male,50-70,Graduate degree,"$100,000 - $249,999",75%-100%,"500 to 1,000 acres"
+6949510004,Male,50-70,"B.A., B.S., or equivalent",,75%-100%,"500 to 1,000 acres"
+6949508507,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,"500 to 1,000 acres"
+6949506509,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6949504595,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,100 to 500 acres
+6949502871,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6949501136,Male,50-70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6949498386,Male,30-50,Some college but no 4-year degree,"$1 -$24,999",50%-75%,1 to 100 acres
+6949496064,Male,Over 70,High school diploma,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6949493789,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,"500 to 1,000 acres"
+6949491780,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,
+6949489833,Male,Over 70,Some college but no 4-year degree,"$25,000 - $99,999",75%-100%,"500 to 1,000 acres"
+6949488002,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6949485959,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6949478309,Male,Over 70,High school diploma,,50%-75%,"500 to 1,000 acres"
+6949476839,,,,,1%-25%,100 to 500 acres
+6949474644,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6949471920,Male,Over 70,High school diploma,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6949467324,Male,Over 70,Some college but no 4-year degree,None,75%-100%,"500 to 1,000 acres"
+6949465030,,,,,,"500 to 1,000 acres"
+6949463084,Male,50-70,High school diploma,"$1 -$24,999",1%-25%,1 to 100 acres
+6949461204,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6949458706,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6949455558,Male,Over 70,High school diploma,,75%-100%,
+6949418183,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",1%-25%,1 to 100 acres
+6949416279,,,,,50%-75%,100 to 500 acres
+6949408889,Female,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6949405911,Male,Over 70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6949403352,,,,,75%-100%,
+6949399112,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,"1,000 acres or more"
+6949394536,Female,Over 70,Graduate degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6949392066,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6949389471,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,"500 to 1,000 acres"
+6949385903,Female,50-70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6948985749,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6948796897,,,,,0,100 to 500 acres
+6948796210,Male,Over 70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6948795512,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6948794673,Male,50-70,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,100 to 500 acres
+6948793617,Male,Over 70,"B.A., B.S., or equivalent",,,1 to 100 acres
+6948792859,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6948790989,Male,50-70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6948790357,,,,,25%-50%,100 to 500 acres
+6948788893,Male,Over 70,Graduate degree,None,1%-25%,100 to 500 acres
+6948788159,Female,Over 70,High school diploma,"$1 -$24,999",1%-25%,100 to 500 acres
+6948756355,Male,Over 70,,,75%-100%,100 to 500 acres
+6948754791,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6948752656,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,"500 to 1,000 acres"
+6948751048,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6948748993,Male,Over 70,Graduate degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6948747287,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6948745823,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6948744309,Male,Over 70,High school diploma,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6948742656,Male,50-70,High school diploma,"$25,000 - $99,999",0,100 to 500 acres
+6948731395,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6948722483,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,100 to 500 acres
+6948718920,Male,50-70,High school diploma,"$1 -$24,999",75%-100%,100 to 500 acres
+6948716744,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,100 to 500 acres
+6948714093,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",,100 to 500 acres
+6948712233,Male,50-70,High school diploma,None,75%-100%,"500 to 1,000 acres"
+6948710186,Male,,,,,100 to 500 acres
+6948708312,Male,50-70,Graduate degree,"$1 -$24,999",25%-50%,100 to 500 acres
+6948706493,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",25%-50%,100 to 500 acres
+6948691653,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6948681806,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6948655563,,,,,50%-75%,I do not own any land
+6948647714,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6948511119,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6948510157,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,100 to 500 acres
+6948509307,,,,,75%-100%,
+6948508205,Male,Under 30,Graduate degree,"$1,000,000 and over",75%-100%,100 to 500 acres
+6948507689,,,,,75%-100%,"500 to 1,000 acres"
+6948506700,Male,50-70,High school diploma,"$1 -$24,999",1%-25%,100 to 500 acres
+6948504619,Female,50-70,Graduate degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6948503888,Male,,,,75%-100%,
+6948502762,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,1 to 100 acres
+6948501935,Male,Over 70,Some college but no 4-year degree,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6948500862,Male,50-70,Graduate degree,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6948500040,Male,Over 70,High school diploma,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6948499253,Male,Over 70,Graduate degree,"$1 -$24,999",1%-25%,"500 to 1,000 acres"
+6948498376,Male,30-50,High school diploma,"$500,000 to $999,999",1%-25%,100 to 500 acres
+6948497545,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,100 to 500 acres
+6948497011,Male,Over 70,,None,0,"1,000 acres or more"
+6948495759,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,1 to 100 acres
+6948494256,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",1%-25%,"1,000 acres or more"
+6948493327,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",25%-50%,100 to 500 acres
+6948492232,Male,Over 70,,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6948461651,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6948085949,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6948084829,Male,Over 70,High school diploma,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6948083536,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",75%-100%,100 to 500 acres
+6948082295,Male,50-70,High school diploma,"$25,000 - $99,999",75%-100%,1 to 100 acres
+6948080508,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6948077266,Male,50-70,High school diploma,"$1,000,000 and over",50%-75%,"500 to 1,000 acres"
+6948076027,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6948074916,Male,Over 70,Some college but no 4-year degree,None,0,1 to 100 acres
+6948071691,Male,50-70,Graduate degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6948070295,Male,50-70,High school diploma,"$100,000 - $249,999",50%-75%,
+6948068890,Male,Over 70,Graduate degree,"$1 -$24,999",25%-50%,1 to 100 acres
+6948067454,Male,50-70,High school diploma,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6948065388,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6948063980,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6948061858,Male,Over 70,High school diploma,"$1 -$24,999",50%-75%,1 to 100 acres
+6948059293,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",25%-50%,100 to 500 acres
+6948057874,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6948056254,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6948054705,,,,,,100 to 500 acres
+6948052325,Male,50-70,"B.A., B.S., or equivalent","$1 -$24,999",25%-50%,100 to 500 acres
+6948020508,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6948018409,Male,50-70,Some college but no 4-year degree,,75%-100%,100 to 500 acres
+6948016142,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,1 to 100 acres
+6948013471,Male,Over 70,High school diploma,,,100 to 500 acres
+6948011547,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,100 to 500 acres
+6948008993,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",1%-25%,100 to 500 acres
+6947769197,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,"500 to 1,000 acres"
+6947767101,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6947766117,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6947764954,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6947763940,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,100 to 500 acres
+6947763117,Male,Over 70,,,,
+6947762340,Male,50-70,High school diploma,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6947730214,Male,50-70,High school diploma,"$100,000 - $249,999",75%-100%,1 to 100 acres
+6947728905,Male,50-70,Graduate degree,"$100,000 - $249,999",75%-100%,"500 to 1,000 acres"
+6947727383,Male,50-70,Graduate degree,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6947725489,Male,50-70,High school diploma,"$250,000 - $499,999",25%-50%,100 to 500 acres
+6947722323,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,"500 to 1,000 acres"
+6947720880,Male,Over 70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6947718708,Female,50-70,Graduate degree,"$100,000 - $249,999",50%-75%,
+6947716268,Male,Over 70,High school diploma,None,50%-75%,100 to 500 acres
+6947714118,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6947711441,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6947708338,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6947706873,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,"1,000 acres or more"
+6947704679,Male,50-70,High school diploma,"$1 -$24,999",75%-100%,I do not own any land
+6947701473,Male,50-70,"B.A., B.S., or equivalent","$1 -$24,999",1%-25%,100 to 500 acres
+6947697525,Male,50-70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6947696123,Male,50-70,High school diploma,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6947392965,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",75%-100%,"500 to 1,000 acres"
+6947391733,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",75%-100%,100 to 500 acres
+6947391108,,,,,50%-75%,100 to 500 acres
+6947389851,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,I do not own any land
+6947387994,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6947387071,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",50%-75%,"500 to 1,000 acres"
+6947385647,Male,50-70,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,"1,000 acres or more"
+6947384017,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6947382976,Male,Over 70,High school diploma,,1%-25%,100 to 500 acres
+6947381248,Male,50-70,High school diploma,"$1 -$24,999",25%-50%,1 to 100 acres
+6947380629,Male,Over 70,Some college but no 4-year degree,,75%-100%,100 to 500 acres
+6947379840,Male,Over 70,,,,100 to 500 acres
+6947378928,,,,,1%-25%,100 to 500 acres
+6947364981,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6947364123,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",50%-75%,100 to 500 acres
+6947363268,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",25%-50%,1 to 100 acres
+6947362650,,,,,,1 to 100 acres
+6947361706,Male,50-70,High school diploma,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6947359283,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6947000153,Male,50-70,Graduate degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6946999089,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",1%-25%,1 to 100 acres
+6946997925,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6946997286,,,,,75%-100%,100 to 500 acres
+6946996370,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",50%-75%,1 to 100 acres
+6946995349,Female,Over 70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,100 to 500 acres
+6946993526,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6946896808,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6946894306,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",0,100 to 500 acres
+6946892816,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6946891262,Male,Over 70,High school diploma,"$1 -$24,999",1%-25%,1 to 100 acres
+6946889776,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,100 to 500 acres
+6946884857,Male,Over 70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6946883630,Male,Over 70,High school diploma,"$25,000 - $99,999",25%-50%,1 to 100 acres
+6946882172,Male,Over 70,Graduate degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6946879942,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946742831,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6946742021,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6946740972,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",75%-100%,100 to 500 acres
+6946739593,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946738484,Male,,Some college but no 4-year degree,,50%-75%,"500 to 1,000 acres"
+6946737162,Male,Over 70,High school diploma,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6946736097,Male,50-70,High school diploma,"$1 -$24,999",25%-50%,100 to 500 acres
+6946735108,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6946734321,Male,50-70,High school diploma,"$25,000 - $99,999",0,I do not own any land
+6946589637,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6946589608,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6946588901,Male,Over 70,High school diploma,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6946588875,Male,50-70,Some college but no 4-year degree,,,I do not own any land
+6946588448,Male,Over 70,High school diploma,,75%-100%,100 to 500 acres
+6946588193,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,1 to 100 acres
+6946587636,Male,50-70,High school diploma,,75%-100%,100 to 500 acres
+6946587356,Male,50-70,,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946586671,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946586125,Male,Over 70,High school diploma,"$1 -$24,999",50%-75%,100 to 500 acres
+6946585546,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6946584969,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946584818,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,1 to 100 acres
+6946583955,Male,Over 70,High school diploma,,50%-75%,100 to 500 acres
+6946583813,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,"500 to 1,000 acres"
+6946513673,Male,30-50,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6946511637,Male,Over 70,High school diploma,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6946260193,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6946258184,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6946255870,Female,50-70,Some college but no 4-year degree,"$25,000 - $99,999",1%-25%,1 to 100 acres
+6946253329,Male,Over 70,High school diploma,"$1 -$24,999",50%-75%,"500 to 1,000 acres"
+6946252003,Female,50-70,Graduate degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6946250964,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6946249196,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6946247015,Male,50-70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6946167103,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",1%-25%,1 to 100 acres
+6946164683,Male,30-50,Some college but no 4-year degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6946161348,Male,Over 70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6946157221,Male,30-50,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,100 to 500 acres
+6946154289,Male,30-50,High school diploma,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6946149478,Male,50-70,High school diploma,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6946147157,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6946144634,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6945891488,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6945889965,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6945888906,,,,,50%-75%,100 to 500 acres
+6945887634,Male,30-50,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,"1,000 acres or more"
+6945886504,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6945885329,Male,30-50,Some college but no 4-year degree,"$1 -$24,999",1%-25%,1 to 100 acres
+6945884181,Female,50-70,Graduate degree,"$1 -$24,999",0,100 to 500 acres
+6945882081,Male,50-70,High school diploma,,50%-75%,100 to 500 acres
+6945880499,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",50%-75%,1 to 100 acres
+6945876874,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6945874059,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6945872667,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6945870973,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6945868936,Male,50-70,Graduate degree,"$100,000 - $249,999",1%-25%,"500 to 1,000 acres"
+6945867319,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6945865748,Male,50-70,High school diploma,"$1 -$24,999",75%-100%,
+6945864732,,,,,25%-50%,100 to 500 acres
+6945771977,Male,Over 70,Some college but no 4-year degree,"$1 -$24,999",50%-75%,100 to 500 acres
+6945769093,,,,,75%-100%,"500 to 1,000 acres"
+6945765963,,,,,75%-100%,
+6945762450,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",1%-25%,1 to 100 acres
+6945759082,Male,50-70,High school diploma,"$25,000 - $99,999",1%-25%,1 to 100 acres
+6945753660,Male,Over 70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6945749841,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,100 to 500 acres
+6945491577,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6945489960,,,,"$100,000 - $249,999",,100 to 500 acres
+6945488925,Female,50-70,Some college but no 4-year degree,"$1 -$24,999",25%-50%,100 to 500 acres
+6945484811,Female,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,100 to 500 acres
+6945483564,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",50%-75%,"1,000 acres or more"
+6945482225,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,1 to 100 acres
+6945480813,,,,,25%-50%,100 to 500 acres
+6945479131,Male,Over 70,High school diploma,"$500,000 to $999,999",75%-100%,
+6945476052,,,Graduate degree,,75%-100%,
+6945473463,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6945471288,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,
+6945469617,,,,,50%-75%,
+6945357761,Male,Over 70,Graduate degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6945346677,Male,Over 70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6945339362,Male,50-70,"B.A., B.S., or equivalent","$1 -$24,999",50%-75%,100 to 500 acres
+6945333858,Female,50-70,Some college but no 4-year degree,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6945330465,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",25%-50%,100 to 500 acres
+6945096694,Male,50-70,High school diploma,"$1 -$24,999",1%-25%,1 to 100 acres
+6945095461,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6945093820,Female,50-70,High school diploma,"$25,000 - $99,999",,100 to 500 acres
+6945090035,Male,Over 70,Some college but no 4-year degree,,50%-75%,"500 to 1,000 acres"
+6945087838,Male,50-70,High school diploma,"$500,000 to $999,999",50%-75%,1 to 100 acres
+6945086238,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6945075683,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",,100 to 500 acres
+6945073672,Male,Over 70,High school diploma,,,100 to 500 acres
+6945071639,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6945069066,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6945066152,Female,50-70,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,100 to 500 acres
+6941915788,Male,50-70,,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6941781008,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6941005128,,,,,,I do not own any land
+6940815398,,,,,75%-100%,1 to 100 acres
+6940155468,Male,30-50,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6937754838,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6936574728,Male,30-50,Graduate degree,"$100,000 - $249,999",1%-25%,100 to 500 acres
+6934585817,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",1%-25%,100 to 500 acres
+6934559667,Male,30-50,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,"1,000 acres or more"
+6934348442,Male,Over 70,Graduate degree,"$25,000 - $99,999",1%-25%,1 to 100 acres
+6934185982,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",0,1 to 100 acres
+6933987919,Male,30-50,Some college but no 4-year degree,"$100,000 - $249,999",1%-25%,1 to 100 acres
+6933706763,Male,30-50,Some college but no 4-year degree,"$1,000,000 and over",75%-100%,"1,000 acres or more"
+6933503691,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,100 to 500 acres
+6933154498,Male,50-70,Graduate degree,"$25,000 - $99,999",0,100 to 500 acres
+6933133137,,,,,1%-25%,100 to 500 acres
+6932752643,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6932751625,,,,,75%-100%,100 to 500 acres
+6932688717,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6932441494,,,,,75%-100%,"500 to 1,000 acres"
+6932293849,Male,50-70,"B.A., B.S., or equivalent","$1 -$24,999",1%-25%,1 to 100 acres
+6932088242,Female,Over 70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,
+6931894923,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6931885688,,,,,25%-50%,100 to 500 acres
+6931787072,Male,30-50,Graduate degree,"$25,000 - $99,999",25%-50%,1 to 100 acres
+6931585020,Male,30-50,Some college but no 4-year degree,"$1 -$24,999",0,1 to 100 acres
+6931498222,Male,50-70,High school diploma,"$250,000 - $499,999",75%-100%,"1,000 acres or more"
+6931279978,Female,30-50,"B.A., B.S., or equivalent","$25,000 - $99,999",50%-75%,100 to 500 acres
+6930958766,Male,30-50,Graduate degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6930668529,Male,Under 30,Some college but no 4-year degree,"$1 -$24,999",25%-50%,I do not own any land
+6930465140,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,"500 to 1,000 acres"
+6930456202,Other/Prefer not to say,50-70,High school diploma,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6930330199,Male,30-50,Some college but no 4-year degree,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6930202534,Female,30-50,"B.A., B.S., or equivalent","$25,000 - $99,999",75%-100%,1 to 100 acres
+6930096244,,,,,75%-100%,"1,000 acres or more"
+6930079051,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6929947545,Female,Over 70,Some college but no 4-year degree,"$1 -$24,999",75%-100%,100 to 500 acres
+6929858535,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,100 to 500 acres
+6929566355,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,100 to 500 acres
+6929551675,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6929344611,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6929143264,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6928839973,,,,,50%-75%,100 to 500 acres
+6928802489,Male,Over 70,High school diploma,"$1 -$24,999",75%-100%,"500 to 1,000 acres"
+6928795921,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",1%-25%,100 to 500 acres
+6928735471,,,,,50%-75%,100 to 500 acres
+6928713560,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",50%-75%,"500 to 1,000 acres"
+6928704976,Male,Over 70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,100 to 500 acres
+6928541618,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",50%-75%,100 to 500 acres
+6928526475,,,,,75%-100%,100 to 500 acres
+6928506433,,,,,25%-50%,1 to 100 acres
+6928504611,Female,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,100 to 500 acres
+6928482714,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",50%-75%,100 to 500 acres
+6928473662,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",25%-50%,1 to 100 acres
+6928311009,Male,30-50,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6928285300,Male,50-70,High school diploma,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6928282907,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6928248814,Other/Prefer not to say,Over 70,High school diploma,None,25%-50%,100 to 500 acres
+6928220423,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,"500 to 1,000 acres"
+6928200982,Male,Over 70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,"1,000 acres or more"
+6928197304,Male,50-70,Some college but no 4-year degree,"$1,000,000 and over",75%-100%,"500 to 1,000 acres"
+6928055902,Male,50-70,High school diploma,"$1 -$24,999",25%-50%,1 to 100 acres
+6928055608,Other/Prefer not to say,50-70,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,"1,000 acres or more"
+6928052617,Other/Prefer not to say,50-70,High school diploma,,75%-100%,100 to 500 acres
+6928043253,,,,,75%-100%,100 to 500 acres
+6928029902,Male,50-70,Some college but no 4-year degree,None,0,100 to 500 acres
+6928014492,,,,,25%-50%,1 to 100 acres
+6927954841,,,,,,1 to 100 acres
+6927954250,Male,Over 70,High school diploma,"$25,000 - $99,999",50%-75%,100 to 500 acres
+6927948667,Male,50-70,High school diploma,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6927942980,Male,50-70,Graduate degree,"$1,000,000 and over",75%-100%,"500 to 1,000 acres"
+6927914142,,Over 70,High school diploma,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6927913113,Male,50-70,Some college but no 4-year degree,"$1 -$24,999",1%-25%,100 to 500 acres
+6927899941,,,,,75%-100%,"1,000 acres or more"
+6927866573,Male,50-70,Some college but no 4-year degree,None,0,1 to 100 acres
+6927857741,Female,50-70,Some college but no 4-year degree,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6927775381,,,,,1%-25%,1 to 100 acres
+6927608649,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6927564241,,,,,50%-75%,100 to 500 acres
+6927545653,Male,50-70,High school diploma,"$1 -$24,999",1%-25%,100 to 500 acres
+6927471449,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6927238205,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",25%-50%,100 to 500 acres
+6927085272,Female,30-50,Some college but no 4-year degree,"$1 -$24,999",0,100 to 500 acres
+6926902789,Male,Over 70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,100 to 500 acres
+6926883676,Male,50-70,High school diploma,"$1 -$24,999",1%-25%,1 to 100 acres
+6926684241,Male,50-70,"B.A., B.S., or equivalent",,75%-100%,"1,000 acres or more"
+6926133812,Male,50-70,Some college but no 4-year degree,"$1,000,000 and over",50%-75%,"500 to 1,000 acres"
+6925691377,Female,50-70,Some college but no 4-year degree,"$100,000 - $249,999",0,"500 to 1,000 acres"
+6925479410,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",75%-100%,1 to 100 acres
+6925475963,,,,,25%-50%,100 to 500 acres
+6925475627,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6925411481,Male,50-70,Graduate degree,"$250,000 - $499,999",1%-25%,"1,000 acres or more"
+6925391133,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,100 to 500 acres
+6925351988,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6925276018,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6925148928,,,,,,I do not own any land
+6925117930,,,,,50%-75%,"500 to 1,000 acres"
+6925112112,Male,30-50,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,"1,000 acres or more"
+6925090735,Male,50-70,"B.A., B.S., or equivalent","$250,000 - $499,999",75%-100%,100 to 500 acres
+6925029626,Male,Over 70,"B.A., B.S., or equivalent","$1 -$24,999",0,1 to 100 acres
+6924889661,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6924789209,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,100 to 500 acres
+6924648234,,,,,75%-100%,100 to 500 acres
+6924604682,Male,Over 70,Graduate degree,"$1 -$24,999",25%-50%,1 to 100 acres
+6924597547,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6924548198,Female,30-50,"B.A., B.S., or equivalent","$1 -$24,999",50%-75%,1 to 100 acres
+6924513479,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6924372074,Male,30-50,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6924359661,Female,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",75%-100%,100 to 500 acres
+6924334238,Other/Prefer not to say,Over 70,"B.A., B.S., or equivalent","$25,000 - $99,999",50%-75%,100 to 500 acres
+6924333898,,,,,50%-75%,100 to 500 acres
+6924327658,,,,,75%-100%,100 to 500 acres
+6924319094,Male,50-70,Some college but no 4-year degree,"$25,000 - $99,999",50%-75%,1 to 100 acres
+6924303569,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,100 to 500 acres
+6924255499,Male,50-70,Some college but no 4-year degree,"$250,000 - $499,999",75%-100%,100 to 500 acres
+6924252974,Other/Prefer not to say,Over 70,High school diploma,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6924251283,,,,,75%-100%,100 to 500 acres
+6924246168,,,,,75%-100%,"1,000 acres or more"
+6924239246,Male,Over 70,High school diploma,"$100,000 - $249,999",75%-100%,"500 to 1,000 acres"
+6924231184,Male,50-70,High school diploma,"$25,000 - $99,999",25%-50%,100 to 500 acres
+6924226818,Male,Over 70,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,100 to 500 acres
+6924224030,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",1%-25%,100 to 500 acres
+6924223908,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6924215880,,,,,75%-100%,100 to 500 acres
+6924211132,Female,30-50,"B.A., B.S., or equivalent","$25,000 - $99,999",25%-50%,"1,000 acres or more"
+6924209904,Male,50-70,High school diploma,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6924194655,,,,,75%-100%,100 to 500 acres
+6924101928,Male,30-50,Graduate degree,"$100,000 - $249,999",1%-25%,100 to 500 acres
+6924100619,,,,,75%-100%,"500 to 1,000 acres"
+6924088968,,,,,50%-75%,"500 to 1,000 acres"
+6924079621,Male,Over 70,High school diploma,"$1 -$24,999",25%-50%,100 to 500 acres
+6924077360,Male,50-70,Graduate degree,"$500,000 to $999,999",75%-100%,"500 to 1,000 acres"
+6924077001,,,,,25%-50%,100 to 500 acres
+6924072627,Male,50-70,Some college but no 4-year degree,"$500,000 to $999,999",75%-100%,100 to 500 acres
+6924068010,,,,,50%-75%,100 to 500 acres
+6924044928,Male,Over 70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6924025722,Male,30-50,Some college but no 4-year degree,"$250,000 - $499,999",50%-75%,100 to 500 acres
+6924025410,,,,,75%-100%,100 to 500 acres
+6924025148,,,,,75%-100%,100 to 500 acres
+6923978329,Male,50-70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,"500 to 1,000 acres"
+6923974560,Male,Over 70,High school diploma,"$25,000 - $99,999",0,100 to 500 acres
+6923965588,,,,,75%-100%,"500 to 1,000 acres"
+6923951616,Male,50-70,"B.A., B.S., or equivalent","$25,000 - $99,999",1%-25%,100 to 500 acres
+6923932384,,,,,75%-100%,"500 to 1,000 acres"
+6923929952,Male,50-70,Some college but no 4-year degree,"$100,000 - $249,999",75%-100%,"1,000 acres or more"
+6923929001,,,,,0,I do not own any land
+6923914852,Male,Over 70,,"$250,000 - $499,999",75%-100%,"500 to 1,000 acres"
+6923909650,,,,,50%-75%,100 to 500 acres
+6923898758,Male,50-70,"B.A., B.S., or equivalent","$1 -$24,999",1%-25%,"500 to 1,000 acres"
+6923852238,Male,Over 70,High school diploma,"$25,000 - $99,999",75%-100%,100 to 500 acres
+6923844220,Male,50-70,"B.A., B.S., or equivalent",,50%-75%,"500 to 1,000 acres"
+6923841359,Female,Over 70,Some college but no 4-year degree,None,0,1 to 100 acres
+6923831732,Male,50-70,"B.A., B.S., or equivalent","$1,000,000 and over",75%-100%,100 to 500 acres
+6923662174,Male,50-70,Some college but no 4-year degree,"$1,000,000 and over",50%-75%,100 to 500 acres
+6923650451,Male,50-70,"B.A., B.S., or equivalent","$100,000 - $249,999",50%-75%,100 to 500 acres
+6923571354,Male,50-70,Some college but no 4-year degree,"$1,000,000 and over",75%-100%,"500 to 1,000 acres"
+6923512631,Male,Over 70,"B.A., B.S., or equivalent","$500,000 to $999,999",50%-75%,100 to 500 acres
+6923443435,Male,Over 70,"B.A., B.S., or equivalent","$500,000 to $999,999",75%-100%,"1,000 acres or more"
+6923432743,Male,50-70,High school diploma,"$250,000 - $499,999",50%-75%,1 to 100 acres
+6923419162,,,,,75%-100%,1 to 100 acres
+6922251457,Male,50-70,High school diploma,,50%-75%,1 to 100 acres
