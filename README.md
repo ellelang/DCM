@@ -5,7 +5,8 @@
   * [Modeling Procedures](#modeling-procedures)
     + [Random Utility Framework](#random-utility-framework)
     + [Multinomial Logit (MNL) Modeling](#multinomial-logit--mnl--modeling)
-    + [NLOGIT Syntax for MNL](#nlogit-syntax-for-mnl)
+    + [NLOGIT Syntax](#nlogit-syntax)
+      - [MNL](#mnl)
 
 ## Background
 Stated Preference (SP) methods are widely applied to estimate the value of nonmarket commodities in the context of environmental policy and management. As survey-based methods, these approaches collect information about respondent preferences for the environmental amenities of interest by observing choices in hypothetical situations, aiming to know people's maximum willingness to pay (WTP) or minimum willingness to accept (WTA) compensation for changes in environmental quality.
@@ -43,7 +44,9 @@ Based on the specification that random errors are from independent type I extrem
 <img src="/tex/818b2fdc3323fd488665d7adf218a8f3.svg?invert_in_darkmode&sanitize=true" align=middle width=279.8032248pt height=24.65753399999998pt/> =
 <img src="/tex/6f4117ba7962d3edab16fce98ee75063.svg?invert_in_darkmode&sanitize=true" align=middle width=191.34422999999995pt height=39.017266199999995pt/>
 
-### NLOGIT Syntax for MNL
+### NLOGIT Syntax 
+
+#### MNL
 
 ```
 "READ; file="\\D:\OneDrive\Farm survey\Nlogit\dataset_nlogit.csv"; Nobs=7025; Nvar=22;
