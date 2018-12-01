@@ -64,3 +64,31 @@ MLOGIT
 ;Marginal Effects
 
 ```
+
+### RPL
+
+```
+RPLOGIT
+ ; Lhs = ... as usual
+; Choices = ...
+; ... Utility function specification using
+; Rhs = ...
+; Rh2 = ... or
+; Model: U(...) = ... to specify utilities
+; Fcn = specification of random parameters $
+
+RPLOGIT
+; Lhs = mode 
+; Choices = air,train,bus,car
+; Model:U(air) = a_air+bgc*gc+btt*ttme+binvc*invc+ghinc*hinc/
+U(train,bus,car) = a_ground+bgc*gc
+; Fcn = a_ground(n),btt(n) $
+
+; RPL = age,sex,income
+; Fcn = gc(n),
+ttme (n|#101)
+invt (n|#011)
+invc (n|#000)
+
+```
+

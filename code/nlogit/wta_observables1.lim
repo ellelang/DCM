@@ -1,9 +1,9 @@
-READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\export_test_nlogit.csv"; Nobs=7025; Nvar=24; 
+READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
 
-Names=id,Y,ChoiceSet,alti,task, Wetland,Payment,CC,NuMgt,farminc, landarea,
-		dem_president_2016, dem_2018, unemploy, YrCost, HrWage,
-		monthTax, cashrent, landvalu, Stream_miles, 
-		Lake_acres, Wetland_acres, total_im, water_im $
+Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
+	hrwage,taxcost,cashrent,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,
+	incfar_1,incfar_5,incfar_2,incfar_3,incfar_4,incfar_NA,areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
+$
 
 
 
@@ -16,12 +16,13 @@ CALC ; Ran(123) $
 ? create negative of wetland attribute to estimate lognormal rpl
 
 CREATE ; negWetl = -1*Wetland 
-	 ; lake1000 = lake_acr/1000
+	 ; lake1000 = implakes/1000
 	 ; agv1000 = landvalu/1000 $
 
 SETPANEL ; Group = ID $
 
 SKIP $
+
 
 
 nlogit
@@ -32,15 +33,17 @@ nlogit
 ;Pds = 8
 ?;Panel
 ?;rpl
-;rpl = lake1000
-;Pts = 20
-;fcn=  wetland[l],pay[l], covercro(n)
+;rpl = lake1000, costlive, incfar_5
+?;Pts = 1000
+; Pts = 20
+;fcn=  -wetland[l],pay(l|#011), covercro(n|#100)
 ;Halton
 ;Model:
 
-U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC +
-		dems18*dem_2018 + incfarm*FARMINC 	
-		/
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro + nm*NuMgt +
+		dems18*dem_2018 + costliv*costlive + costFood*foodcost + costTax*taxcost + costHealth*healthc
+ + incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4 
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
 U(Current) = 0
 
 ?;Cluster=qnum
@@ -50,21 +53,87 @@ U(Current) = 0
 ?+ cashr*cashrent + aglval*agv1000	
 $
 
+?????? model with interactions with non-random parameters
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+;fcn=  wetland[l],pay[l], covercro(n), nm(c)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC + nm*NuMgt + cashr*cashrent
+		+ dems18*dem_2018 + incfarm*FARMINC 	
+		/
+U(Current) = 0
+
+
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000
+?+ cashr*cashrent + aglval*agv1000	
+$
+
+
+?????? model based on vars suggested in large part by stepAIC in R - prob best spec as of 11/29/18
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+;fcn= wetland[l],pay[l], covercro(n)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC + arealand*landarea + incfarm*FARMINC 
+		+ dems18*dem_2018 	
+		/
+U(Current) = 0
+
+; Par ; WTP = -wetland / pay
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000
+?+ cashr*cashrent + aglval*agv1000	
+$
+
+? WTP estimates
+
+
+WALD ; Fn1 = -wetland /pay $
+
+
 ? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% not run below
 
 GMXLOGIT
 ;lhs=Y
 ;Choices=VolCons,Current
-;Panel
-;Fcn= pay(*n), wetland(n) 
+;Pds = 8
+; Rpl = lake1000
+;fcn= pay[*l], wetland[l], covercro(n) 
+;Pts = 50
 ;Halton
 ;Model:
 
-U(VolCons) = asc + pay*Payment + wetland*Wetland + covercro*CC + nm*NuMgt + cashr*cashrent/
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC +
+		dems18*dem_2018 + incfarm*FARMINC 	
+		/
 U(Current) = 0
 
-?;Cluster=qnum
-?;Robust
+
 
 $
 
