@@ -1,4 +1,4 @@
-READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
+READ; file="\\C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,

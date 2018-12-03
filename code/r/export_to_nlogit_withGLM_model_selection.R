@@ -45,9 +45,11 @@ export_test_nlogit <- fastDummies::dummy_cols(export_test_nlogit, select_columns
 
 write.csv(export_test_nlogit,file = "wta_observables11192018.csv", row.names = FALSE)
 
-
+######################
+rm(list = ls())
 
 library(bestglm)
+export_test_nlogit <- read.csv (file = "wta_observables11192018.csv", header = TRUE)
 
 databestglm <- filter(export_test_nlogit, export_test_nlogit$alti == 1)
 
