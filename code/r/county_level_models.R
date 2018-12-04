@@ -16,6 +16,9 @@ summary(mnl.gmnl)
 
 wtp.gmnl(mnl.gmnl, wrt = "Payment")
 
+############
+
+
 
 #####
 h.mnl.gmnl <- gmnl(Y ~  Payment + 
