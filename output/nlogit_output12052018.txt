@@ -1,0 +1,66 @@
+
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1497.69663
+Restricted log likelihood   -1816.04561
+Chi squared [ 18](P= .000)    636.69797
+Significance level               .00000
+McFadden Pseudo R-squared      .1752979
+Estimation based on N =   2620, K =  18
+Inf.Cr.AIC  =   3031.4 AIC/N =    1.157
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1816.0456  .1753 .1696
+Constants only  -1809.0042  .1721 .1664
+At start values -1638.9268  .0862 .0799
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. =1000
+Used Halton sequences in simulations.
+RPL model with panel has     353 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2824, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    1.71578***      .18343     9.35  .0000     1.35626   2.07529
+     PAY|     .00743***      .00055    13.49  .0000      .00635    .00851
+COVERCRO|    -.39673***      .13128    -3.02  .0025     -.65404   -.13943
+      NM|    -.32799***      .09240    -3.55  .0004     -.50909   -.14690
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.44533***      .45931    -5.32  .0000    -3.34557  -1.54509
+  DEMS18|     .69744***      .10107     6.90  .0000      .49936    .89553
+ COSTTAX|    -.00090**       .00039    -2.28  .0227     -.00167   -.00013
+INCFARM1|    2.00344***      .42511     4.71  .0000     1.17024   2.83663
+INCFARM2|     .70277**       .29784     2.36  .0183      .11901   1.28653
+INCFARM3|     .72375***      .27840     2.60  .0093      .17810   1.26940
+INCFARM4|     .55802**       .27644     2.02  .0435      .01620   1.09984
+INCFARM5|     .60953**       .28254     2.16  .0310      .05577   1.16329
+INCFARM6|     .86659***      .27185     3.19  .0014      .33377   1.39941
+ FARMSI1|    1.66079***      .30885     5.38  .0000     1.05546   2.26612
+ FARMSI2|    1.48998***      .30178     4.94  .0000      .89850   2.08145
+ FARMSI3|    1.08364***      .33204     3.26  .0011      .43285   1.73444
+ FARMSI4|    1.22489***      .34101     3.59  .0003      .55653   1.89326
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+WETL:INC|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:INC|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .09133***      .02426     3.76  .0002      .04378    .13888
+COVE:INC|        0.0    .....(Fixed Parameter).....
+  NM:LAK|        0.0    .....(Fixed Parameter).....
+  NM:INC|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   QsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Dec 05, 2018 at 03:20:55 PM

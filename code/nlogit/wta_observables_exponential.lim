@@ -1,0 +1,50 @@
+READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
+
+Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
+
+
+$
+
+
+
+dstat; rhs=* $
+
+sample; 2-7025 $
+
+CALC ; Ran(123) $
+
+? create negative of wetland attribute to estimate lognormal rpl
+
+CREATE ; negWetl = -1*Wetland 
+
+
+
+SETPANEL ; Group = ID $
+
+SKIP $
+
+???? 12/4/18
+? models with alternative non-negative distributions, not lognormal N-563 in NLOGIT 6 ref guide
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000, incfar_5
+?;Pts = 1000
+; Pts = 1000
+;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +
+             incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4 
+
+U(Current) = 0
+
+
+$

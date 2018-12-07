@@ -81,3 +81,6 @@ had a nonpositive st.error because of an earlier problem.
 Model was estimated on Nov 28, 2018 at 03:10:43 PM
 -----------------------------------------------------------------------------
 
+ curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn

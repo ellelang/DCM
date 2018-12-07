@@ -1,8 +1,8 @@
-READ; file="\\C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
+READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=42; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,
-	incfar_1,incfar_5,incfar_2,incfar_3,incfar_4,incfar_NA,areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
+	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
 $
 
 
@@ -33,25 +33,79 @@ nlogit
 ;Pds = 8
 ?;Panel
 ?;rpl
-;rpl = lake1000, costlive, incfar_5
+;rpl = lake1000, incfar_5
 ?;Pts = 1000
-; Pts = 20
-;fcn=  -wetland[l],pay(l|#011), covercro(n|#100)
+; Pts = 100
+;fcn=  -wetland[l],pay(l|#01), covercro(n|#10)
 ;Halton
 ;Model:
 
-U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro + nm*NuMgt +
-		dems18*dem_2018 + costliv*costlive + costFood*foodcost + costTax*taxcost + costHealth*healthc
- + incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4 
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	dems18*dem_2018 +  costTax*taxcost +
+             incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4  
 		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
 U(Current) = 0
 
 ?;Cluster=qnum
 ?;Robust
 
-?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000 
 ?+ cashr*cashrent + aglval*agv1000	
 $
+
+???? 12/4/18
+? models with alternative non-negative distributions, not lognormal N-563 in NLOGIT 6 ref guide
+
+REJECT; income_N = 1 $
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000, income_7
+;Pts = 1000
+?; Pts = 200
+;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+             incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+U(Current) = 0
+
+
+$
+
+? not include farm income 
+
+sample; 2-7025 $
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+;fcn=  -wetland[q],pay(q|#0), covercro(q|#1), nm[q]
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+              farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+U(Current) = 0
+
+
+$
+
 
 ?????? model with interactions with non-random parameters
 
