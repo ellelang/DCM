@@ -10,7 +10,11 @@ n <- dim(dataset)[1]
 colnames(dataset)
 betas <- read.table("beta.dat", sep = "\t", header = TRUE)
 varcov <- read.table("varcov.dat", sep = "\t", header = FALSE)
+betas
 
+b_wetland <- -1.7157
+rd <- rexp(10000000,rate = 1/-1.7157)
+mean(rd)
 ########Construct X matrix
 var_names <- betas$Names
 var_names

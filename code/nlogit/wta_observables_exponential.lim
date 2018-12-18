@@ -1,9 +1,10 @@
-READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=40; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7025; Nvar=42; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
-
-
+	hrwage,taxcost,cashrent,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,
+	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
 $
+
 
 
 
@@ -16,8 +17,6 @@ CALC ; Ran(123) $
 ? create negative of wetland attribute to estimate lognormal rpl
 
 CREATE ; negWetl = -1*Wetland 
-
-
 
 SETPANEL ; Group = ID $
 

@@ -1,7 +1,7 @@
-setup.py build_ext --inplace --force
+
 from pathlib import Path
 import numpy as np
-import pandas
+import pandas as pd
 pd.set_option('display.max_columns', None)
 
 mdata_folder = Path("C:/Users/langzx/Documents")
@@ -76,6 +76,7 @@ results = biogeme.estimate()
 
 # Print the estimated values
 betas = results.getBetaValues()
+betas
 for k,v in betas.items():
     print(f"{k}=\t{v:.3g}")
 

@@ -1,4 +1,4 @@
-id	task	Y.1	ChoiceSet.1	Wetland.1	Payment.1	Covercrop.1	NuMgt.1	Y.2	ChoiceSet.2	Wetland.2	Payment.2	Covercrop.2	NuMgt.2	Choice	income	areaf	demPrez16	dem_2018	unemploy	costlive	hrwage	taxcost	cashrent	crp2018	landvalu	impstrea	implakes	impwetl	imptotal	childcar	foodcost	healthc	housecos	othercos	convCS	corn
+id	task	Y_1	ChoiceSet_1	Wetland_1	Payment_1	Covercrop_1	NuMgt_1	Y_2	ChoiceSet_2	Wetland_2	Payment_2	Covercrop_2	NuMgt_2	Choice	income	areaf	demPrez16	dem_2018	unemploy	costlive	hrwage	taxcost	cashrent	crp2018	landvalu	impstrea	implakes	impwetl	imptotal	childcar	foodcost	healthc	housecos	othercos	convCS	corn
 6967500969	1	1	2	1	600	1	1	0	2	0	0	0	0	1	6	3	0	0	3.9	44714	14.33	428	195	202	7136	28.1	81	0	3	204	769	417	698	429	1	1
 6967500969	2	1	2	0	50	1	0	0	2	0	0	0	0	1	6	3	0	0	3.9	44714	14.33	428	195	202	7136	28.1	81	0	3	204	769	417	698	429	1	1
 6967500969	3	0	2	1	650	0	0	1	2	0	0	0	0	2	6	3	0	0	3.9	44714	14.33	428	195	202	7136	28.1	81	0	3	204	769	417	698	429	1	1

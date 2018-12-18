@@ -1,5 +1,5 @@
 rm(list = ls())
-setwd("//udrive.uw.edu/udrive/MRB surveys/Results")
+setwd("C:/Users/langzx/Desktop/github/DCM/data")
 library(mlogit)
 library(gmnl)
 library(tidyverse)
