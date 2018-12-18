@@ -1,6 +1,7 @@
+setup.py build_ext --inplace --force
 from pathlib import Path
 import numpy as np
-import pandas as pd
+import pandas
 pd.set_option('display.max_columns', None)
 
 mdata_folder = Path("C:/Users/langzx/Documents")
