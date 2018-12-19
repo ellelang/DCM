@@ -1,4 +1,4 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7025; Nvar=45; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7056; Nvar=45; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
@@ -9,7 +9,7 @@ $
 
 dstat; rhs=* $
 
-sample; 2-7057 $
+sample; ALL$
 
 CALC ; Ran(123) $
 
@@ -25,35 +25,10 @@ SKIP $
 
 
 
-nlogit
-;lhs=Y
-;Choices=VolCons,Current
-?;Check Data
-
-;Pds = 8
-?;Panel
-?;rpl
-;rpl = lake1000, incfar_5
-?;Pts = 1000
-; Pts = 100
-;fcn=  -wetland[l],pay(l|#01), covercro(n|#10)
-;Halton
-;Model:
-
-U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	dems18*dem_2018 +  costTax*taxcost +
-             incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4  
-		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
-U(Current) = 0
-
-?;Cluster=qnum
-?;Robust
-
-?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000 
-?+ cashr*cashrent + aglval*agv1000	
-$
-
 ???? 12/4/18
 ? models with alternative non-negative distributions, not lognormal N-563 in NLOGIT 6 ref guide
+
+sample; 2-7056$
 
 REJECT; income_N = 1 $
 
@@ -105,6 +80,35 @@ U(Current) = 0
 
 
 $
+
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000, incfar_5
+?;Pts = 1000
+; Pts = 100
+;fcn=  -wetland[l],pay(l|#01), covercro(n|#10)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	dems18*dem_2018 +  costTax*taxcost +
+             incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4  
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+U(Current) = 0
+
+?;Cluster=qnum
+?;Robust
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000 
+?+ cashr*cashrent + aglval*agv1000	
+$
+
 
 
 ?????? model with interactions with non-random parameters
