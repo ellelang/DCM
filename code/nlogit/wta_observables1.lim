@@ -1,7 +1,7 @@
-READ; file="\\udrive.uw.edu\udrive\MRB surveys\Results\wta_observables11192018.csv"; Nobs=7025; Nvar=42; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7025; Nvar=45; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
-	hrwage,taxcost,cashrent,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,
+	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
 	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
 $
 
@@ -9,7 +9,7 @@ $
 
 dstat; rhs=* $
 
-sample; 2-7025 $
+sample; 2-7057 $
 
 CALC ; Ran(123) $
 
@@ -74,7 +74,7 @@ nlogit
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
              incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
 U(Current) = 0
 
 
@@ -82,7 +82,7 @@ $
 
 ? not include farm income 
 
-sample; 2-7025 $
+sample; 2-7057 $
 
 nlogit
 ;lhs=Y

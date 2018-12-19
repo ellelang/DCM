@@ -16,7 +16,14 @@ dataset$ChoiceSet <- 2
 
 names(dataset)
 
-dataset <- plyr::rename(dataset, c("cashrental_peracre" = "cashrent" , "dem_president_2016" = "demPrez16",
+dataset$num_rotation <- as.numeric(dataset$primaryrotation)
+#dataset$num_rotation <- replace_na(dataset$num_rotation, -999) not necessary
+dataset$convCS <- ifelse(dataset$num_rotation == 1 | dataset$num_rotation == 2, 1, 0)
+dataset$corn <- ifelse(dataset$num_rotation == 1 | dataset$num_rotation == 2 
+                       | dataset$num_rotation == 4 | dataset$num_rotation == 5
+                       | dataset$num_rotation == 9, 1, 0)
+
+dataset <- plyr::rename(dataset, c("cashrental_peracre" = "cashrent" ,"crp2018" = "crp2018", "dem_president_2016" = "demPrez16",
                                    "incomefromfarming" = "incfar" ,"unemploymentrate" = "unemploy",
                                    "Yearly.Cost" = "costlive", "Hourly.Wage" = "hrwage", "av_monthly_Child.Care" = "childcar",
                                    "av_monthly_Food" = "foodcost", "av_montly_Health.Care" = "healthc",
@@ -34,22 +41,20 @@ dataset <- plyr::rename(dataset, c("cashrental_peracre" = "cashrent" , "dem_pres
 
 export_test_nlogit <- dplyr::select(dataset, c("id","Y","ChoiceSet","alti", "task",
                                         "Wetland","Payment","Covercrop","NuMgt", 
-                                        "incfar", "areaf", "demPrez16", "dem_2018",
+                                        "income", "areaf", "demPrez16", "dem_2018",
                                         "unemploy", "costlive", "hrwage", "taxcost",
-                                          "cashrent", "landvalu",
+                                          "cashrent","crp2018", "landvalu",
                                         "impstrea", "implakes", "impwetl",
                                         "imptotal", "childcar", "foodcost", "healthc",  "housecos",
-                                        "othercos"))
+                                        "othercos", "convCS", "corn"))
 
-export_test_nlogit <- fastDummies::dummy_cols(export_test_nlogit, select_columns = c("incfar","areaf"))
+export_test_nlogit <- fastDummies::dummy_cols(export_test_nlogit, select_columns = c("income","areaf"))
 
 write.csv(export_test_nlogit,file = "wta_observables11192018.csv", row.names = FALSE)
-
-######################
-rm(list = ls())
+dim(export_test_nlogit)
+colnames(export_test_nlogit)
 
 library(bestglm)
-export_test_nlogit <- read.csv (file = "wta_observables11192018.csv", header = TRUE)
 
 databestglm <- filter(export_test_nlogit, export_test_nlogit$alti == 1)
 
