@@ -5,6 +5,7 @@ Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demP
 	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
 $
 
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix0112.csv"$
 
 
 dstat; rhs=* $
@@ -41,8 +42,16 @@ nlogit
 ?;Panel
 ?;rpl
 ;rpl = lake1000, income_7
+;wtp = wetland/pay,covercro/pay, nm/pay
+;maxit = 200
+;par
 ;Pts = 1000
+;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+;full
 ?; Pts = 200
+;corr
 ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
 ;Halton
 ;Model:
@@ -51,11 +60,21 @@ U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt 
              incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
 		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
 U(Current) = 0
-
-
+;Export output
+?;Export = table
+;Export = matrix 
 $
 
+
+
+
+? ( ) is for elasticities, [ ] is for partial or marginal effects:
+;effects:pay[VolCons]/wetland[VolCons];export = matrix $
+
 ? not include farm income 
+
+
+
 
 sample; 2-7057 $
 
@@ -124,6 +143,7 @@ nlogit
 ;rpl = lake1000
 ?;Pts = 1000
 ; Pts = 20
+; corr
 ;fcn=  wetland[l],pay[l], covercro(n), nm(c)
 ;Halton
 ;Model:

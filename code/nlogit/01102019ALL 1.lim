@@ -1,0 +1,2983 @@
+|-> RESET
+
+====================================================
+                        ____   ___       _____
+       /\    /   /     /   /  /      /     /
+      /  \  /   /     /   /  /___   /     /
+     /    \/   /___  /___/  /___/  /     /
+
+====================================================
+
+O---------------------------------------------------------O
+| NLOGIT 6  (tm)              Jan 10, 2019, 10:21:42AM    |
+| Econometric Software, Inc.  Copyright 1986-2016         |
+| Plainview, New York 11803   www.nlogit.com              |
+| Registered to Sergey Rabotyagov                         |
+|               University of Washington                  |
+| Registration Number:  0518-0017941-6NS                  |
+O---------------------------------------------------------O
+-------Initializing NLOGIT Version 6 (Sep 7, 2016)---------
+-----------------------------------------------------------
+
+|-> LOAD;file="C:\Users\langzx\Desktop\github\DCM\code\nlogit\PRLwtamodel 1.lpj"$
+Project file contained    7056 observations.
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;wtp = Wetland/Payment, NuMgt/Payment
+    ;maxit = 200
+    ;par
+    ;Pts = 1
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+C variable name in  Tvar/Cvar is not in model
+Error   1141: C variable name in  Tvar/Cvar is not in model
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;wtp = Wetland/Payment, NuMgt/Payment
+    ;maxit = 200
+    ;par
+    ;Pts = 1
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+C variable name in  Tvar/Cvar is not in model
+Error   1141: C variable name in  Tvar/Cvar is not in model
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;Pts = 1
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  212 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1764860D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1764.85971
+Estimation based on N =   2628, K =  18
+Inf.Cr.AIC  =   3565.7 AIC/N =    1.357
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1814.4237  .0273 .0202
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[17]          =     99.12798
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|     .46349***      .11358     4.08  .0000      .24088    .68609
+     PAY|     .00144***      .00025     5.70  .0000      .00095    .00194
+COVERCRO|     .04596         .07974      .58  .5643     -.11032    .20225
+      NM|    -.06508         .08622     -.75  .4504     -.23406    .10390
+     ASC|   -1.55504***      .48470    -3.21  .0013    -2.50503   -.60505
+  DEMS18|     .44905***      .08626     5.21  .0000      .27998    .61812
+ COSTTAX|    -.00067*        .00038    -1.74  .0823     -.00142    .00009
+INCFARM1|     .18838         .20498      .92  .3581     -.21338    .59014
+INCFARM2|     .32926         .22271     1.48  .1393     -.10724    .76576
+INCFARM3|     .21771         .20661     1.05  .2920     -.18724    .62265
+INCFARM4|     .99597***      .32106     3.10  .0019      .36670   1.62525
+INCFARM5|     .26631         .21039     1.27  .2056     -.14604    .67866
+INCFARM6|     .29476         .20869     1.41  .1578     -.11427    .70379
+ FARMSI1|    1.05601***      .29263     3.61  .0003      .48245   1.62956
+ FARMSI2|    1.21801***      .28671     4.25  .0000      .65607   1.77996
+ FARMSI3|    1.06594***      .30624     3.48  .0005      .46573   1.66615
+ FARMSI4|    1.09363***      .27568     3.97  .0001      .55330   1.63396
+     CRP|     .00099         .00122      .81  .4185     -.00140    .00338
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:27:58 AM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  24 iterations. Status=0, F=    .1778656D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1778.65610
+Restricted log likelihood   -1821.59079
+Chi squared [ 19](P= .000)     85.86939
+Significance level               .00000
+McFadden Pseudo R-squared      .0235699
+Estimation based on N =   2628, K =  19
+Inf.Cr.AIC  =   3595.3 AIC/N =    1.368
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1821.5908  .0236 .0165
+Constants only  -1814.4237  .0197 .0126
+At start values -1895.6554  .0617 .0549
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. =   1
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|     .06872         .11236      .61  .5408     -.15151    .28894
+     PAY| .98208D-04         .00025      .39  .6942 -.39139D-03  .58781D-03
+COVERCRO|     .08272         .08975      .92  .3567     -.09318    .25863
+      NM|     .06956         .08586      .81  .4178     -.09872    .23785
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -1.24333**       .48528    -2.56  .0104    -2.19445   -.29221
+  DEMS18|     .45915***      .08645     5.31  .0000      .28972    .62858
+ COSTTAX|    -.00069*        .00038    -1.82  .0695     -.00144    .00006
+INCFARM1|     .17549         .20403      .86  .3897     -.22440    .57537
+INCFARM2|     .32763         .22204     1.48  .1401     -.10755    .76282
+INCFARM3|     .22531         .20564     1.10  .2732     -.17774    .62837
+INCFARM4|     .98447***      .31970     3.08  .0021      .35786   1.61108
+INCFARM5|     .25041         .20935     1.20  .2316     -.15990    .66073
+INCFARM6|     .29019         .20773     1.40  .1624     -.11695    .69733
+ FARMSI1|    1.00999***      .29106     3.47  .0005      .43952   1.58047
+ FARMSI2|    1.13313***      .28512     3.97  .0001      .57430   1.69195
+ FARMSI3|     .98126***      .30456     3.22  .0013      .38433   1.57819
+ FARMSI4|    1.02321***      .27412     3.73  .0002      .48594   1.56048
+     CRP|     .00068         .00124      .54  .5864     -.00176    .00311
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+WETL:INC|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:INC|        0.0    .....(Fixed Parameter).....
+COVE:LAK|    -.00959         .01503     -.64  .5233     -.03904    .01986
+COVE:INC|        0.0    .....(Fixed Parameter).....
+  NM:LAK|        0.0    .....(Fixed Parameter).....
+  NM:INC|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   QsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Jan 10, 2019 at 10:27:59 AM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1             2
+--------+----------------------------
+       1|       .000000       .000000
+       2|       .000000       .000000
+       3|    -.00959161       .000000
+       4|       .000000       .000000
+
++---------------------------------------------------+
+| Derivative             averaged over observations.|
+| Effects on probabilities of all choices in model: |
+| * = Direct Derivative effect of the attribute.    |
++---------------------------------------------------+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00771***      .00021    36.72  .0000      .00730    .00812
+ CURRENT|    -.00771***      .00021   -36.72  .0000     -.00812   -.00730
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00771           .00021           .000001       .10703
+ CURRENT|    -.00771           .00021          -.107030       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.00380***      .00013   -30.41  .0000     -.00405   -.00356
+ CURRENT|     .00380***      .00013    30.41  .0000      .00356    .00405
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.00380           .00013          -.023665       .00000
+ CURRENT|     .00380           .00013           .000000       .02366
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00662***      .00027    24.56  .0000      .00609    .00715
+ CURRENT|    -.00662***      .00027   -24.56  .0000     -.00715   -.00609
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00662           .00027          -.124280       .10894
+ CURRENT|    -.00662           .00027          -.108943       .12428
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00832***      .00028    29.82  .0000      .00778    .00887
+ CURRENT|    -.00832***      .00028   -29.82  .0000     -.00887   -.00778
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00832           .00028           .000000       .12780
+ CURRENT|    -.00832           .00028          -.127799       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06451***      .00106    61.14  .0000      .06244    .06658
+ CURRENT|    -.06451***      .00106   -61.14  .0000     -.06658   -.06244
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06451           .00106           .000000       .11479
+ CURRENT|    -.06451           .00106          -.114786       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.08110***      .00038  -214.65  .0000     -.08184   -.08036
+ CURRENT|     .08110***      .00038   214.65  .0000      .08036    .08184
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.08110           .00038          -.153579      -.04663
+ CURRENT|     .08110           .00038           .046630       .15358
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03154***      .00011   279.89  .0000      .03132    .03176
+ CURRENT|    -.03154***      .00011  -279.89  .0000     -.03176   -.03132
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03154           .00011           .005232       .04216
+ CURRENT|    -.03154           .00011          -.042155      -.00523
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00766***      .00032    23.92  .0000      .00704    .00829
+ CURRENT|    -.00766***      .00032   -23.92  .0000     -.00829   -.00704
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00766           .00032           .000000       .04387
+ CURRENT|    -.00766           .00032          -.043871       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01116***      .00053    20.87  .0000      .01011    .01221
+ CURRENT|    -.01116***      .00053   -20.87  .0000     -.01221   -.01011
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01116           .00053           .000000       .08191
+ CURRENT|    -.01116           .00053          -.081909       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01132***      .00043    26.22  .0000      .01047    .01217
+ CURRENT|    -.01132***      .00043   -26.22  .0000     -.01217   -.01047
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:00 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01132           .00043           .000000       .05633
+ CURRENT|    -.01132           .00043          -.056329       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00613***      .00068     8.98  .0000      .00480    .00747
+ CURRENT|    -.00613***      .00068    -8.98  .0000     -.00747   -.00480
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00613           .00068           .000000       .23280
+ CURRENT|    -.00613           .00068          -.232799       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00967***      .00044    22.22  .0000      .00882    .01052
+ CURRENT|    -.00967***      .00044   -22.22  .0000     -.01052   -.00882
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00967           .00044           .000000       .06260
+ CURRENT|    -.00967           .00044          -.062603       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01651***      .00058    28.25  .0000      .01537    .01766
+ CURRENT|    -.01651***      .00058   -28.25  .0000     -.01766   -.01537
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01651           .00058           .000000       .07255
+ CURRENT|    -.01651           .00058          -.072548       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03727***      .00172    21.67  .0000      .03390    .04064
+ CURRENT|    -.03727***      .00172   -21.67  .0000     -.04064   -.03390
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03727           .00172           .000000       .25250
+ CURRENT|    -.03727           .00172          -.252498       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04276***      .00193    22.21  .0000      .03899    .04653
+ CURRENT|    -.04276***      .00193   -22.21  .0000     -.04653   -.03899
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04276           .00193           .000000       .28328
+ CURRENT|    -.04276           .00193          -.283281       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02150***      .00134    16.10  .0000      .01888    .02412
+ CURRENT|    -.02150***      .00134   -16.10  .0000     -.02412   -.01888
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02150           .00134           .000000       .24532
+ CURRENT|    -.02150           .00134          -.245316       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .14280***      .00241    59.23  .0000      .13808    .14753
+ CURRENT|    -.14280***      .00241   -59.23  .0000     -.14753   -.13808
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:28:01 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .14280           .00241           .000000       .25580
+ CURRENT|    -.14280           .00241          -.255803       .00000
+--------+--------------------------------------------------------------------
+
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+PAYMENT | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0077   -.0077
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+WETLAND | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0038    .0038
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+COVERCRO| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0066   -.0066
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+NUMGT   | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0083   -.0083
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+DEM_2018| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0645   -.0645
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+TAXCOST | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0811    .0811
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+CRP2018 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0315   -.0315
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_1| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0077   -.0077
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_2| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0112   -.0112
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_3| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0113   -.0113
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_4| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0061   -.0061
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_5| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0097   -.0097
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_6| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0165   -.0165
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_1 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0373   -.0373
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_2 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0428   -.0428
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_3 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0215   -.0215
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_4 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1428   -.1428
+
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;wtp = wetland/pay,nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 1
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  212 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1764860D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1764.85971
+Estimation based on N =   2628, K =  18
+Inf.Cr.AIC  =   3565.7 AIC/N =    1.357
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1814.4237  .0273 .0202
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[17]          =     99.12798
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|     .46349***      .11358     4.08  .0000      .24088    .68609
+     PAY|     .00144***      .00025     5.70  .0000      .00095    .00194
+COVERCRO|     .04596         .07974      .58  .5643     -.11032    .20225
+      NM|    -.06508         .08622     -.75  .4504     -.23406    .10390
+     ASC|   -1.55504***      .48470    -3.21  .0013    -2.50503   -.60505
+  DEMS18|     .44905***      .08626     5.21  .0000      .27998    .61812
+ COSTTAX|    -.00067*        .00038    -1.74  .0823     -.00142    .00009
+INCFARM1|     .18838         .20498      .92  .3581     -.21338    .59014
+INCFARM2|     .32926         .22271     1.48  .1393     -.10724    .76576
+INCFARM3|     .21771         .20661     1.05  .2920     -.18724    .62265
+INCFARM4|     .99597***      .32106     3.10  .0019      .36670   1.62525
+INCFARM5|     .26631         .21039     1.27  .2056     -.14604    .67866
+INCFARM6|     .29476         .20869     1.41  .1578     -.11427    .70379
+ FARMSI1|    1.05601***      .29263     3.61  .0003      .48245   1.62956
+ FARMSI2|    1.21801***      .28671     4.25  .0000      .65607   1.77996
+ FARMSI3|    1.06594***      .30624     3.48  .0005      .46573   1.66615
+ FARMSI4|    1.09363***      .27568     3.97  .0001      .55330   1.63396
+     CRP|     .00099         .00122      .81  .4185     -.00140    .00338
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:06 AM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  24 iterations. Status=0, F=    .1778656D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1778.65610
+Restricted log likelihood   -1821.59079
+Chi squared [ 19](P= .000)     85.86939
+Significance level               .00000
+McFadden Pseudo R-squared      .0235699
+Estimation based on N =   2628, K =  19
+Inf.Cr.AIC  =   3595.3 AIC/N =    1.368
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1821.5908  .0236 .0165
+Constants only  -1814.4237  .0197 .0126
+At start values -1895.6554  .0617 .0549
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. =   1
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|     .06872         .11236      .61  .5408     -.15151    .28894
+     PAY| .98208D-04         .00025      .39  .6942 -.39139D-03  .58781D-03
+COVERCRO|     .08272         .08975      .92  .3567     -.09318    .25863
+      NM|     .06956         .08586      .81  .4178     -.09872    .23785
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -1.24333**       .48528    -2.56  .0104    -2.19445   -.29221
+  DEMS18|     .45915***      .08645     5.31  .0000      .28972    .62858
+ COSTTAX|    -.00069*        .00038    -1.82  .0695     -.00144    .00006
+INCFARM1|     .17549         .20403      .86  .3897     -.22440    .57537
+INCFARM2|     .32763         .22204     1.48  .1401     -.10755    .76282
+INCFARM3|     .22531         .20564     1.10  .2732     -.17774    .62837
+INCFARM4|     .98447***      .31970     3.08  .0021      .35786   1.61108
+INCFARM5|     .25041         .20935     1.20  .2316     -.15990    .66073
+INCFARM6|     .29019         .20773     1.40  .1624     -.11695    .69733
+ FARMSI1|    1.00999***      .29106     3.47  .0005      .43952   1.58047
+ FARMSI2|    1.13313***      .28512     3.97  .0001      .57430   1.69195
+ FARMSI3|     .98126***      .30456     3.22  .0013      .38433   1.57819
+ FARMSI4|    1.02321***      .27412     3.73  .0002      .48594   1.56048
+     CRP|     .00068         .00124      .54  .5864     -.00176    .00311
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+WETL:INC|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:INC|        0.0    .....(Fixed Parameter).....
+COVE:LAK|    -.00959         .01503     -.64  .5233     -.03904    .01986
+COVE:INC|        0.0    .....(Fixed Parameter).....
+  NM:LAK|        0.0    .....(Fixed Parameter).....
+  NM:INC|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   QsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Jan 10, 2019 at 10:29:07 AM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1             2
+--------+----------------------------
+       1|       .000000       .000000
+       2|       .000000       .000000
+       3|    -.00959161       .000000
+       4|       .000000       .000000
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x2]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
++---------------------------------------------------+
+| Derivative             averaged over observations.|
+| Effects on probabilities of all choices in model: |
+| * = Direct Derivative effect of the attribute.    |
++---------------------------------------------------+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00771***      .00021    36.72  .0000      .00730    .00812
+ CURRENT|    -.00771***      .00021   -36.72  .0000     -.00812   -.00730
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00771           .00021           .000001       .10703
+ CURRENT|    -.00771           .00021          -.107030       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.00380***      .00013   -30.41  .0000     -.00405   -.00356
+ CURRENT|     .00380***      .00013    30.41  .0000      .00356    .00405
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.00380           .00013          -.023665       .00000
+ CURRENT|     .00380           .00013           .000000       .02366
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00662***      .00027    24.56  .0000      .00609    .00715
+ CURRENT|    -.00662***      .00027   -24.56  .0000     -.00715   -.00609
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00662           .00027          -.124280       .10894
+ CURRENT|    -.00662           .00027          -.108943       .12428
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00832***      .00028    29.82  .0000      .00778    .00887
+ CURRENT|    -.00832***      .00028   -29.82  .0000     -.00887   -.00778
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00832           .00028           .000000       .12780
+ CURRENT|    -.00832           .00028          -.127799       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06451***      .00106    61.14  .0000      .06244    .06658
+ CURRENT|    -.06451***      .00106   -61.14  .0000     -.06658   -.06244
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06451           .00106           .000000       .11479
+ CURRENT|    -.06451           .00106          -.114786       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.08110***      .00038  -214.65  .0000     -.08184   -.08036
+ CURRENT|     .08110***      .00038   214.65  .0000      .08036    .08184
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.08110           .00038          -.153579      -.04663
+ CURRENT|     .08110           .00038           .046630       .15358
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03154***      .00011   279.89  .0000      .03132    .03176
+ CURRENT|    -.03154***      .00011  -279.89  .0000     -.03176   -.03132
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03154           .00011           .005232       .04216
+ CURRENT|    -.03154           .00011          -.042155      -.00523
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00766***      .00032    23.92  .0000      .00704    .00829
+ CURRENT|    -.00766***      .00032   -23.92  .0000     -.00829   -.00704
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00766           .00032           .000000       .04387
+ CURRENT|    -.00766           .00032          -.043871       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01116***      .00053    20.87  .0000      .01011    .01221
+ CURRENT|    -.01116***      .00053   -20.87  .0000     -.01221   -.01011
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:08 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01116           .00053           .000000       .08191
+ CURRENT|    -.01116           .00053          -.081909       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01132***      .00043    26.22  .0000      .01047    .01217
+ CURRENT|    -.01132***      .00043   -26.22  .0000     -.01217   -.01047
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01132           .00043           .000000       .05633
+ CURRENT|    -.01132           .00043          -.056329       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00613***      .00068     8.98  .0000      .00480    .00747
+ CURRENT|    -.00613***      .00068    -8.98  .0000     -.00747   -.00480
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00613           .00068           .000000       .23280
+ CURRENT|    -.00613           .00068          -.232799       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00967***      .00044    22.22  .0000      .00882    .01052
+ CURRENT|    -.00967***      .00044   -22.22  .0000     -.01052   -.00882
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00967           .00044           .000000       .06260
+ CURRENT|    -.00967           .00044          -.062603       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01651***      .00058    28.25  .0000      .01537    .01766
+ CURRENT|    -.01651***      .00058   -28.25  .0000     -.01766   -.01537
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01651           .00058           .000000       .07255
+ CURRENT|    -.01651           .00058          -.072548       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03727***      .00172    21.67  .0000      .03390    .04064
+ CURRENT|    -.03727***      .00172   -21.67  .0000     -.04064   -.03390
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03727           .00172           .000000       .25250
+ CURRENT|    -.03727           .00172          -.252498       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04276***      .00193    22.21  .0000      .03899    .04653
+ CURRENT|    -.04276***      .00193   -22.21  .0000     -.04653   -.03899
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04276           .00193           .000000       .28328
+ CURRENT|    -.04276           .00193          -.283281       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02150***      .00134    16.10  .0000      .01888    .02412
+ CURRENT|    -.02150***      .00134   -16.10  .0000     -.02412   -.01888
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02150           .00134           .000000       .24532
+ CURRENT|    -.02150           .00134          -.245316       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .14280***      .00241    59.23  .0000      .13808    .14753
+ CURRENT|    -.14280***      .00241   -59.23  .0000     -.14753   -.13808
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:29:09 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .14280           .00241           .000000       .25580
+ CURRENT|    -.14280           .00241          -.255803       .00000
+--------+--------------------------------------------------------------------
+
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+PAYMENT | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0077   -.0077
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+WETLAND | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0038    .0038
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+COVERCRO| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0066   -.0066
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+NUMGT   | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0083   -.0083
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+DEM_2018| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0645   -.0645
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+TAXCOST | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0811    .0811
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+CRP2018 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0315   -.0315
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_1| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0077   -.0077
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_2| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0112   -.0112
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_3| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0113   -.0113
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_4| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0061   -.0061
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_5| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0097   -.0097
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_6| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0165   -.0165
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_1 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0373   -.0373
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_2 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0428   -.0428
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_3 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0215   -.0215
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_4 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1428   -.1428
+
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 100
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  212 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1764860D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1764.85971
+Estimation based on N =   2628, K =  18
+Inf.Cr.AIC  =   3565.7 AIC/N =    1.357
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1814.4237  .0273 .0202
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[17]          =     99.12798
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|     .46349***      .11358     4.08  .0000      .24088    .68609
+     PAY|     .00144***      .00025     5.70  .0000      .00095    .00194
+COVERCRO|     .04596         .07974      .58  .5643     -.11032    .20225
+      NM|    -.06508         .08622     -.75  .4504     -.23406    .10390
+     ASC|   -1.55504***      .48470    -3.21  .0013    -2.50503   -.60505
+  DEMS18|     .44905***      .08626     5.21  .0000      .27998    .61812
+ COSTTAX|    -.00067*        .00038    -1.74  .0823     -.00142    .00009
+INCFARM1|     .18838         .20498      .92  .3581     -.21338    .59014
+INCFARM2|     .32926         .22271     1.48  .1393     -.10724    .76576
+INCFARM3|     .21771         .20661     1.05  .2920     -.18724    .62265
+INCFARM4|     .99597***      .32106     3.10  .0019      .36670   1.62525
+INCFARM5|     .26631         .21039     1.27  .2056     -.14604    .67866
+INCFARM6|     .29476         .20869     1.41  .1578     -.11427    .70379
+ FARMSI1|    1.05601***      .29263     3.61  .0003      .48245   1.62956
+ FARMSI2|    1.21801***      .28671     4.25  .0000      .65607   1.77996
+ FARMSI3|    1.06594***      .30624     3.48  .0005      .46573   1.66615
+ FARMSI4|    1.09363***      .27568     3.97  .0001      .55330   1.63396
+     CRP|     .00099         .00122      .81  .4185     -.00140    .00338
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:33:08 AM
+-----------------------------------------------------------------------------
+
+Exit to results at user request after   15 iterations.
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1492.67990
+Restricted log likelihood   -1821.59079
+Chi squared [ 19](P= .000)    657.82179
+Significance level               .00000
+McFadden Pseudo R-squared      .1805624
+Estimation based on N =   2628, K =  19
+Inf.Cr.AIC  =   3023.4 AIC/N =    1.150
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1821.5908  .1806 .1746
+Constants only  -1814.4237  .1773 .1713
+At start values -1639.0680  .0893 .0827
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    1.54605***      .16029     9.65  .0000     1.23188   1.86022
+     PAY|     .00771***      .00067    11.47  .0000      .00639    .00903
+COVERCRO|    -.33189***      .12177    -2.73  .0064     -.57055   -.09323
+      NM|    -.40157***      .10839    -3.70  .0002     -.61402   -.18912
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.55409***      .73445    -3.48  .0005    -3.99358  -1.11459
+  DEMS18|     .76192***      .10406     7.32  .0000      .55796    .96588
+ COSTTAX|    -.00090**       .00044    -2.02  .0437     -.00177   -.00003
+INCFARM1|    1.13116***      .28741     3.94  .0001      .56784   1.69448
+INCFARM2|     .84471***      .31152     2.71  .0067      .23414   1.45527
+INCFARM3|     .74670**       .29113     2.56  .0103      .17610   1.31730
+INCFARM4|    2.03189***      .44378     4.58  .0000     1.16209   2.90169
+INCFARM5|     .82333***      .29767     2.77  .0057      .23991   1.40674
+INCFARM6|     .93346***      .29197     3.20  .0014      .36120   1.50572
+ FARMSI1|    1.68186***      .49655     3.39  .0007      .70864   2.65509
+ FARMSI2|    2.23214***      .48748     4.58  .0000     1.27669   3.18759
+ FARMSI3|    1.70929***      .50469     3.39  .0007      .72012   2.69846
+ FARMSI4|    2.03665***      .47886     4.25  .0000     1.09810   2.97520
+     CRP|    -.00326**       .00127    -2.57  .0103     -.00576   -.00077
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+WETL:INC|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:INC|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .04003**       .01909     2.10  .0360      .00261    .07744
+COVE:INC|        0.0    .....(Fixed Parameter).....
+  NM:LAK|        0.0    .....(Fixed Parameter).....
+  NM:INC|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   QsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Jan 10, 2019 at 10:34:20 AM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1             2
+--------+----------------------------
+       1|       .000000       .000000
+       2|       .000000       .000000
+       3|      .0400252       .000000
+       4|       .000000       .000000
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
++---------------------------------------------------+
+| Derivative             averaged over observations.|
+| Effects on probabilities of all choices in model: |
+| * = Direct Derivative effect of the attribute.    |
++---------------------------------------------------+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .16840***      .00144   116.57  .0000      .16557    .17124
+ CURRENT|    -.16840***      .00144  -116.57  .0000     -.17124   -.16557
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .16840           .00144           .009835       .36812
+ CURRENT|    -.16840           .00144          -.368124      -.00983
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07540***      .00151   -50.05  .0000     -.07835   -.07245
+ CURRENT|     .07540***      .00151    50.05  .0000      .07245    .07835
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07540           .00151          -.228364       .00000
+ CURRENT|     .07540           .00151           .000000       .22836
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.01715***      .00049   -35.24  .0000     -.01811   -.01620
+ CURRENT|     .01715***      .00049    35.24  .0000      .01620    .01811
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.01715           .00049          -.078387       .09103
+ CURRENT|     .01715           .00049          -.091035       .07839
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.02655***      .00056   -47.09  .0000     -.02765   -.02544
+ CURRENT|     .02655***      .00056    47.09  .0000      .02544    .02765
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.02655           .00056          -.096453       .00000
+ CURRENT|     .02655           .00056           .000000       .09645
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06883***      .00128    53.97  .0000      .06633    .07133
+ CURRENT|    -.06883***      .00128   -53.97  .0000     -.07133   -.06633
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06883           .00128           .000000       .18475
+ CURRENT|    -.06883           .00128          -.184745       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.06589***      .00053  -124.71  .0000     -.06693   -.06485
+ CURRENT|     .06589***      .00053   124.71  .0000      .06485    .06693
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.06589           .00053          -.186175      -.01643
+ CURRENT|     .06589           .00053           .016435       .18617
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.09605***      .00072  -133.86  .0000     -.09746   -.09464
+ CURRENT|     .09605***      .00072   133.86  .0000      .09464    .09746
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.09605           .00072          -.188621      -.00912
+ CURRENT|     .09605           .00072           .009124       .18862
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03095***      .00138    22.44  .0000      .02825    .03366
+ CURRENT|    -.03095***      .00138   -22.44  .0000     -.03366   -.02825
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03095           .00138           .000000       .27311
+ CURRENT|    -.03095           .00138          -.273108       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01839***      .00094    19.59  .0000      .01655    .02023
+ CURRENT|    -.01839***      .00094   -19.59  .0000     -.02023   -.01655
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01839           .00094           .000000       .20518
+ CURRENT|    -.01839           .00094          -.205179       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02384***      .00097    24.62  .0000      .02194    .02574
+ CURRENT|    -.02384***      .00097   -24.62  .0000     -.02574   -.02194
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02384           .00097           .000000       .18058
+ CURRENT|    -.02384           .00097          -.180575       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00764***      .00091     8.43  .0000      .00587    .00942
+ CURRENT|    -.00764***      .00091    -8.43  .0000     -.00942   -.00587
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00764           .00091           .000000       .48218
+ CURRENT|    -.00764           .00091          -.482176       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02033***      .00097    20.99  .0000      .01843    .02223
+ CURRENT|    -.02033***      .00097   -20.99  .0000     -.02223   -.01843
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02033           .00097           .000000       .19964
+ CURRENT|    -.02033           .00097          -.199635       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03382***      .00128    26.47  .0000      .03132    .03633
+ CURRENT|    -.03382***      .00128   -26.47  .0000     -.03633   -.03132
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03382           .00128           .000000       .22580
+ CURRENT|    -.03382           .00128          -.225802       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03897***      .00190    20.53  .0000      .03525    .04270
+ CURRENT|    -.03897***      .00190   -20.53  .0000     -.04270   -.03525
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .03897           .00190           .000000       .40781
+ CURRENT|    -.03897           .00190          -.407807       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .05405***      .00260    20.81  .0000      .04896    .05914
+ CURRENT|    -.05405***      .00260   -20.81  .0000     -.05914   -.04896
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .05405           .00260           .000000       .54219
+ CURRENT|    -.05405           .00260          -.542187       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02341***      .00153    15.25  .0000      .02040    .02641
+ CURRENT|    -.02341***      .00153   -15.25  .0000     -.02641   -.02040
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02341           .00153           .000000       .41260
+ CURRENT|    -.02341           .00153          -.412601       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .18056***      .00340    53.06  .0000      .17389    .18723
+ CURRENT|    -.18056***      .00340   -53.06  .0000     -.18723   -.17389
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:34:22 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .18056           .00340           .000000       .49268
+ CURRENT|    -.18056           .00340          -.492676       .00000
+--------+--------------------------------------------------------------------
+
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+PAYMENT | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1684   -.1684
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+WETLAND | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0754    .0754
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+COVERCRO| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0172    .0172
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+NUMGT   | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0265    .0265
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+DEM_2018| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0688   -.0688
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+TAXCOST | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0659    .0659
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+CRP2018 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0960    .0960
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_1| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0310   -.0310
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_2| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0184   -.0184
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_3| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0238   -.0238
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_4| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0076   -.0076
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_5| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0203   -.0203
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_6| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0338   -.0338
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_1 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0390   -.0390
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_2 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0541   -.0541
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_3 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0234   -.0234
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_4 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1806   -.1806
+
+|-> RESET
+|-> READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7056; Nvar=45;
+    Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
+    	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
+    	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
+    $
+|-> dstat; rhs=* $
+
+
+--------+---------------------------------------------------------------------
+        |                  Standard                                    Missing
+Variable|         Mean    Deviation      Minimum      Maximum    Cases  Values
+--------+---------------------------------------------------------------------
+      ID|   .694041D+1     10148017   .692225D+1   .696750D+1     7055       1
+       Y|      .500085      .500043          0.0          1.0     5865    1191
+CHOICESE|          2.0          0.0          2.0          2.0     7055       1
+    ALTI|     1.499929      .500035          1.0          2.0     7055       1
+    TASK|     4.499504     2.291234          1.0          8.0     7055       1
+ WETLAND|      .250035      .433064          0.0          1.0     7055       1
+ PAYMENT|     164.0858     233.2041          0.0        650.0     7055       1
+COVERCRO|      .250035      .433064          0.0          1.0     7055       1
+   NUMGT|      .250035      .433064          0.0          1.0     7055       1
+  INCFAR|     4.002817     1.548418          1.0          7.0     5680    1376
+   AREAF|     2.244889      .884576          1.0          5.0     6799     257
+DEMPREZ1|      .052519      .223087          0.0          1.0     7007      49
+DEM_2018|      .570858      .494989          0.0          1.0     7007      49
+UNEMPLOY|     3.858427      .649825          2.7          6.1     7007      49
+COSTLIVE|      47156.2     5193.209      41053.0      65315.0     7007      49
+  HRWAGE|     15.11439     1.664505        13.16        20.93     7007      49
+ TAXCOST|     483.6678     116.7314        336.0        885.0     7007      49
+CASHRENT|     195.9267     37.15246         32.0        237.0     6943     113
+ CRP2018|     192.9058     34.92709         32.0        250.0     6943     113
+LANDVALU|      6554.67     2235.395       1986.0      18090.0     7007      49
+IMPSTREA|     141.2426     109.2527          0.0        344.4     7007      49
+IMPLAKES|     2769.288     3698.315          0.0      21030.0     7007      49
+ IMPWETL|     8.052291     21.57575          0.0        83.99     7007      49
+IMPTOTAL|     18.69844     11.74932          0.0         46.0     7007      49
+CHILDCAR|     254.2098     127.3865        184.0        741.0     7007      49
+FOODCOST|     760.3999     11.19783        741.0        787.0     7007      49
+ HEALTHC|     422.0418      17.9586        417.0        486.0     7007      49
+HOUSECOS|     752.1005     115.2529        698.0       1113.0     7007      49
+OTHERCOS|     442.1991     33.57283        421.0        555.0     7007      49
+  CONVCS|      .607419       .48836          0.0          1.0     6847     209
+    CORN|      .740616      .438328          0.0          1.0     6847     209
+INCOME_1|      .140609      .347643          0.0          1.0     7055       1
+INCOME_6|      .190503      .392726          0.0          1.0     7055       1
+INCOME_4|      .027215       .16272          0.0          1.0     7055       1
+INCOME_3|      .165556      .371708          0.0          1.0     7055       1
+INCOME_2|      .120198      .325216          0.0          1.0     7055       1
+INCOME_N|      .194897       .39615          0.0          1.0     7055       1
+INCOME_5|      .124734      .330441          0.0          1.0     7055       1
+INCOME_7|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_1|      .156485       .36334          0.0          1.0     7055       1
+ AREAF_2|      .145004      .352129          0.0          1.0     7055       1
+ AREAF_4|       .56017      .496402          0.0          1.0     7055       1
+ AREAF_3|      .081644      .273841          0.0          1.0     7055       1
+AREAF_NA|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_5|      .020411      .141412          0.0          1.0     7055       1
+--------+---------------------------------------------------------------------
+
+Descriptive Statistics for  45 variables
+DSTAT results are matrix LASTDSTA in current project.
+|-> sample; ALL$
+|-> CALC ; Ran(123) $
+|-> CREATE ; negWetl = -1*Wetland
+    	 ; lake1000 = implakes/1000
+    	 ; agv1000 = landvalu/1000 $
+|-> SETPANEL ; Group = ID $
+Error    512: STR/SET variable has missing values. Cannot continue.
+|-> SKIP $
+|-> dstat; rhs=* $
+
+
+--------+---------------------------------------------------------------------
+        |                  Standard                                    Missing
+Variable|         Mean    Deviation      Minimum      Maximum    Cases  Values
+--------+---------------------------------------------------------------------
+      ID|   .694041D+1     10148017   .692225D+1   .696750D+1     7055       1
+       Y|      .500085      .500043          0.0          1.0     5865    1191
+CHOICESE|          2.0          0.0          2.0          2.0     7055       1
+    ALTI|     1.499929      .500035          1.0          2.0     7055       1
+    TASK|     4.499504     2.291234          1.0          8.0     7055       1
+ WETLAND|      .250035      .433064          0.0          1.0     7055       1
+ PAYMENT|     164.0858     233.2041          0.0        650.0     7055       1
+COVERCRO|      .250035      .433064          0.0          1.0     7055       1
+   NUMGT|      .250035      .433064          0.0          1.0     7055       1
+  INCFAR|     4.002817     1.548418          1.0          7.0     5680    1376
+   AREAF|     2.244889      .884576          1.0          5.0     6799     257
+DEMPREZ1|      .052519      .223087          0.0          1.0     7007      49
+DEM_2018|      .570858      .494989          0.0          1.0     7007      49
+UNEMPLOY|     3.858427      .649825          2.7          6.1     7007      49
+COSTLIVE|      47156.2     5193.209      41053.0      65315.0     7007      49
+  HRWAGE|     15.11439     1.664505        13.16        20.93     7007      49
+ TAXCOST|     483.6678     116.7314        336.0        885.0     7007      49
+CASHRENT|     195.9267     37.15246         32.0        237.0     6943     113
+ CRP2018|     192.9058     34.92709         32.0        250.0     6943     113
+LANDVALU|      6554.67     2235.395       1986.0      18090.0     7007      49
+IMPSTREA|     141.2426     109.2527          0.0        344.4     7007      49
+IMPLAKES|     2769.288     3698.315          0.0      21030.0     7007      49
+ IMPWETL|     8.052291     21.57575          0.0        83.99     7007      49
+IMPTOTAL|     18.69844     11.74932          0.0         46.0     7007      49
+CHILDCAR|     254.2098     127.3865        184.0        741.0     7007      49
+FOODCOST|     760.3999     11.19783        741.0        787.0     7007      49
+ HEALTHC|     422.0418      17.9586        417.0        486.0     7007      49
+HOUSECOS|     752.1005     115.2529        698.0       1113.0     7007      49
+OTHERCOS|     442.1991     33.57283        421.0        555.0     7007      49
+  CONVCS|      .607419       .48836          0.0          1.0     6847     209
+    CORN|      .740616      .438328          0.0          1.0     6847     209
+INCOME_1|      .140609      .347643          0.0          1.0     7055       1
+INCOME_6|      .190503      .392726          0.0          1.0     7055       1
+INCOME_4|      .027215       .16272          0.0          1.0     7055       1
+INCOME_3|      .165556      .371708          0.0          1.0     7055       1
+INCOME_2|      .120198      .325216          0.0          1.0     7055       1
+INCOME_N|      .194897       .39615          0.0          1.0     7055       1
+INCOME_5|      .124734      .330441          0.0          1.0     7055       1
+INCOME_7|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_1|      .156485       .36334          0.0          1.0     7055       1
+ AREAF_2|      .145004      .352129          0.0          1.0     7055       1
+ AREAF_4|       .56017      .496402          0.0          1.0     7055       1
+ AREAF_3|      .081644      .273841          0.0          1.0     7055       1
+AREAF_NA|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_5|      .020411      .141412          0.0          1.0     7055       1
+ NEGWETL|     -.250035      .433064         -1.0          0.0     7055       1
+LAKE1000|     2.769288     3.698315          0.0        21.03     7007      49
+ AGV1000|      6.55467     2.235395        1.986        18.09     7007      49
+      TI|No valid observations found for this variable.
+--------+---------------------------------------------------------------------
+
+Descriptive Statistics for  49 variables
+DSTAT results are matrix LASTDSTA in current project.
+|-> CALC ; Ran(123) $
+|-> CREATE ; negWetl = -1*Wetland
+    	 ; lake1000 = implakes/1000
+    	 ; agv1000 = landvalu/1000 $
+|-> SETPANEL ; Group = ID $
+Error    512: STR/SET variable has missing values. Cannot continue.
+|-> CREATE ; negWetl = -1*Wetland
+    	 ; lake1000 = implakes/1000
+    	 ; agv1000 = landvalu/1000 $
+|-> SETPANEL ; Group = ID $
+Error    512: STR/SET variable has missing values. Cannot continue.
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1 $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000, income_7
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 100
+    ;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+    income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+    areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+    ;full
+    ;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+    incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+    U(Current) = 0
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  212 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1764860D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1764.85971
+Estimation based on N =   2628, K =  18
+Inf.Cr.AIC  =   3565.7 AIC/N =    1.357
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1814.4237  .0273 .0202
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[17]          =     99.12798
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|     .46349***      .11358     4.08  .0000      .24088    .68609
+     PAY|     .00144***      .00025     5.70  .0000      .00095    .00194
+COVERCRO|     .04596         .07974      .58  .5643     -.11032    .20225
+      NM|    -.06508         .08622     -.75  .4504     -.23406    .10390
+     ASC|   -1.55504***      .48470    -3.21  .0013    -2.50503   -.60505
+  DEMS18|     .44905***      .08626     5.21  .0000      .27998    .61812
+ COSTTAX|    -.00067*        .00038    -1.74  .0823     -.00142    .00009
+INCFARM1|     .18838         .20498      .92  .3581     -.21338    .59014
+INCFARM2|     .32926         .22271     1.48  .1393     -.10724    .76576
+INCFARM3|     .21771         .20661     1.05  .2920     -.18724    .62265
+INCFARM4|     .99597***      .32106     3.10  .0019      .36670   1.62525
+INCFARM5|     .26631         .21039     1.27  .2056     -.14604    .67866
+INCFARM6|     .29476         .20869     1.41  .1578     -.11427    .70379
+ FARMSI1|    1.05601***      .29263     3.61  .0003      .48245   1.62956
+ FARMSI2|    1.21801***      .28671     4.25  .0000      .65607   1.77996
+ FARMSI3|    1.06594***      .30624     3.48  .0005      .46573   1.66615
+ FARMSI4|    1.09363***      .27568     3.97  .0001      .55330   1.63396
+     CRP|     .00099         .00122      .81  .4185     -.00140    .00338
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:36:09 AM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  28 iterations. Status=0, F=    .1491430D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1491.43017
+Restricted log likelihood   -1821.59079
+Chi squared [ 19](P= .000)    660.32125
+Significance level               .00000
+McFadden Pseudo R-squared      .1812485
+Estimation based on N =   2628, K =  19
+Inf.Cr.AIC  =   3020.9 AIC/N =    1.149
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1821.5908  .1812 .1753
+Constants only  -1814.4237  .1780 .1720
+At start values -1639.0680  .0901 .0834
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  212 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    1.74629***      .17477     9.99  .0000     1.40375   2.08884
+     PAY|     .00808***      .00070    11.63  .0000      .00672    .00945
+COVERCRO|    -.36704***      .12538    -2.93  .0034     -.61278   -.12130
+      NM|    -.42495***      .10867    -3.91  .0001     -.63793   -.21197
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.83212***      .76096    -3.72  .0002    -4.32357  -1.34067
+  DEMS18|     .76407***      .10622     7.19  .0000      .55589    .97225
+ COSTTAX|    -.00105**       .00045    -2.33  .0198     -.00193   -.00017
+INCFARM1|     .98919***      .28795     3.44  .0006      .42481   1.55356
+INCFARM2|     .72197**       .31352     2.30  .0213      .10748   1.33646
+INCFARM3|     .60407**       .29210     2.07  .0386      .03157   1.17657
+INCFARM4|    2.00168***      .44611     4.49  .0000     1.12732   2.87604
+INCFARM5|     .66609**       .29838     2.23  .0256      .08128   1.25090
+INCFARM6|     .77529***      .29283     2.65  .0081      .20137   1.34922
+ FARMSI1|    1.89428***      .52091     3.64  .0003      .87331   2.91526
+ FARMSI2|    2.50108***      .51231     4.88  .0000     1.49697   3.50519
+ FARMSI3|    1.93274***      .52910     3.65  .0003      .89573   2.96975
+ FARMSI4|    2.30999***      .50300     4.59  .0000     1.32412   3.29586
+     CRP|    -.00217*        .00131    -1.65  .0984     -.00474    .00040
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|        0.0    .....(Fixed Parameter).....
+WETL:INC|        0.0    .....(Fixed Parameter).....
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+ PAY:INC|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .06278***      .02208     2.84  .0045      .01949    .10606
+COVE:INC|        0.0    .....(Fixed Parameter).....
+  NM:LAK|        0.0    .....(Fixed Parameter).....
+  NM:INC|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   QsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Jan 10, 2019 at 10:38:04 AM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1             2
+--------+----------------------------
+       1|       .000000       .000000
+       2|       .000000       .000000
+       3|      .0627776       .000000
+       4|       .000000       .000000
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
++---------------------------------------------------+
+| Derivative             averaged over observations.|
+| Effects on probabilities of all choices in model: |
+| * = Direct Derivative effect of the attribute.    |
++---------------------------------------------------+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .17078***      .00146   117.11  .0000      .16792    .17363
+ CURRENT|    -.17078***      .00146  -117.11  .0000     -.17363   -.16792
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .17078           .00146           .008409       .36709
+ CURRENT|    -.17078           .00146          -.367088      -.00841
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07910***      .00158   -50.09  .0000     -.08219   -.07600
+ CURRENT|     .07910***      .00158    50.09  .0000      .07600    .08219
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07910           .00158          -.237373       .00000
+ CURRENT|     .07910           .00158           .000000       .23737
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.01499***      .00056   -26.99  .0000     -.01608   -.01390
+ CURRENT|     .01499***      .00056    26.99  .0000      .01390    .01608
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.01499           .00056          -.084843       .12354
+ CURRENT|     .01499           .00056          -.123541       .08484
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.02718***      .00058   -46.78  .0000     -.02832   -.02605
+ CURRENT|     .02718***      .00058    46.78  .0000      .02605    .02832
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.02718           .00058          -.099279       .00000
+ CURRENT|     .02718           .00058           .000000       .09928
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06721***      .00126    53.45  .0000      .06475    .06968
+ CURRENT|    -.06721***      .00126   -53.45  .0000     -.06968   -.06475
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt DEM_2018 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .06721           .00126           .000000       .18483
+ CURRENT|    -.06721           .00126          -.184831       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07511***      .00062  -120.69  .0000     -.07633   -.07389
+ CURRENT|     .07511***      .00062   120.69  .0000      .07389    .07633
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.07511           .00062          -.217729      -.01539
+ CURRENT|     .07511           .00062           .015385       .21773
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.06207***      .00048  -128.97  .0000     -.06301   -.06113
+ CURRENT|     .06207***      .00048   128.97  .0000      .06113    .06301
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt CRP2018  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|    -.06207           .00048          -.124712      -.00611
+ CURRENT|     .06207           .00048           .006106       .12471
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02628***      .00118    22.32  .0000      .02397    .02859
+ CURRENT|    -.02628***      .00118   -22.32  .0000     -.02859   -.02397
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02628           .00118           .000000       .23718
+ CURRENT|    -.02628           .00118          -.237178       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01525***      .00078    19.47  .0000      .01371    .01678
+ CURRENT|    -.01525***      .00078   -19.47  .0000     -.01678   -.01371
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01525           .00078           .000000       .17374
+ CURRENT|    -.01525           .00078          -.173736       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01875***      .00077    24.46  .0000      .01724    .02025
+ CURRENT|    -.01875***      .00077   -24.46  .0000     -.02025   -.01724
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01875           .00077           .000000       .14567
+ CURRENT|    -.01875           .00077          -.145666       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00732***      .00087     8.42  .0000      .00561    .00902
+ CURRENT|    -.00732***      .00087    -8.42  .0000     -.00902   -.00561
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .00732           .00087           .000000       .47453
+ CURRENT|    -.00732           .00087          -.474531       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01603***      .00077    20.90  .0000      .01452    .01753
+ CURRENT|    -.01603***      .00077   -20.90  .0000     -.01753   -.01452
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .01603           .00077           .000000       .16113
+ CURRENT|    -.01603           .00077          -.161129       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02739***      .00104    26.33  .0000      .02535    .02943
+ CURRENT|    -.02739***      .00104   -26.33  .0000     -.02943   -.02535
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02739           .00104           .000000       .18649
+ CURRENT|    -.02739           .00104          -.186492       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04263***      .00208    20.45  .0000      .03854    .04671
+ CURRENT|    -.04263***      .00208   -20.45  .0000     -.04671   -.03854
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .04263           .00208           .000000       .45818
+ CURRENT|    -.04263           .00208          -.458179       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .05925***      .00286    20.73  .0000      .05365    .06485
+ CURRENT|    -.05925***      .00286   -20.73  .0000     -.06485   -.05365
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:06 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .05925           .00286           .000000       .60187
+ CURRENT|    -.05925           .00286          -.601867       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02591***      .00170    15.21  .0000      .02257    .02925
+ CURRENT|    -.02591***      .00170   -15.21  .0000     -.02925   -.02257
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:07 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .02591           .00170           .000000       .46606
+ CURRENT|    -.02591           .00170          -.466064       .00000
+--------+--------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+  Choice|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ VOLCONS|     .19971***      .00380    52.59  .0000      .19227    .20715
+ CURRENT|    -.19971***      .00380   -52.59  .0000     -.20715   -.19227
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Jan 10, 2019 at 10:38:07 AM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS
+--------+--------------------------------------------------------------------
+        |    Average       Sample Standard      Sample       Sample
+  Choice|  Elasticity         Deviation         Minimum      Maximum
+--------+--------------------------------------------------------------------
+ VOLCONS|     .19971           .00380           .000000       .55879
+ CURRENT|    -.19971           .00380          -.558792       .00000
+--------+--------------------------------------------------------------------
+
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+PAYMENT | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1708   -.1708
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+WETLAND | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0791    .0791
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+COVERCRO| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0150    .0150
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+NUMGT   | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0272    .0272
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+DEM_2018| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0672   -.0672
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+TAXCOST | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0751    .0751
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+CRP2018 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|  -.0621    .0621
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_1| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0263   -.0263
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_2| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0152   -.0152
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_3| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0187   -.0187
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_4| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0073   -.0073
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_5| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0160   -.0160
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+INCOME_6| VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0274   -.0274
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_1 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0426   -.0426
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_2 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0592   -.0592
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_3 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .0259   -.0259
+
+
+Derivative wrt change of X in row choice on Prob[column choice]
+--------+-----------------
+AREAF_4 | VOLCONS  CURRENT
+--------+-----------------
+ VOLCONS|   .1997   -.1997
+

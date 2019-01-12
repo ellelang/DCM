@@ -8,9 +8,17 @@ dataset <- read.csv (file = "wta_observables11192018.csv",header = TRUE)
 dim(dataset)
 n <- dim(dataset)[1]
 colnames(dataset)
-betas <- read.table("beta.dat", sep = "\t", header = TRUE)
+betas <- read.table("beta.dat", sep = ",", header = TRUE)
 varcov <- read.table("varcov.dat", sep = "\t", header = FALSE)
+L <- t(chol(varcov))
+L
+sd <- read.table("sd.dat", sep = ",", header = TRUE)
 betas
+sd
+set.seed(123)
+normals <- rnorm(10000, 0, 1)
+beta_price <- exp(sd[2,2] + betas[2,2] * normals)
+beta_price
 
 b_wetland <- -1.7157
 rd <- rexp(10000000,rate = 1/-1.7157)

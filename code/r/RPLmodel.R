@@ -5,12 +5,12 @@ library(gmnl)
 library(tidyverse)
 library(fastDummies)
 setwd("C:/Users/langzx/Desktop/github/DCM/data")
-dataset <- read.csv (file = "wta_observables12032018.csv",header = TRUE)
+dataset <- read.csv (file = "wholeCEscio_dataset_envinfo_1119.csv",header = TRUE)
 dim(dataset)
 colnames(dataset)
 
 
-dataset1 <- mlogit.data(dataset, varying = 6:43, shape = "long",
+dataset1 <- mlogit.data(dataset, varying = 6:161, shape = "long",
                         choice = "Y", alt.levels = c("V", "C"), id.var = "id")
 
 #simple MNL to serve as a check
