@@ -32,7 +32,7 @@ dat_m
 dat_m %*% betas$Betas
 
 new_beta <- t(L)%*% betas$Betas + betas$Betas
-new_beta[3,]
+new_beta_price <- new_beta[2,]
 
 normals <- rnorm(10, 0, 1)
 new_beta2 <- c(0,0,0,0,new_beta[5:19])
@@ -40,10 +40,12 @@ new_beta2 <- c(0,0,0,0,new_beta[5:19])
 #new_beta2_wld
 wta_wetland <- -((exp (new_beta[1,] + sd$sd[1] * normals)) + dat_m %*% new_beta2)/ new_beta_price
 wta_wetland
-!is.na(wta_wetland)
+mean(na.omit(wta_wetland))
 plot(density(na.omit(wta_wetland)))
 
-wta_nm <- -((exp (new_beta[4,] + sd$sd[4] * normals)) + dat_m %*% new_beta2_wld)/ new_beta_price
+wta_nm <- -((exp (new_beta[4,] + sd$sd[4] * normals)) + dat_m %*% new_beta2)/ new_beta_price
+mean(na.omit(wta_nm))
+
 plot(density(na.omit(wta_nm)))
 #wta_nm <- mean(- dat_m %*% new_beta2_nm/ new_beta_price,na.rm=TRUE)
 wta_nm
