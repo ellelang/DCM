@@ -8,7 +8,7 @@ dataset <- read.csv (file = "wta_observables11192018.csv",header = TRUE)
 dim(dataset)
 n <- dim(dataset)[1]
 dataset$asc <- rep(1,n )
-
+dataset$lake1000 <- dataset$implakes/1000
 colnames(dataset)
 betas <- read.table("beta.dat", sep = ",", header = TRUE)
 varcov <- read.table("varcov.dat", sep = "\t", header = FALSE)
@@ -23,16 +23,61 @@ sd
 dat0 <- select (dataset, Wetland, Payment, Covercrop, NuMgt, asc, 
                 dem_2018,taxcost, 
                 income_1, income_2, income_3, income_4, income_5, income_6,
-                areaf_1, areaf_2, areaf_3, areaf_4, crp2018, implakes )
+                areaf_1, areaf_2, areaf_3, areaf_4, crp2018, lake1000)
 
-dat1 <- sample_n(dat0, 1000)
+# coeff 
+## Payment 
+pay_rp <- betas$Betas[betas$Names=="pay"]
+
+## wetland 
+wld_rp <- betas$Betas[betas$Names=="wetland"]
+
+## cc
+cc_rp <- betas$Betas[betas$Names=="cc"]
+lake_rp <- betas$Betas[betas$Names=="cclake"]
+
+## wetland 
+nm_rp <- betas$Betas[betas$Names=="nm"]
+
+
+## fixed parameters
+beta2<- c(0,0,0,0,betas$Betas[5:18],0)
+
+
+## individual samples
+dat1 <- sample_n(dat0, 1)
 dat1
-dat_m <- as.matrix(x = dat1, nrow = 1000, ncol = 19)  
+dat_m <- as.matrix(x = dat1, nrow = 1, ncol = 19)  
 dat_m
 dat_m %*% betas$Betas
 
-new_beta <- t(L)%*% betas$Betas + betas$Betas
-new_beta[3,]
+dat_m %*% beta2
+dat_m
+############WTA estimate
+n_draws <- 10000
+wta_wld <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_wld, na.rm = TRUE)
+plot(density(wtp_wld))
+wta_wld
+
+
+wta_nm <- -(nm_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_nm, na.rm = TRUE)
+plot(density(wta_nm))
+wta_nm
+
+lake_rp
+lake_rp * dat_m[,19]
+wta_cc <- -((cc_rp + lake_rp * dat_m[,19] )* rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_cc, na.rm = TRUE)
+plot(density(wta_cc))
+wta_cc
+
+
+###########
+
+#new_beta <- t(L)%*% betas$Betas + betas$Betas
+#new_beta[3,]
 
 normals <- rnorm(10, 0, 1)
 new_beta2 <- c(0,0,0,0,new_beta[5:19])
