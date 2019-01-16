@@ -1,7 +1,8 @@
 rm(list = ls())
 library(tidyverse)
 library(mvtnorm)
-setwd("C:/Users/langzx/Desktop/github/DCM/data")
+#setwd("C:/Users/langzx/Desktop/github/DCM/data")
+setwd("//udrive.uw.edu/udrive/MRB surveys/Results")
 dataset <- read.csv (file = "wta_observables11192018.csv",header = TRUE)
 dim(dataset)
 n <- dim(dataset)[1]
@@ -16,7 +17,7 @@ varcov_m
 betas$Names
 betas$Betas
 
-newbetas<- betas
+newbetas <- betas
 newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
 
 # coeff 
@@ -54,8 +55,8 @@ dat_m
 n_draws <- 10000
 wta_wld <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
 mean(wta_wld, na.rm = TRUE)
-plot(density(wtp_wld))
-wta_wld
+plot(density(wta_wld))
+
 
 ################## FOR WHOLE SAMPLE
 R <- 1000
@@ -83,15 +84,47 @@ for (i in 1:s){
     index_i <- index(i)
     dat_s <- dat0[i,]
     dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
-    wta_s <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+    wta_s <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
     wta_vec[r] <- mean(wta_s)
   }
   WLD_WTA_ALL[i,1] <- mean(wta_vec)
   WLD_WTA_ALL[i,2] <- quantile(wta_vec, 0.025)
   WLD_WTA_ALL[i,3] <- quantile(wta_vec, 0.975)
 }
-WLD_WTA_ALL
+summary(WLD_WTA_ALL)
 plot(density(WLD_WTA_ALL[,1]))
+
+# check how that compares to estimates which vary BY RESPONDENTS ONLY
+##########wld wta
+WLD_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
+colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
+
+for (i in 1:s){
+  wta_vec <- c()
+  for (r in 1 : 1){
+    newbetas<- betas
+    #newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
+    pay_rp <- newbetas$Betas[newbetas$Names=="pay"]
+    wld_rp <- newbetas$Betas[newbetas$Names=="wetland"]
+    ## fixed parameters
+    new_beta2<- c(0,0,0,0,newbetas$Betas[5:18],0)
+    dat_s <- dat0[i,]
+    dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
+    wta_s <- -(wld_rp + as.vector(dat_s_m %*% new_beta2)) / pay_rp 
+    wta_vec[r] <- mean(wta_s)
+  }
+  WLD_WTA_ALL[i,1] <- mean(wta_vec)
+  WLD_WTA_ALL[i,2] <- quantile(wta_vec, 0.025)
+  WLD_WTA_ALL[i,3] <- quantile(wta_vec, 0.975)
+}
+summary(WLD_WTA_ALL)
+plot(density(WLD_WTA_ALL[,1]))
+
+
+
+
+
+
 #sample average value 
 WLD_mean <- mean(WLD_WTA_ALL[,1])
 WLD_CIL <- mean(WLD_WTA_ALL[,2])
@@ -117,7 +150,7 @@ for (i in 1:s){
     index_i <- index(i)
     dat_s <- dat0[i,]
     dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
-    wta_s <- -(cc_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+    wta_s <- -(cc_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
     wta_vec[r] <- mean(wta_s)
   }
   CC_WTA_ALL[i,1] <- mean(wta_vec)
@@ -151,7 +184,7 @@ for (i in 1:s){
     index_i <- index(i)
     dat_s <- dat0[i,]
     dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
-    wta_s <- -(nm_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+    wta_s <- -(nm_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
     wta_vec[r] <- mean(wta_s)
   }
   NM_WTA_ALL[i,1] <- mean(wta_vec)
