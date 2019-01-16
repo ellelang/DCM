@@ -1,9 +1,11 @@
 rm(list = ls())
+set.seed(12345)
 library(mlogit)
 library(gmnl)
 library(tidyverse)
 library(fastDummies)
-setwd("C:/Users/langzx/Desktop/github/DCM/data")
+#setwd("C:/Users/langzx/Desktop/github/DCM/data")
+setwd("//udrive.uw.edu/udrive/MRB surveys/Results")
 dataset <- read.csv (file = "wta_observables11192018.csv",header = TRUE)
 dim(dataset)
 n <- dim(dataset)[1]
@@ -55,16 +57,45 @@ dat_m
 
 ############INDIVIDUAL WTA estimate EXAMPLE
 n_draws <- 10000
+
+# WTA for any program
+wta_anything <- -(as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_anything, na.rm = TRUE)
+plot(density(wta_anything))
+summary(wta_anything)
+
+# marginal WTA for wetland
+wta_mwetland <- -(wld_rp * rexp(rate = 1, n = n_draws) ) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_mwetland, na.rm = TRUE)
+plot(density(wta_mwetland))
+summary(wta_mwetland)
+
+# marginal WTA for NM
+wta_mnm <- -(nm_rp * rexp(rate = 1, n = n_draws) ) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_mnm, na.rm = TRUE)
+plot(density(wta_mnm))
+summary(wta_mnm)
+
+# marginal WTA for cover crops
+lake_rp
+lake_rp * dat_m[,19]
+wta_cc <- -((cc_rp + lake_rp * dat_m[,19] )* rexp(rate = 1, n = n_draws) ) / pay_rp * rexp(rate = 1, n = n_draws)
+mean(wta_cc, na.rm = TRUE)
+plot(density(wta_cc))
+summary(wta_cc)
+
+# WTAs with 'fixed costs' added
+
 wta_wld <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
 mean(wta_wld, na.rm = TRUE)
-plot(density(wtp_wld))
-wta_wld
+plot(density(wta_wld))
+summary(wta_wld)
 
 
 wta_nm <- -(nm_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
 mean(wta_nm, na.rm = TRUE)
 plot(density(wta_nm))
-wta_nm
+summary(wta_nm)
 
 lake_rp
 lake_rp * dat_m[,19]
@@ -77,14 +108,40 @@ wta_cc
 ########### FOR WHOLE SAMPLE
 n <- dim(dataset)[1]
 t <- 8
-s< - 441
+s <- 441
 index <- seq(1, n, by=16) 
 length(index)
 n_draws <- 10000
 
+#### 'fixed cost of any program' WTA
+ANY_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
+colnames(ANY_WTA_ALL) <- c("MEAN", "CI_L","CI_U") # note these aren't confidence intervals but percentiles of taste heterogeneity
+
+for (i in 1:s){
+  index_i <- index(i)
+  dat_s <- dat0[i,]
+  dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
+  wta_s <- -(as.vector(dat_s_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
+  ANY_WTA_ALL[i,1] <- mean(wta_s)
+  ANY_WTA_ALL[i,2] <- quantile(wta_s, 0.05) 
+  ANY_WTA_ALL[i,3] <- quantile(wta_s, 0.95)
+}
+summary(ANY_WTA_ALL)
+
+plot(density (wta_s),xlim = c(-1000,1000))
+
+#sample average value 
+WLD_mean <- mean(WLD_WTA_ALL[,1])
+WLD_CIL <- mean(WLD_WTA_ALL[,2])
+WLD_CIU <- mean(WLD_WTA_ALL[,3])
+WLD_mean
+WLD_CIL
+WLD_CIU
+
+
 ##########wld wta
 WLD_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
-colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
+colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U") # note these aren't confidence intervals but percentiles of taste heterogeneity
 
 for (i in 1:s){
   index_i <- index(i)
@@ -92,11 +149,12 @@ for (i in 1:s){
   dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 19)  
   wta_s <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
   WLD_WTA_ALL[i,1] <- mean(wta_s)
-  WLD_WTA_ALL[i,2] <- quantile(wta_s, 0.25)
+  WLD_WTA_ALL[i,2] <- quantile(wta_s, 0.25) # note these are 1st and 3rd quantiles
   WLD_WTA_ALL[i,3] <- quantile(wta_s, 0.75)
 }
-WLD_WTA_ALL
+summary(WLD_WTA_ALL)
 
+plot(density (wta_s),xlim = c(-1000,1000))
 
 #sample average value 
 WLD_mean <- mean(WLD_WTA_ALL[,1])
@@ -118,8 +176,9 @@ for (i in 1:s){
   CC_WTA_ALL[i,2] <- quantile(wta_s, 0.25)
   CC_WTA_ALL[i,3] <- quantile(wta_s, 0.75)
 }
-CC_WTA_ALL
+summary(CC_WTA_ALL)
 
+plot(density (wta_s),xlim = c(-1000,1000))
 
 #sample average value 
 CC_mean <- mean(CC_WTA_ALL[,1])
@@ -142,8 +201,9 @@ for (i in 1:s){
   NM_WTA_ALL[i,2] <- quantile(wta_s, 0.25)
   NM_WTA_ALL[i,3] <- quantile(wta_s, 0.75)
 }
-NM_WTA_ALL
+summary(NM_WTA_ALL)
 
+plot(density (wta_s),xlim = c(-1000,1000))
 
 #sample average value 
 NM_mean <- mean(NM_WTA_ALL[,1])
