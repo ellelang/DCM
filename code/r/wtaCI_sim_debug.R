@@ -62,6 +62,8 @@ for (r1 in 1 : 10){
   draws[r1, ] <- drawbetas$Betas
 }
 
+draws
+
 draws[1,"pay"]
 newbetas <- draws[1,]
 newbetas["pay"]
@@ -86,10 +88,7 @@ n_draws <- 10000
 wta_vec <- vector (length = 10)
 wta_vec
 ##########wld wta
-draws <- matrix (NA,nrow = R, ncol = 19)
-colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
-                   'inc1','inc2','inc3','inc4','inc5','inc6',
-                   'farm1','farm2','farm3','farm4','crp','cclake')
+
 
 
 WLD_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
@@ -97,8 +96,11 @@ colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 
 for (i in 1:s){
   wta_vec <- vector (length = R)
-  
-  for (r1 in 1 : 10){
+  draws <- matrix (NA,nrow = R, ncol = 19)
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+                     'inc1','inc2','inc3','inc4','inc5','inc6',
+                     'farm1','farm2','farm3','farm4','crp','cclake')
+  for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
     draws[r1, ] <- drawbetas$Betas
@@ -131,18 +133,18 @@ WLD_CIL
 WLD_CIU
 
 ##########cc wta
-draws <- matrix (NA,nrow = R, ncol = 19)
-colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
-                   'inc1','inc2','inc3','inc4','inc5','inc6',
-                   'farm1','farm2','farm3','farm4','crp','cclake')
+
 
 CC_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
 colnames(CC_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 
 for (i in 1:s){
   wta_vec <- vector(length = R)
-  
-  for (r1 in 1 : 10){
+  draws <- matrix (NA,nrow = R, ncol = 19)
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+                     'inc1','inc2','inc3','inc4','inc5','inc6',
+                     'farm1','farm2','farm3','farm4','crp','cclake')
+  for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
     draws[r1, ] <- drawbetas$Betas
@@ -177,18 +179,18 @@ CC_CIL
 CC_CIU
 
 ##########nm wta
-draws <- matrix (NA,nrow = R, ncol = 19)
-colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
-                   'inc1','inc2','inc3','inc4','inc5','inc6',
-                   'farm1','farm2','farm3','farm4','crp','cclake')
 
 NM_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
 colnames(NM_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 
 for (i in 1:s){
   wta_vec <- vector(length = R)
+  draws <- matrix (NA,nrow = R, ncol = 19)
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+                     'inc1','inc2','inc3','inc4','inc5','inc6',
+                     'farm1','farm2','farm3','farm4','crp','cclake')
   
-  for (r1 in 1 : 10){
+  for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
     draws[r1, ] <- drawbetas$Betas
