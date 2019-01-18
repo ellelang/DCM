@@ -110,7 +110,7 @@ for (i in 1:s){
     newbetas <- draws[r,]
     pay_rp <- newbetas["pay"]
     wld_rp <- newbetas["wetland"]
-    ## fixed parameters
+    ## individual-specific parameters
     new_beta2<- c(0,0,0,0,newbetas[5:18],0)
     index_i <- index [i]
     dat_s <- dat0[i,]
@@ -155,7 +155,7 @@ for (i in 1:s){
     pay_rp <- newbetas["pay"]
     cc_rp <- newbetas["cc"]
     lake_rp <- newbetas["cclake"]
-    ## fixed parameters
+    ## individual-specific parameters
     new_beta2<- c(0,0,0,0,newbetas[5:18],0)
     index_i <- index[i]
     dat_s <- dat0[i,]
@@ -200,7 +200,7 @@ for (i in 1:s){
     newbetas <- draws[r,]
     pay_rp <- newbetas["pay"]
     nm_rp <- newbetas["nm"]
-    ## fixed parameters
+    ## individual-specific parameters
     new_beta2<- c(0,0,0,0,newbetas[5:18],0)
     
     newbetas<- betas
