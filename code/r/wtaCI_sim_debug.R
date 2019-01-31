@@ -230,7 +230,7 @@ NM_mean
 NM_CIL
 NM_CIU
 setwd("C:/Users/langzx/Desktop/github/DCM/output")
-write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0116.csv", row.names = FALSE)
-write.csv (x = CC_WTA_ALL, file = "CC_wta_0116.csv", row.names = FALSE)
-write.csv (x = NM_WTA_ALL, file = "NM_wta_0116.csv", row.names = FALSE)
+write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0129.csv", row.names = FALSE)
+write.csv (x = CC_WTA_ALL, file = "CC_wta_0129.csv", row.names = FALSE)
+write.csv (x = NM_WTA_ALL, file = "NM_wta_0129.csv", row.names = FALSE)
 write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0129.csv", row.names = FALSE)
