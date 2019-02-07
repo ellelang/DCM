@@ -1,11 +1,11 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7056; Nvar=45; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018.csv"; Nobs=7056; Nvar=47; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
-	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5
+	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean
 $
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix_normalfixed0130.csv"$
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix_normalfixed0206.csv"$
 
 
 dstat; rhs=* $
@@ -50,17 +50,17 @@ nlogit
 ;full
 ?; Pts = 200
 ?;corr
-?;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+ ;fcn=  wetland[q],pay(c|#00), covercro(q|#10), nm[q]
 ?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
-;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
+?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
 
 ;Halton
 ;Model:
 
-U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflmean + costTax*taxcost +
              incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ crp*crp2018		/
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
 U(Current) = 0
 ;Export output
 ?;Export = table
