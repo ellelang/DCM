@@ -32,11 +32,12 @@ for i in conservation:
                  kde_kws = {'linewidth': 3},
                  label = i)
     
-plt.legend(prop={'size': 16}, title = 'Conservation actions')
+plt.legend(loc= 1, fontsize = 5, title = 'Conservation actions')
 plt.title('Willingess to Accept of key conservation actions')
 plt.xlabel('WTA')
 plt.ylabel('Density')
-
+plt.savefig("wta.png", dpi = 800)
+plt.show()
 
 def CIdata (data):
     CI_df = pd.DataFrame(columns = ['WTA', 'Low_CI', 'Upper_CI'])
