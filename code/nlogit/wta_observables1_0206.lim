@@ -50,7 +50,7 @@ nlogit
 ;full
 ?; Pts = 200
 ?;corr
- ;fcn=  wetland[q],pay(c|#00), covercro(q|#10), nm[q]
+ ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
 ?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
@@ -58,7 +58,7 @@ nlogit
 ;Halton
 ;Model:
 
-U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflmean + costTax*taxcost +
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
 		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
 U(Current) = 0
@@ -66,4 +66,6 @@ U(Current) = 0
 ?;Export = table
 ;Export = matrix 
 $
+
+
 

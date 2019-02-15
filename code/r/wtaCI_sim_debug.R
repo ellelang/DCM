@@ -9,8 +9,8 @@ n <- dim(dataset)[1]
 dataset$asc <- rep(1,n )
 dataset$lake1000 <- dataset$implakes/1000
 colnames(dataset)
-betas <- read.table("beta131.dat", sep = ",", header = TRUE)
-varcov <- read.table("varcov131.dat", sep = "\t", header = FALSE)
+betas <- read.table("beta0208.dat", sep = ",", header = TRUE)
+varcov <- read.table("varcov0208.dat", sep = "\t", header = FALSE)
 dim(varcov)
 varcov_m <- as.matrix(varcov, nrow = 18, ncol = 18)
 varcov_m 
@@ -18,7 +18,7 @@ betas$Names
 betas$Betas
 
 newbetas<- betas
-newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
+#newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
 
 # coeff 
 ## Payment 
@@ -36,12 +36,12 @@ nm_rp <- newbetas$Betas[newbetas$Names=="nm"]
 length(newbetas$Names)
 
 ## fixed parameters
-new_beta2<- c(0,0,0,0,newbetas$Betas[5:17],0)
+#new_beta2<- c(0,0,0,0,newbetas$Betas[5:17],0)
 
 
 
 dat0 <- select (dataset, Wetland, Payment, Covercrop, NuMgt, asc, 
-                dem_2018,taxcost, 
+                dfl08to18,taxcost, 
                 income_1, income_2, income_3, income_4, income_5, income_6,
                 areaf_1, areaf_2, areaf_3, areaf_4, lake1000)
 
@@ -53,7 +53,7 @@ dat_m
 
 ############INDIVIDUAL WTA estimate EXAMPLE
 draws <- matrix (NA,nrow = 10, ncol = 18)
-colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                    'inc1','inc2','inc3','inc4','inc5','inc6',
                    'farm1','farm2','farm3','farm4','cclake')
 for (r1 in 1 : 10){
@@ -76,8 +76,8 @@ plot(density(wtp_wld))
 wta_wld
 
 ################## FOR WHOLE SAMPLE
-set.seed(123456)
-R <- 1000
+#set.seed(123456)
+R <- 10000
 n <- dim(dataset)[1]
 t <- 8
 s<- 441
@@ -97,9 +97,10 @@ colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 for (i in 1:s){
   wta_vec <- vector (length = R)
   draws <- matrix (NA,nrow = R, ncol = 18)
-  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                      'inc1','inc2','inc3','inc4','inc5','inc6',
                      'farm1','farm2','farm3','farm4','cclake')
+  set.seed(4008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -141,9 +142,10 @@ colnames(CC_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 for (i in 1:s){
   wta_vec <- vector(length = R)
   draws <- matrix (NA,nrow = R, ncol = 18)
-  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                      'inc1','inc2','inc3','inc4','inc5','inc6',
                      'farm1','farm2','farm3','farm4','cclake')
+  set.seed(5008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -160,7 +162,7 @@ for (i in 1:s){
     index_i <- index[i]
     dat_s <- dat0[i,]
     dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 18)  
-    wta_s <- -((cc_rp)* rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2) + cc_rp*lake_rp * rexp(rate = 1, n = n_draws) ) / pay_rp
+    wta_s <- -((cc_rp + lake_rp )* rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / pay_rp
     wta_vec[r] <- mean(wta_s,na.rm = TRUE)
   }
   CC_WTA_ALL[i,1] <- mean(wta_vec,na.rm = TRUE)
@@ -186,10 +188,11 @@ colnames(NM_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
 for (i in 1:s){
   wta_vec <- vector(length = R)
   draws <- matrix (NA,nrow = R, ncol = 18)
-  colnames(draws)<-c('wetland','pay','cc','nm','asc','dems18','costtax',
+  colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                      'inc1','inc2','inc3','inc4','inc5','inc6',
                      'farm1','farm2','farm3','farm4','cclake')
   
+  set.seed(6008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -223,9 +226,9 @@ NM_mean
 NM_CIL
 NM_CIU
 setwd("C:/Users/langzx/Desktop/github/DCM/output")
-write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0131.csv", row.names = FALSE)
-write.csv (x = CC_WTA_ALL, file = "CC_wta_0131.csv", row.names = FALSE)
-write.csv (x = NM_WTA_ALL, file = "NM_wta_0131.csv", row.names = FALSE)
+write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0214.csv", row.names = FALSE)
+write.csv (x = CC_WTA_ALL, file = "CC_wta_0214.csv", row.names = FALSE)
+write.csv (x = NM_WTA_ALL, file = "NM_wta_0214.csv", row.names = FALSE)
 
 
 WLD_mean
