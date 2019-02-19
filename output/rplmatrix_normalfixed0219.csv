@@ -1,0 +1,1983 @@
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -.461782    ,   .113023    ,  -4.08573    ,   .439392E-04,  -.683304    ,  -.240261    
+PAY     ,   .141517E-02,   .251289E-03,   5.63163    ,   .178516E-07,   .922650E-03,   .190769E-02
+COVERCRO,   .395092E-01,   .793414E-01,   .497965    ,   .618509    ,  -.115997    ,   .195015    
+NM      ,  -.625763E-01,   .857782E-01,  -.729513    ,   .465688    ,  -.230698    ,   .105546    
+ASC     ,  -2.51223    ,   .506500    ,  -4.95998    ,   .705003E-06,  -3.50495    ,  -1.51951    
+DFL     ,   2.70727    ,   .719346    ,   3.76352    ,   .167538E-03,   1.29738    ,   4.11716    
+COSTTAX ,  -.481232E-03,   .370059E-03,  -1.30042    ,   .193457    ,  -.120653E-02,   .244070E-03
+INCFARM1,   .186176    ,   .204105    ,   .912154    ,   .361688    ,  -.213864    ,   .586215    
+INCFARM2,   .394897    ,   .221833    ,   1.78016    ,   .750503E-01,  -.398871E-01,   .829681    
+INCFARM3,   .273464    ,   .205416    ,   1.33127    ,   .183101    ,  -.129144    ,   .676072    
+INCFARM4,   .954973    ,   .316587    ,   3.01646    ,   .255741E-02,   .334474    ,   1.57547    
+INCFARM5,   .314517    ,   .209673    ,   1.50004    ,   .133604    ,  -.964338E-01,   .725468    
+INCFARM6,   .295595    ,   .207893    ,   1.42186    ,   .155067    ,  -.111868    ,   .703057    
+FARMSI1 ,   .962852    ,   .273555    ,   3.51978    ,   .431902E-03,   .426695    ,   1.49901    
+FARMSI2 ,   1.07946    ,   .267646    ,   4.03316    ,   .550315E-04,   .554883    ,   1.60404    
+FARMSI3 ,   .978129    ,   .288649    ,   3.38865    ,   .702378E-03,   .412388    ,   1.54387    
+FARMSI4 ,   .974221    ,   .256329    ,   3.80067    ,   .144305E-03,   .471826    ,   1.47662    
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -1.82210    ,   .198824    ,  -9.16437    ,   .000000    ,  -2.21179    ,  -1.43241    
+PAY     ,   .384366E-02,   .256138E-03,   15.0062    ,   .000000    ,   .334164E-02,   .434568E-02
+COVERCRO,  -.478192    ,   .121959    ,  -3.92091    ,   .882148E-04,  -.717228    ,  -.239156    
+NM      ,  -.776108    ,   .131616    ,  -5.89676    ,   .000000    ,  -1.03407    ,  -.518145    
+ASC     ,  -3.15819    ,   .429287    ,  -7.35682    ,   .000000    ,  -3.99957    ,  -2.31680    
+DFL     ,   4.36125    ,   .601697    ,   7.24826    ,   .000000    ,   3.18195    ,   5.54056    
+COSTTAX ,  -.809698E-03,   .311720E-03,  -2.59751    ,   .939015E-02,  -.142066E-02,  -.198737E-03
+INCFARM1,   .442712    ,   .168855    ,   2.62185    ,   .874529E-02,   .111763    ,   .773661    
+INCFARM2,   .454630    ,   .186587    ,   2.43656    ,   .148276E-01,   .889268E-01,   .820333    
+INCFARM3,   .416827    ,   .171501    ,   2.43047    ,   .150794E-01,   .806916E-01,   .752962    
+INCFARM4,   1.53412    ,   .330155    ,   4.64665    ,   .337363E-05,   .887024    ,   2.18121    
+INCFARM5,   .436941    ,   .176719    ,   2.47251    ,   .134167E-01,   .905772E-01,   .783305    
+INCFARM6,   .517589    ,   .171437    ,   3.01913    ,   .253505E-02,   .181579    ,   .853598    
+FARMSI1 ,   .997619    ,   .203365    ,   4.90556    ,   .931633E-06,   .599030    ,   1.39621    
+FARMSI2 ,   1.20563    ,   .195502    ,   6.16684    ,   .000000    ,   .822454    ,   1.58881    
+FARMSI3 ,   .999231    ,   .217698    ,   4.58998    ,   .443285E-05,   .572550    ,   1.42591    
+FARMSI4 ,   1.03923    ,   .183599    ,   5.66032    ,   .151093E-07,   .679380    ,   1.39907    
+WETL:LAK,  -.378467E-01,   .430366E-01,  -.879407    ,   .379181    ,  -.122197    ,   .465035E-01
+WETL:INC,   .000000    ,   .000000    ,   .100000E+11,   .379181    ,   .000000    ,   .000000    
+PAY :LAK,   .000000    ,   .000000    ,   .100000E+11,   .379181    ,   .000000    ,   .000000    
+PAY :INC,   .000000    ,   .000000    ,   .100000E+11,   .379181    ,   .000000    ,   .000000    
+COVE:LAK,   .867751E-01,   .256510E-01,   3.38291    ,   .717227E-03,   .365000E-01,   .137050    
+COVE:INC,   .000000    ,   .000000    ,   .100000E+11,   .717227E-03,   .000000    ,   .000000    
+NM  :LAK,  -.113936E-01,   .241321E-01,  -.472135    ,   .636831    ,  -.586916E-01,   .359044E-01
+NM  :INC,   .000000    ,   .000000    ,   .100000E+11,   .636831    ,   .000000    ,   .000000    
+QsWETLAN,   .000000    ,   .000000    ,   .100000E+11,   .636831    ,   .000000    ,   .000000    
+CsPAY   ,   .000000    ,   .000000    ,   .100000E+11,   .636831    ,   .000000    ,   .000000    
+QsCOVERC,   .000000    ,   .000000    ,   .100000E+11,   .636831    ,   .000000    ,   .000000    
+QsNM    ,   .000000    ,   .000000    ,   .100000E+11,   .636831    ,   .000000    ,   .000000    
+                                                                                
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .204634    ,   .258442E-02,   79.1800    ,   .000000    ,   .199569    ,   .209700    
+CURRENT ,  -.204634    ,   .258442E-02,  -79.1800    ,   .000000    ,  -.209700    ,  -.199569    
+                                                                                
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.113435    ,   .225956E-02,  -50.2024    ,   .000000    ,  -.117864    ,  -.109007    
+CURRENT ,   .113435    ,   .225956E-02,   50.2024    ,   .000000    ,   .109007    ,   .117864    
+                                                                                
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.244830E-01,   .859109E-03,  -28.4981    ,   .000000    ,  -.261668E-01,  -.227992E-01
+CURRENT ,   .244830E-01,   .859109E-03,   28.4981    ,   .000000    ,   .227992E-01,   .261668E-01
+                                                                                
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.658181E-01,   .131226E-02,  -50.1565    ,   .000000    ,  -.683900E-01,  -.632461E-01
+CURRENT ,   .658181E-01,   .131226E-02,   50.1565    ,   .000000    ,   .632461E-01,   .683900E-01
+                                                                                
+Average partial effect  on prob(alt) wrt DFLALL   in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .416287    ,   .173091E-02,   240.502    ,   .000000    ,   .412894    ,   .419679    
+CURRENT ,  -.416287    ,   .173091E-02,  -240.502    ,   .000000    ,  -.419679    ,  -.412894    
+                                                                                
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.713758E-01,   .426813E-03,  -167.229    ,   .000000    ,  -.722123E-01,  -.705392E-01
+CURRENT ,   .713758E-01,   .426813E-03,   167.229    ,   .000000    ,   .705392E-01,   .722123E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .145282E-01,   .619859E-03,   23.4379    ,   .000000    ,   .133133E-01,   .157431E-01
+CURRENT ,  -.145282E-01,   .619859E-03,  -23.4379    ,   .000000    ,  -.157431E-01,  -.133133E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .119926E-01,   .578597E-03,   20.7270    ,   .000000    ,   .108586E-01,   .131266E-01
+CURRENT ,  -.119926E-01,   .578597E-03,  -20.7270    ,   .000000    ,  -.131266E-01,  -.108586E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .158689E-01,   .618699E-03,   25.6489    ,   .000000    ,   .146563E-01,   .170816E-01
+CURRENT ,  -.158689E-01,   .618699E-03,  -25.6489    ,   .000000    ,  -.170816E-01,  -.146563E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .647658E-02,   .744513E-03,   8.69909    ,   .000000    ,   .501736E-02,   .793580E-02
+CURRENT ,  -.647658E-02,   .744513E-03,  -8.69909    ,   .000000    ,  -.793580E-02,  -.501736E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .127885E-01,   .587262E-03,   21.7764    ,   .000000    ,   .116374E-01,   .139395E-01
+CURRENT ,  -.127885E-01,   .587262E-03,  -21.7764    ,   .000000    ,  -.139395E-01,  -.116374E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .221318E-01,   .801527E-03,   27.6121    ,   .000000    ,   .205608E-01,   .237028E-01
+CURRENT ,  -.221318E-01,   .801527E-03,  -27.6121    ,   .000000    ,  -.237028E-01,  -.205608E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .275649E-01,   .129873E-02,   21.2245    ,   .000000    ,   .250195E-01,   .301104E-01
+CURRENT ,  -.275649E-01,   .129873E-02,  -21.2245    ,   .000000    ,  -.301104E-01,  -.250195E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .339273E-01,   .156479E-02,   21.6817    ,   .000000    ,   .308603E-01,   .369942E-01
+CURRENT ,  -.339273E-01,   .156479E-02,  -21.6817    ,   .000000    ,  -.369942E-01,  -.308603E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .165772E-01,   .104968E-02,   15.7927    ,   .000000    ,   .145199E-01,   .186346E-01
+CURRENT ,  -.165772E-01,   .104968E-02,  -15.7927    ,   .000000    ,  -.186346E-01,  -.145199E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .109195    ,   .192223E-02,   56.8065    ,   .000000    ,   .105428    ,   .112963    
+CURRENT ,  -.109195    ,   .192223E-02,  -56.8065    ,   .000000    ,  -.112963    ,  -.105428    
+                                                                                
+Partial Effects for Multinomial Choice Model                                    
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+PAYMENT ,VOLCONS ,CURRENT    
+VOLCONS ,   .20463,  -.20463 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+PAYMENT ,VOLCONS ,CURRENT                    
+VOLCONS ,   .20463(******),  -.20463(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+WETLAND ,VOLCONS ,CURRENT    
+VOLCONS ,  -.11344,   .11344 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+WETLAND ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.11344(******),   .11344(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+COVERCRO,VOLCONS ,CURRENT    
+VOLCONS ,  -.02448,   .02448 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+COVERCRO,VOLCONS ,CURRENT                    
+VOLCONS ,  -.02448(******),   .02448(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06582,   .06582 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06582(******),   .06582(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+DFLALL  ,VOLCONS ,CURRENT    
+VOLCONS ,   .41629,  -.41629 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+DFLALL  ,VOLCONS ,CURRENT                    
+VOLCONS ,   .41629(******),  -.41629(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+TAXCOST ,VOLCONS ,CURRENT    
+VOLCONS ,  -.07138,   .07138 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+TAXCOST ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.07138(******),   .07138(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_1,VOLCONS ,CURRENT    
+VOLCONS ,   .01453,  -.01453 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_1,VOLCONS ,CURRENT                    
+VOLCONS ,   .01453(******),  -.01453(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_2,VOLCONS ,CURRENT    
+VOLCONS ,   .01199,  -.01199 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_2,VOLCONS ,CURRENT                    
+VOLCONS ,   .01199(******),  -.01199(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_3,VOLCONS ,CURRENT    
+VOLCONS ,   .01587,  -.01587 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_3,VOLCONS ,CURRENT                    
+VOLCONS ,   .01587(******),  -.01587(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_4,VOLCONS ,CURRENT    
+VOLCONS ,   .00648,  -.00648 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_4,VOLCONS ,CURRENT                    
+VOLCONS ,   .00648(******),  -.00648(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_5,VOLCONS ,CURRENT    
+VOLCONS ,   .01279,  -.01279 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_5,VOLCONS ,CURRENT                    
+VOLCONS ,   .01279(******),  -.01279(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_6,VOLCONS ,CURRENT    
+VOLCONS ,   .02213,  -.02213 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_6,VOLCONS ,CURRENT                    
+VOLCONS ,   .02213(******),  -.02213(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_1 ,VOLCONS ,CURRENT    
+VOLCONS ,   .02756,  -.02756 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_1 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .02756(******),  -.02756(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_2 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03393,  -.03393 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_2 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03393(******),  -.03393(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_3 ,VOLCONS ,CURRENT    
+VOLCONS ,   .01658,  -.01658 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_3 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .01658(******),  -.01658(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_4 ,VOLCONS ,CURRENT    
+VOLCONS ,   .10920,  -.10920 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_4 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .10920(******),  -.10920(******) 
+                                                                                
+                                                                                
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -.461782    ,   .113023    ,  -4.08573    ,   .439392E-04,  -.683304    ,  -.240261    
+PAY     ,   .141517E-02,   .251289E-03,   5.63163    ,   .178516E-07,   .922650E-03,   .190769E-02
+COVERCRO,   .395092E-01,   .793414E-01,   .497965    ,   .618509    ,  -.115997    ,   .195015    
+NM      ,  -.625763E-01,   .857782E-01,  -.729513    ,   .465688    ,  -.230698    ,   .105546    
+ASC     ,  -2.51223    ,   .506500    ,  -4.95998    ,   .705003E-06,  -3.50495    ,  -1.51951    
+DFL     ,   2.70727    ,   .719346    ,   3.76352    ,   .167538E-03,   1.29738    ,   4.11716    
+COSTTAX ,  -.481232E-03,   .370059E-03,  -1.30042    ,   .193457    ,  -.120653E-02,   .244070E-03
+INCFARM1,   .186176    ,   .204105    ,   .912154    ,   .361688    ,  -.213864    ,   .586215    
+INCFARM2,   .394897    ,   .221833    ,   1.78016    ,   .750503E-01,  -.398871E-01,   .829681    
+INCFARM3,   .273464    ,   .205416    ,   1.33127    ,   .183101    ,  -.129144    ,   .676072    
+INCFARM4,   .954973    ,   .316587    ,   3.01646    ,   .255741E-02,   .334474    ,   1.57547    
+INCFARM5,   .314517    ,   .209673    ,   1.50004    ,   .133604    ,  -.964338E-01,   .725468    
+INCFARM6,   .295595    ,   .207893    ,   1.42186    ,   .155067    ,  -.111868    ,   .703057    
+FARMSI1 ,   .962852    ,   .273555    ,   3.51978    ,   .431902E-03,   .426695    ,   1.49901    
+FARMSI2 ,   1.07946    ,   .267646    ,   4.03316    ,   .550315E-04,   .554883    ,   1.60404    
+FARMSI3 ,   .978129    ,   .288649    ,   3.38865    ,   .702378E-03,   .412388    ,   1.54387    
+FARMSI4 ,   .974221    ,   .256329    ,   3.80067    ,   .144305E-03,   .471826    ,   1.47662    
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -1.92810    ,   .171455    ,  -11.2455    ,   .000000    ,  -2.26415    ,  -1.59206    
+PAY     ,   .385552E-02,   .255016E-03,   15.1187    ,   .000000    ,   .335570E-02,   .435534E-02
+COVERCRO,  -.460781    ,   .107970    ,  -4.26768    ,   .197520E-04,  -.672398    ,  -.249164    
+NM      ,  -.816310    ,   .122165    ,  -6.68203    ,   .000000    ,  -1.05575    ,  -.576871    
+ASC     ,  -3.13397    ,   .427467    ,  -7.33149    ,   .000000    ,  -3.97179    ,  -2.29615    
+DFL     ,   4.31984    ,   .597994    ,   7.22390    ,   .000000    ,   3.14780    ,   5.49189    
+COSTTAX ,  -.795995E-03,   .311909E-03,  -2.55201    ,   .107104E-01,  -.140733E-02,  -.184664E-03
+INCFARM1,   .445614    ,   .167875    ,   2.65444    ,   .794404E-02,   .116585    ,   .774643    
+INCFARM2,   .446930    ,   .185855    ,   2.40473    ,   .161845E-01,   .826613E-01,   .811198    
+INCFARM3,   .414449    ,   .169243    ,   2.44885    ,   .143315E-01,   .827396E-01,   .746159    
+INCFARM4,   1.53221    ,   .330302    ,   4.63883    ,   .350391E-05,   .884833    ,   2.17959    
+INCFARM5,   .436478    ,   .176284    ,   2.47600    ,   .132864E-01,   .909686E-01,   .781988    
+INCFARM6,   .517796    ,   .170700    ,   3.03337    ,   .241840E-02,   .183230    ,   .852362    
+FARMSI1 ,   .993918    ,   .203061    ,   4.89469    ,   .984622E-06,   .595926    ,   1.39191    
+FARMSI2 ,   1.21014    ,   .196143    ,   6.16966    ,   .000000    ,   .825703    ,   1.59457    
+FARMSI3 ,   .983527    ,   .217001    ,   4.53236    ,   .583275E-05,   .558213    ,   1.40884    
+FARMSI4 ,   1.03978    ,   .184353    ,   5.64014    ,   .169912E-07,   .678451    ,   1.40110    
+WETL:LAK,   .000000    ,   .000000    ,   .100000E+11,   .169912E-07,   .000000    ,   .000000    
+WETL:INC,   .000000    ,   .000000    ,   .100000E+11,   .169912E-07,   .000000    ,   .000000    
+PAY :LAK,   .000000    ,   .000000    ,   .100000E+11,   .169912E-07,   .000000    ,   .000000    
+PAY :INC,   .000000    ,   .000000    ,   .100000E+11,   .169912E-07,   .000000    ,   .000000    
+COVE:LAK,   .749970E-01,   .191429E-01,   3.91775    ,   .893811E-04,   .374776E-01,   .112516    
+COVE:INC,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+NM  :LAK,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+NM  :INC,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+QsWETLAN,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+CsPAY   ,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+QsCOVERC,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+QsNM    ,   .000000    ,   .000000    ,   .100000E+11,   .893811E-04,   .000000    ,   .000000    
+                                                                                
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .204805    ,   .257736E-02,   79.4630    ,   .000000    ,   .199753    ,   .209856    
+CURRENT ,  -.204805    ,   .257736E-02,  -79.4630    ,   .000000    ,  -.209856    ,  -.199753    
+                                                                                
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.113438    ,   .225859E-02,  -50.2251    ,   .000000    ,  -.117865    ,  -.109011    
+CURRENT ,   .113438    ,   .225859E-02,   50.2251    ,   .000000    ,   .109011    ,   .117865    
+                                                                                
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.252652E-01,   .809978E-03,  -31.1925    ,   .000000    ,  -.268527E-01,  -.236777E-01
+CURRENT ,   .252652E-01,   .809978E-03,   31.1925    ,   .000000    ,   .236777E-01,   .268527E-01
+                                                                                
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.662607E-01,   .132010E-02,  -50.1937    ,   .000000    ,  -.688481E-01,  -.636734E-01
+CURRENT ,   .662607E-01,   .132010E-02,   50.1937    ,   .000000    ,   .636734E-01,   .688481E-01
+                                                                                
+Average partial effect  on prob(alt) wrt DFLALL   in VOLCONS                    
+Average partial effect  on prob(alt) wrt DFLALL   in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .412365    ,   .171922E-02,   239.857    ,   .000000    ,   .408996    ,   .415735    
+CURRENT ,  -.412365    ,   .171922E-02,  -239.857    ,   .000000    ,  -.415735    ,  -.408996    
+                                                                                
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.701627E-01,   .418745E-03,  -167.554    ,   .000000    ,  -.709834E-01,  -.693420E-01
+CURRENT ,   .701627E-01,   .418745E-03,   167.554    ,   .000000    ,   .693420E-01,   .709834E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .146297E-01,   .624277E-03,   23.4347    ,   .000000    ,   .134062E-01,   .158533E-01
+CURRENT ,  -.146297E-01,   .624277E-03,  -23.4347    ,   .000000    ,  -.158533E-01,  -.134062E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .118403E-01,   .571228E-03,   20.7278    ,   .000000    ,   .107207E-01,   .129599E-01
+CURRENT ,  -.118403E-01,   .571228E-03,  -20.7278    ,   .000000    ,  -.129599E-01,  -.107207E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .157781E-01,   .615090E-03,   25.6516    ,   .000000    ,   .145725E-01,   .169836E-01
+CURRENT ,  -.157781E-01,   .615090E-03,  -25.6516    ,   .000000    ,  -.169836E-01,  -.145725E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .646704E-02,   .742752E-03,   8.70685    ,   .000000    ,   .501127E-02,   .792280E-02
+CURRENT ,  -.646704E-02,   .742752E-03,  -8.70685    ,   .000000    ,  -.792280E-02,  -.501127E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .127676E-01,   .586403E-03,   21.7728    ,   .000000    ,   .116183E-01,   .139170E-01
+CURRENT ,  -.127676E-01,   .586403E-03,  -21.7728    ,   .000000    ,  -.139170E-01,  -.116183E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .220870E-01,   .800249E-03,   27.6002    ,   .000000    ,   .205186E-01,   .236555E-01
+CURRENT ,  -.220870E-01,   .800249E-03,  -27.6002    ,   .000000    ,  -.236555E-01,  -.205186E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .275449E-01,   .129746E-02,   21.2298    ,   .000000    ,   .250020E-01,   .300879E-01
+CURRENT ,  -.275449E-01,   .129746E-02,  -21.2298    ,   .000000    ,  -.300879E-01,  -.250020E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .340487E-01,   .157062E-02,   21.6785    ,   .000000    ,   .309704E-01,   .371271E-01
+CURRENT ,  -.340487E-01,   .157062E-02,  -21.6785    ,   .000000    ,  -.371271E-01,  -.309704E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .163438E-01,   .103478E-02,   15.7945    ,   .000000    ,   .143156E-01,   .183719E-01
+CURRENT ,  -.163438E-01,   .103478E-02,  -15.7945    ,   .000000    ,  -.183719E-01,  -.143156E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .109158    ,   .192245E-02,   56.7805    ,   .000000    ,   .105390    ,   .112925    
+CURRENT ,  -.109158    ,   .192245E-02,  -56.7805    ,   .000000    ,  -.112925    ,  -.105390    
+                                                                                
+Partial Effects for Multinomial Choice Model                                    
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+PAYMENT ,VOLCONS ,CURRENT    
+VOLCONS ,   .20480,  -.20480 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+PAYMENT ,VOLCONS ,CURRENT                    
+VOLCONS ,   .20480(******),  -.20480(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+WETLAND ,VOLCONS ,CURRENT    
+VOLCONS ,  -.11344,   .11344 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+WETLAND ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.11344(******),   .11344(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+COVERCRO,VOLCONS ,CURRENT    
+VOLCONS ,  -.02527,   .02527 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+COVERCRO,VOLCONS ,CURRENT                    
+VOLCONS ,  -.02527(******),   .02527(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06626,   .06626 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06626(******),   .06626(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+DFLALL  ,VOLCONS ,CURRENT    
+VOLCONS ,   .41237,  -.41237 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+DFLALL  ,VOLCONS ,CURRENT                    
+VOLCONS ,   .41237(******),  -.41237(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+TAXCOST ,VOLCONS ,CURRENT    
+VOLCONS ,  -.07016,   .07016 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+TAXCOST ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.07016(******),   .07016(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_1,VOLCONS ,CURRENT    
+VOLCONS ,   .01463,  -.01463 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_1,VOLCONS ,CURRENT                    
+VOLCONS ,   .01463(******),  -.01463(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_2,VOLCONS ,CURRENT    
+VOLCONS ,   .01184,  -.01184 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_2,VOLCONS ,CURRENT                    
+VOLCONS ,   .01184(******),  -.01184(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_3,VOLCONS ,CURRENT    
+VOLCONS ,   .01578,  -.01578 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_3,VOLCONS ,CURRENT                    
+VOLCONS ,   .01578(******),  -.01578(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_4,VOLCONS ,CURRENT    
+VOLCONS ,   .00647,  -.00647 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_4,VOLCONS ,CURRENT                    
+VOLCONS ,   .00647(******),  -.00647(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_5,VOLCONS ,CURRENT    
+VOLCONS ,   .01277,  -.01277 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_5,VOLCONS ,CURRENT                    
+VOLCONS ,   .01277(******),  -.01277(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_6,VOLCONS ,CURRENT    
+VOLCONS ,   .02209,  -.02209 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_6,VOLCONS ,CURRENT                    
+VOLCONS ,   .02209(******),  -.02209(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_1 ,VOLCONS ,CURRENT    
+VOLCONS ,   .02754,  -.02754 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_1 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .02754(******),  -.02754(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_2 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03405,  -.03405 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_2 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03405(******),  -.03405(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_3 ,VOLCONS ,CURRENT    
+VOLCONS ,   .01634,  -.01634 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_3 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .01634(******),  -.01634(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_4 ,VOLCONS ,CURRENT    
+VOLCONS ,   .10916,  -.10916 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_4 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .10916(******),  -.10916(******) 
+                                                                                
+                                                                                
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -.464390    ,   .113345    ,  -4.09714    ,   .418284E-04,  -.686542    ,  -.242238    
+PAY     ,   .142411E-02,   .252030E-03,   5.65057    ,   .159912E-07,   .930144E-03,   .191808E-02
+COVERCRO,   .395264E-01,   .795654E-01,   .496779    ,   .619345    ,  -.116419    ,   .195472    
+NM      ,  -.632656E-01,   .860218E-01,  -.735459    ,   .462060    ,  -.231865    ,   .105334    
+ASC     ,  -1.18712    ,   .378750    ,  -3.13432    ,   .172253E-02,  -1.92946    ,  -.444788    
+DFL     ,   .455288    ,   .849520E-01,   5.35935    ,   .835198E-07,   .288785    ,   .621790    
+COSTTAX ,  -.745148E-03,   .375991E-03,  -1.98182    ,   .474989E-01,  -.148208E-02,  -.821936E-05
+INCFARM1,   .184631    ,   .204885    ,   .901145    ,   .367511    ,  -.216936    ,   .586199    
+INCFARM2,   .341680    ,   .222233    ,   1.53748    ,   .124175    ,  -.938895E-01,   .777249    
+INCFARM3,   .218096    ,   .206477    ,   1.05627    ,   .290843    ,  -.186591    ,   .622783    
+INCFARM4,   .966059    ,   .317474    ,   3.04296    ,   .234265E-02,   .343822    ,   1.58830    
+INCFARM5,   .264700    ,   .210303    ,   1.25866    ,   .208154    ,  -.147487    ,   .676887    
+INCFARM6,   .296873    ,   .208586    ,   1.42327    ,   .154659    ,  -.111947    ,   .705694    
+FARMSI1 ,   .916739    ,   .274318    ,   3.34188    ,   .832129E-03,   .379085    ,   1.45439    
+FARMSI2 ,   1.08078    ,   .267824    ,   4.03542    ,   .545045E-04,   .555858    ,   1.60571    
+FARMSI3 ,   .928486    ,   .289287    ,   3.20957    ,   .132935E-02,   .361494    ,   1.49548    
+FARMSI4 ,   .959338    ,   .256689    ,   3.73735    ,   .185967E-03,   .456237    ,   1.46244    
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -1.90684    ,   .167198    ,  -11.4047    ,   .000000    ,  -2.23455    ,  -1.57914    
+PAY     ,   .384439E-02,   .252855E-03,   15.2039    ,   .000000    ,   .334880E-02,   .433997E-02
+COVERCRO,  -.405728    ,   .105571    ,  -3.84319    ,   .121446E-03,  -.612643    ,  -.198813    
+NM      ,  -.805984    ,   .121090    ,  -6.65610    ,   .000000    ,  -1.04332    ,  -.568653    
+ASC     ,  -1.02782    ,   .312263    ,  -3.29152    ,   .996476E-03,  -1.63984    ,  -.415795    
+DFL     ,   .600577    ,   .709833E-01,   8.46082    ,   .000000    ,   .461452    ,   .739701    
+COSTTAX ,  -.111617E-02,   .308772E-03,  -3.61486    ,   .300505E-03,  -.172135E-02,  -.510988E-03
+INCFARM1,   .434272    ,   .163241    ,   2.66031    ,   .780697E-02,   .114325    ,   .754218    
+INCFARM2,   .363206    ,   .181012    ,   2.00653    ,   .447997E-01,   .842907E-02,   .717983    
+INCFARM3,   .332472    ,   .164176    ,   2.02509    ,   .428583E-01,   .106919E-01,   .654252    
+INCFARM4,   1.55765    ,   .319722    ,   4.87190    ,   .110532E-05,   .931010    ,   2.18430    
+INCFARM5,   .354147    ,   .171252    ,   2.06799    ,   .386409E-01,   .184997E-01,   .689794    
+INCFARM6,   .500894    ,   .166299    ,   3.01201    ,   .259525E-02,   .174954    ,   .826834    
+FARMSI1 ,   .961192    ,   .203664    ,   4.71949    ,   .236437E-05,   .562017    ,   1.36037    
+FARMSI2 ,   1.23909    ,   .196620    ,   6.30195    ,   .000000    ,   .853722    ,   1.62446    
+FARMSI3 ,   .962370    ,   .217693    ,   4.42077    ,   .983488E-05,   .535700    ,   1.38904    
+FARMSI4 ,   1.03686    ,   .186131    ,   5.57060    ,   .253866E-07,   .672051    ,   1.40167    
+WETL:LAK,   .000000    ,   .000000    ,   .100000E+11,   .253866E-07,   .000000    ,   .000000    
+WETL:INC,   .000000    ,   .000000    ,   .100000E+11,   .253866E-07,   .000000    ,   .000000    
+PAY :LAK,   .000000    ,   .000000    ,   .100000E+11,   .253866E-07,   .000000    ,   .000000    
+PAY :INC,   .000000    ,   .000000    ,   .100000E+11,   .253866E-07,   .000000    ,   .000000    
+COVE:LAK,   .598503E-01,   .177756E-01,   3.36700    ,   .759908E-03,   .250108E-01,   .946898E-01
+COVE:INC,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+NM  :LAK,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+NM  :INC,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+QsWETLAN,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+CsPAY   ,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+QsCOVERC,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+QsNM    ,   .000000    ,   .000000    ,   .100000E+11,   .759908E-03,   .000000    ,   .000000    
+                                                                                
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .205105    ,   .259082E-02,   79.1661    ,   .000000    ,   .200027    ,   .210183    
+CURRENT ,  -.205105    ,   .259082E-02,  -79.1661    ,   .000000    ,  -.210183    ,  -.200027    
+                                                                                
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.113132    ,   .225361E-02,  -50.2005    ,   .000000    ,  -.117549    ,  -.108715    
+CURRENT ,   .113132    ,   .225361E-02,   50.2005    ,   .000000    ,   .108715    ,   .117549    
+                                                                                
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.238421E-01,   .711131E-03,  -33.5270    ,   .000000    ,  -.252359E-01,  -.224483E-01
+CURRENT ,   .238421E-01,   .711131E-03,   33.5270    ,   .000000    ,   .224483E-01,   .252359E-01
+                                                                                
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.657303E-01,   .130967E-02,  -50.1884    ,   .000000    ,  -.682973E-01,  -.631634E-01
+CURRENT ,   .657303E-01,   .130967E-02,   50.1884    ,   .000000    ,   .631634E-01,   .682973E-01
+                                                                                
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.987282E-01,   .597868E-03,  -165.134    ,   .000000    ,  -.998999E-01,  -.975564E-01
+CURRENT ,   .987282E-01,   .597868E-03,   165.134    ,   .000000    ,   .975564E-01,   .998999E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .142518E-01,   .608255E-03,   23.4307    ,   .000000    ,   .130597E-01,   .154440E-01
+CURRENT ,  -.142518E-01,   .608255E-03,  -23.4307    ,   .000000    ,  -.154440E-01,  -.130597E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .965792E-02,   .466038E-03,   20.7234    ,   .000000    ,   .874450E-02,   .105713E-01
+CURRENT ,  -.965792E-02,   .466038E-03,  -20.7234    ,   .000000    ,  -.105713E-01,  -.874450E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .126882E-01,   .494561E-03,   25.6556    ,   .000000    ,   .117189E-01,   .136576E-01
+CURRENT ,  -.126882E-01,   .494561E-03,  -25.6556    ,   .000000    ,  -.136576E-01,  -.117189E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .656848E-02,   .753004E-03,   8.72303    ,   .000000    ,   .509261E-02,   .804434E-02
+CURRENT ,  -.656848E-02,   .753004E-03,  -8.72303    ,   .000000    ,  -.804434E-02,  -.509261E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .103886E-01,   .476978E-03,   21.7799    ,   .000000    ,   .945370E-02,   .113234E-01
+CURRENT ,  -.103886E-01,   .476978E-03,  -21.7799    ,   .000000    ,  -.113234E-01,  -.945370E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .214649E-01,   .777611E-03,   27.6036    ,   .000000    ,   .199408E-01,   .229890E-01
+CURRENT ,  -.214649E-01,   .777611E-03,  -27.6036    ,   .000000    ,  -.229890E-01,  -.199408E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .266918E-01,   .125776E-02,   21.2218    ,   .000000    ,   .242266E-01,   .291570E-01
+CURRENT ,  -.266918E-01,   .125776E-02,  -21.2218    ,   .000000    ,  -.291570E-01,  -.242266E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .349090E-01,   .161008E-02,   21.6815    ,   .000000    ,   .317533E-01,   .380647E-01
+CURRENT ,  -.349090E-01,   .161008E-02,  -21.6815    ,   .000000    ,  -.380647E-01,  -.317533E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .160316E-01,   .101481E-02,   15.7975    ,   .000000    ,   .140426E-01,   .180206E-01
+CURRENT ,  -.160316E-01,   .101481E-02,  -15.7975    ,   .000000    ,  -.180206E-01,  -.140426E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .109139    ,   .192162E-02,   56.7955    ,   .000000    ,   .105373    ,   .112905    
+CURRENT ,  -.109139    ,   .192162E-02,  -56.7955    ,   .000000    ,  -.112905    ,  -.105373    
+                                                                                
+Partial Effects for Multinomial Choice Model                                    
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+PAYMENT ,VOLCONS ,CURRENT    
+VOLCONS ,   .20510,  -.20510 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+PAYMENT ,VOLCONS ,CURRENT                    
+VOLCONS ,   .20510(******),  -.20510(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+WETLAND ,VOLCONS ,CURRENT    
+VOLCONS ,  -.11313,   .11313 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+WETLAND ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.11313(******),   .11313(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+COVERCRO,VOLCONS ,CURRENT    
+VOLCONS ,  -.02384,   .02384 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+COVERCRO,VOLCONS ,CURRENT                    
+VOLCONS ,  -.02384(******),   .02384(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06573,   .06573 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06573(******),   .06573(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+TAXCOST ,VOLCONS ,CURRENT    
+VOLCONS ,  -.09873,   .09873 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+TAXCOST ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.09873(******),   .09873(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_1,VOLCONS ,CURRENT    
+VOLCONS ,   .01425,  -.01425 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_1,VOLCONS ,CURRENT                    
+VOLCONS ,   .01425(******),  -.01425(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_2,VOLCONS ,CURRENT    
+VOLCONS ,   .00966,  -.00966 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_2,VOLCONS ,CURRENT                    
+VOLCONS ,   .00966(******),  -.00966(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_3,VOLCONS ,CURRENT    
+VOLCONS ,   .01269,  -.01269 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_3,VOLCONS ,CURRENT                    
+VOLCONS ,   .01269(******),  -.01269(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_4,VOLCONS ,CURRENT    
+VOLCONS ,   .00657,  -.00657 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_4,VOLCONS ,CURRENT                    
+VOLCONS ,   .00657(******),  -.00657(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_5,VOLCONS ,CURRENT    
+VOLCONS ,   .01039,  -.01039 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_5,VOLCONS ,CURRENT                    
+VOLCONS ,   .01039(******),  -.01039(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_6,VOLCONS ,CURRENT    
+VOLCONS ,   .02146,  -.02146 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_6,VOLCONS ,CURRENT                    
+VOLCONS ,   .02146(******),  -.02146(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_1 ,VOLCONS ,CURRENT    
+VOLCONS ,   .02669,  -.02669 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_1 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .02669(******),  -.02669(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_2 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03491,  -.03491 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_2 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03491(******),  -.03491(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_3 ,VOLCONS ,CURRENT    
+VOLCONS ,   .01603,  -.01603 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_3 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .01603(******),  -.01603(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_4 ,VOLCONS ,CURRENT    
+VOLCONS ,   .10914,  -.10914 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_4 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .10914(******),  -.10914(******) 
+                                                                                
+                                                                                
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -.463488    ,   .113577    ,  -4.08083    ,   .448748E-04,  -.686094    ,  -.240881    
+PAY     ,   .144057E-02,   .252576E-03,   5.70349    ,   .117377E-07,   .945527E-03,   .193561E-02
+COVERCRO,   .459615E-01,   .797390E-01,   .576400    ,   .564345    ,  -.110324    ,   .202247    
+NM      ,  -.650770E-01,   .862155E-01,  -.754818    ,   .450358    ,  -.234056    ,   .103902    
+ASC     ,  -1.55504    ,   .484698    ,  -3.20826    ,   .133541E-02,  -2.50503    ,  -.605046    
+DFL     ,   .449050    ,   .862639E-01,   5.20553    ,   .193439E-06,   .279976    ,   .618124    
+COSTTAX ,  -.665749E-03,   .383121E-03,  -1.73770    ,   .822637E-01,  -.141665E-02,   .851540E-04
+INCFARM1,   .188377    ,   .204983    ,   .918986    ,   .358103    ,  -.213383    ,   .590136    
+INCFARM2,   .329264    ,   .222709    ,   1.47845    ,   .139287    ,  -.107237    ,   .765765    
+INCFARM3,   .217708    ,   .206609    ,   1.05372    ,   .292011    ,  -.187238    ,   .622655    
+INCFARM4,   .995972    ,   .321065    ,   3.10209    ,   .192160E-02,   .366697    ,   1.62525    
+INCFARM5,   .266310    ,   .210388    ,   1.26581    ,   .205583    ,  -.146043    ,   .678663    
+INCFARM6,   .294760    ,   .208692    ,   1.41241    ,   .157828    ,  -.114270    ,   .703790    
+FARMSI1 ,   1.05601    ,   .292635    ,   3.60862    ,   .307830E-03,   .482454    ,   1.62956    
+FARMSI2 ,   1.21801    ,   .286711    ,   4.24822    ,   .215473E-04,   .656070    ,   1.77996    
+FARMSI3 ,   1.06594    ,   .306237    ,   3.48076    ,   .499990E-03,   .465725    ,   1.66615    
+FARMSI4 ,   1.09363    ,   .275685    ,   3.96696    ,   .727960E-04,   .553298    ,   1.63396    
+CRP     ,   .986378E-03,   .121932E-02,   .808959    ,   .418539    ,  -.140344E-02,   .337620E-02
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -1.91748    ,   .169499    ,  -11.3126    ,   .000000    ,  -2.24969    ,  -1.58527    
+PAY     ,   .388789E-02,   .256483E-03,   15.1585    ,   .000000    ,   .338520E-02,   .439059E-02
+COVERCRO,  -.393150    ,   .105485    ,  -3.72706    ,   .193727E-03,  -.599897    ,  -.186403    
+NM      ,  -.810792    ,   .121756    ,  -6.65913    ,   .000000    ,  -1.04943    ,  -.572154    
+ASC     ,  -1.18234    ,   .414728    ,  -2.85089    ,   .435972E-02,  -1.99519    ,  -.369491    
+DFL     ,   .612147    ,   .717472E-01,   8.53200    ,   .000000    ,   .471525    ,   .752769    
+COSTTAX ,  -.109169E-02,   .324529E-03,  -3.36391    ,   .768458E-03,  -.172775E-02,  -.455622E-03
+INCFARM1,   .436977    ,   .163263    ,   2.67652    ,   .743913E-02,   .116987    ,   .756967    
+INCFARM2,   .333931    ,   .181088    ,   1.84402    ,   .651798E-01,  -.209955E-01,   .688857    
+INCFARM3,   .338351    ,   .164219    ,   2.06037    ,   .393636E-01,   .164878E-01,   .660215    
+INCFARM4,   1.54123    ,   .320790    ,   4.80448    ,   .155156E-05,   .912492    ,   2.16997    
+INCFARM5,   .351607    ,   .171157    ,   2.05429    ,   .399474E-01,   .161450E-01,   .687069    
+INCFARM6,   .500128    ,   .166226    ,   3.00873    ,   .262346E-02,   .174331    ,   .825925    
+FARMSI1 ,   1.12749    ,   .212689    ,   5.30114    ,   .115082E-06,   .710632    ,   1.54436    
+FARMSI2 ,   1.41509    ,   .205433    ,   6.88833    ,   .000000    ,   1.01245    ,   1.81773    
+FARMSI3 ,   1.12525    ,   .225120    ,   4.99845    ,   .577933E-06,   .684025    ,   1.56648    
+FARMSI4 ,   1.20558    ,   .194600    ,   6.19517    ,   .000000    ,   .824171    ,   1.58699    
+CRP     ,  -.219494E-03,   .974593E-03,  -.225216    ,   .821812    ,  -.212966E-02,   .169067E-02
+WETL:LAK,   .000000    ,   .000000    ,   .100000E+11,   .821812    ,   .000000    ,   .000000    
+WETL:INC,   .000000    ,   .000000    ,   .100000E+11,   .821812    ,   .000000    ,   .000000    
+PAY :LAK,   .000000    ,   .000000    ,   .100000E+11,   .821812    ,   .000000    ,   .000000    
+PAY :INC,   .000000    ,   .000000    ,   .100000E+11,   .821812    ,   .000000    ,   .000000    
+COVE:LAK,   .600874E-01,   .182479E-01,   3.29284    ,   .991813E-03,   .243222E-01,   .958526E-01
+COVE:INC,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+NM  :LAK,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+NM  :INC,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+QsWETLAN,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+CsPAY   ,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+QsCOVERC,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+QsNM    ,   .000000    ,   .000000    ,   .100000E+11,   .991813E-03,   .000000    ,   .000000    
+                                                                                
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .206708    ,   .261473E-02,   79.0552    ,   .000000    ,   .201583    ,   .211833    
+CURRENT ,  -.206708    ,   .261473E-02,  -79.0552    ,   .000000    ,  -.211833    ,  -.201583    
+                                                                                
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.113388    ,   .226335E-02,  -50.0973    ,   .000000    ,  -.117824    ,  -.108952    
+CURRENT ,   .113388    ,   .226335E-02,   50.0973    ,   .000000    ,   .108952    ,   .117824    
+                                                                                
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.226330E-01,   .696016E-03,  -32.5179    ,   .000000    ,  -.239972E-01,  -.212689E-01
+CURRENT ,   .226330E-01,   .696016E-03,   32.5179    ,   .000000    ,   .212689E-01,   .239972E-01
+                                                                                
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.658934E-01,   .131548E-02,  -50.0909    ,   .000000    ,  -.684717E-01,  -.633151E-01
+CURRENT ,   .658934E-01,   .131548E-02,   50.0909    ,   .000000    ,   .633151E-01,   .684717E-01
+                                                                                
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.962924E-01,   .585161E-03,  -164.557    ,   .000000    ,  -.974393E-01,  -.951455E-01
+CURRENT ,   .962924E-01,   .585161E-03,   164.557    ,   .000000    ,   .951455E-01,   .974393E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .143242E-01,   .611610E-03,   23.4205    ,   .000000    ,   .131255E-01,   .155229E-01
+CURRENT ,  -.143242E-01,   .611610E-03,  -23.4205    ,   .000000    ,  -.155229E-01,  -.131255E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .871613E-02,   .425822E-03,   20.4690    ,   .000000    ,   .788153E-02,   .955072E-02
+CURRENT ,  -.871613E-02,   .425822E-03,  -20.4690    ,   .000000    ,  -.955072E-02,  -.788153E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .128929E-01,   .502738E-03,   25.6455    ,   .000000    ,   .119076E-01,   .138783E-01
+CURRENT ,  -.128929E-01,   .502738E-03,  -25.6455    ,   .000000    ,  -.138783E-01,  -.119076E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .649941E-02,   .745513E-03,   8.71803    ,   .000000    ,   .503823E-02,   .796059E-02
+CURRENT ,  -.649941E-02,   .745513E-03,  -8.71803    ,   .000000    ,  -.796059E-02,  -.503823E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .103240E-01,   .474036E-03,   21.7790    ,   .000000    ,   .939493E-02,   .112531E-01
+CURRENT ,  -.103240E-01,   .474036E-03,  -21.7790    ,   .000000    ,  -.112531E-01,  -.939493E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .214370E-01,   .776656E-03,   27.6017    ,   .000000    ,   .199148E-01,   .229592E-01
+CURRENT ,  -.214370E-01,   .776656E-03,  -27.6017    ,   .000000    ,  -.229592E-01,  -.199148E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .313407E-01,   .147689E-02,   21.2208    ,   .000000    ,   .284461E-01,   .342354E-01
+CURRENT ,  -.313407E-01,   .147689E-02,  -21.2208    ,   .000000    ,  -.342354E-01,  -.284461E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .398918E-01,   .184025E-02,   21.6774    ,   .000000    ,   .362850E-01,   .434986E-01
+CURRENT ,  -.398918E-01,   .184025E-02,  -21.6774    ,   .000000    ,  -.434986E-01,  -.362850E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .187580E-01,   .118764E-02,   15.7944    ,   .000000    ,   .164303E-01,   .210857E-01
+CURRENT ,  -.187580E-01,   .118764E-02,  -15.7944    ,   .000000    ,  -.210857E-01,  -.164303E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .127028    ,   .223385E-02,   56.8648    ,   .000000    ,   .122649    ,   .131406    
+CURRENT ,  -.127028    ,   .223385E-02,  -56.8648    ,   .000000    ,  -.131406    ,  -.122649    
+                                                                                
+Partial Effects for Multinomial Choice Model                                    
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+PAYMENT ,VOLCONS ,CURRENT    
+VOLCONS ,   .20671,  -.20671 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+PAYMENT ,VOLCONS ,CURRENT                    
+VOLCONS ,   .20671(******),  -.20671(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+WETLAND ,VOLCONS ,CURRENT    
+VOLCONS ,  -.11339,   .11339 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+WETLAND ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.11339(******),   .11339(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+COVERCRO,VOLCONS ,CURRENT    
+VOLCONS ,  -.02263,   .02263 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+COVERCRO,VOLCONS ,CURRENT                    
+VOLCONS ,  -.02263(******),   .02263(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06589,   .06589 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06589(******),   .06589(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+TAXCOST ,VOLCONS ,CURRENT    
+VOLCONS ,  -.09629,   .09629 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+TAXCOST ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.09629(******),   .09629(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_1,VOLCONS ,CURRENT    
+VOLCONS ,   .01432,  -.01432 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_1,VOLCONS ,CURRENT                    
+VOLCONS ,   .01432(******),  -.01432(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_2,VOLCONS ,CURRENT    
+VOLCONS ,   .00872,  -.00872 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_2,VOLCONS ,CURRENT                    
+VOLCONS ,   .00872(******),  -.00872(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_3,VOLCONS ,CURRENT    
+VOLCONS ,   .01289,  -.01289 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_3,VOLCONS ,CURRENT                    
+VOLCONS ,   .01289(******),  -.01289(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_4,VOLCONS ,CURRENT    
+VOLCONS ,   .00650,  -.00650 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_4,VOLCONS ,CURRENT                    
+VOLCONS ,   .00650(******),  -.00650(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_5,VOLCONS ,CURRENT    
+VOLCONS ,   .01032,  -.01032 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_5,VOLCONS ,CURRENT                    
+VOLCONS ,   .01032(******),  -.01032(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_6,VOLCONS ,CURRENT    
+VOLCONS ,   .02144,  -.02144 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_6,VOLCONS ,CURRENT                    
+VOLCONS ,   .02144(******),  -.02144(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_1 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03134,  -.03134 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_1 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03134(******),  -.03134(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_2 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03989,  -.03989 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_2 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03989(******),  -.03989(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_3 ,VOLCONS ,CURRENT    
+VOLCONS ,   .01876,  -.01876 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_3 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .01876(******),  -.01876(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_4 ,VOLCONS ,CURRENT    
+VOLCONS ,   .12703,  -.12703 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_4 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .12703(******),  -.12703(******) 
+                                                                                
+                                                                                
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -.461492    ,   .113312    ,  -4.07276    ,   .464592E-04,  -.683579    ,  -.239405    
+PAY     ,   .143261E-02,   .251961E-03,   5.68585    ,   .130164E-07,   .938780E-03,   .192645E-02
+COVERCRO,   .458046E-01,   .795540E-01,   .575768    ,   .564772    ,  -.110118    ,   .201728    
+NM      ,  -.645138E-01,   .860140E-01,  -.750038    ,   .453232    ,  -.233098    ,   .104071    
+ASC     ,  -3.20274    ,   .596590    ,  -5.36841    ,   .794349E-07,  -4.37203    ,  -2.03344    
+DFL     ,   2.80861    ,   .721683    ,   3.89175    ,   .995228E-04,   1.39414    ,   4.22308    
+COSTTAX ,  -.369018E-03,   .373750E-03,  -.987339    ,   .323477    ,  -.110156E-02,   .363519E-03
+INCFARM1,   .192957    ,   .204221    ,   .944840    ,   .344741    ,  -.207310    ,   .593223    
+INCFARM2,   .388364    ,   .222344    ,   1.74668    ,   .806928E-01,  -.474223E-01,   .824151    
+INCFARM3,   .265855    ,   .205593    ,   1.29312    ,   .195970    ,  -.137099    ,   .668809    
+INCFARM4,   1.02920    ,   .320483    ,   3.21142    ,   .132081E-02,   .401070    ,   1.65734    
+INCFARM5,   .319030    ,   .209771    ,   1.52085    ,   .128298    ,  -.921141E-01,   .730174    
+INCFARM6,   .294647    ,   .208013    ,   1.41649    ,   .156633    ,  -.113050    ,   .702345    
+FARMSI1 ,   1.12258    ,   .291646    ,   3.84914    ,   .118534E-03,   .550969    ,   1.69420    
+FARMSI2 ,   1.23127    ,   .286265    ,   4.30117    ,   .169900E-04,   .670204    ,   1.79234    
+FARMSI3 ,   1.13467    ,   .305178    ,   3.71807    ,   .200749E-03,   .536535    ,   1.73281    
+FARMSI4 ,   1.12482    ,   .275164    ,   4.08781    ,   .435456E-04,   .585507    ,   1.66413    
+CRP     ,   .218811E-02,   .120180E-02,   1.82070    ,   .686524E-01,  -.167367E-03,   .454360E-02
+                                                                                
+Last Model Estimation Results                                                   
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+WETLAND ,  -1.92497    ,   .171504    ,  -11.2240    ,   .000000    ,  -2.26111    ,  -1.58882    
+PAY     ,   .387913E-02,   .258330E-03,   15.0162    ,   .000000    ,   .337281E-02,   .438544E-02
+COVERCRO,  -.455851    ,   .108502    ,  -4.20131    ,   .265373E-04,  -.668511    ,  -.243191    
+NM      ,  -.812868    ,   .122151    ,  -6.65461    ,   .000000    ,  -1.05228    ,  -.573456    
+ASC     ,  -3.84498    ,   .524499    ,  -7.33076    ,   .000000    ,  -4.87298    ,  -2.81698    
+DFL     ,   4.49696    ,   .601185    ,   7.48016    ,   .000000    ,   3.31866    ,   5.67526    
+COSTTAX ,  -.706496E-03,   .320275E-03,  -2.20590    ,   .273907E-01,  -.133422E-02,  -.787684E-04
+INCFARM1,   .451287    ,   .167503    ,   2.69420    ,   .705574E-02,   .122987    ,   .779587    
+INCFARM2,   .416977    ,   .186260    ,   2.23868    ,   .251769E-01,   .519134E-01,   .782040    
+INCFARM3,   .410769    ,   .169382    ,   2.42510    ,   .153042E-01,   .787858E-01,   .742752    
+INCFARM4,   1.58119    ,   .327795    ,   4.82370    ,   .140920E-05,   .938719    ,   2.22365    
+INCFARM5,   .441095    ,   .175894    ,   2.50774    ,   .121507E-01,   .963497E-01,   .785840    
+INCFARM6,   .521208    ,   .170381    ,   3.05907    ,   .222028E-02,   .187267    ,   .855149    
+FARMSI1 ,   1.20119    ,   .211465    ,   5.68035    ,   .134418E-07,   .786731    ,   1.61566    
+FARMSI2 ,   1.41079    ,   .205426    ,   6.86766    ,   .000000    ,   1.00817    ,   1.81342    
+FARMSI3 ,   1.18007    ,   .224460    ,   5.25740    ,   .146109E-06,   .740140    ,   1.62001    
+FARMSI4 ,   1.23637    ,   .192918    ,   6.40878    ,   .000000    ,   .858256    ,   1.61448    
+CRP     ,   .184478E-02,   .976137E-03,   1.88988    ,   .587743E-01,  -.684137E-04,   .375797E-02
+WETL:LAK,   .000000    ,   .000000    ,   .100000E+11,   .587743E-01,   .000000    ,   .000000    
+WETL:INC,   .000000    ,   .000000    ,   .100000E+11,   .587743E-01,   .000000    ,   .000000    
+PAY :LAK,   .000000    ,   .000000    ,   .100000E+11,   .587743E-01,   .000000    ,   .000000    
+PAY :INC,   .000000    ,   .000000    ,   .100000E+11,   .587743E-01,   .000000    ,   .000000    
+COVE:LAK,   .843601E-01,   .201972E-01,   4.17683    ,   .295600E-04,   .447744E-01,   .123946    
+COVE:INC,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+NM  :LAK,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+NM  :INC,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+QsWETLAN,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+CsPAY   ,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+QsCOVERC,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+QsNM    ,   .000000    ,   .000000    ,   .100000E+11,   .295600E-04,   .000000    ,   .000000    
+                                                                                
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Average partial effect  on prob(alt) wrt PAYMENT  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .205942    ,   .260139E-02,   79.1661    ,   .000000    ,   .200843    ,   .211040    
+CURRENT ,  -.205942    ,   .260139E-02,  -79.1661    ,   .000000    ,  -.211040    ,  -.200843    
+                                                                                
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Average partial effect  on prob(alt) wrt WETLAND  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.113412    ,   .226284E-02,  -50.1195    ,   .000000    ,  -.117848    ,  -.108977    
+CURRENT ,   .113412    ,   .226284E-02,   50.1195    ,   .000000    ,   .108977    ,   .117848    
+                                                                                
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Average partial effect  on prob(alt) wrt COVERCRO in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.227986E-01,   .829048E-03,  -27.4997    ,   .000000    ,  -.244235E-01,  -.211736E-01
+CURRENT ,   .227986E-01,   .829048E-03,   27.4997    ,   .000000    ,   .211736E-01,   .244235E-01
+                                                                                
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Average partial effect  on prob(alt) wrt NUMGT    in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.659693E-01,   .131683E-02,  -50.0970    ,   .000000    ,  -.685502E-01,  -.633884E-01
+CURRENT ,   .659693E-01,   .131683E-02,   50.0970    ,   .000000    ,   .633884E-01,   .685502E-01
+                                                                                
+Average partial effect  on prob(alt) wrt DFLALL   in VOLCONS                    
+Average partial effect  on prob(alt) wrt DFLALL   in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .428581    ,   .179123E-02,   239.266    ,   .000000    ,   .425070    ,   .432092    
+CURRENT ,  -.428581    ,   .179123E-02,  -239.266    ,   .000000    ,  -.432092    ,  -.425070    
+                                                                                
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Average partial effect  on prob(alt) wrt TAXCOST  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,  -.621849E-01,   .374252E-03,  -166.158    ,   .000000    ,  -.629184E-01,  -.614514E-01
+CURRENT ,   .621849E-01,   .374252E-03,   166.158    ,   .000000    ,   .614514E-01,   .629184E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_1 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .148166E-01,   .632336E-03,   23.4315    ,   .000000    ,   .135772E-01,   .160559E-01
+CURRENT ,  -.148166E-01,   .632336E-03,  -23.4315    ,   .000000    ,  -.160559E-01,  -.135772E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_2 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .108369E-01,   .529254E-03,   20.4758    ,   .000000    ,   .979959E-02,   .118742E-01
+CURRENT ,  -.108369E-01,   .529254E-03,  -20.4758    ,   .000000    ,  -.118742E-01,  -.979959E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_3 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .156407E-01,   .609789E-03,   25.6494    ,   .000000    ,   .144456E-01,   .168359E-01
+CURRENT ,  -.156407E-01,   .609789E-03,  -25.6494    ,   .000000    ,  -.168359E-01,  -.144456E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_4 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .670542E-02,   .769977E-03,   8.70859    ,   .000000    ,   .519629E-02,   .821455E-02
+CURRENT ,  -.670542E-02,   .769977E-03,  -8.70859    ,   .000000    ,  -.821455E-02,  -.519629E-02
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_5 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .129299E-01,   .593768E-03,   21.7760    ,   .000000    ,   .117662E-01,   .140937E-01
+CURRENT ,  -.129299E-01,   .593768E-03,  -21.7760    ,   .000000    ,  -.140937E-01,  -.117662E-01
+                                                                                
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Average partial effect  on prob(alt) wrt INCOME_6 in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .222543E-01,   .806287E-03,   27.6010    ,   .000000    ,   .206740E-01,   .238346E-01
+CURRENT ,  -.222543E-01,   .806287E-03,  -27.6010    ,   .000000    ,  -.238346E-01,  -.206740E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_1  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .333040E-01,   .156875E-02,   21.2296    ,   .000000    ,   .302293E-01,   .363787E-01
+CURRENT ,  -.333040E-01,   .156875E-02,  -21.2296    ,   .000000    ,  -.363787E-01,  -.302293E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_2  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .398080E-01,   .183561E-02,   21.6866    ,   .000000    ,   .362103E-01,   .434058E-01
+CURRENT ,  -.398080E-01,   .183561E-02,  -21.6866    ,   .000000    ,  -.434058E-01,  -.362103E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_3  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .196728E-01,   .124536E-02,   15.7969    ,   .000000    ,   .172319E-01,   .221137E-01
+CURRENT ,  -.196728E-01,   .124536E-02,  -15.7969    ,   .000000    ,  -.221137E-01,  -.172319E-01
+                                                                                
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Average partial effect  on prob(alt) wrt AREAF_4  in VOLCONS                    
+Variable,Coeff.  ,Std.Err.,t-ratio ,P-value ,LowerCIL,UpperCIL
+VOLCONS ,   .130017    ,   .228621E-02,   56.8703    ,   .000000    ,   .125537    ,   .134498    
+CURRENT ,  -.130017    ,   .228621E-02,  -56.8703    ,   .000000    ,  -.134498    ,  -.125537    
+                                                                                
+Partial Effects for Multinomial Choice Model                                    
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+PAYMENT ,VOLCONS ,CURRENT    
+VOLCONS ,   .20594,  -.20594 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute PAYMENT                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+PAYMENT ,VOLCONS ,CURRENT                    
+VOLCONS ,   .20594(******),  -.20594(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+WETLAND ,VOLCONS ,CURRENT    
+VOLCONS ,  -.11341,   .11341 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute WETLAND                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+WETLAND ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.11341(******),   .11341(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+COVERCRO,VOLCONS ,CURRENT    
+VOLCONS ,  -.02280,   .02280 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute COVERCRO                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+COVERCRO,VOLCONS ,CURRENT                    
+VOLCONS ,  -.02280(******),   .02280(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+NUMGT   ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06597,   .06597 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute NUMGT                                 
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+NUMGT   ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06597(******),   .06597(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+DFLALL  ,VOLCONS ,CURRENT    
+VOLCONS ,   .42858,  -.42858 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute DFLALL                                
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+DFLALL  ,VOLCONS ,CURRENT                    
+VOLCONS ,   .42858(******),  -.42858(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+TAXCOST ,VOLCONS ,CURRENT    
+VOLCONS ,  -.06218,   .06218 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute TAXCOST                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+TAXCOST ,VOLCONS ,CURRENT                    
+VOLCONS ,  -.06218(******),   .06218(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_1,VOLCONS ,CURRENT    
+VOLCONS ,   .01482,  -.01482 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_1                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_1,VOLCONS ,CURRENT                    
+VOLCONS ,   .01482(******),  -.01482(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_2,VOLCONS ,CURRENT    
+VOLCONS ,   .01084,  -.01084 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_2                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_2,VOLCONS ,CURRENT                    
+VOLCONS ,   .01084(******),  -.01084(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_3,VOLCONS ,CURRENT    
+VOLCONS ,   .01564,  -.01564 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_3                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_3,VOLCONS ,CURRENT                    
+VOLCONS ,   .01564(******),  -.01564(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_4,VOLCONS ,CURRENT    
+VOLCONS ,   .00671,  -.00671 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_4                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_4,VOLCONS ,CURRENT                    
+VOLCONS ,   .00671(******),  -.00671(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_5,VOLCONS ,CURRENT    
+VOLCONS ,   .01293,  -.01293 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_5                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_5,VOLCONS ,CURRENT                    
+VOLCONS ,   .01293(******),  -.01293(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+INCOME_6,VOLCONS ,CURRENT    
+VOLCONS ,   .02225,  -.02225 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute INCOME_6                              
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+INCOME_6,VOLCONS ,CURRENT                    
+VOLCONS ,   .02225(******),  -.02225(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_1 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03330,  -.03330 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_1                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_1 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03330(******),  -.03330(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_2 ,VOLCONS ,CURRENT    
+VOLCONS ,   .03981,  -.03981 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_2                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_2 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .03981(******),  -.03981(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt)                                               
+AREAF_3 ,VOLCONS ,CURRENT    
+VOLCONS ,   .01967,  -.01967 
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_3                               
+Entry = dPr(Col_alt)/d(x|Row_alt) (z ratio)                                     
+(******) => a std. dev. of zero when the effect is always zero.                 
+AREAF_3 ,VOLCONS ,CURRENT                    
+VOLCONS ,   .01967(******),  -.01967(******) 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+Partial effects with respect to attribute AREAF_4                               

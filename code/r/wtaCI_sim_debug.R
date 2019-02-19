@@ -45,6 +45,48 @@ dat0 <- select (dataset, Wetland, Payment, Covercrop, NuMgt, asc,
                 income_1, income_2, income_3, income_4, income_5, income_6,
                 areaf_1, areaf_2, areaf_3, areaf_4, lake1000)
 
+dat11<-select (dataset, Wetland, Payment, Covercrop, NuMgt, asc, 
+               dfl08to18,taxcost, 
+               income_1, income_2, income_3, income_4, income_5, income_6,
+               areaf_1, areaf_2, areaf_3, areaf_4, lake1000,County_resident)
+
+
+groupdata <- dat11 %>%
+  group_by(County_resident) %>%
+  summarize_at(vars(-County_resident),funs(mean(., na.rm=TRUE)))
+
+
+groupdataselect <- select (groupdata, Wetland, Payment, Covercrop, NuMgt, asc, 
+                           dfl08to18,taxcost, 
+                           income_1, income_2, income_3, income_4, income_5, income_6,
+                           areaf_1, areaf_2, areaf_3, areaf_4, lake1000)
+
+groupdataselect_s_m <- as.matrix(x = groupdataselect, nrow = 1, ncol = 18) 
+groupbeta <- betas$Betas
+groupbeta[1:4] <- c(0,0,0,0)
+countylevel <- groupdataselect_s_m %*% as.vector(groupbeta)
+
+
+mean_wld <- 407.49
+
+mean_cc <- 7.04
+
+mean_nm <- 118.08
+
+
+county_wld <- mean_wld + countylevel
+county_cc <- mean_cc + countylevel
+county_nm <- mean_nm + countylevel
+County <- as.vector (groupdata$County_resident)
+countyleveldata <- cbind (county_wld, county_cc, county_nm)
+countyleveldata
+colnames(countyleveldata) <- c('wetland','cc','nm')
+countyleveldata<- as.data.frame(countyleveldata)
+countyleveldata
+countyleveldata$county <- groupdata$County_resident
+countyleveldata
+write.csv(x = countyleveldata, file= "219countylevelwta.csv", row.names = FALSE)
+
 ## individual sample 
 dat1 <- sample_n(dat0, 1)
 dat1
@@ -62,13 +104,14 @@ for (r1 in 1 : 10){
   draws[r1, ] <- drawbetas$Betas
 }
 
+
+
 draws
 
 draws[1,"pay"]
 newbetas <- draws[1,]
 newbetas["pay"]
 newbetas[5:17]
-
 n_draws <- 10000
 wta_wld <- -(wld_rp * rexp(rate = 1, n = n_draws) + as.vector(dat_m %*% new_beta2)) / pay_rp * rexp(rate = 1, n = n_draws)
 mean(wta_wld, na.rm = TRUE)
@@ -77,13 +120,13 @@ wta_wld
 
 ################## FOR WHOLE SAMPLE
 #set.seed(123456)
-R <- 10000
+R <- 1000
 n <- dim(dataset)[1]
 t <- 8
 s<- 441
 index <- seq(1, n, by=16) 
 length(index)
-n_draws <- 10000
+n_draws <- 1000
 
 wta_vec <- vector (length = 10)
 wta_vec
