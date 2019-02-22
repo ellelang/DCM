@@ -1,5 +1,5 @@
 rm(list = ls())
-
+library(uwIntroStats)
 library(tidyverse)
 library(mvtnorm)
 setwd("C:/Users/langzx/Desktop/github/DCM/data")
@@ -19,7 +19,7 @@ betas$Betas
 
 newbetas<- betas
 #newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
-
+descrip(dataset)
 # coeff 
 ## Payment 
 pay_rp <- newbetas$Betas[newbetas$Names=="pay"]
@@ -66,7 +66,7 @@ groupbeta <- betas$Betas
 groupbeta[1:4] <- c(0,0,0,0)
 countylevel <- groupdataselect_s_m %*% as.vector(groupbeta)
 
-
+write.csv(x = groupdataselect, file = "groupcountydata221.csv", row.names = FALSE)
 mean_wld <- 407.49
 
 mean_cc <- 7.04
