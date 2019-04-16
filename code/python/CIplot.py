@@ -31,11 +31,11 @@ for i in conservation:
     sns.distplot(subset['value'], hist = False, kde = True,
                  kde_kws = {'linewidth': 3},
                  label = i)
-    
+
 plt.legend(loc= 1, fontsize = 5, title = 'Conservation actions')
-plt.title('Willingess to Accept of key conservation actions')
-plt.xlabel('WTA')
-plt.ylabel('Density')
+plt.title('Distributions of willingess-to-accept')
+plt.xlabel('Payment($/acre)')
+plt.ylabel('Probability density')
 plt.savefig("wta.png", dpi = 800)
 plt.show()
 
