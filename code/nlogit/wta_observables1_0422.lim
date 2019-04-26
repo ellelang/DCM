@@ -1,11 +1,11 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018COMB.csv"; Nobs=7056; Nvar=46; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018COMB426.csv"; Nobs=7056; Nvar=46; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
 	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,INCOMB23
 $
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix0422.csv"$
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix0426.csv"$
 
 
 dstat; rhs=* $
@@ -54,13 +54,13 @@ nlogit
 ;full
 ?; Pts = 200
 ;corr
-;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
 ;Halton
 ;Model:
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + crp*crp2018           /
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4/
 U(Current) = 0
 	/
 U(Current) = 0
