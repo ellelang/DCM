@@ -5,7 +5,7 @@ Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demP
 	income_1,income_6,income_4,income_3, income_2,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean
 $
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix_normalfixed0206.csv"$
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix_normalfixed0219.csv"$
 
 
 dstat; rhs=* $
@@ -44,13 +44,13 @@ nlogit
 ;maxit = 200
 ;par
 ;Pts = 100
-?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
-?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
-?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dflall[VolCons]/taxcost[VolCons]/
+income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
 ?; Pts = 200
 ?;corr
- ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+ ;fcn=  wetland(q|#00),pay(c|#00),covercro(q|#10), nm(q|#00)
 ?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
@@ -60,7 +60,7 @@ nlogit
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	 + crp*crp2018		/
 U(Current) = 0
 ;Export output
 ?;Export = table
