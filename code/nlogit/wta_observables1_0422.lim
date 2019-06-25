@@ -1,0 +1,244 @@
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables11192018COMB426.csv"; Nobs=7056; Nvar=46; 
+
+Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
+	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
+	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,INCOMB23
+$
+
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix0426.csv"$
+
+
+dstat; rhs=* $
+
+sample; ALL$
+
+CALC ; Ran(123) $
+
+? create negative of wetland attribute to estimate lognormal rpl
+
+CREATE ; negWetl = -1*Wetland 
+       ; lake1000 = implakes/1000
+	 ; agv1000 = landvalu/1000 $
+
+SETPANEL ; Group = ID $
+
+SKIP $
+
+
+
+???? 12/4/18
+? models with alternative non-negative distributions, not lognormal N-563 in NLOGIT 6 ref guide
+
+sample; 2-7056$
+
+REJECT; income_N = 1
+      ; areaf_5 = 1
+      $
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000, income_7
+;wtp = wetland/pay,covercro/pay, nm/pay
+;maxit = 200
+;par
+;Pts = 1000
+?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+;full
+?; Pts = 200
+;corr
+;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+             incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4/
+U(Current) = 0
+	/
+U(Current) = 0
+;Export output
+?;Export = table
+;Export = matrix 
+$
+
+
+
+
+? ( ) is for elasticities, [ ] is for partial or marginal effects:
+;effects:pay[VolCons]/wetland[VolCons];export = matrix $
+
+? not include farm income 
+
+
+
+
+sample; 2-7057 $
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+;fcn=  -wetland[q],pay(q|#0), covercro(q|#1), nm[q]
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
+              farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+U(Current) = 0
+
+
+$
+
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000, incfar_5
+?;Pts = 1000
+; Pts = 100
+;fcn=  -wetland[l],pay(l|#01), covercro(n|#10)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	dems18*dem_2018 +  costTax*taxcost +
+             incfarm1*incfar_1 + incfarm2*incfar_2 + incfarm3*incfar_3 + incfarm4*incfar_4  
+		+ farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4			/
+U(Current) = 0
+
+?;Cluster=qnum
+?;Robust
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000 
+?+ cashr*cashrent + aglval*agv1000	
+$
+
+
+
+?????? model with interactions with non-random parameters
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+; corr
+;fcn=  wetland[l],pay[l], covercro(n), nm(c)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC + nm*NuMgt + cashr*cashrent
+		+ dems18*dem_2018 + incfarm*FARMINC 	
+		/
+U(Current) = 0
+
+
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000
+?+ cashr*cashrent + aglval*agv1000	
+$
+
+
+?????? model based on vars suggested in large part by stepAIC in R - prob best spec as of 11/29/18
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+?;Pts = 1000
+; Pts = 20
+;fcn= wetland[l],pay[l], covercro(n)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC + arealand*landarea + incfarm*FARMINC 
+		+ dems18*dem_2018 	
+		/
+U(Current) = 0
+
+; Par ; WTP = -wetland / pay
+
+?+ incfarm*FARMINC + areaL*LANDAREA + waterim*water_im + nm*NuMgt + Lakes*lake1000
+?+ cashr*cashrent + aglval*agv1000	
+$
+
+? WTP estimates
+
+
+WALD ; Fn1 = -wetland /pay $
+
+
+? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% not run below
+
+GMXLOGIT
+;lhs=Y
+;Choices=VolCons,Current
+;Pds = 8
+; Rpl = lake1000
+;fcn= pay[*l], wetland[l], covercro(n) 
+;Pts = 50
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*negWetl + covercro*CC +
+		dems18*dem_2018 + incfarm*FARMINC 	
+		/
+U(Current) = 0
+
+
+
+$
+
+
+nlogit
+;lhs=Y,cset,alti
+;Choices=VolCons,Current
+;rpl
+;fcn= pay(n), wetland(n), covercro(n)
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + covercrop*CC + nm*NuMgt + cashr*cashrent/
+U(Current) = 0
+
+?;Cluster=qnum
+;Robust
+
+$
+
+U(ecology)=split*split+pay*payoff+np*nonprof+ssplit*ssplit+spayoff*spayoff+snpe*snonprof+stude*student/
+U(irrig)=ascid+split*split+pay*payoff+np*nonprof+ssplit*ssplit+spayoff*spayoff+snpi*snonprof+studi*student/
+U(devel)=ascdev+split*split+pay*payoff+np*nonprof+ssplit*ssplit+spayoff*spayoff+snpd*snonprof+studd*student/
+U(none)=ascnone
+
+
