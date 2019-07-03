@@ -156,3 +156,315 @@ plt.xlabel('Q (quanty)')
 plt.ylabel('P (price)')
 plt.legend()
 plt.savefig('45Curve.png',dpi = 300)
+
+## HW2 
+### 1.1 
+
+q_21 = np.arange(0,68,1)
+p_21demand = 200 - 3*q_21
+p_21supply = 20 + 3*q_21
+p_21supply_social = 20 + 3*q_21 + 30
+
+
+
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+#plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+plt.axvline(x=30, ymin=0, ymax=0.55,linewidth=4, linestyle = '--', color = 'black')
+plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+plt.savefig('1aCurve.png',dpi = 300)
+plt.show()
+
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+#plt.axvline(x=30, ymin=0, ymax=0.55,linewidth=4, linestyle = '--', color = 'black')
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+plt.axvline(x=25, ymin=0, ymax=0.63,linewidth=4, linestyle = '--',color='#539ecd')
+plt.hlines(y=125,xmin=0, xmax=25,linewidth=4,linestyle = '--',color='#539ecd')
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+
+plt.savefig('1cCurve.png',dpi = 300)
+plt.show()
+
+## 1.b
+
+def f21b(x):
+    return 110
+def f23b(x):
+    return 125
+
+y_21 = f21b(q_21)
+y_23 = f23b(q_21)
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+#plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+plt.fill_between(q_21,p_21demand, where=q_21<=30, color='powderblue')
+
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+plt.show()
+plt.savefig('1baCurve.png',dpi = 300)
+
+## Consumer surplus
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+#plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+plt.fill_between(q_21,p_21demand, y_21, where=y_21<=p_21demand, color='plum')
+#plt.axvline(x=30, ymin=0, ymax=0.55,linewidth=4, linestyle = '--', color = 'black')
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+plt.show()
+plt.savefig('1bbCurve.png',dpi = 300)
+
+
+## producer surplus
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+#plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+plt.fill_between(q_21,p_21supply, y_21, where=y_21<=p_21demand, color='lightsalmon')
+#plt.axvline(x=30, ymin=0, ymax=0.55,linewidth=4, linestyle = '--', color = 'black')
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+plt.show()
+plt.savefig('1bcCurve.png',dpi = 300)
+
+##damage
+plt.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+plt.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+plt.fill_between(q_21,p_21supply,p_21supply_social, where=q_21<=30, color='sienna')
+#plt.axvline(x=30, ymin=0, ymax=0.55,linewidth=4, linestyle = '--', color = 'black')
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+plt.xlim(0,70)
+plt.ylim(0,200)
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.legend()
+plt.show()
+plt.savefig('1bdCurve.png',dpi = 300)
+
+
+import matplotlib.patches as mpatches
+labels = ['Total Benefit', 'Consumer Surplus', 'Producer Surplus', 'Externality Demage']
+
+pb_patch = mpatches.Patch(color='powderblue', edgecolor='') #'#000000' this will create a red bar with black borders, you can leave out edgecolor if you do not want the borders
+plum_patch = mpatches.Patch(color='plum', edgecolor='')
+salmon_patch = mpatches.Patch(color='lightsalmon', edgecolor='')
+sienna_patch = mpatches.Patch(color='sienna', edgecolor='')
+
+
+y_ticks = np.arange(0, 210, 20)
+x_ticks = np.arange(0, 75, 5)
+
+
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex=False, sharey=False, figsize=(15, 10))
+
+ax1.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax1.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+#ax1.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax1.fill_between(q_21,p_21demand, where=q_21<=30, color='powderblue')
+ax1.axvline(x=30, ymin=0, ymax=0.55,linewidth=2, linestyle = '--', color = 'black')
+ax1.hlines(y=110,xmin=0, xmax=30,linewidth=2,linestyle = '--',color = 'black')
+
+ax1.set_xticks(x_ticks)
+ax1.set_yticks(y_ticks)
+ax1.set_xlim(0,70)
+ax1.set_ylim(0,200)
+ax1.set_ylabel('P (price)')
+ax1.legend()
+ax2.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax2.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax2.hlines(y=110,xmin=0, xmax=30,linewidth=2,linestyle = '--',color = 'black')
+
+#ax2.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax2.axvline(x=30, ymin=0, ymax=0.55,linewidth=2, linestyle = '--', color = 'black')
+ax2.fill_between(q_21,p_21demand, y_21, where=y_21<=p_21demand, color='plum')
+ax2.set_xticks(x_ticks)
+ax2.set_yticks(y_ticks)
+ax2.set_xlim(0,70)
+ax2.set_ylim(0,200)
+
+ax3.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax3.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax3.axvline(x=30, ymin=0, ymax=0.55,linewidth=2, linestyle = '--', color = 'black')
+ax3.hlines(y=110,xmin=0, xmax=30,linewidth=2,linestyle = '--',color = 'black')
+
+#ax3.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax3.fill_between(q_21,p_21supply, y_21, where=y_21<=p_21demand, color='lightsalmon')
+ax3.set_xlabel('Q (quanty)')
+ax3.set_ylabel('P (price)')
+ax3.set_xticks(x_ticks)
+ax3.set_yticks(y_ticks)
+ax3.set_xlim(0,70)
+ax3.set_ylim(0,200)
+
+
+ax4.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax4.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax4.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax4.fill_between(q_21,p_21supply,p_21supply_social, where=q_21<=30, color='sienna')
+#ax4.hlines(y=110,xmin=0, xmax=30,linewidth=2,linestyle = '--',color = 'black')
+ax4.axvline(x=30, ymin=0, ymax=0.55,linewidth=2, linestyle = '--', color = 'black')
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+ax4.set_xticks(x_ticks)
+ax4.set_yticks(y_ticks)
+ax4.set_xlim(0,70)
+ax4.set_ylim(0,200)
+
+ax1.title.set_text('Total Benefit')
+ax2.title.set_text('Consumer Surplus')
+ax3.title.set_text('Producer Surplus')
+ax4.title.set_text('Externality Demage')
+ax4.set_xlabel('Q (quanty)')
+ax4.legend()
+fig.legend(handles=[pb_patch, plum_patch, salmon_patch,sienna_patch ],     # The line objects
+           labels=labels,   # The labels for each line
+           loc="center right",   # Position of legend
+           borderaxespad=0.1,    # Small spacing around legend box
+           title=""  # Title for the legend
+           )
+plt.subplots_adjust(right=0.85)
+plt.savefig('1bCurve_whole.png',dpi = 300)
+plt.show()
+
+###############################3d
+
+labels2 = ['Total Benefit', 'Consumer Surplus', 'Producer Surplus', 'Externality Demage',  'Tax Revenue']
+
+
+y_ticks = np.arange(0, 210, 25)
+x_ticks = np.arange(0, 75, 5)
+
+
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex=False, sharey=False, figsize=(15, 10))
+
+ax1.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax1.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax1.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax1.fill_between(q_21,p_21demand, where=q_21<=25, color='powderblue')
+ax1.axvline(x=25, ymin=0, ymax=0.64,linewidth=2, linestyle = '--', color='#539ecd')
+ax1.axhline(y=125, xmin=0, xmax=0.35,linewidth=2, linestyle = '--', color='#539ecd')
+ax1.set_xticks(x_ticks)
+ax1.set_yticks(y_ticks)
+ax1.set_xlim(0,70)
+ax1.set_ylim(0,200)
+ax1.set_ylabel('P (price)')
+ax1.legend()
+ax2.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax2.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax2.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax2.axvline(x=25, ymin=0, ymax=0.64,linewidth=2, linestyle = '--', color='#539ecd')
+ax2.axhline(y=125, xmin=0, xmax=0.35,linewidth=2, linestyle = '--', color='#539ecd')
+ax2.fill_between(q_21,p_21demand, y_23, where=y_23<=p_21demand, color='plum')
+ax2.set_xlim(0,70)
+ax2.set_ylim(0,200)
+ax2.set_xticks(x_ticks)
+ax2.set_yticks(y_ticks)
+
+ax3.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax3.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax3.axvline(x=25, ymin=0, ymax=0.64,linewidth=2, linestyle = '--', color='#539ecd')
+ax3.axhline(y=125, xmin=0, xmax=0.35,linewidth=2, linestyle = '--', color='#539ecd')
+ax3.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax3.fill_between(q_21,p_21supply_social, y_23, where=y_23<=p_21demand, color='lightsalmon')
+ax3.set_xlabel('Q (quanty)')
+ax3.set_ylabel('P (price)')
+ax3.set_xlim(0,70)
+ax3.set_ylim(0,200)
+ax3.set_xticks(x_ticks)
+ax3.set_yticks(y_ticks)
+
+ax4.plot(q_21,p_21demand, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+ax4.plot(q_21,p_21supply, color = 'red',linestyle = '-', linewidth=4, label = "MPC")
+ax4.plot(q_21,p_21supply_social, color = 'gold',linestyle = '-', linewidth=4, label = "MSC")
+ax4.fill_between(q_21,p_21supply,p_21supply_social, where=q_21<=25, color='sienna')
+ax4.axvline(x=25, ymin=0, ymax=0.64,linewidth=2, linestyle = '--', color='#539ecd')
+#ax4.axhline(y=125, xmin=0, xmax=0.35,linewidth=2, linestyle = '--', color='#539ecd')
+ax4.set_xlim(0,70)
+ax4.set_ylim(0,200)
+ax4.set_xticks(x_ticks)
+ax4.set_yticks(y_ticks)
+#plt.hlines(y=110,xmin=0, xmax=30,linewidth=4,linestyle = '--',color = 'black')
+ax1.title.set_text('Total Benefit')
+ax2.title.set_text('Consumer Surplus')
+ax3.title.set_text('Producer Surplus')
+ax4.title.set_text('Externality Demage, Tax Revenue')
+ax4.set_xlabel('Q (quanty)')
+
+
+fig.legend(handles=[pb_patch, plum_patch, salmon_patch,sienna_patch,sienna_patch ],     # The line objects
+           labels=labels2,   # The labels for each line
+           loc="center right",   # Position of legend
+           borderaxespad=0.1,    # Small spacing around legend box
+           title=""  # Title for the legend
+           )
+plt.subplots_adjust(right=0.85)
+plt.savefig('1dCurve_whole.png',dpi = 300)
+
+
+## Q2
+q_22a = np.arange(0,900,1)
+p_22a_b = -0.4 * q_22a + 360
+p_22a_c = 0.2 * q_22a + 90
+
+plt.plot(q_22a,p_22a_b, color = 'blue',linestyle = '-', linewidth=4, label = "MB")
+plt.plot(q_22a,p_22a_c, color = 'red',linestyle = '-', linewidth=4, label = "MC")
+plt.xlim(0,900)
+plt.ylim(0,400)
+plt.axvline(x=450, ymin=0, ymax=0.44,linewidth=4, linestyle = '--', color='#539ecd')
+plt.axhline(y=180, xmin=0, xmax=0.5,linewidth=4, linestyle = '--', color='#539ecd')
+plt.legend()
+plt.xlabel('Q (quanty)')
+plt.ylabel('P (price)')
+plt.savefig('22bCurve.png',dpi = 300)
+
+
+
+##HW3
+
+q_31a  = np.arange(0,21,1)
+
+pi_allow = 10 * q_31a - 0.5 *q_31a**2
+pi_solow = 20 * q_31a - q_31a**2
+
+plt.plot(q_31a, pi_allow, color = 'blue',linestyle = '-', linewidth=4, label = "Arrow")
+plt.plot(q_31a ,pi_solow, color = 'red',linestyle = '-', linewidth=4, label = "Solow")
+
+plt.xlim(0,20)
+plt.ylim(0,110)
+plt.legend()
+plt.xlabel('Pollution')
+plt.ylabel('Profits')
+plt.savefig('32aCurve.png',dpi = 300)
+
+plt.plot(q_22a,p_22a_b, color = 'c',linestyle = '-', linewidth=4, label = "MB")
+plt.axhline(y=180, color = 'm',linewidth=4, linestyle = '-',label = "MD (constant)")
+plt.xticks([])
+plt.yticks([])
+plt.xlim(0,900)
+plt.ylim(0,400)
+plt.legend()
+plt.xlabel('Pollution')
+plt.ylabel('Profits')
+plt.savefig('32iCurve.png',dpi = 300)

@@ -10,7 +10,8 @@ df = pd.read_csv(data_folder/'WAParkCost.csv')
 
 df.head()
 
-
+mean_cost = df['Cost_acre_year_2018'].mean()
+mean_cost
 
 df.describe()
 a = df['Physiognomy'].value_counts()
@@ -23,6 +24,7 @@ wet_types_mean
 
 wet_types_median = df.groupby(['Physiognomy']).median()
 wet_types_median
+wet_types_median['Cost_acre_year_2018'].mean()
 
 wet_types_max = df.groupby(['Physiognomy']).max()
 wet_types_max
