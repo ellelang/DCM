@@ -468,3 +468,46 @@ plt.legend()
 plt.xlabel('Pollution')
 plt.ylabel('Profits')
 plt.savefig('32iCurve.png',dpi = 300)
+
+
+
+################Midterm 
+
+q_mid8  = np.arange(0,11,1)
+B_mid8 = 20 * q_mid8 - q_mid8 **2
+C_mid8 = q_mid8 **2
+x_ticks = np.arange(0, 11, 1)
+plt.xlim(0,11)
+plt.ylim(0,110)
+plt.plot(q_mid8, B_mid8, color = 'blue',linestyle = '-', linewidth=4, label = "B(X)")
+plt.plot(q_mid8, C_mid8, color = 'red',linestyle = '-', linewidth=4, label = "C(X)")
+plt.legend()
+plt.savefig('mid8a.png',dpi = 300)
+
+
+
+q_mid12  = np.arange(0,11,1)
+d_mid12 = 20 - 2*q_mid12
+s_mid12 = 0.5*q_mid12
+social_mid12 =  0.5*q_mid12 + 5
+plt.xlim(0,11)
+plt.ylim(0,21)
+plt.plot(q_mid12, d_mid12, color = 'blue',linestyle = '-', linewidth=4, label = "Demand")
+plt.plot(q_mid12, s_mid12, color = 'red',linestyle = '-', linewidth=4, label = "Supply")
+#TWTP:
+#plt.fill_between(q_mid12,d_mid12, where=q_mid12<=8, color='#539ecd')
+#TCOST:
+plt.fill_between(q_mid12,s_mid12, where=q_mid12<=8, color='lightsalmon')              
+plt.legend()
+plt.savefig('mid12d.png',dpi = 300)
+
+
+##12.e
+plt.xlim(0,11)
+plt.ylim(0,21)
+plt.plot(q_mid12, d_mid12, color = 'blue',linestyle = '-', linewidth=4, label = "MD")
+plt.plot(q_mid12, social_mid12, color = 'orchid',linestyle = '-', linewidth=4, label = "MSC")
+plt.plot(q_mid12, s_mid12, color = 'red',linestyle = '-', linewidth= 4, label = "MC")
+plt.fill_between(q_mid12,social_mid12,s_mid12, where = q_mid12<=8, color='violet') 
+plt.legend()
+plt.savefig('mid12e.png',dpi = 300)
