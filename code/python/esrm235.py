@@ -511,3 +511,76 @@ plt.plot(q_mid12, s_mid12, color = 'red',linestyle = '-', linewidth= 4, label = 
 plt.fill_between(q_mid12,social_mid12,s_mid12, where = q_mid12<=8, color='violet') 
 plt.legend()
 plt.savefig('mid12e.png',dpi = 300)
+
+##############################Final
+##1a
+
+
+q_final1  = np.arange(0,11,1)
+B_final1 = 20 * q_final1 - q_final1 **2
+C_final1 = q_final1 **2
+d_final1 = 20 - 2*q_final1
+s_final1 = 1.2*q_final1
+
+fig, (ax1, ax2) = plt.subplots(1, 2, sharex=False, sharey=False, figsize=(10, 5))
+
+ax1.set_xticks([])
+ax1.set_yticks([])
+ax1.plot(q_final1, B_final1, color = 'blue',linestyle = '-', linewidth=4, label = "B(X)")
+ax1.plot(q_final1, C_final1, color = 'red',linestyle = '-', linewidth=4, label = "C(X)")
+ax1.legend()
+ax1.grid(False)
+
+ax2.set_xticks([])
+ax2.set_yticks([])
+ax2.plot(q_final1, d_final1, color = 'blue',linestyle = '-', linewidth=4, label = "MB(X)")
+ax2.plot(q_final1, s_final1, color = 'red',linestyle = '-', linewidth=4, label = "MC(X)")
+ax2.legend()
+ax2.grid(False)
+
+
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(10, 5))
+plt.setp(ax, xticks=[],
+        yticks=[])
+ax[0].set_xlim (0,11)
+ax[0].set_ylim (0,111)
+ax[0].plot(q_final1, B_final1, color = 'blue',linestyle = '-', linewidth=4, label = "B(X)")
+ax[0].plot(q_final1, C_final1, color = 'red',linestyle = '-', linewidth=4, label = "C(X)") #row=0, col=1
+ax[0].legend()
+ax[1].plot(q_final1, d_final1, color = 'peru',linestyle = '-', linewidth=4, label = "MD(X)") #row=0, col=0
+ax[1].plot(q_final1, s_final1, color = 'teal',linestyle = '-', linewidth=4, label = "MC(X)") #row=0, col=1
+ax[1].set_xlim (0,11)
+ax[1].set_ylim (0,21)
+ax[1].legend()
+
+plt.savefig('final1a.png',dpi = 300)
+
+
+##################Question 5
+q_final5  = np.arange(0,26,1)
+d_final5 = 25 - q_final5
+s_final5 = 1 + 3*q_final5
+social_s_final5 = 5 + 3*q_final5
+
+def f_final5a(x):
+    return 19
+y_19 = f_final5a (q_final5)
+plt.xlim(0,26)
+plt.ylim(0,30)
+plt.xticks(np.arange(0, 26, 1)) 
+plt.plot (q_final5, d_final5, color = 'blue',linestyle = '-', linewidth=4, label = "MD(X)")
+plt.plot (q_final5, s_final5, color = 'red',linestyle = '-', linewidth=4, label = "MC(X)")
+plt.plot (q_final5, social_s_final5, color = 'peru',linestyle = '-', linewidth=4, label = "MSC(X)")
+plt.axvline(x=5, ymin=0, ymax=0.68, linewidth=3, linestyle = '--', color='grey')
+plt.axvline(x=6, ymin=0, ymax=0.75, linewidth=3, linestyle = '--', color='black')
+plt.fill_between(q_final5,d_final5, y_19, where=y_19<=d_final5, color='#539ecd',label = "CS")
+plt.fill_between(q_final5,s_final5, y_19, where=q_final5 <= 6, color='plum', label="PS")
+plt.legend()
+plt.savefig('final5.png',dpi = 300)          
+
+
+############8 
+q_final8  = np.arange(0,21,1)
+x_efinal8 = 6 * q_final8
+x_rfinal8 = 4 * q_final8
+  
