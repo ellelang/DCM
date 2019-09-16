@@ -3,7 +3,8 @@ library(uwIntroStats)
 library(tidyverse)
 library(mvtnorm)
 setwd("C:/Users/langzx/Desktop/github/DCM/data")
-dataset <- read.csv (file = "county_all0426.csv",header = TRUE)
+#dataset <- read.csv (file = "county_all0426.csv",header = TRUE)
+dataset <- read.csv (file = "county_others.csv",header = TRUE)
 dim(dataset)
 n <- dim(dataset)[1]
 dataset$asc <- rep(1,n )
@@ -280,10 +281,10 @@ all$County <- dataset$County
 
 
 setwd("C:/Users/langzx/Desktop/github/DCM/output")
-write.csv (x = WLD_WTA_ALL, file = "WLD_wta_county912.csv", row.names = FALSE)
-write.csv (x = CC_WTA_ALL, file = "CC_wta_county912.csv", row.names = FALSE)
-write.csv (x = NM_WTA_ALL, file = "NM_wta_county912.csv", row.names = FALSE)
-write.csv (x = others_WTA_ALL, file = "others_wta_county912.csv", row.names = FALSE)
-write.csv (x = all, file = "wtas_county912.csv", row.names = FALSE)
+write.csv (x = WLD_WTA_ALL, file = "WLD_wta_county915others.csv", row.names = FALSE)
+write.csv (x = CC_WTA_ALL, file = "CC_wta_county915others.csv", row.names = FALSE)
+write.csv (x = NM_WTA_ALL, file = "NM_wta_county915others.csv", row.names = FALSE)
+write.csv (x = others_WTA_ALL, file = "others_wta_county915others.csv", row.names = FALSE)
+write.csv (x = all, file = "wtas_county915others.csv", row.names = FALSE)
 
 
