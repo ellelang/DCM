@@ -5,18 +5,16 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import numpy as np
 import pandas as pd
-from pathlib import Path
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
 
 #inter_data = pd.read_csv(data_folder/"intersect_data.csv")
-inter_data = pd.read_csv(data_folder/"intersect_3counties_data.csv")
-inter_data
-inter_data.info()
+#inter_data = pd.read_csv(data_folder/"intersect_3counties_data.csv")
+#inter_data
+#inter_data.info()
 
 ##Sort by subbasin and inter_acre, save it to a new file!!! 
-inter_data = inter_data.sort_values(by=['Subbasin','inter_acre'])
-inter_data
-inter_data.to_csv(data_folder/"intersect_3counties_sorted.csv",index = False)
+#inter_data = inter_data.sort_values(by=['Subbasin','inter_acre'])
+#inter_data
+#inter_data.to_csv(data_folder/"intersect_3counties_sorted.csv",index = False)
 
 
 
@@ -24,8 +22,8 @@ inter_data.to_csv(data_folder/"intersect_3counties_sorted.csv",index = False)
 inter_data = pd.read_csv(data_folder/"intersect_3counties_sorted.csv")
 inter_data.info()
 othercosts = pd.DataFrame({'State':['Iowa','Minnesota','South Dakota'], 
-                           'GW': [174.65, 178.48 , 179.81],
-                          'Buffer' : [692.10 ,559.08, 301.77 ]})
+                           'GW': [19.34, 19.77 , 19.91],
+                          'Buffer' : [76.65 ,61.91, 33.42 ]})
 
 
 
