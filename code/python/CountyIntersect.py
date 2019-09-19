@@ -18,7 +18,25 @@ inter_data = inter_data.sort_values(by=['Subbasin','inter_acre'])
 inter_data
 inter_data.to_csv(data_folder/"intersect_3counties_sorted.csv",index = False)
 
+
+
+#################add other costs
 inter_data = pd.read_csv(data_folder/"intersect_3counties_sorted.csv")
+inter_data.info()
+othercosts = pd.DataFrame({'State':['Iowa','Minnesota','South Dakota'], 
+                           'GW': [174.65, 178.48 , 179.81],
+                          'Buffer' : [692.10 ,559.08, 301.77 ]})
+
+
+
+
+othercosts
+inter_data = inter_data.merge(othercosts, on = 'State', how = 'left')
+inter_data.info()
+
+
+
+#inter_data = pd.read_csv(data_folder/"intersect_3counties_sorted.csv")
 grouped = inter_data.groupby('Subbasin')['inter_acre']
 
 pd.DataFrame({'count' : inter_data.groupby( 'Subbasin' ).size()}).reset_index()
@@ -52,8 +70,16 @@ weights_intersect['WLD_w'] = weights_intersect['WLD'] * weights_intersect['weigh
 weights_intersect['CC_w'] = weights_intersect['CC'] * weights_intersect['weight'] 
 weights_intersect['NM_w'] = weights_intersect['NM'] * weights_intersect['weight'] 
 weights_intersect['ASC_w'] = weights_intersect['ASC_obs'] * weights_intersect['weight'] 
+weights_intersect['GW_w'] = weights_intersect['GW'] * weights_intersect['weight'] 
+weights_intersect['Buffer_w'] = weights_intersect['Buffer'] * weights_intersect['weight'] 
 
 
 grouped_w = weights_intersect.groupby('Subbasin')
-weighted_costs = pd.DataFrame( grouped_w[['WLD_w','CC_w','NM_w','ASC_w']].sum()).reset_index()
-weighted_costs.to_csv(data_folder/'weighted_costs_3counties.csv', index=False)
+weighted_costs = pd.DataFrame( grouped_w[['WLD_w','CC_w','NM_w','ASC_w','GW_w','Buffer_w']].sum()).reset_index()
+weighted_costs.to_csv(data_folder/'weighted_costs_3counties_all.csv', index=False)
+
+######################add other costs
+
+
+
+
