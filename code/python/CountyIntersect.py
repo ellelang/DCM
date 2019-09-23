@@ -22,9 +22,8 @@ import pandas as pd
 inter_data = pd.read_csv(data_folder/"intersect_3counties_sorted.csv")
 inter_data.info()
 othercosts = pd.DataFrame({'State':['Iowa','Minnesota','South Dakota'], 
-                           'GW': [19.34, 19.77 , 19.91],
-                          'Buffer' : [76.65 ,61.91, 33.42 ]})
-
+                           'GW': [1.25, 1.76, 1.94],
+                          'Buffer' : [2.27 ,1.82, 0.96 ]})
 
 
 
@@ -74,7 +73,7 @@ weights_intersect['Buffer_w'] = weights_intersect['Buffer'] * weights_intersect[
 
 grouped_w = weights_intersect.groupby('Subbasin')
 weighted_costs = pd.DataFrame( grouped_w[['WLD_w','CC_w','NM_w','ASC_w','GW_w','Buffer_w']].sum()).reset_index()
-weighted_costs.to_csv(data_folder/'weighted_costs_3counties_all.csv', index=False)
+weighted_costs.to_csv(data_folder/'weighted_costs_3counties_all0923.csv', index=False)
 
 ######################add other costs
 
