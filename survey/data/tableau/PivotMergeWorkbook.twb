@@ -1,0 +1,790 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook original-version='18.1' source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Extract+ (Multiple Connections)' inline='true' name='federated.1v8yzn10s81tjo14ppoez01t747j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='NumberPivot441' name='hyper.1t2eb8j1hh9b9u1fm8dhh0nsllnw'>
+            <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/langzx/Desktop/github/DCM/survey/data/NumberPivot441.hyper' default-settings='yes' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+          <named-connection caption='LabelPivot441' name='hyper.0hxqd2b1fflc5p1014szv10qdlgi'>
+            <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/langzx/Desktop/github/DCM/survey/data/LabelPivot441.hyper' default-settings='yes' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+          <named-connection caption='dataset_0105_3set -441 - Copy' name='excel-direct.1t2yfgb06ofywr13smtgb0ea9h44'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/langzx/Desktop/github/DCM/survey/data/dataset_0105_3set -441 - Copy.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Extract].[Pivot Field Names]' />
+              <expression op='[Helper].[QuestionID]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='AND'>
+                <expression op='='>
+                  <expression op='[Extract].[respondentid]' />
+                  <expression op='[Demographics].[respondentid]' />
+                </expression>
+                <expression op='='>
+                  <expression op='[Extract1].[respondentid]' />
+                  <expression op='[Demographics].[respondentid]' />
+                </expression>
+              </expression>
+            </clause>
+            <relation join='inner' type='join'>
+              <clause type='join'>
+                <expression op='AND'>
+                  <expression op='='>
+                    <expression op='[Extract].[Pivot Field Names]' />
+                    <expression op='[Extract1].[Pivot Field Names]' />
+                  </expression>
+                  <expression op='='>
+                    <expression op='[Extract].[respondentid]' />
+                    <expression op='[Extract1].[respondentid]' />
+                  </expression>
+                </expression>
+              </clause>
+              <relation connection='hyper.1t2eb8j1hh9b9u1fm8dhh0nsllnw' name='Extract' table='[Extract].[Extract]' type='table' />
+              <relation connection='hyper.0hxqd2b1fflc5p1014szv10qdlgi' name='Extract1' table='[Extract].[Extract]' type='table' />
+            </relation>
+            <relation connection='excel-direct.1t2yfgb06ofywr13smtgb0ea9h44' name='Demographics' table='[Demographics$]' type='table'>
+              <columns gridOrigin='A1:J442:no:A1:J442:0' header='yes' outcome='2'>
+                <column datatype='integer' name='respondentid' ordinal='0' />
+                <column datatype='string' name='gender' ordinal='1' />
+                <column datatype='string' name='age' ordinal='2' />
+                <column datatype='string' name='education' ordinal='3' />
+                <column datatype='string' name='income' ordinal='4' />
+                <column datatype='string' name='incomefromfarming' ordinal='5' />
+                <column datatype='string' name='landarea' ordinal='6' />
+                <column datatype='string' name='majorityland' ordinal='7' />
+                <column datatype='string' name='primaryrotation' ordinal='8' />
+                <column datatype='string' name='work2017' ordinal='9' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='excel-direct.1t2yfgb06ofywr13smtgb0ea9h44' name='Helper' table='[Helper$]' type='table'>
+            <columns gridOrigin='A1:C152:no:A1:C152:0' header='yes' outcome='2'>
+              <column datatype='string' name='QuestionID' ordinal='0' />
+              <column datatype='string' name='Wording' ordinal='1' />
+              <column datatype='string' name='Grouping' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Grouping]' value='[Helper].[Grouping]' />
+          <map key='[Pivot Field Names (Extract1)]' value='[Extract1].[Pivot Field Names]' />
+          <map key='[Pivot Field Names]' value='[Extract].[Pivot Field Names]' />
+          <map key='[Pivot Field Values (Extract1)]' value='[Extract1].[Pivot Field Values]' />
+          <map key='[Pivot Field Values]' value='[Extract].[Pivot Field Values]' />
+          <map key='[QuestionID]' value='[Helper].[QuestionID]' />
+          <map key='[Wording]' value='[Helper].[Wording]' />
+          <map key='[age]' value='[Demographics].[age]' />
+          <map key='[education]' value='[Demographics].[education]' />
+          <map key='[gender]' value='[Demographics].[gender]' />
+          <map key='[income]' value='[Demographics].[income]' />
+          <map key='[incomefromfarming]' value='[Demographics].[incomefromfarming]' />
+          <map key='[landarea]' value='[Demographics].[landarea]' />
+          <map key='[majorityland]' value='[Demographics].[majorityland]' />
+          <map key='[primaryrotation]' value='[Demographics].[primaryrotation]' />
+          <map key='[respondentid (Demographics)]' value='[Demographics].[respondentid]' />
+          <map key='[respondentid (Extract1)]' value='[Extract1].[respondentid]' />
+          <map key='[respondentid]' value='[Extract].[respondentid]' />
+          <map key='[work2017]' value='[Demographics].[work2017]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>respondentid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[respondentid]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>respondentid</remote-alias>
+            <ordinal>0</ordinal>
+            <family>Number</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>948</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>1</ordinal>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>142</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>2</ordinal>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>76</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>respondentid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[respondentid (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>respondentid</remote-alias>
+            <ordinal>3</ordinal>
+            <family>Label</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1092</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>4</ordinal>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>148</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Values (Extract1)]</local-name>
+            <parent-name>[Extract1]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>5</ordinal>
+            <family>Pivot</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>102</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>respondentid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[respondentid (Demographics)]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>respondentid</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>education</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[education]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>education</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>income</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[income]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>income</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>incomefromfarming</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[incomefromfarming]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>incomefromfarming</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>landarea</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[landarea]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>landarea</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>majorityland</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[majorityland]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>majorityland</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryrotation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[primaryrotation]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>primaryrotation</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>work2017</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[work2017]</local-name>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias>work2017</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Demographics]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J442:no:A1:J442:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>QuestionID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[QuestionID]</local-name>
+            <parent-name>[Helper]</parent-name>
+            <remote-alias>QuestionID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wording</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Wording]</local-name>
+            <parent-name>[Helper]</parent-name>
+            <remote-alias>Wording</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Grouping</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Grouping]</local-name>
+            <parent-name>[Helper]</parent-name>
+            <remote-alias>Grouping</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Helper]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C152:no:A1:C152:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Question ID' datatype='string' name='[QuestionID]' role='dimension' type='nominal' />
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Education' datatype='string' name='[education]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Income' datatype='string' name='[income]' role='dimension' type='nominal' />
+      <column caption='Incomefromfarming' datatype='string' name='[incomefromfarming]' role='dimension' type='nominal' />
+      <column caption='Landarea' datatype='string' name='[landarea]' role='dimension' type='nominal' />
+      <column caption='Majorityland' datatype='string' name='[majorityland]' role='dimension' type='nominal' />
+      <column caption='Primaryrotation' datatype='string' name='[primaryrotation]' role='dimension' type='nominal' />
+      <column caption='Respondentid' datatype='integer' name='[respondentid]' role='measure' type='quantitative' />
+      <column caption='Work2017' datatype='string' name='[work2017]' role='dimension' type='nominal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/langzx/Desktop/github/DCM/survey/data/PivotDataMerge.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/10/2019 09:40:57 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[Grouping]' value='[Extract].[Grouping]' />
+            <map key='[Pivot Field Names (Extract1)]' value='[Extract].[Pivot Field Names]' />
+            <map key='[Pivot Field Names]' value='[Extract].[Pivot Field Names1]' />
+            <map key='[Pivot Field Values (Extract1)]' value='[Extract].[Pivot Field Values]' />
+            <map key='[Pivot Field Values]' value='[Extract].[Pivot Field Values1]' />
+            <map key='[QuestionID]' value='[Extract].[QuestionID]' />
+            <map key='[Wording]' value='[Extract].[Wording]' />
+            <map key='[age]' value='[Extract].[age]' />
+            <map key='[education]' value='[Extract].[education]' />
+            <map key='[gender]' value='[Extract].[gender]' />
+            <map key='[income]' value='[Extract].[income]' />
+            <map key='[incomefromfarming]' value='[Extract].[incomefromfarming]' />
+            <map key='[landarea]' value='[Extract].[landarea]' />
+            <map key='[majorityland]' value='[Extract].[majorityland]' />
+            <map key='[primaryrotation]' value='[Extract].[primaryrotation]' />
+            <map key='[respondentid (Demographics)]' value='[Extract].[respondentid]' />
+            <map key='[respondentid (Extract1)]' value='[Extract].[respondentid1]' />
+            <map key='[respondentid]' value='[Extract].[respondentid2]' />
+            <map key='[work2017]' value='[Extract].[work2017]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='61299' timestamp-start='2019-10-10 21:40:57.812' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>respondentid2</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[respondentid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>respondentid2</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Number</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1152</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names1</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Values]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values1</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>respondentid1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[respondentid (Extract1)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>respondentid1</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Label</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1152</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Names (Extract1)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Names</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pivot Field Values</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Pivot Field Values (Extract1)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pivot Field Values</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Pivot</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>129</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>respondentid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[respondentid (Demographics)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>respondentid</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Demographics</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1152</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>education</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[education]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>education</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>income</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[income]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>income</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>incomefromfarming</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[incomefromfarming]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>incomefromfarming</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>landarea</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[landarea]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>landarea</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>majorityland</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[majorityland]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>majorityland</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primaryrotation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primaryrotation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primaryrotation</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>work2017</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[work2017]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>work2017</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Demographics</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>QuestionID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[QuestionID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>QuestionID</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Helper</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>145</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wording</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Wording]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Wording</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Helper</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>144</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Grouping</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Grouping]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Grouping</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Helper</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.702655' measure-ordering='alphabetic' measure-percentage='0.297345' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{22E6B2CD-6957-4F89-AD55-8C36E053F48C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
