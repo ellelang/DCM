@@ -1,136 +1,136 @@
 QuestionID,Wording,Grouping
-"Choice1","Wetland =1, Covercrop =1,  NuMgt =1,  Payment =600 ",Choice Experiment
-"Choice2","Wetland =0, Covercrop =1,† NuMgt =0,† Payment =50†",Choice Experiment
-"Choice3","Wetland =1, Covercrop =0,† NuMgt =0,† Payment =650†",Choice Experiment
-"Choice4","Wetland =0, Covercrop =0,† NuMgt =1,† Payment =25",Choice Experiment
-"Choice5","Wetland =1, Covercrop =1,† NuMgt =1,† Payment =500†",Choice Experiment
-"Choice6","Wetland =0, Covercrop =0,† NuMgt =1,† Payment =450†",Choice Experiment
-"Choice7","Wetland =0, Covercrop =1,† NuMgt =0,† Payment =150†",Choice Experiment
-Choice8,"Wetland =1, Covercrop =0,† NuMgt =0,† Payment =200",Choice Experiment
-Countyresident,County of residence,Spatial
-Countyland,In which county is all or most of your land located?,Spatial
-Scenicconcern,How concerned are you about the current scenic quality of waterways in the Basin?,Concern_Ecosystem Services
-Scenicmoderate,How important is the achievement of moderate improvements in scenic quality to you?,ModerateImprove_Ecosystem Services
-Scenicmajor,How important is the achievement of major improvements in scenic quality to you?,MajorImprove_Ecosystem Services
-Nutrientconcern,How concerned are you about the current levels of nutrient pollution in Basin's waters?,Concern_Ecosystem Services
-Nutrientmoderate,How important is the achievement of a moderate reduction in nutrient levels to you?,ModerateImprove_Ecosystem Services
-Nutrientmajor,How important is the achievement of a major reduction in nutrient levels to you?,MajorImprove_Ecosystem Services
-Habitatconcern,How concerned are you about the current ability of the Basin to provide high-quality habitat?,Concern_Ecosystem Services
-Habitatmoderate,How important is the achievement of a moderate improvement in habitat quality to you?,ModerateImprove_Ecosystem Services
-Habitatmajor,How important is the achievement of a major improvement in habitat quality to you?,MajorImprove_Ecosystem Services
-Sedimentconcern,How concerned are you about the current levels of sediment in Basin's waters?,Concern_Ecosystem Services
-Sedimentmoderate,How important is the achievement of a moderate reduction in sediment levels to you?,ModerateImprove_Ecosystem Services
-Sedimentmajor,How important is the achievement of a major reduction in sediment levels to you?,MajorImprove_Ecosystem Services
-Recreationconcern,How concerned are you about your current ability to safely and enjoyably engage in aquatic recreation in Basin's waters?,Concern_Ecosystem Services
-Recreationmoderate,How important is the achievement of a moderate improvement in the recreation potential of Basin's waters to you?,ModerateImprove_Ecosystem Services
-Recreationmajor,How important is the achievement of a major improvement in the recreation potential of Basin's waters to you?,MajorImprove_Ecosystem Services
-Valknowconservation,I know what steps to take to conserve soil and water on my land.,Indicate degree to which you agree
-Valundueblame,I think farmers take undue blame for environmental problems in the watershed.,Indicate degree to which you agree
-Valwaterimportant,I think soil and water conservation are important.,Indicate degree to which you agree
-Vallandregulate,I think farming practices and land use (such as planting grass along streams or steep slopes) should be regulated to reduce pollution to surface water.,Indicate degree to which you agree
-Valwaterproblem,"I think water contamination (from fertilizers, sediments, and septics) is an important environmental problem in our watershed.",Indicate degree to which you agree
-Valpaymentimportant,I think commodity payments impact my decisions about soil and water conservation.,Indicate degree to which you agree
-Valtogether,I think farmers and other watershed residents should work together to protect the watershed.,Indicate degree to which you agree
-Valstaff,I think farmers and conservation agency staff should work together to protect the watershed.,Indicate degree to which you agree
-Valsteward,I consider myself a good steward of the land.,Indicate degree to which you agree
-Valinfluence,I think my responses to this survey will influence future decisions regarding water quality and conservation policies.,Indicate degree to which you agree
-Pollutionobs,"Based on what you know and can observe about the Minnesota River Basin, do you think there are significant water-related problems associated with it? ",Pollution notification
-Familiar25,How familiar are you with the 25 by 25ù water quality goal for MinnesotaState?,25 by 25 goal
-Otherswetland,Do you personally know anyone who restored wetlands on their land?,wetland_LM opinions
-Otherscovercrop,Do you personally know anyone who is planting cover crops on a regular basis?,cc_LM opinions
-Othersnm,Do you currently have a nutrient management plan in place?,nm_LM opinions
-Pastcrp,Selection of crop varieties and rotations  in the past 5 years,LM practices
-Pastfcp,Selection of fertilizers/chemicals and cultivation practices,LM practices
-Pastmci,Marketing and crop insurance  in the past 5 years,LM practices
-Pastoneseason,"Adoption of one-season conservation practices (conservation tillage, etc.)  in the past 5 years",LM practices
-Pastlongterm,"Adoption of long-term conservation practices (grass waterways, etc.) in the past 5 years",LM practices
-Pastgcdt,Government commodity programs  in the past 5 years,LM practices
-Pastgcsv,"Government conservation programs (CRP, EQIP, etc.) in the past 5 years",LM practices
-Nowcrp,Currently land is enrolled in Conservation Reserve Program (CRP),LM practices
-Noweqip,Currently land is enrolled  in Environmental Quality Incentives Program (EQIP),LM practices
-Nowfcsv,Currently land is under non-Federally funded conservation easement,LM practices
-Nowcsp,"Currently land is enrolled in Conservation Stewardship Program (CSP), Agricultural Conservation Easement Program (ACEP), or other government conservation programs? ",LM practices
-Practicegd,Currently adopt  grassed waterways,LM practices
-Practicemintill,Currently adopt minimum/no till,LM practices
-Practicerb,Currently adopt riparian buffers,LM practices
-Practicerp,Currently adopt retention ponds,LM practices
-Obssediment,High level of sediment in the river is a  water-related environmental problems in MRB,Environmental issues
-Obsnutrients,High level of nutrients in the river  is a  water-related environmental problems in MRB,Environmental issues
-Obsodor,Odor from the river  is a  water-related environmental problems in MRB,Environmental issues
-Obstrash ,Trash in the river and along the bank  is a  water-related environmental problems in MRB,Environmental issues
-Obslackfish,Lack of fish or aquatic life  is a  water-related environmental problems in MRB,Environmental issues
-Obsunsafeswim,Unsafe to swim or wade in the river  is a  water-related environmental problems in MRB,Environmental issues
-Obscolor,Unnatural colors of the water and rocks along the river - is a  water-related environmental problems in MRB,Environmental issues
-Obsunsafedrink,Unsafe drinking water from wells  is a  water-related environmental problems in MRB,Environmental issues
-Opwetlandfamiliar,How familiar are you with the process and the costs of wetland restoration?,wetland_LM opinions
-Opwetlandcostr,The cost of restoring wetlands is too high.,wetland_LM opinions
-Opwetlandcontrol,"Restoring wetlands causes loss of control over one's land, even if no easement is created.",wetland_LM opinions
-Opwetlandequipment,It is difficult to move equipment in the field with restored wetlands.,wetland_LM opinions
-Opwetlandcostm,The cost† and effort of maintaining wetlands is too high.,wetland_LM opinions
-Opwetlandhabitat,Wetlands are key to maintaining high quality wildlife habitat.,wetland_LM opinions
-Opwetlandsoil,Wetlands protect water quality bycatching soil and nutrients before they flow into streams.,wetland_LM opinions
-Opcovercropfamiliar,How familiar are you with cover crops?,cc_LM opinions
-Opcovercroprp,Cover crops reduce yields of primary crops.,cc_LM opinions
-Opcovercroptimep,It takes too much time to plant cover crops after harvest in the fall.,cc_LM opinions
-Opcovercroptimeh,It takes too much time to harvest or kill cover crops before planting in the spring.,cc_LM opinions
-Opcovercroprs,Cover crops reduce soil loss from fields.,cc_LM opinions
-Opcovercropis,Cover crops improve soil quality.,cc_LM opinions
-Opcovercropln,Cover crops lower the input of nutrients for crops.,cc_LM opinions
-Opnmfamiliar,How familiar are you with nutrient management plans?,nm_LM opinions
-Opnmrs,Nutrient management plans reduce crop yields in the short term.,nm_LM opinions
-Opnmrl,Nutrient management plans reduce crop yields in the long term.,nm_LM opinions
-Opnmis,Nutrient management plans improve soil quality.,nm_LM opinions
-Opnmrf,Nutrient management plans reduce fertilizer costs.,nm_LM opinions
-Opnmcost,The cost of developing and following a nutrient management plan is too high.,nm_LM opinions
-Opwetlandopen,Are you open to restoring wetlands on your land?,wetland_LM opinions
-Opwetlandrestored,Have you restored or protected wetlands on your land?,wetland_LM opinions
-Opcovercropopen,Are you open to planting cover crops on your land?,cc_LM opinions
-Opcovercropplant,"In the past 5 years, have you planted cover crops on your land?",cc_LM opinions
-Opnmopen,Are you open to adopting a nutrient management plan for your land?,nm_LM opinions
-Acfish,"Fished in a lake, river, or creek",Outdoor activities
-Acswim,"Swam in a lake, river, or creek",Outdoor activities
-Acexplore,Explored or waded along a river or creek,Outdoor activities
-Ackayak,Kayaked or canoed,Outdoor activities
-Achunt,Hunted,Outdoor activities
-Achike,Hiked or viewed wildlife,Outdoor activities
-Acbike,Used a bike trail,Outdoor activities
-Acpicnic,Had a picnic outdoors,Outdoor activities
-Achorseride,Went horseback riding,Outdoor activities
-Acgooffroading,Went off-roading,Outdoor activities
-Sptlandowners,Landowners should be responisble for soil and water conservation in the wateshed. ,Responsibility
-Sptfarmmanager,Farm managers should be responisble for soil and water conservation in the wateshed. ,Responsibility
-Sptrenters,Renters should be responisble for soil and water conservation in the wateshed. ,Responsibility
-Sptgovstaff,Government Conservation staff should be responisble for soil and water conservation in the wateshed. ,Responsibility
-Sptmrbboard,MRB board should be responisble for soil and water conservation in the wateshed. ,Responsibility
-Infonrcs,Natural resources Conservation Service is an important source of information for conservation issues,Info source
-Infofsa,Farm Service Agency is an important source of information for conservation issues,Info source
-Infoces,County Extension Service  is an important source of information for conservation issues,Info source
-Infomedial,Local media  is an important source of information for conservation issues,Info source
-Infospecialists,Specialists from local institutes  is an important source of information for conservation issues,Info source
-Infosfdealer,Local seed/chemical/fertilizer dealers  is an important source of information for conservation issues,Info source
-Infomdealer,Machinery dealers  is an important source of information for conservation issues,Info source
-Infoneighborfriends,Neighbors and friends  is an important source of information for conservation issues,Info source
-Infoscdc,Soil Conservation District Commissioners  is an important source of information for conservation issues,Info source
-Infovai,Vocational Agriculture Instructors  is an important source of information for conservation issues,Info source
-Infoprivateconsultants,Private Consultants  is an important source of information for conservation issues,Info source
-Infonpo,"Non-profit organizations, e.g. the Nature Conservancy  is an important source of information for conservation issues",Info source
-Infomedian,National media  is an important source of information for conservation issues,Info source
-Preferfielddemo,Prefer to receive information about conservation issues from Field demonstrations (tours),Info preference
-Preferinternet,"Prefer to receive information about conservation issues from Internet, Webcasts, Podcasts",Info preference
-Prefercountymeeting,Prefer to receive information about conservation issues from County and local meetings,Info preference
-Prefertelevision,Prefer to receive information about conservation issues from Television programs,Info preference
-Prefermagazines,Prefer to receive information about conservation issues from Mgazines,Info preference
-Preferradio,Prefer to receive information about conservation issues from Radio,Info preference
-Preferprinted,Prefer to receive information about conservation issues from Printed Materials (brochures),Info preference
-Prefervisual,"Prefer to receive information about conservation issues from Visual materials (slides, photographs)",Info preference
-Preferonfarmconsul,Prefer to receive information about conservation issues from On-farm consultation,Info preference
-Prefertradeshows,Prefer to receive information about conservation issues from Trade shows and fairs,Info preference
-Gender,What is your gender?,Social demographics
-Age,What is your age?,Social demographics
-Education,What is the highest level of formal education you have achieved?,Social demographics
-Income,"Considering all sources of agricultural income (including government payments), what was the total gross value of your agricultural income in 2017?",Social demographics
-Incomefromfarming,"In the past five years, approximately what percent of your household income has come from farming?",Social demographics
-Landarea,How many total acres of agricultural land do you own?,Land Information
-Majorityland,Is the majority of land you own used for growing crops?,Land Information
-Primaryrotation,What is the primary crop/crop rotation on the land that you own?,Land Information
-Work2017,Which of the following best describes†your work in 2017?,Land Information
+"choice1","Wetland =1, Covercrop =1,  NuMgt =1,  Payment =600 ",Choice Experiment
+"choice2","Wetland =0, Covercrop =1,† NuMgt =0,† Payment =50†",Choice Experiment
+"choice3","Wetland =1, Covercrop =0,† NuMgt =0,† Payment =650†",Choice Experiment
+"choice4","Wetland =0, Covercrop =0,† NuMgt =1,† Payment =25",Choice Experiment
+"choice5","Wetland =1, Covercrop =1,† NuMgt =1,† Payment =500†",Choice Experiment
+"choice6","Wetland =0, Covercrop =0,† NuMgt =1,† Payment =450†",Choice Experiment
+"choice7","Wetland =0, Covercrop =1,† NuMgt =0,† Payment =150†",Choice Experiment
+choice8,"Wetland =1, Covercrop =0,† NuMgt =0,† Payment =200",Choice Experiment
+countyresident,County of residence,Spatial
+countyland,In which county is all or most of your land located?,Spatial
+scenicconcern,How concerned are you about the current scenic quality of waterways in the Basin?,Concern_Ecosystem Services
+scenicmoderate,How important is the achievement of moderate improvements in scenic quality to you?,ModerateImprove_Ecosystem Services
+scenicmajor,How important is the achievement of major improvements in scenic quality to you?,MajorImprove_Ecosystem Services
+nutrientconcern,How concerned are you about the current levels of nutrient pollution in Basin's waters?,Concern_Ecosystem Services
+nutrientmoderate,How important is the achievement of a moderate reduction in nutrient levels to you?,ModerateImprove_Ecosystem Services
+nutrientmajor,How important is the achievement of a major reduction in nutrient levels to you?,MajorImprove_Ecosystem Services
+habitatconcern,How concerned are you about the current ability of the Basin to provide high-quality habitat?,Concern_Ecosystem Services
+habitatmoderate,How important is the achievement of a moderate improvement in habitat quality to you?,ModerateImprove_Ecosystem Services
+habitatmajor,How important is the achievement of a major improvement in habitat quality to you?,MajorImprove_Ecosystem Services
+sedimentconcern,How concerned are you about the current levels of sediment in Basin's waters?,Concern_Ecosystem Services
+sedimentmoderate,How important is the achievement of a moderate reduction in sediment levels to you?,ModerateImprove_Ecosystem Services
+sedimentmajor,How important is the achievement of a major reduction in sediment levels to you?,MajorImprove_Ecosystem Services
+recreationconcern,How concerned are you about your current ability to safely and enjoyably engage in aquatic recreation in Basin's waters?,Concern_Ecosystem Services
+recreationmoderate,How important is the achievement of a moderate improvement in the recreation potential of Basin's waters to you?,ModerateImprove_Ecosystem Services
+recreationmajor,How important is the achievement of a major improvement in the recreation potential of Basin's waters to you?,MajorImprove_Ecosystem Services
+valknowconservation,I know what steps to take to conserve soil and water on my land.,Indicate degree to which you agree
+valundueblame,I think farmers take undue blame for environmental problems in the watershed.,Indicate degree to which you agree
+valwaterimportant,I think soil and water conservation are important.,Indicate degree to which you agree
+vallandregulate,I think farming practices and land use (such as planting grass along streams or steep slopes) should be regulated to reduce pollution to surface water.,Indicate degree to which you agree
+valwaterproblem,"I think water contamination (from fertilizers, sediments, and septics) is an important environmental problem in our watershed.",Indicate degree to which you agree
+valpaymentimportant,I think commodity payments impact my decisions about soil and water conservation.,Indicate degree to which you agree
+valtogether,I think farmers and other watershed residents should work together to protect the watershed.,Indicate degree to which you agree
+valstaff,I think farmers and conservation agency staff should work together to protect the watershed.,Indicate degree to which you agree
+valsteward,I consider myself a good steward of the land.,Indicate degree to which you agree
+valinfluence,I think my responses to this survey will influence future decisions regarding water quality and conservation policies.,Indicate degree to which you agree
+pollutionobs,"Based on what you know and can observe about the Minnesota River Basin, do you think there are significant water-related problems associated with it? ",Pollution notification
+familiar25,How familiar are you with the 25 by 25ù water quality goal for MinnesotaState?,25 by 25 goal
+otherswetland,Do you personally know anyone who restored wetlands on their land?,wetland_LM opinions
+otherscovercrop,Do you personally know anyone who is planting cover crops on a regular basis?,cc_LM opinions
+othersnm,Do you currently have a nutrient management plan in place?,nm_LM opinions
+pastcrp,Selection of crop varieties and rotations  in the past 5 years,LM practices
+pastfcp,Selection of fertilizers/chemicals and cultivation practices,LM practices
+pastmci,Marketing and crop insurance  in the past 5 years,LM practices
+pastoneseason,"Adoption of one-season conservation practices (conservation tillage, etc.)  in the past 5 years",LM practices
+pastlongterm,"Adoption of long-term conservation practices (grass waterways, etc.) in the past 5 years",LM practices
+pastgcdt,Government commodity programs  in the past 5 years,LM practices
+pastgcsv,"Government conservation programs (CRP, EQIP, etc.) in the past 5 years",LM practices
+nowcrp,Currently land is enrolled in Conservation Reserve Program (CRP),LM practices
+noweqip,Currently land is enrolled  in Environmental Quality Incentives Program (EQIP),LM practices
+nowfcsv,Currently land is under non-Federally funded conservation easement,LM practices
+nowcsp,"Currently land is enrolled in Conservation Stewardship Program (CSP), Agricultural Conservation Easement Program (ACEP), or other government conservation programs? ",LM practices
+practicegd,Currently adopt  grassed waterways,LM practices
+practicemintill,Currently adopt minimum/no till,LM practices
+practicerb,Currently adopt riparian buffers,LM practices
+practicerp,Currently adopt retention ponds,LM practices
+obssediment,High level of sediment in the river is a  water-related environmental problems in MRB,Environmental issues
+obsnutrients,High level of nutrients in the river  is a  water-related environmental problems in MRB,Environmental issues
+obsodor,Odor from the river  is a  water-related environmental problems in MRB,Environmental issues
+obstrash ,Trash in the river and along the bank  is a  water-related environmental problems in MRB,Environmental issues
+obslackfish,Lack of fish or aquatic life  is a  water-related environmental problems in MRB,Environmental issues
+obsunsafeswim,Unsafe to swim or wade in the river  is a  water-related environmental problems in MRB,Environmental issues
+obscolor,Unnatural colors of the water and rocks along the river - is a  water-related environmental problems in MRB,Environmental issues
+obsunsafedrink,Unsafe drinking water from wells  is a  water-related environmental problems in MRB,Environmental issues
+opwetlandfamiliar,How familiar are you with the process and the costs of wetland restoration?,wetland_LM opinions
+opwetlandcostr,The cost of restoring wetlands is too high.,wetland_LM opinions
+opwetlandcontrol,"Restoring wetlands causes loss of control over one's land, even if no easement is created.",wetland_LM opinions
+opwetlandequipment,It is difficult to move equipment in the field with restored wetlands.,wetland_LM opinions
+opwetlandcostm,The cost† and effort of maintaining wetlands is too high.,wetland_LM opinions
+opwetlandhabitat,Wetlands are key to maintaining high quality wildlife habitat.,wetland_LM opinions
+opwetlandsoil,Wetlands protect water quality bycatching soil and nutrients before they flow into streams.,wetland_LM opinions
+opcovercropfamiliar,How familiar are you with cover crops?,cc_LM opinions
+opcovercroprp,Cover crops reduce yields of primary crops.,cc_LM opinions
+opcovercroptimep,It takes too much time to plant cover crops after harvest in the fall.,cc_LM opinions
+opcovercroptimeh,It takes too much time to harvest or kill cover crops before planting in the spring.,cc_LM opinions
+opcovercroprs,Cover crops reduce soil loss from fields.,cc_LM opinions
+opcovercropis,Cover crops improve soil quality.,cc_LM opinions
+opcovercropln,Cover crops lower the input of nutrients for crops.,cc_LM opinions
+opnmfamiliar,How familiar are you with nutrient management plans?,nm_LM opinions
+opnmrs,Nutrient management plans reduce crop yields in the short term.,nm_LM opinions
+opnmrl,Nutrient management plans reduce crop yields in the long term.,nm_LM opinions
+opnmis,Nutrient management plans improve soil quality.,nm_LM opinions
+opnmrf,Nutrient management plans reduce fertilizer costs.,nm_LM opinions
+opnmcost,The cost of developing and following a nutrient management plan is too high.,nm_LM opinions
+opwetlandopen,Are you open to restoring wetlands on your land?,wetland_LM opinions
+opwetlandrestored,Have you restored or protected wetlands on your land?,wetland_LM opinions
+opcovercropopen,Are you open to planting cover crops on your land?,cc_LM opinions
+opcovercropplant,"In the past 5 years, have you planted cover crops on your land?",cc_LM opinions
+opnmopen,Are you open to adopting a nutrient management plan for your land?,nm_LM opinions
+acfish,"Fished in a lake, river, or creek",Outdoor activities
+acswim,"Swam in a lake, river, or creek",Outdoor activities
+acexplore,Explored or waded along a river or creek,Outdoor activities
+ackayak,Kayaked or canoed,Outdoor activities
+achunt,Hunted,Outdoor activities
+achike,Hiked or viewed wildlife,Outdoor activities
+acbike,Used a bike trail,Outdoor activities
+acpicnic,Had a picnic outdoors,Outdoor activities
+achorseride,Went horseback riding,Outdoor activities
+acgooffroading,Went off-roading,Outdoor activities
+sptlandowners,Landowners should be responisble for soil and water conservation in the wateshed. ,Responsibility
+sptfarmmanager,Farm managers should be responisble for soil and water conservation in the wateshed. ,Responsibility
+sptrenters,Renters should be responisble for soil and water conservation in the wateshed. ,Responsibility
+sptgovstaff,Government Conservation staff should be responisble for soil and water conservation in the wateshed. ,Responsibility
+sptmrbboard,MRB board should be responisble for soil and water conservation in the wateshed. ,Responsibility
+infonrcs,Natural resources Conservation Service is an important source of information for conservation issues,Info source
+infofsa,Farm Service Agency is an important source of information for conservation issues,Info source
+infoces,County Extension Service  is an important source of information for conservation issues,Info source
+infomedial,Local media  is an important source of information for conservation issues,Info source
+infospecialists,Specialists from local institutes  is an important source of information for conservation issues,Info source
+infosfdealer,Local seed/chemical/fertilizer dealers  is an important source of information for conservation issues,Info source
+infomdealer,Machinery dealers  is an important source of information for conservation issues,Info source
+infoneighborfriends,Neighbors and friends  is an important source of information for conservation issues,Info source
+infoscdc,Soil Conservation District Commissioners  is an important source of information for conservation issues,Info source
+infovai,Vocational Agriculture Instructors  is an important source of information for conservation issues,Info source
+infoprivateconsultants,Private Consultants  is an important source of information for conservation issues,Info source
+infonpo,"Non-profit organizations, e.g. the Nature Conservancy  is an important source of information for conservation issues",Info source
+infomedian,National media  is an important source of information for conservation issues,Info source
+preferfielddemo,Prefer to receive information about conservation issues from Field demonstrations (tours),Info preference
+preferinternet,"Prefer to receive information about conservation issues from Internet, Webcasts, Podcasts",Info preference
+prefercountymeeting,Prefer to receive information about conservation issues from County and local meetings,Info preference
+prefertelevision,Prefer to receive information about conservation issues from Television programs,Info preference
+prefermagazines,Prefer to receive information about conservation issues from Mgazines,Info preference
+preferradio,Prefer to receive information about conservation issues from Radio,Info preference
+preferprinted,Prefer to receive information about conservation issues from Printed Materials (brochures),Info preference
+prefervisual,"Prefer to receive information about conservation issues from Visual materials (slides, photographs)",Info preference
+preferonfarmconsul,Prefer to receive information about conservation issues from On-farm consultation,Info preference
+prefertradeshows,Prefer to receive information about conservation issues from Trade shows and fairs,Info preference
+gender,What is your gender?,Social demographics
+age,What is your age?,Social demographics
+education,What is the highest level of formal education you have achieved?,Social demographics
+income,"Considering all sources of agricultural income (including government payments), what was the total gross value of your agricultural income in 2017?",Social demographics
+incomefromfarming,"In the past five years, approximately what percent of your household income has come from farming?",Social demographics
+landarea,How many total acres of agricultural land do you own?,Land Information
+majorityland,Is the majority of land you own used for growing crops?,Land Information
+primaryrotation,What is the primary crop/crop rotation on the land that you own?,Land Information
+work2017,Which of the following best describes†your work in 2017?,Land Information

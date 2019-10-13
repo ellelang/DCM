@@ -2,8 +2,56 @@ rm(list = ls())
 setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 library(psych)
 library(GPArotation)
+library(dplyr) 
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
+
+groupID <- unique(helper$Grouping)
+
+question_eco <- helper %>%
+  filter(Grouping == "Concern_Ecosystem Services" |
+           Grouping == "ModerateImprove_Ecosystem Services" |
+           Grouping == "MajorImprove_Ecosystem Services"|
+           Grouping == "Indicate degree to which you agree" |
+           Grouping == "Pollution notification") %>%
+  select(QuestionID) %>% 
+  sapply(as.character) %>% 
+  as.vector
+
+length(question_eco)
+
+factor_data = data[12:126]
+
+eco_factordata <- factor_data %>% select (question_eco)
+
+eco_factor_cor <- cor(eco_factordata, use = "pairwise.complete.obs")
+eigenvals <- eigen (eco_factor_cor)
+eigenvals$values
+## The general rule is that the eigenvalues greater than one represent meaningful factors
+sum(eigenvals$values >= 1)
+
+EFA_eco<- fa(eco_factordata, nfactors = 6)
+EFA_eco$loadings
+EFA_eco$TLI
+
+
+
+##########
+question_LM <- helper %>%
+  filter(Grouping == "wetland_LM opinions" |
+           Grouping == "cc_LM opinions" |
+           Grouping == "nm_LM opinions"|
+           Grouping == "LM practices" ) %>%
+  select(QuestionID) %>% 
+  sapply(as.character) %>% 
+  as.vector
+
+LM_factordata <- factor_data %>% select(question_eco)
+EFA_LM<- fa(LM_factordata, nfactors = 6)
+EFA_LM$loadings
+
+EFA_LM$TLI
+
 
 describe (data)
 dim(data)
@@ -34,6 +82,9 @@ describeBy(data_grouped, group = group_var)
 statsBy(data_grouped, group = "group_var")
 
 factor_data = data[12:126]
+
+eco_factordata <- factor_data %>% select (question_eco)
+question_eco
 dim(factor_data)
 
 lowerCor(factor_data)
@@ -53,12 +104,13 @@ factordata_EFA
 eigenvals <- eigen (factor_EFA_cor)
 eigenvals$values
 ## The general rule is that the eigenvalues greater than one represent meaningful factors
-
+sum(eigenvals$values >= 1)
 # visualize the eigenvalues 
+windows(width = 15, height = 15)
 scree(factor_EFA_cor, factor = FALSE)
 
 ## multifactors
-EFA_model <- fa(factordata_EFA, nfactors = 6)
+EFA_model <- fa(factordata_EFA, nfactors = 31)
 EFA_model$loadings
 EFA_model$scores
 EFA_model
