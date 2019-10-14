@@ -12,8 +12,11 @@ question_eco <- helper %>%
   filter(Grouping == "Concern_Ecosystem Services" |
            Grouping == "ModerateImprove_Ecosystem Services" |
            Grouping == "MajorImprove_Ecosystem Services"|
-           Grouping == "Indicate degree to which you agree" |
-           Grouping == "Pollution notification") %>%
+           #Grouping == "Indicate degree to which you agree"|
+           Grouping == "Outdoor activities"|
+           Grouping == "Environmental issues" |
+           Grouping == "Pollution notification"
+           ) %>%
   select(QuestionID) %>% 
   sapply(as.character) %>% 
   as.vector
@@ -30,27 +33,66 @@ eigenvals$values
 ## The general rule is that the eigenvalues greater than one represent meaningful factors
 sum(eigenvals$values >= 1)
 
-EFA_eco<- fa(eco_factordata, nfactors = 6)
+EFA_eco<- fa(eco_factordata, nfactors = 7)
 EFA_eco$loadings
 EFA_eco$TLI
-
+EFA_eco$RMSEA
 
 
 ##########
 question_LM <- helper %>%
   filter(Grouping == "wetland_LM opinions" |
-           Grouping == "cc_LM opinions" |
-           Grouping == "nm_LM opinions"|
-           Grouping == "LM practices" ) %>%
+        Grouping == "cc_LM opinions" |
+        Grouping == "nm_LM opinions"|
+        #Grouping == "Responsibility"|
+        #Grouping == "Indicate degree to which you agree"|
+        Grouping == "LM practices"
+        ) %>%
   select(QuestionID) %>% 
   sapply(as.character) %>% 
   as.vector
 
-LM_factordata <- factor_data %>% select(question_eco)
-EFA_LM<- fa(LM_factordata, nfactors = 6)
-EFA_LM$loadings
+length(question_LM)
 
+LM_factordata <- factor_data %>% select(question_LM)
+
+
+LM_factor_cor <- cor(LM_factordata, use = "pairwise.complete.obs")
+eigenvals <- eigen (LM_factor_cor)
+eigenvals$values
+## The general rule is that the eigenvalues greater than one represent meaningful factors
+sum(eigenvals$values >= 1)
+
+EFA_LM<- fa(LM_factordata, nfactors = 12)
+EFA_LM$loadings
 EFA_LM$TLI
+EFA_LM$RMSEA
+
+
+#############
+question_value <- helper %>%
+  filter(Grouping == "Indicate degree to which you agree"|
+         Grouping == "Responsibility"|
+         Grouping == "25 by 25 goal"
+         ) %>%
+  select(QuestionID) %>% 
+  sapply(as.character) %>% 
+  as.vector
+length(question_LM)
+
+VL_factordata <- factor_data %>% select(question_value)
+
+
+VL_factor_cor <- cor(VL_factordata, use = "pairwise.complete.obs")
+eigenvals <- eigen (VL_factor_cor)
+eigenvals$values
+## The general rule is that the eigenvalues greater than one represent meaningful factors
+sum(eigenvals$values >= 1)
+
+EFA_VL<- fa(VL_factordata, nfactors = 5)
+EFA_VL$loadings
+EFA_VL$TLI
+EFA_VL$RMSEA
 
 
 describe (data)
