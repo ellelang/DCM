@@ -3,6 +3,7 @@ setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 library(psych)
 library(GPArotation)
 library(dplyr) 
+#library(semPlot)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
 groupID <- unique(helper$Grouping)
@@ -66,14 +67,11 @@ cor_eigen <- function(data){
   return (nfactors)
 }
 
+## number of factors based on eigenvalues > 1
 n_least_eco <- cor_eigen(eco_factordata)
 n_least_LM <- cor_eigen(LM_factordata)
 n_least_VL <- cor_eigen(VL_factordata)
 
-c(seq (4, 15, 1))
-for (i in seq (4, 15, 1)){
-  print(i)
-}
 
 EFAfun <- function (data, nleast){
   factorlist <- c(seq(nleast, nleast+5, 1))
@@ -97,26 +95,14 @@ EFAfun(VL_factordata, n_least_VL) # choose n of factors = 5
 
 ######Examine the loadings
 
-EFA_VL<- fa(VL_factordata, nfactors = 11)
+EFA_eco<- fa(eco_factordata, nfactors = 8)
+fa.diagram(EFA_eco,cut=.4,digits=2)
 
+EFA_LM<- fa(LM_factordata, nfactors = 11)
+fa.diagram(EFA_LM,cut=.4,digits=2)
 
-
-eco_factor_cor <- cor(eco_factordata, use = "pairwise.complete.obs")
-eigenvals <- eigen (eco_factor_cor)
-eigenvals$values
-
-VL_factordata <- factor_data %>% select(question_value)
-
-
-VL_factor_cor <- cor(VL_factordata, use = "pairwise.complete.obs")
-eigenvals <- eigen (VL_factor_cor)
-eigenvals$values
-## The general rule is that the eigenvalues greater than one represent meaningful factors
-sum(eigenvals$values >= 1)
 
 EFA_VL<- fa(VL_factordata, nfactors = 5)
-EFA_VL$loadings
-EFA_VL$TLI
-EFA_VL$RMSEA
+fa.diagram(EFA_VL,cut=.4,digits=2)
 
-LM_factordata <- factor_data %>% select(question_LM)
+
