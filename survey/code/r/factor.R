@@ -23,7 +23,7 @@ question_eco <- helper %>%
 
 length(question_eco)
 
-factor_data = data[12:126]
+factor_data = data[12:127]
 
 eco_factordata <- factor_data %>% select (question_eco)
 
