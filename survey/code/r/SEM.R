@@ -64,32 +64,48 @@ VL_factordata <- factor_data %>% select(question_value)
 question_eco
 
 eco_model <- "
-RECRE =~ habitatconcern + habitatmoderate + habitatmajor + recreationconcern + recreationmoderate + recreationmajor ##recreation
-AWARE =~ obssediment + obsnutrients + obsodor + obstrash + obslackfish + obsunsafeswim + obscolor + obsunsafedrink  ##awareness
-WATER =~ nutrientconcern + nutrientmoderate + nutrientmajor + sedimentconcern + sedimentmoderate + sedimentmajor + obsnutrients ##water quality 
-BEAUTY =~ scenicconcern + scenicmoderate + scenicmajor ## scenic beauty
-OUTDOOR =~ acexplore + achike + acbike + acpicnic + ackayak + pollutionobs ## outdoor activities (more regular outdoor )
-OUTDOOR2 =~ achorseride + acgooffroading + acswim + achunt + acfish +  pollutionobs  ## outdoor activities (advanture)
-LOCAL =~ pollutionobs + sedimentmoderate + sedimentmajor + sedimentconcern + obsnutrients +  scenicconcern (local sediment problems)
-BEAUTY ~~ RECRE
+COM =~ habitatconcern + habitatmoderate + habitatmajor + recreationconcern + recreationmoderate + recreationmajor ##recreation
+GCON =~ obssediment + obsnutrients + obsodor + obstrash + obslackfish + obsunsafeswim + obscolor + obsunsafedrink  ##General concern
+SMET =~ nutrientconcern + nutrientmoderate + nutrientmajor + sedimentconcern + sedimentmoderate + sedimentmajor + obsnutrients ##Specific metrics water quality 
+ETHIC =~ scenicconcern + scenicmoderate + scenicmajor ## scenic beauty
+NCOM =~ acexplore + achike + acbike + acpicnic + ackayak + pollutionobs ## outdoor activities (more regular outdoor )
+ADV =~ achorseride + acgooffroading + acswim + achunt + acfish +pollutionobs  ## outdoor activities (advanture)
+ETHIC ~~ COM
+#REC =~ COM + ETHIC 
+#ENV =~ GCON + SMET
 "
+#LOCAL =~ pollutionobs + sedimentmoderate + sedimentmajor + sedimentconcern + obsnutrients +  scenicconcern (local sediment problems)
 
 eco_model.fit <- cfa(model = eco_model,
                      data = eco_factordata )
 
+fitmeasures(eco_model.fit , c("cfi","tli","rmsea", "srmr"))
 summary(eco_model.fit, standardized =TRUE, fit.measures = TRUE)
 
+#summary(wais.fit3, standardized = TRUE, fit.measures = TRUE)
 
 modificationindices(eco_model.fit, sort = TRUE)
 
 windows(width = 40, height = 30 )
 semPaths(object = eco_model.fit,
-         layout = "circle",
+         layout = "tree",
          rotation = 1,
          whatLabels = "std",
          edge.label.cex = 0.6,
          what = 'std',
          edge.color = 'blue')
+
+
+eco_fscores <- lavPredict(eco_model.fit)
+eco_fscores
+idx <- lavInspect(eco_model.fit, "case.idx")
+idx
+
+## loop over factors
+for (fs in colnames(eco_fscores)) {
+  data[idx, fs] <- eco_fscores[ , fs]
+}
+head(data)
 
 ###########value 
 
@@ -97,15 +113,15 @@ semPaths(object = eco_model.fit,
 question_value
 
 val_model <- "
-RESPON =~ sptfarmmanager + sptgovstaff + sptmrbboard + valundueblame  ## responsibility of agent
+AgResp =~ sptfarmmanager + sptgovstaff + sptmrbboard + valundueblame  ## responsibility of agent
 WATER =~ valwaterimportant + vallandregulate + valwaterproblem + valpaymentimportant + valinfluence + valundueblame # value of water
-AGENT =~ valtogether + valstaff + valundueblame +  valwaterimportant ## value of agent
-STEW =~ valsteward + valknowconservation + familiar25 + valwaterimportant + valundueblame +  vallandregulate # stewship
-OWNER =~ sptlandowners + sptfarmmanager + sptrenters + valwaterimportant + vallandregulate # households
+AgVal =~ valtogether + valstaff + valundueblame +  valwaterimportant ## value of agent
+LoSte =~ valsteward + valknowconservation + familiar25 + valwaterimportant + valundueblame +  vallandregulate # stewship
+LoResp =~ sptlandowners + sptfarmmanager + sptrenters + valwaterimportant + vallandregulate # households
 "
 val_model.fit <- cfa(model = val_model,
                      data = VL_factordata )
-
+fitmeasures(val_model.fit , c("cfi","tli","rmsea", "srmr"))
 summary(val_model.fit, standardized =TRUE, fit.measures = TRUE)
 
 modificationindices(val_model.fit, sort = TRUE)
@@ -118,6 +134,15 @@ semPaths(object = val_model.fit,
          edge.label.cex = 0.6,
          what = 'std',
          edge.color = 'black')
+
+val_fscores <- lavPredict(val_model.fit)
+val_fscores
+idx_val <- lavInspect(val_model.fit, "case.idx")
+idx_val
+for (fs in colnames(val_fscores)) {
+  data[idx_val, fs] <- val_fscores[ , fs]
+}
+head(data)
 
 #############Land management 
 EFA_LM<- fa(LM_factordata, nfactors = 9)
@@ -139,6 +164,7 @@ opwetlandfamiliar ~~ opcovercropfamiliar
 
 lm_model.fit <- cfa(model = lm_model,
                      data = LM_factordata, check.gradient = FALSE  )
+fitmeasures(lm_model.fit , c("cfi","tli","rmsea", "srmr"))
 
 summary(lm_model.fit, standardized =TRUE, fit.measures = TRUE)
 modificationindices(lm_model.fit, sort = TRUE)
@@ -151,3 +177,28 @@ semPaths(object = lm_model.fit,
          edge.label.cex = 0.6,
          what = 'std',
          edge.color = 'purple')
+
+lm_fscores <- lavPredict(lm_model.fit)
+lm_fscores
+idx_lm <- lavInspect(lm_model.fit, "case.idx")
+idx_lm
+for (fs in colnames(lm_fscores)) {
+  data[idx_lm, fs] <- lm_fscores[ , fs]
+}
+head(data)
+
+write.csv(x = data, file = "data_fscores.csv", row.names = FALSE)
+
+f_names <- c(colnames(eco_fscores),colnames(lm_fscores), colnames(val_fscores))
+f_names
+data$respondentid
+factors_data <- data %>% select (respondentid,f_names) 
+factors_data
+
+setwd("C:/Users/langzx/Desktop/github/DCM/data")
+nlogitdata <- read.csv (file = "wta_observables11192018.csv")
+nlogitdata$id
+
+wta_data <- nlogitdata %>% left_join(factors_data, by = c("id" = "respondentid"))
+head(wta_data)
+write.csv(x = wta_data, file = "wta_fscores10202019.csv", row.names = FALSE)

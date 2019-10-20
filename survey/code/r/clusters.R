@@ -19,8 +19,8 @@ n_levels <- DEMdata %>%
 n_levels
 
 DEMdata %>%
-  # pull countyresident
-  pull(countyresident) %>%
+  # pull income
+  pull(income) %>%
   # get the values of the levels
   levels()
 
@@ -55,8 +55,13 @@ DEMdata %>%
   group_by(income) %>%
   summarize(mean_c = mean(Choice_all)) %>%
   filter (income != "None") %>%
-  ggplot(mapping = aes(x = income, y = mean_c )) + 
+  ggplot(mapping = aes(x = fct_relevel(income, 
+                                       "$1 -$24,999", "$25,000 - $99,999", "$100,000 - $249,999",
+                                       "$250,000 - $499,999","$500,000 to $999,999", "$1,000,000 and over"), 
+                       y = mean_c )) + 
   geom_col()+
-  coord_flip()
+  coord_flip() +
+  labs(y = "Mean % of choosing Voluntary Program in CE",
+       x = "Income")
   
  

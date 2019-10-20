@@ -101,7 +101,10 @@ EFA_eco<- fa(eco_factordata, nfactors = 8)
 EFA_eco$loadings
 fa.diagram(EFA_eco,cut=.3,digits=2)
 EFA_scores <- EFA_eco$scores
-
+names_eco <- c("GCon","REC","NUTR",)
+head(data.frame(EFA_scores))
+#iclust(eco_factordata)
+#omega(eco_factordata, sl=FALSE)
 
 EFA_LM<- fa(LM_factordata, nfactors = 11)
 fa.diagram(EFA_LM,cut=.3,digits=2)
