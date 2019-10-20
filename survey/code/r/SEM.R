@@ -5,7 +5,7 @@ library(GPArotation)
 library(dplyr) 
 library(lavaan)
 library(semPlot)
-
+library(tidyverse)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
 groupID <- unique(helper$Grouping)
@@ -194,9 +194,23 @@ f_names
 data$respondentid
 factors_data <- data %>% select (respondentid,f_names) 
 factors_data
+#mean_scores <- as.data.frame(apply(subset(factors_data, select = -respondentid ), MARGIN = 2, mean, na.rm=TRUE))
+#meanfactor_scores <- mean_scores$`apply(subset(factors_data, select = -respondentid), MARGIN = 2, mean, na.rm = TRUE)`[1:19]
+
+#meanfactor_scores
+# 
+# for(i in 1:ncol(factors_data)){
+#   factors_data[is.na(factors_data[,i]), i] <- mean(factors_data[,i], na.rm = TRUE)
+# }
+
+
+factors_data <- factors_data %>%
+  mutate_at(vars(f_names), ~replace_na(., 0))
+
+
 
 setwd("C:/Users/langzx/Desktop/github/DCM/data")
-nlogitdata <- read.csv (file = "wta_observables11192018.csv")
+nlogitdata <- read.csv (file = "wta_observables11192018COMB426.csv")
 nlogitdata$id
 
 wta_data <- nlogitdata %>% left_join(factors_data, by = c("id" = "respondentid"))

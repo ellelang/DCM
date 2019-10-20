@@ -25,7 +25,7 @@ DEMdata %>%
   levels()
 
 ggplot(DEMdata) +
-  geom_bar(aes(x =  fct_rev(fct_infreq(countyresident)))) + 
+  geom_bar(aes(x =  fct_rev(fct_infreq(income)))) + 
   # flip the coordinates
   coord_flip()
 
