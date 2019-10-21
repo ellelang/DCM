@@ -20,7 +20,7 @@ n_levels
 
 DEMdata %>%
   # pull income
-  pull(income) %>%
+  pull(landarea) %>%
   # get the values of the levels
   levels()
 
@@ -50,6 +50,23 @@ DEMdata <- DEMdata %>%
 
 DEMdata %>%
   # remove NAs
+  filter(!is.na(landarea)) %>%
+  # get mean_c by land area
+  group_by(landarea) %>%
+  summarize(mean_c = mean(Choice_all)) %>%
+  filter ( landarea != "I do not own any land") %>%
+  ggplot(mapping = aes(x = fct_relevel(landarea, 
+                                       "1 to 100 acres", "100 to 500 acres", "500 to 1,000 acres",
+                                       "1,000 acres or more"), 
+                       y = mean_c )) + 
+  geom_col()+
+  coord_flip() +
+  labs(y = "Mean % of choosing Voluntary Program in CE",
+       x = "Farm Size")
+  
+
+DEMdata %>%
+  # remove NAs
   filter(!is.na(income)) %>%
   # get mean_c by income
   group_by(income) %>%
@@ -63,5 +80,4 @@ DEMdata %>%
   coord_flip() +
   labs(y = "Mean % of choosing Voluntary Program in CE",
        x = "Income")
-  
  

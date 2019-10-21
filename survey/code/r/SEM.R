@@ -188,21 +188,28 @@ for (fs in colnames(lm_fscores)) {
 head(data)
 
 write.csv(x = data, file = "data_fscores.csv", row.names = FALSE)
+######################
 
-f_names <- c(colnames(eco_fscores),colnames(lm_fscores), colnames(val_fscores))
-f_names
-data$respondentid
-factors_data <- data %>% select (respondentid,f_names) 
-factors_data
+#f_names <- c(colnames(eco_fscores),colnames(lm_fscores), colnames(val_fscores))
+#f_names
+#data$respondentid
+#factors_data <- data %>% select (respondentid,f_names) 
+#factors_data
+data_factor <- read.csv (file = "data_fscores.csv")
+colnames(data_factor)
+f_names <- c("COM" ,"GCON","SMET", "ETHIC", "NCOM","ADV" , "NM_DIS" , "WLD_DIS" ,"CC_DIS" , "OPEN" ,"FAMIL" ,
+             "WLD_ADV","CC_ADV" , "NM_ADV",  "AgResp" , "WATER" ,  "AgVal",   "LoSte"  ,"LoResp") 
+
+factors_data <- data_factor %>% select (respondentid,f_names) 
 #mean_scores <- as.data.frame(apply(subset(factors_data, select = -respondentid ), MARGIN = 2, mean, na.rm=TRUE))
 #meanfactor_scores <- mean_scores$`apply(subset(factors_data, select = -respondentid), MARGIN = 2, mean, na.rm = TRUE)`[1:19]
 
 #meanfactor_scores
 # 
-# for(i in 1:ncol(factors_data)){
-#   factors_data[is.na(factors_data[,i]), i] <- mean(factors_data[,i], na.rm = TRUE)
-# }
-
+for(i in 1:ncol(factors_data)){
+  factors_data[is.na(factors_data[,i]), i] <- mean(factors_data[,i], na.rm = TRUE)
+}
+factors_data
 
 factors_data <- factors_data %>%
   mutate_at(vars(f_names), ~replace_na(., 0))
@@ -215,4 +222,4 @@ nlogitdata$id
 
 wta_data <- nlogitdata %>% left_join(factors_data, by = c("id" = "respondentid"))
 head(wta_data)
-write.csv(x = wta_data, file = "wta_fscores10202019.csv", row.names = FALSE)
+write.csv(x = wta_data, file = "wta_fscores10202019_meanna.csv", row.names = FALSE)
