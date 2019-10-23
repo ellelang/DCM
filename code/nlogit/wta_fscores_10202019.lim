@@ -29,7 +29,7 @@ nlogit
 ;Pds = 8
 ?;Panel
 ?;rpl
-;rpl = lake1000, income_7
+;rpl = lake1000
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ;maxit = 200
 ;par

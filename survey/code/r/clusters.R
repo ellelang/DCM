@@ -81,3 +81,4 @@ DEMdata %>%
   labs(y = "Mean % of choosing Voluntary Program in CE",
        x = "Income")
  
+ggplot ()
