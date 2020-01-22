@@ -9,6 +9,7 @@ library(sem)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
 groupID <- unique(helper$Grouping)
+resid <- data$respondentid
 
 # Get the question ID (column names)
 ## Questions related to ecosystem services
@@ -152,9 +153,13 @@ summary(CFA_eco)
 
 CFA_EFA_eco <- sem(EFA_syn, data = eco_factordata)
 summary(CFA_EFA_eco)
-# Calculating factor scores by applying the CFA parameters to the EFA dataset
-CFA_scores <- fscores(CFA_EFA_eco, data = eco_factordata)
 
+resid <- data$respondentid
+# Calculating factor scores by applying the CFA parameters to the EFA dataset
+CFA_scores_eco <- fscores(CFA_EFA_eco, data = eco_factordata)
+df_CFA_scores_eco <- data.frame(CFA_scores_eco) %>% mutate (id = resid )
+
+write.csv(x = df_CFA_scores_eco, file = "fscore_eco.csv", row.names = FALSE)
 #########################
 ## LM
 question_LM
@@ -177,6 +182,8 @@ EFA_syn_LM <- cfa(text = EFA_syn_LM_eq,
 
 CFA_EFA_LM <- sem(EFA_syn_LM, data = LM_factordata)
 summary(CFA_EFA__LM)
+#CFA_scores_LM <- fscores(CFA_EFA_LM, data = LM_factordata)
+
 
 theory_syn_LM_eq1 <- "
 ACTS: pastcrp, pastfcp, pastmci, pastoneseason, pastlongterm, pastgcsv, pastgcdt, practicegd, practicemintill, practicerb, practicerp
@@ -196,9 +203,10 @@ theory_syn_LM <- cfa(text = theory_syn_LM_eq1,
 #options(fit.indices = c("CFI", "GFI", "RMSEA", "BIC"))
 CFA_LM <- sem(theory_syn_LM, data = LM_factordata)
 
-summary(CFA__LM)
-
-
+summary(CFA_LM)
+CFA_scores_LM <- fscores(CFA_EFA_LM, data = LM_factordata)
+df_CFA_scores_LM <- data.frame(CFA_scores_LM) %>% mutate (id = resid)
+write.csv(x = df_CFA_scores_LM, file = "fscore_lm.csv", row.names = FALSE)
 
 ################################VALUE
 #########################
@@ -218,6 +226,13 @@ EFA_syn_VL <- cfa(text = EFA_syn_VL_eq,
 options(fit.indices = c("CFI", "GFI", "RMSEA", "BIC"))
 CFA_EFA_VL <- sem(EFA_syn_VL, data = VL_factordata)
 summary(CFA_EFA_VL)
+CFA_scores_VL <- fscores(CFA_EFA_VL, data = VL_factordata)
+length(data.frame(CFA_scores_VL)[,1])
+df_CFA_scores_VL <- data.frame(CFA_scores_VL)%>% mutate (id = resid )
+
+write.csv(x = df_CFA_scores_VL, file = "fscore_vl.csv", row.names = FALSE)
+
+
 
 theory_syn_VL_eq1 <- "
 COMM: sptfarmmanager, sptgovstaff, sptmrbboard, valtogether, valstaff
