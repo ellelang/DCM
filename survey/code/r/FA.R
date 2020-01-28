@@ -4,12 +4,14 @@ library(psych)
 library(GPArotation)
 library(dplyr) 
 library(sem)
+library(factoextra)
 #library(lavaan)
 #library(semPlot)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
 groupID <- unique(helper$Grouping)
 resid <- data$respondentid
+head(data)
 
 # Get the question ID (column names)
 ## Questions related to ecosystem services
@@ -52,14 +54,76 @@ question_value <- helper %>%
   sapply(as.character) %>% 
   as.vector
 length(question_value)
+head(question_value)
 
 ##Get the subset of data
 ###factor data : exclude the choice experiments and demorgraphics info
 factor_data = data[12:126]
+# factor_data[!is.na(factor_data)]
 ### three subsets based on question groups
 eco_factordata <- factor_data %>% select (question_eco)
 LM_factordata <- factor_data %>% select(question_LM)
 VL_factordata <- factor_data %>% select(question_value)
+ecoVL_factordata <- factor_data %>% select(c(question_eco,question_value))
+
+
+colnames(factor_data)
+
+
+fa.parallel(eco_factordata, fa="both", n.iter=100,
+            show.legend=FALSE, main="Scree plot with parallel analysis")
+
+fa.varimax_ecoVL <- fa(ecoVL_factordata, nfactors = 2, rotate = "varimax", fm = "pa")
+class(fa.varimax_ecoVL[2])
+
+factor.plot(fa.varimax_ecoVL, labels=rownames(fa.varimax_ecoVL$loadings))
+
+scores_ecovl <- fa.varimax_ecoVL$loadings
+
+efa_ecovl_eq <- "
+FA1: scenicconcern, scenicmoderate, scenicmajor, 
+habitatconcern, habitatmoderate,habitatmajor, 
+recreationconcern, recreationmoderate,recreationmajor, 
+sedimentconcern, sedimentmoderate, sedimentmajor, 
+nutrientconcern, nutrientmoderate, nutrientmajor,
+valundueblame, valwaterimportant, vallandregulate,valwaterproblem, 
+valpaymentimportant, valinfluence, valtogether, valstaff,
+sptlandowners, sptfarmmanager, sptrenters,sptgovstaff, sptmrbboard,
+valknowconservation, valsteward
+
+FA2: obssediment, obsnutrients, obsodor, obstrash, 
+obslackfish,obsunsafeswim, obscolor, obsunsafedrink,pollutionobs,
+achike, acexplore, acbike, ackayak, acpicnic,achunt, acfish,achorseride, acgooffroading,acswim,
+sptfarmmanager, sptrenters,sptgovstaff, sptmrbboard,familiar25
+"
+eq_syn_ecovl <- cfa(text = efa_ecovl_eq, 
+                  reference.indicators = FALSE)
+
+CFA_ecovl <- sem(eq_syn_ecovl, data = ecoVL_factordata)
+summary(CFA_ecovl)
+
+CFA_scores_ecovl <- fscores(CFA_ecovl, data = ecoVL_factordata)
+df_CFA_scores_ecovl <- data.frame(CFA_scores_ecovl) %>% mutate (id = resid )
+
+write.csv(x = df_CFA_scores_ecovl, file = "fscore_ecovl.csv", row.names = FALSE)
+
+
+
+
+library(devtools)
+install_github("vqv/ggbiplot", force = TRUE)
+library(ggbiplot)
+
+df_impute <- sapply(ecoVL_factordata,function(x) {
+  if(is.numeric(x)) ifelse(is.na(x),median(x,na.rm=T),x) else x})
+
+ecovl.pca <- prcomp(df_impute, center = TRUE,scale. = TRUE)
+ecovl.pca 
+ggbiplot(ecovl.pca)
+
+
+
+
 
 ##Correlation and eigenvalues
 cor_eigen <- function(data){
@@ -74,7 +138,8 @@ cor_eigen <- function(data){
 n_least_eco <- cor_eigen(eco_factordata)
 n_least_LM <- cor_eigen(LM_factordata)
 n_least_VL <- cor_eigen(VL_factordata)
-
+n_least_all <- cor_eigen(factor_data)
+n_least_all
 
 EFAfun <- function (data, nleast){
   factorlist <- c(seq(nleast, nleast+5, 1))
@@ -96,7 +161,14 @@ EFAfun(eco_factordata, n_least_eco) # choose n of factors = 8
 EFAfun(LM_factordata, n_least_LM) # choose n of factors = 11
 EFAfun(VL_factordata, n_least_VL) # choose n of factors = 5
 
+EFAfun(factor_data, n_least_all) # choose n of factors = 28
+
 ######Examine the loadings
+
+EFA_all<- fa(factor_data, nfactors = 2)
+EFA_all$loadings
+fa.diagram(EFA_all,cut=.3,digits=2)
+
 
 EFA_eco<- fa(eco_factordata, nfactors = 8)
 EFA_eco$loadings

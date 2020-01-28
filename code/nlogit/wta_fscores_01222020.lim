@@ -1,8 +1,8 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_cluster_01222020.csv"; Nobs=7056; Nvar=68;
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_cluster_01222020.csv"; Nobs=7056; Nvar=49;
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
       hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
       income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,INCOMB23,
-         COM,GCON,SMET, ETHIC, NCOM,ADV, NM_DIS, WLD_DIS ,CC_DIS, OPEN,FAMIL, WLD_ADV, CC_ADV , NM_ADV, AgResp, WATER ,AgVal,LoSte,LoResp,c_eco,c_lm,c_vl
+         FSCOMB34,FA1,FA2
 $
 
 ? OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix10202019.csv"$
@@ -31,19 +31,19 @@ nlogit
 ;Pds = 8
 ?;Panel
 ;rpl
-;rpl = lake1000
+;rpl = lake1000,FA1,FA2
 ?;wtp = wetland/pay,covercro/pay, nm/pay
 ?;maxit = 200
 ?;par
 ?;full
 ?;corr
-;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
-;LCM =  ETHIC, ADV,SMET, NCOM
-;Pts = 4
+;fcn=  wetland(qtg|#111),pay(qtg|#111), covercro(qtg|#111), nm(qtg|#111)
+;?LCM =  FA1,FA2
+;Pts = 50
 ;Halton
 ;Model:
 U(VolCons) = wetland*Wetland + CoverCro*covercro +  pay*Payment + asc + nm*NuMgt + incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-            + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + costTax*taxcost/
+            + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + costTax*taxcost + dems18*dem_2018 /
 U(Current) = 0
 
 ;Export output

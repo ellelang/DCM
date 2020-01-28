@@ -7,6 +7,20 @@ library(cluster)
 library(factoextra)
 rm(list = ls())
 setwd("C:/Users/langzx/Desktop/github/DCM/data")
+
+data_ecovl <- read.csv(file = "fscore_ecovl.csv")
+colnames(data_ecovl)
+data_wta <- read.csv("wta_observables11192018COMB426.csv")
+data_wta$id
+
+data_wta <- data_wta %>% left_join(data_ecovl, by = c("id" = "id"))
+write.csv(x =data_wta , file = "wta_cluster_01272020.csv", row.names = FALSE)
+ncol(data_wta)
+colnames(data_wta)
+
+
+
+
 data_eco <- read.csv(file = "fscore_eco.csv")
 colnames(data_eco)
 df <- data_eco[,seq(1,8,1)] 
