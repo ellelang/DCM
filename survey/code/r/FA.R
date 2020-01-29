@@ -5,7 +5,7 @@ library(GPArotation)
 library(dplyr) 
 library(sem)
 library(factoextra)
-#library(lavaan)
+library(lavaan)
 #library(semPlot)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
@@ -33,10 +33,10 @@ length(question_eco)
 question_LM <- helper %>%
   filter(Grouping == "wetland_LM opinions" |
            Grouping == "cc_LM opinions" |
-           Grouping == "nm_LM opinions"|
+           Grouping == "nm_LM opinions"
            #Grouping == "Responsibility"|
            #Grouping == "Indicate degree to which you agree"|
-           Grouping == "LM practices"
+           #Grouping == "LM practices"
   ) %>%
   select(QuestionID) %>% 
   sapply(as.character) %>% 
@@ -65,12 +65,14 @@ eco_factordata <- factor_data %>% select (question_eco)
 LM_factordata <- factor_data %>% select(question_LM)
 VL_factordata <- factor_data %>% select(question_value)
 ecoVL_factordata <- factor_data %>% select(c(question_eco,question_value))
+all_factordata <- factor_data %>% select(c(question_eco,question_value,question_LM))
 
 
-colnames(factor_data)
+
+colnames(all_factordata)
 
 
-fa.parallel(eco_factordata, fa="both", n.iter=100,
+fa.parallel(LM_factordata, fa="both", n.iter=100,
             show.legend=FALSE, main="Scree plot with parallel analysis")
 
 fa.varimax_ecoVL <- fa(ecoVL_factordata, nfactors = 2, rotate = "varimax", fm = "pa")
@@ -81,23 +83,32 @@ factor.plot(fa.varimax_ecoVL, labels=rownames(fa.varimax_ecoVL$loadings))
 scores_ecovl <- fa.varimax_ecoVL$loadings
 
 efa_ecovl_eq <- "
-FA1: scenicconcern, scenicmoderate, scenicmajor, 
-habitatconcern, habitatmoderate,habitatmajor, 
-recreationconcern, recreationmoderate,recreationmajor, 
-sedimentconcern, sedimentmoderate, sedimentmajor, 
-nutrientconcern, nutrientmoderate, nutrientmajor,
-valundueblame, valwaterimportant, vallandregulate,valwaterproblem, 
-valpaymentimportant, valinfluence, valtogether, valstaff,
-sptlandowners, sptfarmmanager, sptrenters,sptgovstaff, sptmrbboard,
-valknowconservation, valsteward
+FA1 =~ scenicconcern +  scenicmoderate+ scenicmajor+ 
+habitatconcern+ habitatmoderate+habitatmajor+ 
+recreationconcern+ recreationmoderate+recreationmajor+ 
+sedimentconcern+ sedimentmoderate+ sedimentmajor+ 
+nutrientconcern+ nutrientmoderate+ nutrientmajor+
+valundueblame+ valwaterimportant+vallandregulate+valwaterproblem+ 
+valpaymentimportant+valinfluence+valtogether+ valstaff+
+sptlandowners+ sptfarmmanager+ sptrenters+sptgovstaff+ sptmrbboard+
+valknowconservation+ valsteward
 
-FA2: obssediment, obsnutrients, obsodor, obstrash, 
-obslackfish,obsunsafeswim, obscolor, obsunsafedrink,pollutionobs,
-achike, acexplore, acbike, ackayak, acpicnic,achunt, acfish,achorseride, acgooffroading,acswim,
-sptfarmmanager, sptrenters,sptgovstaff, sptmrbboard,familiar25
+FA2=~ obssediment+obsnutrients+ obsodor+ obstrash+ 
+obslackfish+obsunsafeswim+ obscolor+ obsunsafedrink+pollutionobs+
+achike+ acexplore+acbike+ ackayak+ acpicnic+achunt+ acfish+achorseride+acgooffroading+acswim+
+sptfarmmanager+sptrenters+sptgovstaff+ sptmrbboard+familiar25
 "
-eq_syn_ecovl <- cfa(text = efa_ecovl_eq, 
-                  reference.indicators = FALSE)
+ecovl_model.fit <- cfa(model = efa_ecovl_eq, ecoVL_factordata )
+ecovl_fscores <- lavPredict(ecovl_model.fit)
+idx_ecovl <- lavInspect(ecovl_model.fit, "case.idx")
+idx_ecovl
+for (fs in colnames(ecovl_fscores)) {
+  data[idx_ecovl, fs] <- ecovl_fscores[ , fs]
+}
+head(data)
+fscore_ecovl <- data %>% select (c(respondentid, FA1,FA2))
+write.csv(x = fscore_ecovl, file = "ecovl_fscores_0127.csv", row.names = FALSE)
+
 
 CFA_ecovl <- sem(eq_syn_ecovl, data = ecoVL_factordata)
 summary(CFA_ecovl)
@@ -107,8 +118,64 @@ df_CFA_scores_ecovl <- data.frame(CFA_scores_ecovl) %>% mutate (id = resid )
 
 write.csv(x = df_CFA_scores_ecovl, file = "fscore_ecovl.csv", row.names = FALSE)
 
+###########all questions
+fa.varimax_all <- fa(all_factordata, nfactors = 2, rotate = "varimax", fm = "pa")
+
+factor.plot(fa.varimax_all)
+
+scores_all <- fa.varimax_all$loadings
 
 
+efa_all_eq <- "
+FA1 = ~ scenicconcern + scenicmoderate + scenicmajor + 
+habitatconcern+ habitatmoderate + habitatmajor+ 
+recreationconcern + recreationmoderate +recreationmajor+ 
+sedimentconcern + sedimentmoderate + sedimentmajor+ 
+nutrientconcern + nutrientmoderate + nutrientmajor+
+valundueblame + valwaterimportant + vallandregulate + valwaterproblem + 
+valpaymentimportant + valinfluence + valtogether + valstaff+
+sptlandowners+ sptfarmmanager+ sptrenters + sptgovstaff+ sptmrbboard+
+valknowconservation+ valsteward +
+opwetlandcostr + opwetlandcontrol +opwetlandequipment + opwetlandcostm+opwetlandhabitat+opwetlandsoil+   
+opcovercroprp+opcovercroptimep+opcovercroptimeh+opcovercroprs+opcovercropis+opcovercropln+ 
+opnmrs+opnmrl+opnmis+opnmrf+opnmcost   
+
+FA2 =~ obssediment+obsnutrients+ obsodor+ obstrash+ 
+obslackfish+obsunsafeswim+obscolor+ obsunsafedrink+pollutionobs+
+achike+ acexplore+ acbike+ ackayak+ acpicnic+achunt+ acfish+achorseride+acgooffroading+acswim+
+sptfarmmanager+ sptrenters+sptgovstaff+sptmrbboard+familiar25+
+otherswetland+ otherscovercrop + othersnm+
+opwetlandfamiliar+opcovercropfamiliar+ opnmfamiliar+
+opwetlandopen+opwetlandrestored+opcovercropopen+opcovercropplant+opnmopen 
+"
+
+all_model.fit <- cfa(model = efa_all_eq,data = all_factordata )
+#fitmeasures(all_model.fit , c("cfi","tli","rmsea", "srmr"))
+#summary(all_model.fit, standardized =TRUE, fit.measures = TRUE)
+
+data <- read.csv ("data_number.csv", head = TRUE)
+
+all_fscores <- lavPredict(all_model.fit)
+idx_all <- lavInspect(all_model.fit, "case.idx")
+idx_all
+for (fs in colnames(all_fscores)) {
+  data[idx_all, fs] <- all_fscores[ , fs]
+}
+head(data)
+fscore <- data %>% select (c(respondentid, FA1,FA2))
+write.csv(x = fscore, file = "all_fscores_0128.csv", row.names = FALSE)
+
+
+
+CFA_all <- sem(eq_syn_all, data = all_factordata)
+summary(CFA_all)
+
+CFA_scores_all <- fscores(CFA_all, data = all_factordata)
+df_CFA_scores_all <- data.frame(CFA_scores_all) %>% mutate (id = resid )
+write.csv(x = df_CFA_scores_all, file = "fscore_allquestions.csv", row.names = FALSE)
+
+
+     
 
 library(devtools)
 install_github("vqv/ggbiplot", force = TRUE)

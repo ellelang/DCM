@@ -1,4 +1,4 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_cluster_01222020.csv"; Nobs=7056; Nvar=49;
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_cluster_01282020.csv"; Nobs=7056; Nvar=49;
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
       hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
       income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,INCOMB23,
@@ -37,8 +37,8 @@ nlogit
 ?;par
 ?;full
 ?;corr
-;fcn=  wetland(qtg|#111),pay(qtg|#111), covercro(qtg|#111), nm(qtg|#111)
-;?LCM =  FA1,FA2
+;fcn=  wetland(qnn|#111),pay(qnn|#111), covercro(qnn|#111), nm(qnn|#111)
+?;LCM =  FA1,FA2
 ;Pts = 50
 ;Halton
 ;Model:
