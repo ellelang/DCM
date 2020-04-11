@@ -3,15 +3,19 @@ setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 library(psych)
 library(GPArotation)
 library(dplyr) 
+library(tidyverse)
 library(sem)
 library(factoextra)
 library(lavaan)
+library(likert)
 #library(semPlot)
 data <- read.csv ("data_number.csv", head = TRUE)
 helper <- read.csv ("data_helper.csv", head = TRUE)
 groupID <- unique(helper$Grouping)
 resid <- data$respondentid
 head(data)
+
+names(data)
 
 # Get the question ID (column names)
 ## Questions related to ecosystem services
@@ -58,13 +62,15 @@ head(question_value)
 
 ##Get the subset of data
 ###factor data : exclude the choice experiments and demorgraphics info
-factor_data = data[12:126]
+factor_data = data[12:102]
+
+
 # factor_data[!is.na(factor_data)]
 ### three subsets based on question groups
 eco_factordata <- factor_data %>% select (question_eco)
 LM_factordata <- factor_data %>% select(question_LM)
 VL_factordata <- factor_data %>% select(question_value)
-ecoVL_factordata <- factor_data %>% select(c(question_eco,question_value))
+#ecoVL_factordata <- factor_data %>% select(question_eco,question_value)
 all_factordata <- factor_data %>% select(c(question_eco,question_value,question_LM))
 
 
