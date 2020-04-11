@@ -6,7 +6,7 @@ Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demP
       INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred 
 $
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix0823.csv"$
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04112020.csv"$
 
 
 dstat; rhs=* $
@@ -49,13 +49,12 @@ nlogit
 
 U(VolCons) = wetland*Wetland + CoverCro*covercro +  pay*Payment + asc +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4+ fscaware*aware + fscpast*past + fscapp*apprecia + fscresp*resp
-            + nowpractice*practice/
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4+ fscaware*aware + fscpast*past + fscapp*apprecia + fscresp*resp/
 U(Current) = 0
 	
 ;Export output
-?;Export = table
-?;Export = matrix 
+;Export = table
+;Export = matrix 
 $
 
 

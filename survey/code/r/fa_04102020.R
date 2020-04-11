@@ -12,7 +12,19 @@ library(missMDA)
 library(corrplot)
 library(polycor)
 library(semPlot)
-library(glm)
+#################
+# factor analysis results
+
+fa_dat <- read.csv( "wta_04112020.csv", header= TRUE)
+names(fa_dat)
+fscore <- select(fa_dat, c(id,aware,past,appreciate, resp))
+df_fscore <- distinct(fscore)
+dim(df_fscore)
+write.csv(x=df_fscore, file = "fscore_04112020.csv", row.names = FALSE)
+scores <- select(df_fscore, -id)
+multi.hist(scores)
+
+#############factor analysis EFA& CFA
 dat <- read.csv ("data_likertscale.csv", head = TRUE)
 dat$id
 p_data <- read.csv("../../data/wta_factors04112020.csv", head = TRUE)
