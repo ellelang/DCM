@@ -92,3 +92,5 @@ invc (n|#000)
 
 ```
 
+## Factor Analysis and EFA
+
