@@ -1,12 +1,11 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04112020.csv"; Nobs=7056; Nvar=53; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04122020.csv"; Nobs=7056; Nvar=57; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
 	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,
-      INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred 
-$
+      INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred,Cluster, C2, C3, C1$
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04112020.csv"$
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04122020.csv"$
 
 
 dstat; rhs=* $
@@ -32,9 +31,9 @@ nlogit
 ;Pds = 8
 ?;Panel
 ?;rpl
-;rpl = lake1000, income_7
+;rpl = lake1000
 ;wtp = wetland/pay,covercro/pay, nm/pay
-;maxit = 200
+?;maxit = 200
 ;par
 ;Pts = 50
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
@@ -42,20 +41,57 @@ nlogit
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
 ?; Pts = 200
-;corr
-;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+?;corr
+;fcn=  wetland[q|#1111],pay(q|#1111), covercro(q|#1111), nm[q|#1111]
 ;Halton
 ;Model:
 
-U(VolCons) = wetland*Wetland + CoverCro*covercro +  pay*Payment + asc +	nm*NuMgt + dems18*dem_2018 +  costTax*taxcost +
-             incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4+ fscaware*aware + fscpast*past + fscapp*apprecia + fscresp*resp/
+U(VolCons) = wetland*Wetland + CoverCro*covercro +  nm*NuMgt + pay*Payment + asc +  dems18*dem_2018 + costTax*taxcost+
+             incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6 +
+		  farmsi1*areaf_1 + farmsi2*areaf_2 + farmsi3*areaf_3 + fscaware*aware + fscpast*past + fscapp*apprecia + fscresp*resp/
 U(Current) = 0
 	
 ;Export output
 ;Export = table
 ;Export = matrix 
 $
+
+
+? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%LMC 
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+;rpl
+;rpl = lake1000,FA1,FA2
+?;wtp = wetland/pay,covercro/pay, nm/pay
+?;maxit = 200
+?;par
+?;full
+?;corr
+;fcn=  wetland(qnn|#111),pay(qnn|#111), covercro(qnn|#111), nm(qnn|#111)
+?;LCM =  FA1,FA2
+;Pts = 50
+;Halton
+;Model:
+U(VolCons) = wetland*Wetland + CoverCro*covercro +  pay*Payment + asc + nm*NuMgt + incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+            + farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + costTax*taxcost + dems18*dem_2018 /
+U(Current) = 0
+
+;Export output
+?;Export = matrix
+$      
+
+
+
+
+
+
+
 
 
 

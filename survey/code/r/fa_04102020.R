@@ -4,6 +4,7 @@ library(psych)
 library(FactoMineR)
 library(dplyr) 
 library(tidyverse)
+library(fastDummies)
 library(sem)
 library(factoextra)
 library(lavaan)
@@ -16,6 +17,22 @@ library(semPlot)
 # factor analysis results
 
 fa_dat <- read.csv( "wta_04112020.csv", header= TRUE)
+cluster_data <- read.csv("fscore_04112020_cluster.csv")
+names(cluster_data)
+df_cluster <- select (cluster_data, c(id, Cluster))
+dfcluster_dummy <- dummy_cols(df_cluster, select_columns = "Cluster")
+head(dfcluster_dummy)
+dim(fa_dat)
+dat00 <- left_join(fa_dat,dfcluster_dummy)
+write.csv(x = dat00, file= "wta_04122020.csv", row.names = FALSE)
+dim(dat00)
+##############
+
+
+
+
+
+
 names(fa_dat)
 fscore <- select(fa_dat, c(id,aware,past,appreciate, resp))
 df_fscore <- distinct(fscore)
