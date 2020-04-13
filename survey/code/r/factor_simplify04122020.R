@@ -8,6 +8,7 @@ library(fastDummies)
 library(corrplot)
 library(polycor)
 library(lavaan)
+library(semPlot)
 impute_df_dich <- read.csv('factorDICH_impute.csv')
 dim(impute_df_dich)
 het.mat <- hetcor(impute_df_dich)$cor
@@ -17,6 +18,7 @@ scree(het.mat)
 DICH_fa4_EFA <- fa(het.mat, nfactor = 4,rotate = "varimax")
 DICH_fa4_EFA$loadings
 DICH_fa4_EFA$score.cor
+fa.diagram(DICH_fa4_EFA)
 poorloading_DICH <- c('otherswetland', 'otherscovercrop','othersnm',
                       'nowcrp','noweqip','nowfcsv','nowcsp',
                       'practicegd','practicemintill','practicerb','practicerp')
@@ -37,6 +39,11 @@ resp =~ sptlandowners + sptfarmmanager + sptrenters + sptgovstaff + sptmrbboard'
 
 bq_cfa <- cfa(model = f_4_CFAmodel,
               data = dich_se)
+
+semPaths(object = bq_cfa,
+         whatLabels = "std",
+         edge.label.cex = 1)
+
 summary(bq_cfa, standardized = T, fit.measures = T)
 csat_scores <- as.data.frame(predict(bq_cfa)) %>% mutate (practice_ind = practice_indicator1)
 names(csat_scores )
