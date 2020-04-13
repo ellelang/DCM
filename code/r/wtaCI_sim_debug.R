@@ -16,7 +16,7 @@ varcov_m <- as.matrix(varcov, nrow = 18, ncol = 18)
 varcov_m 
 betas$Names
 betas$Betas
-
+length(betas$Names)
 newbetas<- betas
 #newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
 descrip(dataset)
@@ -104,8 +104,8 @@ for (r1 in 1 : 10){
   draws[r1, ] <- drawbetas$Betas
 }
 
-
-
+varcov_m
+isSymmetric(varcov_m )
 draws
 
 draws[1,"pay"]
