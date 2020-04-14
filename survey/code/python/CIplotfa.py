@@ -10,8 +10,9 @@ cc = pd.read_csv(data_folder/"CC_wta_04122020.csv")
 nm = pd.read_csv(data_folder/"NM_wta_04122020.csv")
 fa = pd.read_csv(data_folder/"../data/fscore_04112020_cluster.csv")
 
-
-
+cc.mean()
+wld.mean()
+nm.mean()
 
 
 wta_all = pd.DataFrame(columns = ['id','Wetland', 'Cover Crops','Nutrient Management'])
