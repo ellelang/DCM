@@ -17,6 +17,7 @@ varcov_m
 betas$Names
 betas$Betas
 length(betas$Names)
+betas <- betas%>% mutate_if(is.factor,as.character)
 newbetas<- betas
 #newbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
 descrip(dataset)

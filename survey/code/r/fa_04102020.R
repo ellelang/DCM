@@ -19,6 +19,7 @@ library(semPlot)
 fa_dat <- read.csv( "wta_04112020.csv", header= TRUE)
 cluster_data <- read.csv("fscore_04112020_cluster.csv")
 names(cluster_data)
+dim(cluster_data)
 df_cluster <- select (cluster_data, c(id, Cluster))
 dfcluster_dummy <- dummy_cols(df_cluster, select_columns = "Cluster")
 head(dfcluster_dummy)
@@ -134,15 +135,18 @@ res.mca = MCA(data,tab.disj=tab.disj)
 impute_df = imputeMCA(data, ncp=4)$completeObs
 write.csv(x = impute_df, file = 'factor_impute.csv', row.names = FALSE)
 
+setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
+
+impute_df <- read.csv("factor_impute.csv")
 
 names(impute_df)
 
 describe(impute_df)
 
-df_likert <-  as.data.frame(impute_df) %>%
-  mutate_if(is.integer,
-            as.factor) %>%
-  likert()
+# df_likert <-  as.data.frame(impute_df) %>%
+#   mutate_if(is.integer,
+#             as.factor) %>%
+#   likert()
 
 df_num <- impute_df%>% mutate_if(is.factor,as.numeric)
 
@@ -152,37 +156,85 @@ fa.parallel(df_num)
 
 scree(df_num)
 
+
 fa4_EFA <- fa(df_num, nfactor = 4)
 fa4_EFA$loadings
 fa4_EFA$e.values
 fa4_EFA$score.cor
 
-poorloadings <- c('valundueblame','vallandregulate',
-                  'valpaymentimportant','valinfluence','pollutionobs',
-                  'opwetlandequipment','opnmis','opwetlandopen',
+poorloadings <- c('pollutionobs',
+                  'opwetlandopen',
                   'opwetlandrestored','opcovercropplant',
-                  'opnmopen','opcovercropopen',
-                  'valknowconservation', 'valwaterimportant', 'valtogether',
-                   'familiar25' )
+                  'opnmopen','opcovercropopen'
+                    )
+
+# poorloadings <- c('valundueblame','vallandregulate',
+#                   'valpaymentimportant','valinfluence','pollutionobs',
+#                   'opwetlandequipment','opnmis','opwetlandopen',
+#                   'opwetlandrestored','opcovercropplant',
+#                   'opnmopen','opcovercropopen',
+#                   'valknowconservation', 'valwaterimportant', 'valtogether')
+
+
+
 
 library(car)
 df_se <- select(df_num, -poorloadings)
-dim(df_num)
-names(df_num)
-df_se <- df_num[,1:15]
-df_num<-scale(df_num)
 
-fa.parallel(df_num)
-fa3_EFA <- fa(df_se, nfactor = 2)
+#df_se <- select(df_num, -c(alundueblame, vallandregulate,valinfluence,pollutionobs
+                           #opwetlandrestored, opcovercropplant,
+                           #opnmopen,opwetlandopen,opcovercropopen))
+dim(df_num)
+dim(df_se)
+names(df_num)
+#df_se <- df_num[,1:15]
+df_se<-scale(df_se)
+dim(df_num)
+fa.parallel(df_se)
+fa3_EFA <- fa(df_se, nfactor = 3, rotate = "varimax")
 fa3_EFA$loadings
 
-fa2_EFA$score.cor
+fa3_EFA$score.cor
 
 
-fa2_CFAmodel <- 'awareproblem =~ scenicconcern + scenicmoderate + nutrientconcern + nutrientmoderate + nutrientmajor +
-habitatconcern + habitatmoderate + habitatmajor + sedimentconcern + sedimentmoderate + sedimentmajor + recreationconcern +recreationmoderate +
-recreationmajor  + valundueblame + vallandregulate + valwaterproblem + valinfluence 
-knowledge =~ valknowconservation + valwaterimportant +  valtogether + valstaff + valsteward'
-fa_cfa <- cfa(model = fa2_CFAmodel,
-              data = df_se, estimator = 'MLR')
+
+fa3_CFAmodel <- 'concern =~ scenicconcern + scenicmoderate + nutrientconcern + nutrientmoderate + nutrientmajor + habitatconcern + habitatmoderate + habitatmajor + sedimentconcern + sedimentmoderate + sedimentmajor + recreationconcern +recreationmoderate +
+recreationmajor + valwaterproblem + valwaterimportant  + valtogether
+value =~ valknowconservation +  valsteward + opnmfamiliar + opwetlandfamiliar+ familiar25 + opcovercropfamiliar 
+landcontrol =~ valundueblame + opwetlandcostr + opwetlandcontrol + opwetlandcostm + opwetlandsoil + opwetlandhabitat + valstaff +
+opcovercroprp + opcovercroptimep +opcovercroptimeh + opcovercroprs + opcovercropis + opcovercropln + opnmrs + opnmrl + opnmis + opnmrf + opnmcost+
+vallandregulate+valpaymentimportant + valinfluence + opwetlandequipment  '
+
+
+
+fa_cfa <- cfa(model = fa3_CFAmodel,data = df_se)
 summary(fa_cfa, standardized = T, fit.measures = T)
+
+f_scores <- as.data.frame(predict(fa_cfa))
+names(f_scores)
+daaa <-  read.csv("data_likertscale.csv", head = TRUE)
+daaa$id
+f_scores['id'] = daaa$id
+write.csv(x= f_scores, file = "factorscores_likertlike.csv", row.names = FALSE)
+
+di_fscores <- read.csv("fscore_04112020.csv") 
+dim(di_fscores)
+names(di_fscores)
+all <- read.csv( "wta_04112020.csv")
+all_fa <- left_join(all, f_scores)
+dim(all_fa)
+write.csv(x= all_fa, file = "wta_factorsall_0415.csv", row.names = FALSE)
+
+fscoresall <- left_join (di_fscores, f_scores)
+dim(fscoresall)
+names(fscoresall)
+write.csv(x= fscoresall, file = "factors7_0415.csv", row.names = FALSE)
+##############
+f_dich <- read.csv("fscore_04112020_cluster.csv")
+f_likert <- read.csv("factorscores_likertlike.csv")
+dim(f_likert)
+f_all <- left_join(f_dich, f_likert) %>% select(-c(Cluster,id))
+fa.parallel(f_all)
+f_all <- scale(f_all)
+fa3_EFA <- fa(f_all, nfactor = 2)
+fa3_EFA$loadings

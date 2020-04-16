@@ -1,0 +1,19 @@
+Names	Betas
+wetland 	-1.77366
+pay     	0.00810084
+cc	-0.3674
+nm      	-0.406822
+asc     	-1.38492
+dems18  	0.741315
+costtax 	-0.00121551
+incfarm1	0.875915
+incfarm23	0.6534
+incfarm4	0.479734
+incfarm5	0.614204
+incfarm6	2.06379
+farmsi2 	0.793101
+farmsi3 	0.258299
+farmsi4	0.595674
+clake	0.0835788
+
+

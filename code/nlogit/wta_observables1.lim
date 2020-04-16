@@ -52,7 +52,7 @@ areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
 ?; Pts = 200
 ;corr
-;fcn=  -wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
 ;Halton
 ;Model:
 

@@ -1,11 +1,16 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04122020.csv"; Nobs=7056; Nvar=60; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_observables04152020.csv"; Nobs=7056; Nvar=53; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
-	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,
-      INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred, Cluster, C2, C3,C1, concern,value, landcontrol$
+	income_6,income_3, income_1, income_4,income_2, income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,county,aware,
+past, appreciate,resp, Cluster
+$
 
-OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04122020.csv"$
+
+
+
+
+OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04152020.csv"$
 
 
 dstat; rhs=* $
@@ -23,6 +28,7 @@ REJECT; income_N = 1
       $
 
 
+
 nlogit
 ;lhs=Y
 ;Choices=VolCons,Current
@@ -35,22 +41,21 @@ nlogit
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ?;maxit = 200
 ;par
-;Pts = 100
+;Pts = 1000
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
 ?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
 ?; Pts = 200
 ?;corr
-;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;fcn=  wetland[q],covercro(q), pay[q], nm[q]
 covercro(q)
 ;Halton
 ;Model:
 
-U(VolCons) = wetland*Wetland + CoverCro*covercro +  nm*NuMgt + pay*Payment + asc +  dems18*dem_2018 + costTax*taxcost+
-             incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6 +
-		   farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + fscaware*aware + fscpast*past + fscapp*apprecia + 
-               fslandctrl * landcontrol/
+U(VolCons) = asc + pay*Payment +wetland*Wetland + CoverCro*covercro +  nm*NuMgt +  dems18*dem_2018 + costTax*taxcost+
+             incfarm1*income_1 + incfarm2*income_2 +incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6 +
+		   farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 + fscaware*aware + fscpast*past + fscapp*apprecia + fscresp*resp/
 U(Current) = 0
 	
 ;Export output
@@ -73,21 +78,21 @@ nlogit
 ?;rpl
 ;rpl = lake1000
 ;wtp = wetland/pay,covercro/pay, nm/pay
-?;maxit = 2000
+?;maxit = 1000
 ;par
 ;Pts = 1000
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
 ?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
-?; Pts = 1000
+?; Pts = 200
 ?;corr
-;fcn=  wetland[q],pay(q|#00), covercro(q|#10), nm[q]
+;fcn=  wetland[q],covercro(q), pay[q], nm[q]
 ;Halton
 ;Model:
 
-U(VolCons) = wetland*Wetland + CoverCro*covercro +  nm*NuMgt + pay*Payment + asc +  dems18*dem_2018 + costTax*taxcost+
-             incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6 +
+U(VolCons) = asc +  pay*Payment + wetland*Wetland + CoverCro*covercro +  nm*NuMgt +  dems18*dem_2018 + costTax*taxcost+
+             incfarm1*income_1 + incfarm2*income_2 + incfarm3*income_3 + incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6 +
 		  farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4/
 U(Current) = 0
 	
