@@ -27,9 +27,9 @@ n <- dim(dataset)[1]
 dataset$asc <- rep(1,n )
 dataset$lake1000 <- dataset$implakes/1000
 colnames(dataset)
-betas <- read.table("betas04142020_orign.txt", sep = "\t", header = TRUE)
+betas <- read.table("betas04182020_orign.txt", sep = "\t", header = TRUE)
 dim(betas)
-varcov <- read.table("varscov0414_orign.txt", sep = "\t", header = FALSE)
+varcov <- read.table("varscov04182020_origin.txt", sep = "\t", header = FALSE)
 dim(varcov)
 
 varcov_m <- as.matrix(varcov, nrow = 16, ncol = 16)
@@ -117,7 +117,10 @@ for (i in 1:s){
   WLD_WTA_ALL[i,3] <- quantile(wta_vec, 0.975,na.rm = TRUE)
 }
 WLD_WTA_ALL
+png("wld.png")
+
 plot(density(WLD_WTA_ALL[,1]))
+dev.off()
 #sample average value 
 WLD_mean <- mean(WLD_WTA_ALL[,1])
 WLD_CIL <- mean(WLD_WTA_ALL[,2])
@@ -221,3 +224,6 @@ NM_mean
 NM_CIL
 NM_CIU
 
+write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0418_origin.csv", row.names = FALSE)
+write.csv (x = CC_WTA_ALL, file = "CC_wta_0418_origin.csv", row.names = FALSE)
+write.csv (x = NM_WTA_ALL, file = "NM_wta_0418_origin.csv", row.names = FALSE)

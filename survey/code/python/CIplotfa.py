@@ -1,14 +1,24 @@
 from pathlib import Path
-data_folder = Path("C:/Users/langzx/Desktop/github/DCM/output")
+data_folder = Path("C:/Users/langzx/Desktop/github/DCM/data")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import itertools 	
-wld = pd.read_csv(data_folder/"WLD_wta_04122020.csv")
-cc = pd.read_csv(data_folder/"CC_wta_04122020.csv")
-nm = pd.read_csv(data_folder/"NM_wta_04122020.csv")
+wld = pd.read_csv(data_folder/"WLD_wta_0418_origin.csv")
+cc = pd.read_csv(data_folder/"CC_wta_0418_origin.csv")
+nm = pd.read_csv(data_folder/"NM_wta_0418_origin.csv")
 fa = pd.read_csv(data_folder/"../data/fscore_04112020_cluster.csv")
+fa = pd.read_csv(data_folder/"../data/fscore_04162020_cluster.csv")
+fa.columns
+wld = pd.read_csv(data_folder/"WLD_wta_0418.csv")
+cc = pd.read_csv(data_folder/"CC_wta_0418.csv")
+nm = pd.read_csv(data_folder/"NM_wta_0418.csv")
+proby = pd.read_csv(data_folder/"../data/predprob.csv")
+fa = pd.read_csv(data_folder/"../data/fscore_0418_4_cluster.csv")
+fa.columns
+proby.columns
+
 
 cc.mean()
 wld.mean()
@@ -22,7 +32,7 @@ wta_all['Cover Crops'] = cc['MEAN']
 wta_all['Nutrient Management'] = nm['MEAN']
 
 wta_all['Cluster'] = ['cluster' + str(i) for i in fa['Cluster']]
-wta_all.to_csv("C:/Users/langzx/Desktop/github/DCM/output/wta_means_04122020.csv",index=False)
+#wta_all.to_csv("C:/Users/langzx/Desktop/github/DCM/output/wta_means_04122020.csv",index=False)
 
 
 
@@ -38,7 +48,7 @@ plt.show()
 wta_melt = pd.melt(
   					wta_all.reset_index(), 
                         
-                    id_vars=['id', 'Cluster'],
+                    id_vars=['id','Cluster'],
 
                     value_vars=['Wetland', 'Cover Crops','Nutrient Management'], 
                         

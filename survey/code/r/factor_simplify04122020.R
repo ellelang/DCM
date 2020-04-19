@@ -1,6 +1,7 @@
 rm(list = ls())
-#setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
-setwd("~/Documents/github/DCM/survey/data")
+#
+setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
+#setwd("~/Documents/github/DCM/survey/data")
 library(psych)
 library(FactoMineR)
 library(dplyr) 
@@ -12,6 +13,16 @@ library(lavaan)
 library(semPlot)
 impute_df_dich <- read.csv('factorDICH_impute.csv')
 dim(impute_df_dich)
+impute_dich <- read.csv('factor_impute.csv')
+dim(impute_dich)
+
+
+impute_all = cbind(impute_dich,impute_df_dich)
+#fa.diagram(impute_all)
+fa.parallel(impute_all)
+efa <- fa(impute_all, nfactor = 7,rotate = "varimax")
+efa$loadings
+
 het.mat <- hetcor(impute_df_dich)$cor
 corrplot(cor(het.mat))
 fa.parallel(het.mat)
