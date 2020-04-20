@@ -15,7 +15,7 @@ wld = pd.read_csv(data_folder/"WLD_wta_0418.csv")
 cc = pd.read_csv(data_folder/"CC_wta_0418.csv")
 nm = pd.read_csv(data_folder/"NM_wta_0418.csv")
 proby = pd.read_csv(data_folder/"../data/predprob.csv")
-fa = pd.read_csv(data_folder/"../data/fscore_0418_4_cluster.csv")
+fa = pd.read_csv(data_folder/"fscore_0418_4_cluster.csv")
 fa.columns
 proby.columns
 
@@ -31,10 +31,12 @@ wta_all['Wetland'] = wld['MEAN']
 wta_all['Cover Crops'] = cc['MEAN']
 wta_all['Nutrient Management'] = nm['MEAN']
 
+
+
 wta_all['Cluster'] = ['cluster' + str(i) for i in fa['Cluster']]
 #wta_all.to_csv("C:/Users/langzx/Desktop/github/DCM/output/wta_means_04122020.csv",index=False)
 
-
+wta_all.groupby('Cluster').mean()	
 
 wta_ori = pd.read_csv(data_folder/"wta_all_mean.csv")
 
@@ -61,7 +63,11 @@ y="WTA",
 hue='Cluster',
 data = wta_melt ,
 kind = "box")
+
+plt.savefig(data_folder/'wta_box2_u.jpg',dpi = 200)
 plt.show()
+
+
 
 wta_ori_melt = pd.melt(
   					wta_ori.reset_index(), 
@@ -150,5 +156,5 @@ plt.legend(loc= 1, fontsize = 5, title = 'Conservation actions')
 plt.title('Distributions of willingess-to-accept')
 plt.xlabel('Payment($/acre)')
 plt.ylabel('Probability density')
-plt.savefig("wta.png", dpi = 800)
+plt.savefig(data_folder/"wta_u.png", dpi = 200)
 plt.show()

@@ -14,7 +14,7 @@ dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 
 dat0.columns
 dat = dat0[['aware','past','appreciate','resp', 'concern', 'value', 'landcontrol']]
-#dat = dat0[['aware','past','appreciate','landcontrol']]
+#dat = dat0[['aware','past','appreciate','resp']]
 
 dat.columns
 minlist = dat.min()
@@ -38,8 +38,9 @@ dat_log = pd.DataFrame({'aware':aware_log,
                         'app': app_log,
                         'resp': resp_log,
                         'concern': concern_log,
-                        'value': value_log,
-                        'landcontrol': landcontrol_log})
+                       'value': value_log,
+                        'landcontrol': landcontrol_log
+                        })
 
 from sklearn.preprocessing import StandardScaler
 # Initialize a scaler
@@ -83,7 +84,7 @@ plt.show()
 
 # Initialize KMeans
 # Initialize KMeans
-kmeans = KMeans(n_clusters =3, random_state =1) 
+kmeans = KMeans(n_clusters =2, random_state =1) 
 
 # Fit k-means clustering on the normalized data set
 kmeans.fit(data_normalized)
@@ -109,7 +110,7 @@ grouped.agg({
     'resp': 'mean',
     'concern' : 'mean',
     'value': 'mean',
-    'landcontrol' : 'mean'
+   'landcontrol' : 'mean'
   }).round(3)
 
 data_normalized['Cluster'] = data_k3['Cluster']
@@ -121,8 +122,11 @@ datanormalized_melt = pd.melt(
                     id_vars=['id', 'Cluster'],
 
 # Assign RFM values as value variables
-                    value_vars=['aware', 'past', 'app','resp','concern','value'
-                         ,'landcontrol' ], 
+                    value_vars=['aware', 
+                                'past', 'app','resp',
+                                'concern','value'
+                         ,'landcontrol' 
+                         ], 
                         
 # Name the variable and value
                     var_name='Metric', value_name ='Value'
@@ -168,6 +172,7 @@ plt.show()
 
 data_k3['id'] = dat0['id']
 #data_k3.to_csv(data_folder/"fscore_04112020_cluster.csv", index = False)
+data_k3.columns
 data_k3.to_csv(data_folder/"fscore_0418_4_cluster.csv", index = False)
 fig, axes = plt.subplots(4,1)
 

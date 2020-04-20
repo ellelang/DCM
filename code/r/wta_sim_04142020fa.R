@@ -157,7 +157,7 @@ for (i in 1:s){
     index_i <- index[i]
     dat_s <- dat0[i,]
     dat_s_m <- as.matrix(x = dat_s, nrow = 1, ncol = 20)  
-    wta_s <- -((cc_rp )* rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / (pay_rp)
+    wta_s <- -((cc_rp  +lake_rp)* rexp(rate = 1, n = n_draws) + as.vector(dat_s_m %*% new_beta2)) / (pay_rp)
     wta_vec[r] <- mean(wta_s,na.rm = TRUE)
   }
   CC_WTA_ALL[i,1] <- mean(wta_vec,na.rm = TRUE)

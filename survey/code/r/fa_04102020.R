@@ -161,6 +161,7 @@ fa4_EFA <- fa(df_num, nfactor = 4)
 fa4_EFA$loadings
 fa4_EFA$e.values
 fa4_EFA$score.cor
+fa4_EFA$scores
 
 poorloadings <- c('pollutionobs',
                   'opwetlandopen',
