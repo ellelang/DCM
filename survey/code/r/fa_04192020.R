@@ -119,3 +119,11 @@ vallandregulate+valpaymentimportant + valinfluence + opwetlandequipment  '
 fa_cfa <- cfa(model = fa3_CFAmodel,data = da_CFA)
 summary(fa_cfa, standardized = T, fit.measures = T)
 
+rrslabels<-c(1:8,9:14, 15:24, 25:29, "Awareness",
+             "Past","Appreciation","Responsibility")
+
+png("../plot/cfaplot.png")
+semPaths(object = bq_cfa,
+         what="par",whatLabels="hide", nodeLabels=rrslabels, sizeLat=12,
+         sizeMan=4.5,edge.label.cex=0.75, edge.color="black", asize=2)
+dev.off()
