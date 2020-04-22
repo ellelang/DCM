@@ -1,0 +1,583 @@
+|-> RESET
+
+====================================================
+                        ____   ___       _____
+       /\    /   /     /   /  /      /     /
+      /  \  /   /     /   /  /___   /     /
+     /    \/   /___  /___/  /___/  /     /
+
+====================================================
+
+O---------------------------------------------------------O
+| NLOGIT 6  (tm)              Apr 21, 2020, 05:13:56PM    |
+| Econometric Software, Inc.  Copyright 1986-2016         |
+| Plainview, New York 11803   www.nlogit.com              |
+| Registered to Sergey Rabotyagov                         |
+|               University of Washington                  |
+| Registration Number:  0518-0017941-6NS                  |
+O---------------------------------------------------------O
+-------Initializing NLOGIT Version 6 (Sep 7, 2016)---------
+-----------------------------------------------------------
+
+|-> READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04122020.csv"; Nobs=7056; Nvar=61;
+    Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
+    	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
+    	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,
+    INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred, Cluster, C2, C3,C1, concern,value, landcontrol,info_so$
+|-> dstat; rhs=* $
+
+
+--------+---------------------------------------------------------------------
+        |                  Standard                                    Missing
+Variable|         Mean    Deviation      Minimum      Maximum    Cases  Values
+--------+---------------------------------------------------------------------
+      ID|   .694041D+1     10148017   .692225D+1   .696750D+1     7055       1
+       Y|      .500085      .500043          0.0          1.0     5865    1191
+CHOICESE|          2.0          0.0          2.0          2.0     7055       1
+    ALTI|     1.499929      .500035          1.0          2.0     7055       1
+    TASK|     4.499504     2.291234          1.0          8.0     7055       1
+ WETLAND|      .250035      .433064          0.0          1.0     7055       1
+ PAYMENT|     164.0858     233.2041          0.0        650.0     7055       1
+COVERCRO|      .250035      .433064          0.0          1.0     7055       1
+   NUMGT|      .250035      .433064          0.0          1.0     7055       1
+  INCFAR|     4.002817     1.548418          1.0          7.0     5680    1376
+   AREAF|     2.244889      .884576          1.0          5.0     6799     257
+DEMPREZ1|      .052519      .223087          0.0          1.0     7007      49
+DEM_2018|      .570858      .494989          0.0          1.0     7007      49
+UNEMPLOY|     3.858427      .649825          2.7          6.1     7007      49
+COSTLIVE|      47156.2     5193.209      41053.0      65315.0     7007      49
+  HRWAGE|     15.11439     1.664505        13.16        20.93     7007      49
+ TAXCOST|     483.6678     116.7314        336.0        885.0     7007      49
+CASHRENT|     195.9267     37.15246         32.0        237.0     6943     113
+ CRP2018|     193.4501     33.34423         52.0        250.0     7007      49
+LANDVALU|      6554.67     2235.395       1986.0      18090.0     7007      49
+IMPSTREA|     141.2426     109.2527          0.0        344.4     7007      49
+IMPLAKES|     2769.288     3698.315          0.0      21030.0     7007      49
+ IMPWETL|     8.052291     21.57575          0.0        83.99     7007      49
+IMPTOTAL|     18.69844     11.74932          0.0         46.0     7007      49
+CHILDCAR|     254.2098     127.3865        184.0        741.0     7007      49
+FOODCOST|     760.3999     11.19783        741.0        787.0     7007      49
+ HEALTHC|     422.0418      17.9586        417.0        486.0     7007      49
+HOUSECOS|     752.1005     115.2529        698.0       1113.0     7007      49
+OTHERCOS|     442.1991     33.57283        421.0        555.0     7007      49
+  CONVCS|      .607419       .48836          0.0          1.0     6847     209
+    CORN|      .740616      .438328          0.0          1.0     6847     209
+INCOME_1|      .140609      .347643          0.0          1.0     7055       1
+INCOME_6|      .027215       .16272          0.0          1.0     7055       1
+INCOME_4|      .165556      .371708          0.0          1.0     7055       1
+INCOME_N|      .194897       .39615          0.0          1.0     7055       1
+INCOME_5|      .124734      .330441          0.0          1.0     7055       1
+INCOME_7|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_1|      .156485       .36334          0.0          1.0     7055       1
+ AREAF_2|      .145004      .352129          0.0          1.0     7055       1
+ AREAF_4|       .56017      .496402          0.0          1.0     7055       1
+ AREAF_3|      .081644      .273841          0.0          1.0     7055       1
+AREAF_NA|      .036286      .187015          0.0          1.0     7055       1
+ AREAF_5|      .020411      .141412          0.0          1.0     7055       1
+  DFLALL|      .522239      .057477      .400033      .666004     7007      49
+ DFLMEAN|       .49609      .057419      .372982      .627657     7007      49
+INCOMB23|      .310702      .462814          0.0          1.0     7055       1
+FSCOMB34|      .238129      .425969          0.0          1.0     7055       1
+   AWARE| -.445680D-04      .323798     -.310452      .446157     7055       1
+    PAST|  .432123D-05       .37931     -.725928      .502671     7055       1
+APPRECIA|  .267604D-04       .19344     -.239639      .533637     7055       1
+    RESP|  .450627D-05       .15076     -.184857      .229816     7055       1
+PRACTICE|      .723317       .44739          0.0          1.0     7055       1
+PRAC_PRE|     1.057424      .684858     -.490249     2.555894     7055       1
+ CLUSTER|     1.893551      .728443          1.0          3.0     7055       1
+      C2|      .458115      .498278          0.0          1.0     7055       1
+      C3|      .217718      .412724          0.0          1.0     7055       1
+      C1|      .324167      .468096          0.0          1.0     7055       1
+ CONCERN|     -.000181      .797488    -1.693755      1.84718     7055       1
+   VALUE|  .472327D-04      .314183    -1.370929      .905987     7055       1
+LANDCONT|  .443194D-04      .358177    -1.265035     1.273552     7055       1
+ INFO_SO| -.152747D-04       .22907     -.275981      .890304     7055       1
+--------+---------------------------------------------------------------------
+
+Descriptive Statistics for  61 variables
+DSTAT results are matrix LASTDSTA in current project.
+|-> sample; ALL$
+|-> CALC ; Ran(123) $
+|-> CREATE ; lake1000 = implakes/1000
+    ; agv1000 = landvalu/1000 $
+|-> SETPANEL ; Group = ID $
+Error    512: STR/SET variable has missing values. Cannot continue.
+|-> SKIP $
+|-> CALC ; Ran(12345) $
+|-> sample; 2-7056$
+|-> REJECT; income_N = 1
+    ; areaf_5 = 1
+    $
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 200
+    ;full
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fsaware*aware + fscpast*past + fscapp*apprecia +
+    fsresp*resp  + fsinfo*info_so
+    /
+    U(Current) = 0
+    ;Export output
+    ;Export = matrix
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1744400D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1744.40002
+Estimation based on N =   2636, K =  20
+Inf.Cr.AIC  =   3528.8 AIC/N =    1.339
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0415 .0331
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[19]          =    151.18129
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.47227***      .11457    -4.12  .0000     -.69681   -.24772
+     PAY|     .00146***      .00025     5.71  .0000      .00096    .00196
+COVERCRO|     .04157         .08040      .52  .6051     -.11601    .19916
+      NM|    -.06273         .08692     -.72  .4705     -.23309    .10763
+     ASC|   -2.07327***      .45755    -4.53  .0000    -2.97005  -1.17649
+     DFL|    2.97807***      .73632     4.04  .0001     1.53491   4.42122
+ COSTTAX|    -.00059         .00038    -1.57  .1154     -.00133    .00015
+INCFARM1|     .33023         .20831     1.59  .1129     -.07806    .73851
+INCFARM2|     .57835***      .21024     2.75  .0059      .16629    .99041
+INCFARM4|     .41829**       .20926     2.00  .0456      .00815    .82843
+INCFARM5|     .48055**       .21527     2.23  .0256      .05863    .90246
+INCFARM6|    1.61102***      .33822     4.76  .0000      .94811   2.27392
+ FARMSI2|     .28760*        .14753     1.95  .0512     -.00156    .57675
+ FARMSI3|     .03912         .16763      .23  .8155     -.28943    .36767
+ FARMSI4|     .22526**       .11203     2.01  .0444      .00568    .44483
+ FSAWARE|     .14525         .13909     1.04  .2964     -.12737    .41787
+ FSCPAST|     .35593***      .13445     2.65  .0081      .09241    .61945
+  FSCAPP|    1.41954***      .23814     5.96  .0000      .95278   1.88629
+  FSRESP|     .31501         .31376     1.00  .3154     -.29994    .92996
+  FSINFO|     .61170***      .20445     2.99  .0028      .21098   1.01242
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Apr 21, 2020 at 05:17:52 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  34 iterations. Status=0, F=    .1612335D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1612.33506
+Restricted log likelihood   -1827.13597
+Chi squared [ 23](P= .000)    429.60182
+Significance level               .00000
+McFadden Pseudo R-squared      .1175615
+Estimation based on N =   2636, K =  23
+Inf.Cr.AIC  =   3270.7 AIC/N =    1.241
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .1176 .1098
+Constants only  -1819.9907  .1141 .1063
+At start values -1702.1893  .0528 .0444
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 200
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|   -1.79876***      .21825    -8.24  .0000    -2.22651  -1.37100
+     PAY|     .00379***      .00026    14.39  .0000      .00327    .00431
+COVERCRO|    -.44251***      .12172    -3.64  .0003     -.68108   -.20393
+      NM|    -.67996***      .12314    -5.52  .0000     -.92131   -.43861
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.97993***      .39788    -7.49  .0000    -3.75975  -2.20010
+     DFL|    4.94128***      .63616     7.77  .0000     3.69442   6.18814
+ COSTTAX|    -.00091***      .00033    -2.79  .0054     -.00155   -.00027
+INCFARM1|     .61879***      .17366     3.56  .0004      .27842    .95916
+INCFARM2|     .82807***      .17721     4.67  .0000      .48075   1.17540
+INCFARM4|     .57553***      .17679     3.26  .0011      .22902    .92203
+INCFARM5|     .59258***      .18587     3.19  .0014      .22829    .95688
+INCFARM6|    2.32919***      .38370     6.07  .0000     1.57716   3.08123
+ FARMSI2|     .34804***      .12015     2.90  .0038      .11255    .58353
+ FARMSI3|     .04763         .13383      .36  .7219     -.21468    .30993
+ FARMSI4|     .27351***      .09178     2.98  .0029      .09361    .45340
+ FSAWARE|     .09654         .12884      .75  .4537     -.15598    .34907
+ FSCPAST|     .51314***      .11764     4.36  .0000      .28256    .74372
+  FSCAPP|    1.47464***      .21032     7.01  .0000     1.06241   1.88687
+  FSRESP|     .44986*        .26967     1.67  .0953     -.07868    .97840
+  FSINFO|     .92445***      .18374     5.03  .0000      .56433   1.28457
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.04119         .04386     -.94  .3476     -.12715    .04476
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .10522***      .02739     3.84  .0001      .05153    .15891
+  NM:LAK|    -.01479         .02464     -.60  .5484     -.06309    .03351
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   CsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Apr 21, 2020 at 05:23:01 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0411949
+       2|       .000000
+       3|       .105217
+       4|     -.0147920
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 100
+    ;full
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    ;Export output
+    ;Export = matrix
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1785984D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1785.98436
+Estimation based on N =   2636, K =  15
+Inf.Cr.AIC  =   3602.0 AIC/N =    1.366
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0187 .0119
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[14]          =     68.01261
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.45973***      .11274    -4.08  .0000     -.68070   -.23877
+     PAY|     .00141***      .00025     5.62  .0000      .00092    .00190
+COVERCRO|     .03928         .07914      .50  .6196     -.11583    .19440
+      NM|    -.06245         .08556     -.73  .4654     -.23015    .10525
+     ASC|   -1.63854***      .43854    -3.74  .0002    -2.49806   -.77901
+     DFL|    2.84291***      .71627     3.97  .0001     1.43906   4.24676
+ COSTTAX|    -.00066*        .00036    -1.81  .0702     -.00137    .00005
+INCFARM1|     .15136         .20386      .74  .4578     -.24821    .55092
+INCFARM2|     .25615         .20133     1.27  .2033     -.13846    .65076
+INCFARM4|     .19460         .20417      .95  .3405     -.20556    .59476
+INCFARM5|     .29132         .20966     1.39  .1647     -.11960    .70225
+INCFARM6|     .94473***      .31654     2.98  .0028      .32432   1.56514
+ FARMSI2|     .30917**       .14411     2.15  .0319      .02671    .59162
+ FARMSI3|     .15446         .16443      .94  .3475     -.16781    .47673
+ FARMSI4|     .17030         .10889     1.56  .1178     -.04313    .38373
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Apr 21, 2020 at 06:20:28 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  30 iterations. Status=0, F=    .1644778D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1644.77800
+Restricted log likelihood   -1827.13597
+Chi squared [ 18](P= .000)    364.71594
+Significance level               .00000
+McFadden Pseudo R-squared      .0998054
+Estimation based on N =   2636, K =  18
+Inf.Cr.AIC  =   3325.6 AIC/N =    1.262
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0998 .0936
+Constants only  -1819.9907  .0963 .0901
+At start values -1743.0673  .0564 .0499
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|   -1.82985***      .19989    -9.15  .0000    -2.22162  -1.43808
+     PAY|     .00385***      .00026    14.97  .0000      .00335    .00436
+COVERCRO|    -.48162***      .12251    -3.93  .0001     -.72174   -.24151
+      NM|    -.78408***      .13292    -5.90  .0000    -1.04460   -.52357
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.29852***      .37368    -6.15  .0000    -3.03091  -1.56613
+     DFL|    4.55528***      .60189     7.57  .0000     3.37560   5.73495
+ COSTTAX|    -.00097***      .00030    -3.28  .0010     -.00155   -.00039
+INCFARM1|     .40880**       .16791     2.43  .0149      .07970    .73790
+INCFARM2|     .41458**       .16606     2.50  .0125      .08910    .74005
+INCFARM4|     .32301*        .16966     1.90  .0569     -.00952    .65555
+INCFARM5|     .40034**       .17638     2.27  .0232      .05465    .74603
+INCFARM6|    1.52174***      .33525     4.54  .0000      .86467   2.17882
+ FARMSI2|     .39062***      .12124     3.22  .0013      .15299    .62826
+ FARMSI3|     .15461         .13311     1.16  .2454     -.10628    .41549
+ FARMSI4|     .22490**       .08845     2.54  .0110      .05154    .39826
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.03914         .04357     -.90  .3691     -.12455    .04626
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .08973***      .02577     3.48  .0005      .03923    .14023
+  NM:LAK|    -.01022         .02453     -.42  .6771     -.05829    .03786
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   CsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Apr 21, 2020 at 06:23:19 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0391403
+       2|       .000000
+       3|      .0897314
+       4|     -.0102158
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 1000
+    ;full
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fsaware*aware + fscpast*past + fscapp*apprecia +
+    fsresp*resp  + fsinfo*info_so
+    /
+    U(Current) = 0
+    ;Export output
+    ;Export = matrix
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   5 iterations. Status=0, F=    .1744400D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1744.40002
+Estimation based on N =   2636, K =  20
+Inf.Cr.AIC  =   3528.8 AIC/N =    1.339
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0415 .0331
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[19]          =    151.18129
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.47227***      .11457    -4.12  .0000     -.69681   -.24772
+     PAY|     .00146***      .00025     5.71  .0000      .00096    .00196
+COVERCRO|     .04157         .08040      .52  .6051     -.11601    .19916
+      NM|    -.06273         .08692     -.72  .4705     -.23309    .10763
+     ASC|   -2.07327***      .45755    -4.53  .0000    -2.97005  -1.17649
+     DFL|    2.97807***      .73632     4.04  .0001     1.53491   4.42122
+ COSTTAX|    -.00059         .00038    -1.57  .1154     -.00133    .00015
+INCFARM1|     .33023         .20831     1.59  .1129     -.07806    .73851
+INCFARM2|     .57835***      .21024     2.75  .0059      .16629    .99041
+INCFARM4|     .41829**       .20926     2.00  .0456      .00815    .82843
+INCFARM5|     .48055**       .21527     2.23  .0256      .05863    .90246
+INCFARM6|    1.61102***      .33822     4.76  .0000      .94811   2.27392
+ FARMSI2|     .28760*        .14753     1.95  .0512     -.00156    .57675
+ FARMSI3|     .03912         .16763      .23  .8155     -.28943    .36767
+ FARMSI4|     .22526**       .11203     2.01  .0444      .00568    .44483
+ FSAWARE|     .14525         .13909     1.04  .2964     -.12737    .41787
+ FSCPAST|     .35593***      .13445     2.65  .0081      .09241    .61945
+  FSCAPP|    1.41954***      .23814     5.96  .0000      .95278   1.88629
+  FSRESP|     .31501         .31376     1.00  .3154     -.29994    .92996
+  FSINFO|     .61170***      .20445     2.99  .0028      .21098   1.01242
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on Apr 21, 2020 at 06:24:52 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  34 iterations. Status=0, F=    .1612260D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1612.25998
+Restricted log likelihood   -1827.13597
+Chi squared [ 23](P= .000)    429.75197
+Significance level               .00000
+McFadden Pseudo R-squared      .1176026
+Estimation based on N =   2636, K =  23
+Inf.Cr.AIC  =   3270.5 AIC/N =    1.241
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .1176 .1098
+Constants only  -1819.9907  .1141 .1063
+At start values -1702.1193  .0528 .0445
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. =1000
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|   -1.81020***      .21996    -8.23  .0000    -2.24132  -1.37908
+     PAY|     .00380***      .00026    14.40  .0000      .00328    .00431
+COVERCRO|    -.43556***      .12246    -3.56  .0004     -.67558   -.19553
+      NM|    -.69519***      .12766    -5.45  .0000     -.94541   -.44497
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.93589***      .39966    -7.35  .0000    -3.71920  -2.15257
+     DFL|    4.90970***      .63816     7.69  .0000     3.65893   6.16047
+ COSTTAX|    -.00094***      .00033    -2.88  .0040     -.00159   -.00030
+INCFARM1|     .61008***      .17370     3.51  .0004      .26964    .95051
+INCFARM2|     .80968***      .17699     4.57  .0000      .46280   1.15657
+INCFARM4|     .56106***      .17676     3.17  .0015      .21462    .90751
+INCFARM5|     .58207***      .18545     3.14  .0017      .21859    .94555
+INCFARM6|    2.32532***      .38355     6.06  .0000     1.57358   3.07707
+ FARMSI2|     .35243***      .12017     2.93  .0034      .11690    .58796
+ FARMSI3|     .03654         .13417      .27  .7853     -.22643    .29951
+ FARMSI4|     .27340***      .09169     2.98  .0029      .09370    .45310
+ FSAWARE|     .08341         .12885      .65  .5174     -.16913    .33596
+ FSCPAST|     .50496***      .11801     4.28  .0000      .27366    .73626
+  FSCAPP|    1.44682***      .20965     6.90  .0000     1.03592   1.85772
+  FSRESP|     .44789*        .27027     1.66  .0975     -.08183    .97761
+  FSINFO|     .92748***      .18417     5.04  .0000      .56651   1.28845
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.04018         .04489     -.90  .3708     -.12817    .04781
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .10741***      .02775     3.87  .0001      .05301    .16181
+  NM:LAK|    -.01514         .02488     -.61  .5429     -.06391    .03363
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   CsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on Apr 21, 2020 at 07:56:51 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0401800
+       2|       .000000
+       3|       .107409
+       4|     -.0151407
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
+|-> SAVE;file="C:\Users\langzx\Desktop\github\DCM\code\nlogit\PRLwtamodel04212020lpj.lpj"$

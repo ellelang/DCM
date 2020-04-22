@@ -1,9 +1,9 @@
-READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04122020.csv"; Nobs=7056; Nvar=60; 
+READ; file="C:\Users\langzx\Desktop\github\DCM\data\wta_04122020.csv"; Nobs=7056; Nvar=61; 
 
 Names=id,Y,ChoiceSet,alti,task,Wetland,Payment,Covercrop,NuMgt,incfar,areaf,demPrez16,dem_2018,unemploy,costlive,
 	hrwage,taxcost,cashrent,crp2018,landvalu,impstrea,implakes,impwetl,imptotal,childcar,foodcost,healthc,housecos,othercos,convCS,corn,
 	income_1,income_6,income_4,income_NA, income_5, income_7, areaf_1,areaf_2,areaf_4,areaf_3,areaf_NA,areaf_5,dflall,dflmean,
-      INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred, Cluster, C2, C3,C1, concern,value, landcontrol$
+      INCOMB23,FSCOMB34,aware, past, appreciate, resp, practice_ind,prac_pred, Cluster, C2, C3,C1, concern,value, landcontrol,info_so$
 
 OPEN; Export ="C:\Users\langzx\Desktop\github\DCM\output\rplmatrix04122020.csv"$
 
@@ -39,7 +39,7 @@ nlogit
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ;maxit = 200
 ;par
-;Pts = 200
+;Pts = 1000
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
 ?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
@@ -57,7 +57,7 @@ nlogit
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
 		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fsaware*aware + fscpast*past + fscapp*apprecia + 
-               fsresp*resp                 
+               fsresp*resp  + fsinfo*info_so                
            /
 
 U(Current) = 0
@@ -87,7 +87,7 @@ nlogit
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ;maxit = 200
 ;par
-;Pts = 200
+;Pts = 100
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
 ?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]

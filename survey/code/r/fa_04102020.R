@@ -56,16 +56,59 @@ nrow(na.omit(df))
 colSums(is.na(df))
 
 df_dich <- dat_dich[,2:42]
+head(df_dich)
+df_info <- dat_dich[,43:65]
+names(df_info)
 nrow(na.omit(df_dich))
 colSums(is.na(df_dich))
 
 
-data_dich <- df_dich %>% mutate_if(is.numeric,as.factor)
+#data_dich <- df_dich %>% mutate_if(is.numeric,as.factor)
 nb = estim_ncpMCA(data_dich,ncp.max=2)
 tab.disj_dich = imputeMCA(data_dich, ncp=4)$tab.disj
 res.mca = MCA(data_dich,tab.disj=tab.disj_dich)
 impute_df_dich = imputeMCA(data_dich, ncp=4)$completeObs
 write.csv(x = impute_df_dich, file = 'factorDICH_impute.csv', row.names = FALSE)
+
+tab.disj_dich_info = imputeMCA(df_info, ncp=4)$tab.disj
+#res.mca_info = MCA(data_dich,tab.disj=tab.disj_dich_info)
+impute_df_dich_info = imputeMCA(df_info, ncp=4)$completeObs
+het.mat_info <- hetcor(impute_df_dich_info)$cor
+corrplot(cor(het.mat_info))
+fa.parallel(het.mat_info)
+scree(het.mat_info)
+fa_info <- fa(het.mat_info, nfactor = 1,rotate = "varimax")
+fa_info$loadings
+fa_info$R2.scores
+
+
+info_CFAmodel <- 'info_so =~ infonrcs  + infomedian + infoscdc 
++ infovai + infoprivateconsultants + prefercountymeeting + infomedian + preferfielddemo  + prefertelevision + prefermagazines  + preferradio + preferprinted + preferonfarmconsul' 
+
+poorloading_info <- c('infofsa', 'infoces','infoces','infonpo',
+                      'infomedial','infospecialists','infosfdealer','infomdealer',
+                      'infoneighborfriends','preferinternet','prefervisual','prefertradeshows')
+
+dich_info_se <- select(impute_df_dich_info , -poorloading_info) %>% mutate_if(is.factor,as.numeric)
+
+
+info_cfa <- cfa(model = info_CFAmodel,
+              data = dich_info_se)
+
+
+summary(info_cfa, standardized = T, fit.measures = T)
+info_scores <- as.data.frame(predict(info_cfa))
+info_scores['id'] = dat_dich$ï..id
+
+f7 <- read.csv(file = "../../data/factors7_0415.csv")
+f7 <- left_join(f7, info_scores)
+write.csv(x = f7, file = "../../data/factors7_0415.csv", row.names = FALSE)
+
+
+info<- fa.poly(impute_df_dich_info, nfactor =1, rotate="varimax")
+info$loadings
+info$scores
+####################3
 
 het.mat <- hetcor(impute_df_dich)$cor
 corrplot(cor(het.mat))
