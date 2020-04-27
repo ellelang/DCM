@@ -13,6 +13,7 @@ library(missMDA)
 library(corrplot)
 library(polycor)
 library(semPlot)
+library(semTools)
 #################
 # factor analysis results
 
@@ -55,8 +56,8 @@ df <- dat[,2:53]
 nrow(na.omit(df))
 colSums(is.na(df))
 
-df_dich <- dat_dich[,2:42]
-head(df_dich)
+data_dich <- dat_dich[,2:42]
+head(data_dich)
 df_info <- dat_dich[,43:65]
 names(df_info)
 nrow(na.omit(df_dich))
@@ -78,9 +79,12 @@ corrplot(cor(het.mat_info))
 fa.parallel(het.mat_info)
 scree(het.mat_info)
 fa_info <- fa(het.mat_info, nfactor = 1,rotate = "varimax")
+
 fa_info$loadings
 fa_info$R2.scores
-
+fa_info_alpha <- alpha.ci(het.mat_info)
+summary(fa_info_alpha)
+splitHalf(het.mat_info)
 
 info_CFAmodel <- 'info_so =~ infonrcs  + infomedian + infoscdc 
 + infovai + infoprivateconsultants + prefercountymeeting + infomedian + preferfielddemo  + prefertelevision + prefermagazines  + preferradio + preferprinted + preferonfarmconsul' 
@@ -95,6 +99,7 @@ dich_info_se <- select(impute_df_dich_info , -poorloading_info) %>% mutate_if(is
 info_cfa <- cfa(model = info_CFAmodel,
               data = dich_info_se)
 
+reliability(info_cfa )
 
 summary(info_cfa, standardized = T, fit.measures = T)
 info_scores <- as.data.frame(predict(info_cfa))
@@ -111,6 +116,7 @@ info$scores
 ####################3
 
 het.mat <- hetcor(impute_df_dich)$cor
+splitHalf(het.mat)
 corrplot(cor(het.mat))
 fa.parallel(het.mat)
 scree(het.mat)
@@ -152,7 +158,7 @@ resp =~ sptlandowners + sptfarmmanager + sptrenters + sptgovstaff + sptmrbboard'
 bq_cfa <- cfa(model = f_4_CFAmodel,
               data = dich_se)
 summary(bq_cfa, standardized = T, fit.measures = T)
-
+reliability(bq_cfa)
 
 
 csat_scores <- as.data.frame(predict(bq_cfa)) %>% mutate (practice_ind = practice_indicator1)
@@ -224,7 +230,7 @@ poorloadings <- c('pollutionobs',
 
 library(car)
 df_se <- select(df_num, -poorloadings)
-
+splitHalf(df_se)
 #df_se <- select(df_num, -c(alundueblame, vallandregulate,valinfluence,pollutionobs
                            #opwetlandrestored, opcovercropplant,
                            #opnmopen,opwetlandopen,opcovercropopen))
@@ -232,7 +238,7 @@ dim(df_num)
 dim(df_se)
 names(df_num)
 #df_se <- df_num[,1:15]
-df_se<-scale(df_se)
+#df_se<-scale(df_se)
 dim(df_num)
 fa.parallel(df_se)
 fa3_EFA <- fa(df_se, nfactor = 3, rotate = "varimax")
@@ -253,6 +259,9 @@ vallandregulate+valpaymentimportant + valinfluence + opwetlandequipment  '
 
 fa_cfa <- cfa(model = fa3_CFAmodel,data = df_se)
 summary(fa_cfa, standardized = T, fit.measures = T)
+library(semTools)
+reliability(fa_cfa)
+
 
 f_scores <- as.data.frame(predict(fa_cfa))
 names(f_scores)
