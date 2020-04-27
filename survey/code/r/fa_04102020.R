@@ -75,6 +75,9 @@ tab.disj_dich_info = imputeMCA(df_info, ncp=4)$tab.disj
 #res.mca_info = MCA(data_dich,tab.disj=tab.disj_dich_info)
 impute_df_dich_info = imputeMCA(df_info, ncp=4)$completeObs
 het.mat_info <- hetcor(impute_df_dich_info)$cor
+fa_info_alpha <- psych::alpha(impute_df_dich_info)
+summary(fa_info_alpha)
+
 corrplot(cor(het.mat_info))
 fa.parallel(het.mat_info)
 scree(het.mat_info)
@@ -82,7 +85,7 @@ fa_info <- fa(het.mat_info, nfactor = 1,rotate = "varimax")
 
 fa_info$loadings
 fa_info$R2.scores
-fa_info_alpha <- alpha.ci(het.mat_info)
+
 summary(fa_info_alpha)
 splitHalf(het.mat_info)
 
@@ -95,7 +98,7 @@ poorloading_info <- c('infofsa', 'infoces','infoces','infonpo',
 
 dich_info_se <- select(impute_df_dich_info , -poorloading_info) %>% mutate_if(is.factor,as.numeric)
 
-
+summary(fa_info_alpha)
 info_cfa <- cfa(model = info_CFAmodel,
               data = dich_info_se)
 
@@ -116,6 +119,8 @@ info$scores
 ####################3
 
 het.mat <- hetcor(impute_df_dich)$cor
+fa_alpha <- psych::alpha(het.mat)
+summary(fa_alpha)
 splitHalf(het.mat)
 corrplot(cor(het.mat))
 fa.parallel(het.mat)
@@ -142,6 +147,9 @@ describe(practice_indicator)
 
 
 dich_se <- select(impute_df_dich , -poorloading_DICH) %>% mutate_if(is.factor,as.numeric)
+
+dich_alpha <- psych::alpha(dich_se)
+summary(dfse_alpha)
 
 het.mat <- hetcor(dich_se)$cor
 corrplot(cor(het.mat))
@@ -192,6 +200,8 @@ names(impute_df)
 
 describe(impute_df)
 
+head(impute_df)
+
 # df_likert <-  as.data.frame(impute_df) %>%
 #   mutate_if(is.integer,
 #             as.factor) %>%
@@ -230,6 +240,8 @@ poorloadings <- c('pollutionobs',
 
 library(car)
 df_se <- select(df_num, -poorloadings)
+dfse_alpha <- psych::alpha(df_se)
+summary(dfse_alpha)
 splitHalf(df_se)
 #df_se <- select(df_num, -c(alundueblame, vallandregulate,valinfluence,pollutionobs
                            #opwetlandrestored, opcovercropplant,
