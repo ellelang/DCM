@@ -1,5 +1,6 @@
 rm(list = ls())
-setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
+#setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
+setwd("~/Documents/github/DCM/survey/data")
 library(psych)
 library(FactoMineR)
 library(dplyr) 
@@ -106,7 +107,7 @@ reliability(info_cfa )
 
 summary(info_cfa, standardized = T, fit.measures = T)
 info_scores <- as.data.frame(predict(info_cfa))
-info_scores['id'] = dat_dich$ï..id
+info_scores['id'] = dat_dich$?..id
 
 f7 <- read.csv(file = "../../data/factors7_0415.csv")
 f7 <- left_join(f7, info_scores)
@@ -193,7 +194,7 @@ res.mca = MCA(data,tab.disj=tab.disj)
 impute_df = imputeMCA(data, ncp=4)$completeObs
 write.csv(x = impute_df, file = 'factor_impute.csv', row.names = FALSE)
 
-setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
+#setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 
 impute_df <- read.csv("factor_impute.csv")
 
@@ -241,7 +242,7 @@ poorloadings <- c('pollutionobs',
 
 library(car)
 df_se <- select(df_num, -poorloadings)
-dfse_alpha <- psych::alpha(df_se)
+dfse_alpha <- psych::alpha(df_se, check.keys = TRUE)
 summary(dfse_alpha)
 splitHalf(df_se)
 #df_se <- select(df_num, -c(alundueblame, vallandregulate,valinfluence,pollutionobs
@@ -254,7 +255,7 @@ names(df_num)
 #df_se<-scale(df_se)
 dim(df_num)
 fa.parallel(df_se)
-fa3_EFA <- fa(df_se, nfactor = 3, rotate = "varimax")
+fa3_EFA <- fa(df_se, nfactor = 4, rotate = "varimax")
 fa3_EFA$loadings
 
 fa3_EFA$score.cor
