@@ -97,10 +97,10 @@ poorloading_info <- c('infofsa', 'infoces','infoces','infonpo',
                       'infoneighborfriends','preferinternet','prefervisual','prefertradeshows')
 
 dich_info_se <- select(impute_df_dich_info , -poorloading_info) %>% mutate_if(is.factor,as.numeric)
-
+mardia(dich_info_se)
 summary(fa_info_alpha)
 info_cfa <- cfa(model = info_CFAmodel,
-              data = dich_info_se)
+              data = dich_info_se, estimator = "MLR")
 
 reliability(info_cfa )
 
@@ -163,9 +163,10 @@ past =~ pastcrp + pastfcp + pastmci + pastlongterm + pastgcdt + pastgcsv
 appreciate =~ acfish + acswim + acexplore + ackayak + achunt + achike + acbike + acpicnic + achorseride + acgooffroading
 resp =~ sptlandowners + sptfarmmanager + sptrenters + sptgovstaff + sptmrbboard'
 
+mardia(dich_se)
 bq_cfa <- cfa(model = f_4_CFAmodel,
               data = dich_se)
-summary(bq_cfa, standardized = T, fit.measures = T)
+summary(bq_cfa, standardized = T, fit.measures = T )
 reliability(bq_cfa)
 
 
