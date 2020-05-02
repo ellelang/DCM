@@ -6,14 +6,14 @@ import seaborn as sns
 from scipy import stats
 from pathlib import Path
 data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
-dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
-#dat0 = pd.read_csv(data_folder/'fscore_04112020.csv')
+#dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
+dat0 = pd.read_csv(data_folder/'scoresall_0501.csv')
 
 
 
 
 dat0.columns
-dat = dat0[['aware','past','appreciate','resp', 'concern', 'value', 'landcontrol']]
+dat = dat0[['concern','att_wld_unfav','att_nm_unfav','comp', 'norm_control', 'aware','past', 'appreciate','social']]
 #dat = dat0[['aware','past','appreciate','resp']]
 
 dat.columns
@@ -23,23 +23,27 @@ minlist['aware']
 aware_log = np.log(dat['aware']-minlist['aware'] + 1).astype('float64')
 past_log = np.log(dat['past']-minlist['past'] + 1).astype('float64')
 app_log = np.log(dat['appreciate']-minlist['appreciate'] + 1).astype('float64')
-resp_log = np.log(dat['resp']-minlist['resp'] + 1).astype('float64')
+social_log = np.log(dat['social']-minlist['social'] + 1).astype('float64')
 
 concern_log = np.log(dat['concern']-minlist['concern'] + 1).astype('float64')
-value_log = np.log(dat['value']-minlist['value'] + 1).astype('float64')
-landcontrol_log = np.log(dat['landcontrol']-minlist['landcontrol'] + 1).astype('float64')
-
-
+norm_log = np.log(dat['norm_control']-minlist['norm_control'] + 1).astype('float64')
+wldunfav_log = np.log(dat['att_wld_unfav']-minlist['att_wld_unfav'] + 1).astype('float64')
+nmunfav_log = np.log(dat['att_nm_unfav']-minlist['att_nm_unfav'] + 1).astype('float64')
+comp_log= np.log(dat['comp']-minlist['comp'] + 1).astype('float64')
 #dat = dat[['aware','past','appreciate','landcontrol']]
 
 sns.distplot(app_log)
-dat_log = pd.DataFrame({'aware':aware_log, 
-                        'past':past_log,
+dat_log = pd.DataFrame({
+                        
+                        'aware': aware_log,
+                        'past': past_log,
                         'app': app_log,
-                        'resp': resp_log,
+                        'social': social_log,
                         'concern': concern_log,
-                       'value': value_log,
-                        'landcontrol': landcontrol_log
+                        'norm_ctl': norm_log,
+                        'wld_unf': wldunfav_log,
+                        'nm_unf': nmunfav_log,
+                        'fav': comp_log
                         })
 
 from sklearn.preprocessing import StandardScaler
@@ -84,13 +88,13 @@ plt.show()
 
 # Initialize KMeans
 # Initialize KMeans
-kmeans = KMeans(n_clusters =2, random_state =1) 
+kmeans = KMeans(n_clusters =3, random_state =1) 
 
 # Fit k-means clustering on the normalized data set
 kmeans.fit(data_normalized)
 
 # Extract cluster labels
-cluster_labels = kmeans.labels_ +1
+cluster_labels = kmeans.labels_ 
 cluster_labels = cluster_labels
 cluster_labels[0]
 # Create a DataFrame by adding a new cluster label column
@@ -102,16 +106,8 @@ data_k3.columns
 grouped = data_k3.groupby(['Cluster'])
 data_k3['Cluster']
 # Calculate average RFM values and segment sizes per cluster value
-grouped.agg('mean')
-grouped.agg({
-    'aware': 'mean',
-    'past': 'mean',
-    'appreciate': 'mean',
-    'resp': 'mean',
-    'concern' : 'mean',
-    'value': 'mean',
-   'landcontrol' : 'mean'
-  }).round(3)
+grouped.agg('mean').round(3)
+
 
 data_normalized['Cluster'] = data_k3['Cluster']
 data_normalized['id'] = dat0['id']
@@ -122,15 +118,18 @@ datanormalized_melt = pd.melt(
                     id_vars=['id', 'Cluster'],
 
 # Assign RFM values as value variables
-                    value_vars=['aware', 
-                                'past', 'app','resp',
-                                'concern','value'
-                         ,'landcontrol' 
+                    value_vars=[ 
+                                'aware', 'past',
+                                'app', 'social',
+                                'concern','norm_ctl',
+                                'wld_unf', 'nm_unf', 'fav'
+                                
                          ], 
                         
 # Name the variable and value
                     var_name='Metric', value_name ='Value'
 					)
+
 
 
 # Add the plot title
@@ -148,14 +147,14 @@ g= sns.lineplot(data=datanormalized_melt,
 
 plt.show()
 
-
-cluster_avg = data_k3.groupby(['Cluster']).mean() 
+data_k3.columns
+cluster_avg = data_k3.groupby(['Cluster'])[['appreciate','past','social','concern' ]].mean() 
 cluster_avg.columns
 # Calculate average RFM values for the total customer population
-population_avg = dat.mean()
+population_avg = dat[['appreciate','past','social','concern' ]].mean()
 
 # Calculate relative importance of cluster's attribute value compared to population
-relative_imp = cluster_avg  /population_avg - 1
+relative_imp = cluster_avg/population_avg - 1
 relative_imp.columns
 # Print relative importance scores rounded to 2 decimals
 print(relative_imp.round(2))
