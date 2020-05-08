@@ -1,7 +1,7 @@
 rm(list = ls())
 setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 #setwd("~/Documents/github/DCM/survey/data")
-data <- read.csv(file='merged_cluster_0504.csv')
+data <- read.csv(file='merged_cluster.csv')
 cluster <- factor(data$Cluster)
 c0 <- data[data$Cluster == 0,]
 c1 <- data[data$Cluster == 1,]

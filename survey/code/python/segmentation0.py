@@ -225,13 +225,15 @@ water_county = pd.merge (county_all,watershed, how = 'left', on = 'County')
 water_county.info()
 water_county[water_county['Watershed'].isnull()]
 
-
+data_k3 = pd.read_csv(data_folder/"fscore_0504_9_cluster.csv")
 merged = pd.merge(demo,data_k3, how='left', on='id')
 merged.columns
+merged.shape
 merge1 = pd.merge(merged,water_county, how='left',left_on='countyresident', right_on='County')
 merge1.columns
+merge1.shape
 
-merge1.to_csv(data_folder/"merged_cluster_0504.csv", index = False)
+merged.to_csv(data_folder/"merged_cluster_0504.csv", index = False)
 merged.shape
 
 merged.columns
@@ -243,8 +245,7 @@ std_dat = num_merged.groupby(['Cluster']).std()
 mean_dat.to_csv(data_folder/"mean_cluster_0504.csv", index = False)
 std_dat.to_csv(data_folder/"std_cluster_0504.csv", index = False)
 
-
-
+num_merged.columns
 data_demo = num_merged[['gender','age',
                         'education','income',
                         'incomefromfarming','landarea',
@@ -265,6 +266,8 @@ pd.crosstab(data_demo['Cluster'],data_demo['incomefromfarming']).apply(lambda r:
 pd.crosstab(data_demo['Cluster'],data_demo['landarea']).apply(lambda r: round(r/r.sum(),3), axis=1)
 pd.crosstab(data_demo['Cluster'],data_demo['majorityland']).apply(lambda r: round(r/r.sum(),3), axis=1)
 pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),3), axis=1)
+rotation = pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),3), axis=1)
+rotation.to_csv(data_folder/"primaryrotation_compare.csv", index = True)
 
 
 region_water = pd.read_csv (data_folder/"merged_cluster_0504.csv")
