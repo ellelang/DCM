@@ -86,14 +86,14 @@ wta_vec
 
 WLD_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
 colnames(WLD_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
-
+set.seed(4008)
 for (i in 1:s){
   wta_vec <- vector (length = R)
   draws <- matrix (NA,nrow = R, ncol = 17)
   colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                      'incfarm1','incfarm23','incfarm4','incfarm5','incfarm6',
                      'farmsi2','farmsi3','farmsi4','plake','clake')
-  set.seed(4008)
+  #set.seed(4008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -135,14 +135,14 @@ R <- 1000
 n_draws <- 1000
 CC_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
 colnames(CC_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
-
+set.seed(5008)
 for (i in 1:s){
   wta_vec <- vector(length = R)
   draws <- matrix (NA,nrow = R, ncol = 17)
   colnames(draws)<-c('wetland','pay','cc','nm','asc','dfl','costtax',
                      'incfarm1','incfarm23','incfarm4','incfarm5','incfarm6',
                      'farmsi2','farmsi3','farmsi4','plake','clake')
-  set.seed(5008)
+  #set.seed(5008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -182,7 +182,7 @@ CC_CIU
 
 NM_WTA_ALL <- matrix(NA, nrow = s, ncol = 3)
 colnames(NM_WTA_ALL) <- c("MEAN", "CI_L","CI_U")
-
+set.seed(6008)
 for (i in 1:s){
   wta_vec <- vector(length = R)
   draws <- matrix (NA,nrow = R, ncol = 17)
@@ -190,7 +190,7 @@ for (i in 1:s){
                      'incfarm1','incfarm23','incfarm4','incfarm5','incfarm6',
                      'farmsi2','farmsi3','farmsi4','plake','clake')
   
-  set.seed(6008)
+  #set.seed(6008)
   for (r1 in 1 : R){
     drawbetas<- betas
     drawbetas$Betas <- as.vector(rmvnorm(1,mean = betas$Betas, sigma = varcov_m))
@@ -224,6 +224,8 @@ NM_CIU <- mean(NM_WTA_ALL[,3])
 NM_mean
 NM_CIL
 NM_CIU
+
+
 
 write.csv (x = WLD_WTA_ALL, file = "WLD_wta_0422_origin.csv", row.names = FALSE)
 write.csv (x = CC_WTA_ALL, file = "CC_wta_0422_origin.csv", row.names = FALSE)

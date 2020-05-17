@@ -1,0 +1,8 @@
+Names	Betas
+wetland 	-2.00328
+pay     	0.00424692
+cc	-0.523374
+nm      	-0.837885
+asc     	0.194982
+plake	-0.000156318
+clake	0.132347
