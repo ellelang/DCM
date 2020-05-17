@@ -130,7 +130,7 @@ nlogit
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ;maxit = 200
 ;par
-;Pts = 100
+;Pts = 1000
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
 ?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
