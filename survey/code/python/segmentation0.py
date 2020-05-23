@@ -49,8 +49,15 @@ dat_log = pd.DataFrame({
                         })
 
 dat_log.columns
-data_log_sel = dat_log[['concern','past','app','social']]
-data_log_sel.shape
+data_log_sel = dat_log[['aware','past','app','social']]
+data_log_sel.mean()
+data_log_sel.std()
+sns.violinplot(data = data_log_sel)
+sns.violinplot(data = data_log_sel)
+dataaaa = dat_log[['concern', 'norm_ctl', 'wld_unf','nm_unf', 'fav']]
+sns.violinplot(data = dataaaa)
+
+
 
 from sklearn.preprocessing import StandardScaler
 # Initialize a scaler

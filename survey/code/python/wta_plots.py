@@ -30,6 +30,18 @@ sns.distplot(cc_onlyatt[['MEAN']], hist=False, rug=False,ax=axes[1] )
 sns.distplot(nm_onlyatt[['MEAN']], hist=False, rug=False, ax=axes[2])
 
 
+wld_onlyatt.mean()
+cc_onlyatt.mean()
+nm_onlyatt.mean()
+
+wld_origin.mean()
+cc_origin.mean()
+nm_origin.mean()
+110
+wld_ba.mean()
+cc_ba.mean()
+nm_ba.mean()
+
 
 wld_origin['Practice']="WLD"
 cc_origin['Practice']="CC"
@@ -99,7 +111,7 @@ g_org.axes[0,1].set_xlabel('WTA estimates ($/acre)')
 g_org.axes[0,2].set_xlabel('')
 g_org.axes[0,0].set_ylabel('Probability')
 g_org.add_legend()
-g_org.savefig(data_folder/'wta_compare.png', dpi=200)
+g_org.savefig(data_folder/'wta_compare.png', bbox_inches = 'tight',dpi=200)
 
 
 

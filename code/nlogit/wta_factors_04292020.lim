@@ -26,6 +26,8 @@ REJECT; income_N = 1
 
 
 
+
+
 ?%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% updated 0418/2020
 
 
@@ -41,24 +43,23 @@ nlogit
 ;wtp = wetland/pay,covercro/pay, nm/pay
 ;maxit = 200
 ;par
-;Pts = 200
+;Pts = 100
 ?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
-?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+?income_1[VolCons]/INCOMB23[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
 ?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
 ;full
 ?; Pts = 200
 ?;corr
- ;fcn=  wetland(q|#10),pay(c|#10),covercro(q|#10), nm(q|#10)
+ ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
 ?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
-
 ;Halton
 ;Model:
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	                
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4 	                
            /
 
 U(Current) = 0
@@ -68,6 +69,19 @@ U(Current) = 0
 $
 
 
+RPLOGIT
+ ; Lhs = Y ; Choices =VolCons,Current
+; Rhs = Wetland,Covercro, NuMgt,Payment
+;rpl = lake1000
+;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+
+$
+WALD
+  ; Fn1 = wtp1 = - b1/b4
+ ; Fn2 = wtp2 = - b2/b4
+ ; Fn3 = wtp3 = - b3/b4
+
+$
 ?################################
 
 nlogit
@@ -89,7 +103,7 @@ nlogit
 ;full
 ?; Pts = 200
 ?;corr
- ;fcn=  wetland(q|#10),pay(c|#10),covercro(q|#10), nm(q|#10)
+ ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
 ?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
 ?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
@@ -99,7 +113,7 @@ nlogit
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fscon*concern + fscpast*past + fscapp*app + fsiso*social 
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ faware*aware + fscpast*past + fscapp*app + fsiso*social 
 /
 U(Current) = 0
 ;Export output
@@ -112,7 +126,8 @@ $
 
 U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
              incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
-		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fswld* wldunf + fsnm* nmunf + fsfa* fa + fsn* norm_ctl
+		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4	+ fswld* wldunf + fsnm* nmunf + fsfa* fa + fsn* norm_ctl + fsiso*social
+
 
 
 ?%%%%%%%%%%%%%%%%%%%%%%%%%only attributes
@@ -137,7 +152,7 @@ nlogit
 ;full
 ?; Pts = 200
 ?;corr
- ;fcn=  wetland(q|#10),pay(c|#10),covercro(q|#10), nm(q|#10)
+ ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
 ;Halton
 ;Model:
 
@@ -149,7 +164,10 @@ U(Current) = 0
 ;Export = matrix 
 $
 
-
+WALD
+; Fn1 = -wetland/pay
+; Fn2 = -covercro/pay
+; Fn3 = -nm/pay $
 
 
 
@@ -233,3 +251,39 @@ U(devel)=ascdev+split*split+pay*payoff+np*nonprof+ssplit*ssplit+spayoff*spayoff+
 U(none)=ascnone
 
 
+?%%%%%%%%%%%%%%%%%%%
+
+nlogit
+;lhs=Y
+;Choices=VolCons,Current
+?;Check Data
+?; Start = B
+;Pds = 8
+?;Panel
+?;rpl
+;rpl = lake1000
+;wtp = wetland/pay,covercro/pay, nm/pay
+;maxit = 200
+;par
+;Pts = 100
+?;effects:Payment[VolCons]/Wetland[VolCons]/CoverCro[VolCons]/NuMgt[VolCons]/dem_2018[VolCons]/taxcost[VolCons]/crp2018[VolCons]/
+?income_1[VolCons]/income_2[VolCons]/income_3[VolCons]/income_4[VolCons]/income_5[VolCons]/income_6[VolCons]/areaf_1[VolCons]/
+?areaf_2[VolCons]/areaf_3[VolCons]/areaf_4[VolCons]
+;full
+?; Pts = 200
+?;corr
+ ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+?;fcn=  wetland[n],pay(l|#00), covercro(n|#10), nm[n]
+?;fcn=  wetland[n],pay(c|#00), covercro(n|#10), nm[n]
+?;fcn=  wetland[z],pay(c|#00), covercro(z|#10), nm[z]
+
+;Halton
+;Model:
+
+U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + faware*aware + fscpast*past + fscapp*app + fsiso*social 
+/
+U(Current) = 0
+;Export output
+?;Export = table
+;Export = matrix 
+$

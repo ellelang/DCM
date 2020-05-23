@@ -21,12 +21,12 @@ colnames(dataset)
 #varcov <- read.table("varscov0414.txt", sep = "\t", header = FALSE)
 #varcov_m <- as.matrix(varcov, nrow = 19, ncol = 19)
 
-betas <- read.table("betas04122020.txt", sep = "\t", header = TRUE)
-varcov <- read.table("varscov04122020.txt", sep = "\t", header = FALSE)
-varcov_test <- read.table("varscovtest.txt", sep = "\t", header = FALSE)
-dim(varcov_test)
-varcov_m <- as.matrix(varcov, nrow = 21, ncol = 21)
-varcov_m_test <- as.matrix(varcov_test, nrow = 20, ncol = 20)
+betas <- read.table("betas05202020.txt", sep = "\t", header = TRUE)
+varcov <- read.table("varscov05202020.txt", sep = "\t", header = FALSE)
+#varcov_test <- read.table("varscovtest.txt", sep = "\t", header = FALSE)
+dim(varcov)
+varcov_m <- as.matrix(varcov, nrow = 20, ncol = 20)
+varcov_m_test <- as.matrix(varcov, nrow = 20, ncol = 20)
 length(betas$Names)
 betas$Names
 betas$Betas
@@ -71,7 +71,7 @@ draws
 
 ################## FOR WHOLE SAMPLE
 #set.seed(123456)
-R <- 500
+R <- 1000
 n <- dim(dataset)[1]
 t <- 8
 s<- 441
