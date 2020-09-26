@@ -1253,3 +1253,1671 @@ Alternative   Attribute   Income/Cost
      Chosen    COVERCRO          PAY
      Chosen          NM          PAY
 (Saved absolute values. Check signs of coefficients.)
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 100
+    ;full
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt + faware*aware + fscpast*past + fscapp*app + fsiso*social
+    /
+    U(Current) = 0
+    ;Export output
+    ;Export = matrix
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1771449D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1771.44853
+Estimation based on N =   2636, K =   9
+Inf.Cr.AIC  =   3560.9 AIC/N =    1.351
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0267 .0222
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[ 8]          =     97.08426
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46160***      .11338    -4.07  .0000     -.68381   -.23939
+     PAY|     .00142***      .00025     5.65  .0000      .00093    .00192
+COVERCRO|     .04101         .07958      .52  .6064     -.11497    .19699
+      NM|    -.06241         .08604     -.73  .4682     -.23103    .10622
+     ASC|    -.10997         .08417    -1.31  .1914     -.27494    .05500
+  FAWARE|     .14058         .13486     1.04  .2972     -.12374    .40489
+ FSCPAST|     .05550         .11236      .49  .6213     -.16471    .27571
+  FSCAPP|    1.34636***      .22645     5.95  .0000      .90252   1.79020
+   FSISO|     .73608***      .27531     2.67  .0075      .19649   1.27567
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 20, 2020 at 04:50:43 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  24 iterations. Status=0, F=    .1644496D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1644.49633
+Restricted log likelihood   -1827.13597
+Chi squared [ 12](P= .000)    365.27928
+Significance level               .00000
+McFadden Pseudo R-squared      .0999595
+Estimation based on N =   2636, K =  12
+Inf.Cr.AIC  =   3313.0 AIC/N =    1.257
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .1000 .0958
+Constants only  -1819.9907  .0964 .0923
+At start values -1731.4941  .0502 .0459
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|   -1.70498***      .19572    -8.71  .0000    -2.08859  -1.32137
+     PAY|     .00370***      .00026    14.28  .0000      .00319    .00420
+COVERCRO|    -.40211***      .12275    -3.28  .0011     -.64270   -.16151
+      NM|    -.67059***      .12719    -5.27  .0000     -.91988   -.42130
+        |Nonrandom parameters in utility functions...........................
+     ASC|     .09628         .07694     1.25  .2108     -.05452    .24707
+  FAWARE|     .04494         .12025      .37  .7086     -.19075    .28062
+ FSCPAST|     .12731         .09487     1.34  .1796     -.05863    .31325
+  FSCAPP|    1.38440***      .18640     7.43  .0000     1.01906   1.74975
+   FSISO|    1.05256***      .23055     4.57  .0000      .60068   1.50443
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.04894         .04324    -1.13  .2578     -.13369    .03582
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .10657***      .02745     3.88  .0001      .05277    .16037
+  NM:LAK|    -.01668         .02353     -.71  .4785     -.06280    .02945
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   CsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 20, 2020 at 04:53:10 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0489354
+       2|       .000000
+       3|       .106569
+       4|     -.0166781
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
+|-> ;WALD ; Fn1 = wtp = -wetland/pay,-covercro/pay, -nm/pay $
+Error      1: Unrecognized command.  (Missing ; ?)
+|-> WALD ; Fn1 = wtp = -wetland/pay,-covercro/pay, -nm/pay $
+Error    759: Name in expr not label,variable,scalar,matrix,list,or FNi.
+Error    588: Error translating function in optimization command.
+Error is in -WETLAND/PAY,-COVERCRO/PAY,-NM/PAY
+Error     69: WALD,NLSQ,MAXIMIZE. Cannot translate the listed string
+|-> WALD ;  Labels =  wetland,covercro, nm, pay;  Fn1 = wtp = -wetland/pay,-covercro/pay, -nm/pay $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> WALD
+    ;  Labels =  wetland,covercro, nm, pay
+    ;  Fn1 = -wetland/pay
+    ; Fn2 = -covercro/pay
+    ; Fn2 = -nm/pay $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> WALD
+    ; Fn1 = -wetland/pay
+    ; Fn2 = -covercro/pay
+    ; Fn3 = -nm/pay $
+Error    759: Name in expr not label,variable,scalar,matrix,list,or FNi.
+Error    588: Error translating function in optimization command.
+Error is in -WETLAND/PAY
+Error     69: WALD,NLSQ,MAXIMIZE. Cannot translate the listed string
+|-> nlogit
+    ;lhs=Y
+    ;Choices=VolCons,Current
+    ;Pds = 8
+    ;rpl = lake1000
+    ;wtp = wetland/pay,covercro/pay, nm/pay
+    ;maxit = 200
+    ;par
+    ;Pts = 100
+    ;full
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    ;Halton
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    ;Export output
+    ;Export = matrix
+    ;test: -wetland/pay
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1785984D+04
+Error     71: Variable list contains a name not in the expected table.
+Error    539: Variable list: The unidentifiable string is WETLAND/PAY
+Error    775: Variable name in test specification is not recognized
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1785.98436
+Estimation based on N =   2636, K =  15
+Inf.Cr.AIC  =   3602.0 AIC/N =    1.366
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0187 .0119
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Chi-squared[14]          =     68.01261
+Prob [ chi squared > value ] =   .00000
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.45973***      .11274    -4.08  .0000     -.68070   -.23877
+     PAY|     .00141***      .00025     5.62  .0000      .00092    .00190
+COVERCRO|     .03928         .07914      .50  .6196     -.11583    .19440
+      NM|    -.06245         .08556     -.73  .4654     -.23015    .10525
+     ASC|   -1.63854***      .43854    -3.74  .0002    -2.49806   -.77901
+     DFL|    2.84291***      .71627     3.97  .0001     1.43906   4.24676
+ COSTTAX|    -.00066*        .00036    -1.81  .0702     -.00137    .00005
+INCFARM1|     .15136         .20386      .74  .4578     -.24821    .55092
+INCFARM2|     .25615         .20133     1.27  .2033     -.13846    .65076
+INCFARM4|     .19460         .20417      .95  .3405     -.20556    .59476
+INCFARM5|     .29132         .20966     1.39  .1647     -.11960    .70225
+INCFARM6|     .94473***      .31654     2.98  .0028      .32432   1.56514
+ FARMSI2|     .30917**       .14411     2.15  .0319      .02671    .59162
+ FARMSI3|     .15446         .16443      .94  .3475     -.16781    .47673
+ FARMSI4|     .17030         .10889     1.56  .1178     -.04313    .38373
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 07:44:47 PM
+-----------------------------------------------------------------------------
+Iterative procedure has converged
+Normal exit:  30 iterations. Status=0, F=    .1644778D+04
+Error     71: Variable list contains a name not in the expected table.
+Error    539: Variable list: The unidentifiable string is WETLAND/PAY
+Error    775: Variable name in test specification is not recognized
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1644.77800
+Restricted log likelihood   -1827.13597
+Chi squared [ 18](P= .000)    364.71594
+Significance level               .00000
+McFadden Pseudo R-squared      .0998054
+Estimation based on N =   2636, K =  18
+Inf.Cr.AIC  =   3325.6 AIC/N =    1.262
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0998 .0936
+Constants only  -1819.9907  .0963 .0901
+At start values -1743.0673  .0564 .0499
+Note: R-sqrd = 1 - logL/Logl(constants)
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Used Halton sequences in simulations.
+RPL model with panel has     355 groups
+Fixed number of obsrvs./group=        8
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|   -1.82985***      .19989    -9.15  .0000    -2.22162  -1.43808
+     PAY|     .00385***      .00026    14.97  .0000      .00335    .00436
+COVERCRO|    -.48162***      .12251    -3.93  .0001     -.72174   -.24151
+      NM|    -.78408***      .13292    -5.90  .0000    -1.04460   -.52357
+        |Nonrandom parameters in utility functions...........................
+     ASC|   -2.29852***      .37368    -6.15  .0000    -3.03091  -1.56613
+     DFL|    4.55528***      .60189     7.57  .0000     3.37560   5.73495
+ COSTTAX|    -.00097***      .00030    -3.28  .0010     -.00155   -.00039
+INCFARM1|     .40880**       .16791     2.43  .0149      .07970    .73790
+INCFARM2|     .41458**       .16606     2.50  .0125      .08910    .74005
+INCFARM4|     .32301*        .16966     1.90  .0569     -.00952    .65555
+INCFARM5|     .40034**       .17638     2.27  .0232      .05465    .74603
+INCFARM6|    1.52174***      .33525     4.54  .0000      .86467   2.17882
+ FARMSI2|     .39062***      .12124     3.22  .0013      .15299    .62826
+ FARMSI3|     .15461         .13311     1.16  .2454     -.10628    .41549
+ FARMSI4|     .22490**       .08845     2.54  .0110      .05154    .39826
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.03914         .04357     -.90  .3691     -.12455    .04626
+ PAY:LAK|        0.0    .....(Fixed Parameter).....
+COVE:LAK|     .08973***      .02577     3.48  .0005      .03923    .14023
+  NM:LAK|    -.01022         .02453     -.42  .6771     -.05829    .03786
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+   CsPAY|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+    QsNM|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 07:51:25 PM
+-----------------------------------------------------------------------------
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0391403
+       2|       .000000
+       3|      .0897314
+       4|     -.0102158
+
+Saved Individual Estimates of WTP in matrix WTP_I [ 355x3]
+Alternative   Attribute   Income/Cost
+     Chosen     WETLAND          PAY
+     Chosen    COVERCRO          PAY
+     Chosen          NM          PAY
+(Saved absolute values. Check signs of coefficients.)
+|-> nlogit
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment$
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  188 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1813453D+04
+
+-----------------------------------------------------------------------------
+Discrete choice (multinomial logit) model
+Dependent variable               Choice
+Log likelihood function     -1813.45337
+Estimation based on N =   2652, K =   4
+Inf.Cr.AIC  =   3634.9 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1830.2175  .0092 .0077
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  188 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46534***      .11097    -4.19  .0000     -.68284   -.24783
+COVERCRO|     .01631         .06854      .24  .8119     -.11803    .15065
+   NUMGT|    -.07579         .08039     -.94  .3458     -.23336    .08178
+ PAYMENT|     .00132***      .00024     5.59  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 07:59:18 PM
+-----------------------------------------------------------------------------
+
+|-> WALD
+    ; Labels = wetland, covercro, nm, pay
+    ; Fn1 = wtp1 = - wetland/pay
+    ; Fn2 = wtp2 = -covercro/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+Error    575: Conflict: param. and variable have the same name: WETLAND
+|-> nlogit
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment$
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  188 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1813453D+04
+
+-----------------------------------------------------------------------------
+Discrete choice (multinomial logit) model
+Dependent variable               Choice
+Log likelihood function     -1813.45337
+Estimation based on N =   2652, K =   4
+Inf.Cr.AIC  =   3634.9 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1830.2175  .0092 .0077
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  188 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46534***      .11097    -4.19  .0000     -.68284   -.24783
+COVERCRO|     .01631         .06854      .24  .8119     -.11803    .15065
+   NUMGT|    -.07579         .08039     -.94  .3458     -.23336    .08178
+ PAYMENT|     .00132***      .00024     5.59  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:00:02 PM
+-----------------------------------------------------------------------------
+
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     66.32718
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    351.951***    51.58629     6.82  .0000     250.844   453.059
+    WTP2|   -12.3355       52.26403     -.24  .8134   -114.7711   90.1001
+    WTP3|    57.3225       56.06890     1.02  .3066    -52.5706  167.2155
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:00:02 PM
+-----------------------------------------------------------------------------
+
+|-> nlogit
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment,dflall$
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Maximum of  100 iterations. Exit iterations with status=1
+
+-----------------------------------------------------------------------------
+Discrete choice (multinomial logit) model
+Dependent variable               Choice
+Log likelihood function     -1827.13597
+Estimation based on N =   2636, K =   5
+Inf.Cr.AIC  =   3664.3 AIC/N =    1.390
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907 -.0039-.0058
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|   -45.4864***      .10976  -414.41  .0000    -45.7016  -45.2713
+COVERCRO|     .94374***      .06825    13.83  .0000      .80998   1.07751
+   NUMGT|   -8.13876***      .08012  -101.58  .0000    -8.29579  -7.98173
+ PAYMENT|     .12997***      .00023   558.12  .0000      .12951    .13043
+  DFLALL| .42415D+10***   .4351D+08    97.48  .0000  .41562D+10  .43268D+10
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:03:10 PM
+-----------------------------------------------------------------------------
+
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> nlogit
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  wld(q|#10),pay(c|#00),cc(q|#10), nm(q|#10)
+    $
+Error   1071: Error, the following name is not a parameter:WLD
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    $
+Error   1052: You did not provide ;FCN=label(distn),... for RPL model.
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> nlogit
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  188 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1813453D+04
+
+-----------------------------------------------------------------------------
+Discrete choice (multinomial logit) model
+Dependent variable               Choice
+Log likelihood function     -1813.45337
+Estimation based on N =   2652, K =   4
+Inf.Cr.AIC  =   3634.9 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1830.2175  .0092 .0077
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  188 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46534***      .11097    -4.19  .0000     -.68284   -.24783
+COVERCRO|     .01631         .06854      .24  .8119     -.11803    .15065
+   NUMGT|    -.07579         .08039     -.94  .3458     -.23336    .08178
+ PAYMENT|     .00132***      .00024     5.59  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:06:12 PM
+-----------------------------------------------------------------------------
+
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     66.32718
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    351.951***    51.58629     6.82  .0000     250.844   453.059
+    WTP2|   -12.3355       52.26403     -.24  .8134   -114.7711   90.1001
+    WTP3|    57.3225       56.06890     1.02  .3066    -52.5706  167.2155
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:06:13 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    $
+Error   1052: You did not provide ;FCN=label(distn),... for RPL model.
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     66.32718
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    351.951***    51.58629     6.82  .0000     250.844   453.059
+    WTP2|   -12.3355       52.26403     -.24  .8134   -114.7711   90.1001
+    WTP3|    57.3225       56.06890     1.02  .3066    -52.5706  167.2155
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:06:40 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  wetland(q|#10),pay(c|#00),covercro(q|#10), nm(q|#10)
+    $
+Error   1071: Error, the following name is not a parameter:PAY
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     66.32718
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    351.951***    51.58629     6.82  .0000     250.844   453.059
+    WTP2|   -12.3355       52.26403     -.24  .8134   -114.7711   90.1001
+    WTP3|    57.3225       56.06890     1.02  .3066    -52.5706  167.2155
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:07:22 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  wld(q|#10),covercro(q|#10), nm(q|#10),pay(c|#00)
+    $
+Error   1071: Error, the following name is not a parameter:WLD
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     66.32718
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    351.951***    51.58629     6.82  .0000     250.844   453.059
+    WTP2|   -12.3355       52.26403     -.24  .8134   -114.7711   90.1001
+    WTP3|    57.3225       56.06890     1.02  .3066    -52.5706  167.2155
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:08:25 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1803362D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1803.36180
+Estimation based on N =   2636, K =   4
+Inf.Cr.AIC  =   3614.7 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0091 .0065
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46271***      .11126    -4.16  .0000     -.68077   -.24465
+COVERCRO|     .00760         .06873      .11  .9120     -.12710    .14230
+   NUMGT|    -.08449         .08064    -1.05  .2947     -.24253    .07355
+ PAYMENT|     .00132***      .00024     5.58  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:09:07 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  12 iterations. Status=0, F=    .1802046D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1802.04560
+Restricted log likelihood   -1827.13597
+Chi squared [  7](P= .000)     50.18075
+Significance level               .00000
+McFadden Pseudo R-squared      .0137321
+Estimation based on N =   2636, K =   7
+Inf.Cr.AIC  =   3618.1 AIC/N =    1.373
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0137 .0111
+Constants only  -1819.9907  .0099 .0072
+At start values -1804.1650  .0012-.0015
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    -.42114***      .13352    -3.15  .0016     -.68282   -.15945
+COVERCRO|    -.12074         .08619    -1.40  .1612     -.28966    .04818
+   NUMGT|    -.03822         .09586     -.40  .6901     -.22609    .14966
+ PAYMENT|     .00134***      .00025     5.35  .0000      .00085    .00184
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.01819         .02049     -.89  .3745     -.05835    .02196
+COVE:LAK|     .04078**       .02026     2.01  .0441      .00108    .08049
+NUMG:LAK|    -.01441         .01879     -.77  .4432     -.05124    .02242
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:09:45 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0181947
+       2|      .0407842
+       3|     -.0144085
+       4|       .000000
+
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    ; Fn2 = wtp2 = -cc/pay
+    ; Fn3 = wtp3 = -nm/pay  $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1803362D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1803.36180
+Estimation based on N =   2636, K =   4
+Inf.Cr.AIC  =   3614.7 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0091 .0065
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46271***      .11126    -4.16  .0000     -.68077   -.24465
+COVERCRO|     .00760         .06873      .11  .9120     -.12710    .14230
+   NUMGT|    -.08449         .08064    -1.05  .2947     -.24253    .07355
+ PAYMENT|     .00132***      .00024     5.58  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:13:05 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  12 iterations. Status=0, F=    .1802046D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1802.04560
+Restricted log likelihood   -1827.13597
+Chi squared [  7](P= .000)     50.18075
+Significance level               .00000
+McFadden Pseudo R-squared      .0137321
+Estimation based on N =   2636, K =   7
+Inf.Cr.AIC  =   3618.1 AIC/N =    1.373
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0137 .0111
+Constants only  -1819.9907  .0099 .0072
+At start values -1804.1650  .0012-.0015
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    -.42114***      .13352    -3.15  .0016     -.68282   -.15945
+COVERCRO|    -.12074         .08619    -1.40  .1612     -.28966    .04818
+   NUMGT|    -.03822         .09586     -.40  .6901     -.22609    .14966
+ PAYMENT|     .00134***      .00025     5.35  .0000      .00085    .00184
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.01819         .02049     -.89  .3745     -.05835    .02196
+COVE:LAK|     .04078**       .02026     2.01  .0441      .00108    .08049
+NUMG:LAK|    -.01441         .01879     -.77  .4432     -.05124    .02242
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:13:38 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0181947
+       2|      .0407842
+       3|     -.0144085
+       4|       .000000
+
+|-> WALD
+    ; Labels = wld, cc, nm, pay
+    ; Fn1 = wtp1 = - wld/pay
+    $
+Error    242: NLSQ:Wrong number of start values - need one for each label
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1803362D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1803.36180
+Estimation based on N =   2636, K =   4
+Inf.Cr.AIC  =   3614.7 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0091 .0065
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46271***      .11126    -4.16  .0000     -.68077   -.24465
+COVERCRO|     .00760         .06873      .11  .9120     -.12710    .14230
+   NUMGT|    -.08449         .08064    -1.05  .2947     -.24253    .07355
+ PAYMENT|     .00132***      .00024     5.58  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:15:10 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  12 iterations. Status=0, F=    .1802046D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1802.04560
+Restricted log likelihood   -1827.13597
+Chi squared [  7](P= .000)     50.18075
+Significance level               .00000
+McFadden Pseudo R-squared      .0137321
+Estimation based on N =   2636, K =   7
+Inf.Cr.AIC  =   3618.1 AIC/N =    1.373
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0137 .0111
+Constants only  -1819.9907  .0099 .0072
+At start values -1804.1650  .0012-.0015
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    -.42114***      .13352    -3.15  .0016     -.68282   -.15945
+COVERCRO|    -.12074         .08619    -1.40  .1612     -.28966    .04818
+   NUMGT|    -.03822         .09586     -.40  .6901     -.22609    .14966
+ PAYMENT|     .00134***      .00025     5.35  .0000      .00085    .00184
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.01819         .02049     -.89  .3745     -.05835    .02196
+COVE:LAK|     .04078**       .02026     2.01  .0441      .00108    .08049
+NUMG:LAK|    -.01441         .01879     -.77  .4432     -.05124    .02242
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:16:08 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0181947
+       2|      .0407842
+       3|     -.0144085
+       4|       .000000
+
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     20.77945
+Prob. from Chi-squared[ 1] =       .00001
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:16:08 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment,dflall
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Maximum of   50 iterations. Exit iterations with status=1
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1827.13597
+Estimation based on N =   2636, K =   5
+Inf.Cr.AIC  =   3664.3 AIC/N =    1.390
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907 -.0039-.0070
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|   -22.7432***      .10976  -207.20  .0000    -22.9583  -22.5281
+COVERCRO|     .47187***      .06825     6.91  .0000      .33810    .60564
+   NUMGT|   -4.06938***      .08012   -50.79  .0000    -4.22641  -3.91235
+ PAYMENT|     .06498***      .00023   279.06  .0000      .06453    .06544
+  DFLALL| .21208D+10***   .4351D+08    48.74  .0000  .20355D+10  .22060D+10
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:17:31 PM
+-----------------------------------------------------------------------------
+
+Exit to results at user request after   22 iterations.
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1827.13597
+Estimation based on N =   2636, K =   8
+Inf.Cr.AIC  =   3670.3 AIC/N =    1.392
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0000-.0030
+Constants only  -1819.9907 -.0039-.0070
+At start values -1827.1360  .0000-.0030
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    1012.79***      .11860  8539.23  .0000     1012.55   1013.02
+COVERCRO|    1064.05***      .08301 12818.68  .0000     1063.88   1064.21
+   NUMGT|    1462.99***      .09309 15716.32  .0000     1462.81   1463.17
+ PAYMENT| .12058D+07***      .00023 ********  .0000  .12058D+07  .12058D+07
+        |Nonrandom parameters in utility functions...........................
+  DFLALL| .21208D+10***   .4351D+08    48.74  .0000  .20355D+10  .22060D+10
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    2377.25***      .01753 ********  .0000     2377.21   2377.28
+COVE:LAK|    4825.89***      .01745 ********  .0000     4825.86   4825.93
+NUMG:LAK|    3455.55***      .01762 ********  .0000     3455.51   3455.58
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:22:20 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|       2377.25
+       2|       4825.89
+       3|       3455.55
+       4|       .000000
+
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =*************
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    -.00084***   .9836D-07 -8539.22  .0000     -.00084   -.00084
+    WTP2|    -.00088***   .6884D-07 ********  .0000     -.00088   -.00088
+    WTP3|    -.00121***   .7720D-07 ********  .0000     -.00121   -.00121
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:22:20 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error   1066: Command has both ;RHS and Model: U(alts). Inconsistent.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =*************
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    -.00084***   .9836D-07 -8539.22  .0000     -.00084   -.00084
+    WTP2|    -.00088***   .6884D-07 ********  .0000     -.00088   -.00088
+    WTP3|    -.00121***   .7720D-07 ********  .0000     -.00121   -.00121
+--------+--------------------------------------------------------------------
+nnnnn.D-xx or D+xx => multiply by 10 to -xx or +xx.
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:23:04 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1803362D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1803.36180
+Estimation based on N =   2636, K =   4
+Inf.Cr.AIC  =   3614.7 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0091 .0065
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46271***      .11126    -4.16  .0000     -.68077   -.24465
+COVERCRO|     .00760         .06873      .11  .9120     -.12710    .14230
+   NUMGT|    -.08449         .08064    -1.05  .2947     -.24253    .07355
+ PAYMENT|     .00132***      .00024     5.58  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:24:21 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  12 iterations. Status=0, F=    .1802046D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1802.04560
+Restricted log likelihood   -1827.13597
+Chi squared [  7](P= .000)     50.18075
+Significance level               .00000
+McFadden Pseudo R-squared      .0137321
+Estimation based on N =   2636, K =   7
+Inf.Cr.AIC  =   3618.1 AIC/N =    1.373
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0137 .0111
+Constants only  -1819.9907  .0099 .0072
+At start values -1804.1650  .0012-.0015
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    -.42114***      .13352    -3.15  .0016     -.68282   -.15945
+COVERCRO|    -.12074         .08619    -1.40  .1612     -.28966    .04818
+   NUMGT|    -.03822         .09586     -.40  .6901     -.22609    .14966
+ PAYMENT|     .00134***      .00025     5.35  .0000      .00085    .00184
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.01819         .02049     -.89  .3745     -.05835    .02196
+COVE:LAK|     .04078**       .02026     2.01  .0441      .00108    .08049
+NUMG:LAK|    -.01441         .01879     -.77  .4432     -.05124    .02242
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:24:50 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0181947
+       2|      .0407842
+       3|     -.0144085
+       4|       .000000
+
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:24:50 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error    999: The specification ;U(V is not recognized.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:27:31 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error    999: The specification ;U(V is not recognized.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:28:07 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;Model:
+    U(VolCons) = asc + pay*Payment + wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error   1066: Command has both ;RHS and Model: U(alts). Inconsistent.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:28:42 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment,dfall,taxcost,income_1 ,INCOMB23,income_4,income_5,income_6,areaf_2,areaf_3,areaf_4
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;Model:
+    U(VolCons) = wetland*Wetland + CoverCro*covercro +	nm*NuMgt  + pay*Payment + asc + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error     71: Variable list contains a name not in the expected table.
+Error    539: Variable list: The unidentifiable string is DFALL
+Error     83: RHS/RH1  variable in list  not in the variable names table.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:30:45 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment,asc,dfall,taxcost,income_1 ,INCOMB23,income_4,income_5,income_6,areaf_2,areaf_3,areaf_4
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    ;Model:
+    U(VolCons) = wetland*Wetland + CoverCro*covercro +nm*NuMgt  + pay*Payment + asc + dfl*dflall + costTax*taxcost +
+    incfarm1*income_1 + incfarm23*INCOMB23+ incfarm4*income_4 + incfarm5*income_5 + incfarm6*income_6
+    		+ farmsi2*areaf_2 + farmsi3*areaf_3 + farmsi4*areaf_4
+    /
+    U(Current) = 0
+    $
+Error     71: Variable list contains a name not in the expected table.
+Error    539: Variable list: The unidentifiable string is ASC
+Error     83: RHS/RH1  variable in list  not in the variable names table.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:31:38 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment,asc,dfall,taxcost,income_1 ,INCOMB23,income_4,income_5,income_6,areaf_2,areaf_3,areaf_4
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+Error     71: Variable list contains a name not in the expected table.
+Error    539: Variable list: The unidentifiable string is ASC
+Error     83: RHS/RH1  variable in list  not in the variable names table.
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:32:31 PM
+-----------------------------------------------------------------------------
+
+|-> RPLOGIT
+    ; Lhs = Y ; Choices =VolCons,Current
+    ; Rhs = Wetland,Covercro, NuMgt,Payment
+    ;rpl = lake1000
+    ;fcn=  Wetland(q|#10),Covercro(q|#10), NuMgt(q|#10),Payment(c|#00)
+    $
+
++------------------------------------------------------+
+|WARNING:   Bad observations were found in the sample. |
+|Found  204 bad observations among   2840 individuals. |
+|You can use ;CheckData to get a list of these points. |
++------------------------------------------------------+
+
+Iterative procedure has converged
+Normal exit:   4 iterations. Status=0, F=    .1803362D+04
+
+-----------------------------------------------------------------------------
+Start values obtained using MNL model
+Dependent variable               Choice
+Log likelihood function     -1803.36180
+Estimation based on N =   2636, K =   4
+Inf.Cr.AIC  =   3614.7 AIC/N =    1.371
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+Constants only  -1819.9907  .0091 .0065
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+ WETLAND|    -.46271***      .11126    -4.16  .0000     -.68077   -.24465
+COVERCRO|     .00760         .06873      .11  .9120     -.12710    .14230
+   NUMGT|    -.08449         .08064    -1.05  .2947     -.24253    .07355
+ PAYMENT|     .00132***      .00024     5.58  .0000      .00086    .00179
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:32:52 PM
+-----------------------------------------------------------------------------
+
+Iterative procedure has converged
+Normal exit:  12 iterations. Status=0, F=    .1802046D+04
+
+-----------------------------------------------------------------------------
+Random Parameters Multinom. Logit Model
+Dependent variable                    Y
+Log likelihood function     -1802.04560
+Restricted log likelihood   -1827.13597
+Chi squared [  7](P= .000)     50.18075
+Significance level               .00000
+McFadden Pseudo R-squared      .0137321
+Estimation based on N =   2636, K =   7
+Inf.Cr.AIC  =   3618.1 AIC/N =    1.373
+---------------------------------------
+            Log likelihood R-sqrd R2Adj
+No coefficients -1827.1360  .0137 .0111
+Constants only  -1819.9907  .0099 .0072
+At start values -1804.1650  .0012-.0015
+Note: R-sqrd = 1 - logL/Logl(constants)
+Warning:  Model does not contain a full
+set of ASCs. R-sqrd is problematic. Use
+model setup with ;RHS=one to get LogL0.
+---------------------------------------
+Response data are given as ind. choices
+Replications for simulated probs. = 100
+Pseudo random draws (Mersenne twister).
+BHHH estimator used for asymp. variance
+Number of obs.=  2840, skipped  204 obs
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+       Y|  Coefficient       Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+        |Random parameters in utility functions..............................
+ WETLAND|    -.42114***      .13352    -3.15  .0016     -.68282   -.15945
+COVERCRO|    -.12074         .08619    -1.40  .1612     -.28966    .04818
+   NUMGT|    -.03822         .09586     -.40  .6901     -.22609    .14966
+ PAYMENT|     .00134***      .00025     5.35  .0000      .00085    .00184
+        |Heterogeneity in mean, Parameter:Variable...........................
+WETL:LAK|    -.01819         .02049     -.89  .3745     -.05835    .02196
+COVE:LAK|     .04078**       .02026     2.01  .0441      .00108    .08049
+NUMG:LAK|    -.01441         .01879     -.77  .4432     -.05124    .02242
+PAYM:LAK|        0.0    .....(Fixed Parameter).....
+        |Distns. of RPs. Std.Devs or limits of triangular....................
+QsWETLAN|        0.0    .....(Fixed Parameter).....
+QsCOVERC|        0.0    .....(Fixed Parameter).....
+ QsNUMGT|        0.0    .....(Fixed Parameter).....
+CsPAYMEN|        0.0    .....(Fixed Parameter).....
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Fixed parameter ... is constrained to equal the value or
+had a nonpositive st.error because of an earlier problem.
+Model was estimated on May 21, 2020 at 08:33:21 PM
+-----------------------------------------------------------------------------
+
+Parameter Matrix for Heterogeneity in Means.
+
+Delta_RP|             1
+--------+--------------
+       1|     -.0181947
+       2|      .0407842
+       3|     -.0144085
+       4|       .000000
+
+|-> WALD
+    ; Fn1 = wtp1 = - b1/b4
+    ; Fn2 = wtp2 = - b2/b4
+    ; Fn3 = wtp3 = - b3/b4
+    $
+
+-----------------------------------------------------------------------------
+WALD procedure. Estimates and standard errors for nonlinear functions and
+joint test of nonlinear restrictions.
+Wald Statistic             =     40.64510
+Prob. from Chi-squared[ 3] =       .00000
+Functions are computed at means of variables
+--------+--------------------------------------------------------------------
+        |                  Standard            Prob.      95% Confidence
+WaldFcns|   Function         Error       z    |z|>Z*         Interval
+--------+--------------------------------------------------------------------
+    WTP1|    313.155***    68.69781     4.56  .0000     178.510   447.801
+    WTP2|    89.7821       63.74020     1.41  .1590    -35.1464  214.7106
+    WTP3|    28.4175       68.99567      .41  .6804   -106.8115  163.6465
+--------+--------------------------------------------------------------------
+***, **, * ==>  Significance at 1%, 5%, 10% level.
+Model was estimated on May 21, 2020 at 08:33:21 PM
+-----------------------------------------------------------------------------
+
