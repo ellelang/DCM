@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from pathlib import Path
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
+#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
+data_folder = Path('/Users/ellelang/Documents/github/DCM/survey/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 dat0 = pd.read_csv(data_folder/'scoresall_0501.csv')
 
@@ -40,21 +41,21 @@ dat_log = pd.DataFrame({
                         'aware': aware_log,
                         'past': past_log,
                         'app': app_log,
-                        'social': social_log,
+                        'social_norm': social_log,
                         'concern': concern_log,
-                        'norm_ctl': norm_log,
-                        'wld_unf': wldunfav_log,
-                        'nm_unf': nmunfav_log,
+                        'behavior_ctrl': norm_log,
+                        'wld_unfav': wldunfav_log,
+                        'nm_unfav': nmunfav_log,
                         'fav': comp_log
                         })
 
 dat_log.columns
-data_log_sel = dat_log[['aware','past','app','social']]
+data_log_sel = dat_log[['aware','past','app','social_norm']]
 data_log_sel.mean()
 data_log_sel.std()
 sns.violinplot(data = data_log_sel)
 sns.violinplot(data = data_log_sel)
-dataaaa = dat_log[['concern', 'norm_ctl', 'wld_unf','nm_unf', 'fav']]
+dataaaa = dat_log[['concern', 'social_norm', 'wld_unfav','nm_unfav', 'fav']]
 sns.violinplot(data = dataaaa)
 
 
@@ -108,8 +109,8 @@ kmeans.fit(data_normalized)
 
 # Extract cluster labels
 cluster_labels = kmeans.labels_ 
-cluster_labels = cluster_labels
-cluster_labels[0]
+#cluster_labels = cluster_labels
+cluster_labels
 # Create a DataFrame by adding a new cluster label column
 data_k3 = dat.assign(Cluster=cluster_labels)
 
@@ -121,55 +122,65 @@ data_k3['Cluster']
 # Calculate average RFM values and segment sizes per cluster value
 grouped.agg('mean').round(3)
 
-''''''
-'aware', 'past',
-'app', 'social',
-'concern','norm_ctl',
-'wld_unf', 'nm_unf', 'fav'
+#'''''''
+#'aware', 'past',
+#'app', 'social',
+#'concern','norm_ctl',
+#'wld_unf', 'nm_unf', 'fav'
 
- 'concern','social',
- 'app', 'past'
+ #'concern','social',
+# 'app', 'past'
 
-''''''
+#''''''
+## already save the cluster files. assign the cluster values 
+data_k3 = pd.read_csv(data_folder/"fscore_0504_9_cluster.csv")
+
 data_normalized['Cluster'] = data_k3['Cluster']
 data_normalized['id'] = dat0['id']
 datanormalized_melt = pd.melt(
   					data_normalized, 
                         
 # Assign CustomerID and Cluster as ID variables
-                    id_vars=['id', 'Cluster'],
+                    id_vars=['id','Cluster'],
 
 # Assign RFM values as value variables
                     value_vars=[ 
                                 'aware', 'past',
-'app', 'social',
-'concern','norm_ctl',
-'wld_unf', 'nm_unf', 'fav'
+'app', 'social_norm',
+'concern','behavior_ctrl',
+'wld_unfav', 'nm_unfav', 'fav'
                                
                                 
                          ], 
                         
 # Name the variable and value
-                    var_name='Metric', value_name ='Value'
+                    var_name='Constructs', value_name ='Value'
 					)
 
 datanormalized_melt.columns
+datanormalized_melt.head(3)
 
 # Add the plot title
-plt.title('Snake plot of normalized variables')
+#plt.title('Snake plot of normalized variables')
 
 # Add the x axis label
-plt.xlabel('Metric')
+plt.xlabel('Constructs Metrics')
 
 # Add the y axis label
 plt.ylabel('Value')
 
+#current_palette = sns.color_palette()
+#sns.color_palette("tab10")
+
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
-             x='Metric', y='Value', hue='Cluster' )
-
-
-
+             x='Constructs', y='Value', hue='Cluster' )
+leg = g.axes.get_legend()
+leg.texts
+new_labels = ['Cluster', 'C0: Economics-leaning', 'C1: Oppose BMPs', 'C2: Environmental-Friendly']
+for t, l in zip(leg.texts, new_labels): t.set_text(l)
+#plt.show()
+plt.xticks(rotation=22)
 plt.savefig(data_folder/'snakeplot.png',dpi=300)
 plt.show()
 
