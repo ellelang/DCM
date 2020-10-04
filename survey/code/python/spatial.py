@@ -8,7 +8,8 @@ from pathlib import Path
 import seaborn as sns
 import itertools
 
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
+#data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
+data_folder = Path('/Users/ellelang/Documents/github/DCM')
 MRB = gpd.read_file(data_folder/"shapefilesMRB/3statesMRBclipped.shp")
 MRB.crs
 MRB.plot(color='white', edgecolor='grey')
@@ -55,14 +56,14 @@ palette="summer_r",
 ax = ax2)
 ax2.set(xlabel='Regional characteristics')
 
-plt.savefig(data_folder/'regioncompare.png', bbox_inches='tight', dpi=200)
+plt.savefig(data_folder/'regioncompare.png', bbox_inches='tight', dpi=300)
 
                
-plt.savefig(data_folder/'regionmap.png', bbox_inches='tight', dpi=200)
+#plt.savefig(data_folder/'regionmap.png', bbox_inches='tight', dpi=200)
 plt.show()
 
 
-fig, (ax1, ax2) = plt.subplots(2, 1 ,figsize=(10, 10))
+fig, (ax1, ax2) = plt.subplots(1, 2 ,figsize=(10, 6))
 
 
 ax = sns.barplot(data=regmelt, 
@@ -80,7 +81,7 @@ hue="Region",
 palette="summer_r",
 ax = ax2)
 
-
+plt.show()
 plt.savefig(data_folder/'regioncompare.png', bbox_inches='tight', dpi=200)
 
 
