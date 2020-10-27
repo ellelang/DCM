@@ -31,9 +31,13 @@ MRB_5_sub.columns
 sub_counties = pd.read_csv(data_folder/"data/intersect_3counties_sorted.csv")
 MRB_5_sub_state = pd.merge(MRB_5_sub, sub_counties, how='left',left_on='Subbasin', right_on='Subbasin')
 
+
+
 weighted_cost = pd.read_csv(data_folder/"data/weighted_costs_3counties_all0923.csv")
 MRB_sub_weighted =  pd.merge(MRB_5_sub_state, weighted_cost, how='left',left_on='Subbasin', right_on='Subbasin')
 mnsub = MRB_sub_weighted.loc[MRB_sub_weighted['State']=='Minnesota']
 mnsub.plot(column = 'CC_w', linewidth=0.08, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
 MRB_sub_weighted.plot(column = 'CC_w', linewidth=0.08, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
 #######################
+#subbasin_counties
+

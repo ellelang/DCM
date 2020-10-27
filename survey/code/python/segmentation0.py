@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from pathlib import Path
-#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
-data_folder = Path('/Users/ellelang/Documents/github/DCM/survey/data')
+data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
+#data_folder = Path('/Users/ellelang/Documents/github/DCM/survey/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 dat0 = pd.read_csv(data_folder/'scoresall_0501.csv')
 
@@ -250,8 +250,8 @@ merged.shape
 merge1 = pd.merge(merged,water_county, how='left',left_on='countyresident', right_on='County')
 merge1.columns
 merge1.shape
-
-merged.to_csv(data_folder/"merged_cluster_0504.csv", index = False)
+merge1.to_csv(data_folder/"merged_cluster_0504(1).csv", index = False)
+#merged.to_csv(data_folder/"merged_cluster_0504.csv", index = False)
 merged.shape
 
 merged.columns
@@ -259,7 +259,7 @@ num_merged = merged.select_dtypes(exclude=['object'])
 num_merged.columns
 mean_dat = num_merged.groupby(['Cluster']).mean()
 std_dat = num_merged.groupby(['Cluster']).std()
-
+mean_dat.columns
 mean_dat.to_csv(data_folder/"mean_cluster_0504.csv", index = False)
 std_dat.to_csv(data_folder/"std_cluster_0504.csv", index = False)
 
@@ -274,21 +274,21 @@ data_demo = num_merged[['gender','age',
 
 data_demo.pivot_table(index="Cluster", columns='gender', aggfunc='size', fill_value=0)
 
-pd.crosstab(data_demo['Cluster'],data_demo['gender']).apply(lambda r: round(r/r.sum(),3), axis=1)
-pd.crosstab(data_demo['Cluster'],data_demo['age']).apply(lambda r: round(r/r.sum(),3), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['gender']).apply(lambda r: round(r/r.sum(),4), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['age']).apply(lambda r: round(r/r.sum(),4), axis=1)
 
-pd.crosstab(data_demo['Cluster'],data_demo['income']).apply(lambda r: round(r/r.sum(),3), axis=1)
-pd.crosstab(data_demo['Cluster'],data_demo['education']).apply(lambda r: round(r/r.sum(),3), axis=1)
-pd.crosstab(data_demo['Cluster'],data_demo['incomefromfarming']).apply(lambda r: round(r/r.sum(),3), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['income']).apply(lambda r: round(r/r.sum(),4), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['education']).apply(lambda r: round(r/r.sum(),4), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['incomefromfarming']).apply(lambda r: round(r/r.sum(),4), axis=1)
 
-pd.crosstab(data_demo['Cluster'],data_demo['landarea']).apply(lambda r: round(r/r.sum(),3), axis=1)
-pd.crosstab(data_demo['Cluster'],data_demo['majorityland']).apply(lambda r: round(r/r.sum(),3), axis=1)
-pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),3), axis=1)
-rotation = pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),3), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['landarea']).apply(lambda r: round(r/r.sum(),4), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['majorityland']).apply(lambda r: round(r/r.sum(),4), axis=1)
+pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),4), axis=1)
+rotation = pd.crosstab(data_demo['Cluster'],data_demo['primaryrotation']).apply(lambda r: round(r/r.sum(),4), axis=1)
 rotation.to_csv(data_folder/"primaryrotation_compare.csv", index = True)
 
 
-region_water = pd.read_csv (data_folder/"merged_cluster_0504.csv")
+region_water = pd.read_csv(data_folder/"merged_cluster_0504.csv")
 pd.crosstab(merge1 ['Cluster'],merge1['Region_y']).apply(lambda r: round(r/r.sum(),3), axis=1)
 pd.crosstab(merge1 ['Cluster'],merge1['Watershed']).apply(lambda r: round(r/r.sum(),3), axis=1)
 

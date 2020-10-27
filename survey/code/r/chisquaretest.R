@@ -1,12 +1,13 @@
 rm(list = ls())
 setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 #setwd("~/Documents/github/DCM/survey/data")
-data <- read.csv(file='merged_cluster.csv')
+#data <- read.csv(file='merged_cluster.csv')
+data <- read.csv(file='merged_cluster_0504.csv')
 cluster <- factor(data$Cluster)
 c0 <- data[data$Cluster == 0,]
 c1 <- data[data$Cluster == 1,]
 c2 <- data[data$Cluster == 2,]
-
+colnames(data)
 pairwise.t.test(data$social, cluster, p.adj = "bonf")
 pairwise.t.test(data$appreciate, cluster, p.adj = "bonf")
 pairwise.t.test(data$past, cluster,p.adj = "bonf")
@@ -29,6 +30,7 @@ pairwise.t.test(data$impwetl, cluster, p.adj = "bonf")
 library(data.table)
 c0$mean_wld
 c0.gender = table(c0$gender);c1.gender = table(c1$gender); c2.gender = table(c2$gender)
+
 c2.gender['3']=0
 
 
@@ -36,6 +38,8 @@ c2.gender['3']=0
 gender01 = rbind(c0.gender,c1.gender)
 gender02 = rbind(c0.gender,c2.gender)
 gender12 = rbind(c1.gender,c2.gender)
+
+gender01
 
 chisq.test(gender01)
 chisq.test(gender02)
@@ -47,8 +51,11 @@ c0.age['1']=0; c2.age['1']=0
 age01 = rbind(c0.age,c1.age)
 age02 = rbind(c0.age,c2.age)
 age12 = rbind(c1.age,c2.age)
+
+age02[,c(1,2,3)]
+
 chisq.test(age01)
-chisq.test(age02)
+chisq.test(age02[,c(1,2,3)])
 chisq.test(age12)
 
 c0.education = table(c0$education);c1.education = table(c1$education); c2.education = table(c2$education)
