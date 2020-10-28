@@ -15,13 +15,22 @@ MRB.crs
 MRB.plot(color='white', edgecolor='grey')
 MRB.columns
 MRB.NAME 
-MRB = MRB.loc[MRB['STATE_NAME'] == 'Minnesota']
 
-cost_counties = pd.read_csv(data_folder/"data/MRB47counties.csv")
+MRB.loc[(MRB.STATE_NAME == 'South Dakota')&(MRB.NAME == 'Grant'), 'NAME'] = 'Grant_sd'
+
+#MRB = MRB.loc[MRB['STATE_NAME'] == 'Minnesota']
+
+
+cost_counties = pd.read_csv(data_folder/"data/cost_region1027.csv")
 MRB_counties = pd.merge(MRB, cost_counties,how='left',left_on='NAME', right_on='County')
 MRB_counties.columns
-MRB_counties.plot(column = 'STATE_NAME', linewidth=0.8, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
+MRB_counties.plot(column = 'STATE_NAME', linewidth=0.8, cmap='Wistia',edgecolor='#B3B3B3', legend = True)
 MRB_counties.plot(column = 'WLD', linewidth=0.8, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
+
+#MRB_counties.iloc[37,]
+#MRB_counties[MRB_counties['Region'].isnull()].NAME
+
+MRB_counties.plot(column = 'Region', linewidth=0.8, cmap='Set2',edgecolor='#B3B3B3', legend = True, alpha=0.6)
 
 
 MRB_5_sub = gpd.read_file(data_folder/"shapefilesMRB/MRB_5_subbasins.shp")
@@ -40,4 +49,12 @@ mnsub.plot(column = 'CC_w', linewidth=0.08, cmap='summer_r',edgecolor='#B3B3B3',
 MRB_sub_weighted.plot(column = 'CC_w', linewidth=0.08, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
 #######################
 #subbasin_counties
+import matplotlib.image as mpimg
+from PIL import Image
+MRBimage = Image.open(data_folder/"shapefilesMRB/Minnesotarivermap.png")
 
+
+f, axarr = plt.subplots(figsize=(35,15))
+
+axarr.imshow(MRBimage)
+axarr.axis('off')

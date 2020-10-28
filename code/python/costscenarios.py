@@ -1,19 +1,19 @@
 from pathlib import Path
-#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
-data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
+data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+#data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import altair as alt
 
-# cost_mn = pd.read_csv(data_folder/'wtas_countyMN.csv')
-# cost_others = pd.read_csv(data_folder/'wtas_countyothers.csv')
-# cost_mn.head(3)
-# cost_others.head(3)
-# cost = pd.concat([cost_mn, cost_others], axis = 0)
+cost_mn = pd.read_csv(data_folder/'wtas_countyMN.csv')
+cost_others = pd.read_csv(data_folder/'wtas_countyothers.csv')
+cost_mn.head(3)
+cost_others.head(3)
+cost = pd.concat([cost_mn, cost_others], axis = 0)
 
-#cost.to_csv(data_folder/'cost_region1027.csv', index = False)
+cost.to_csv(data_folder/'cost_region1027.csv', index = False)
 ####################
 
 cost = pd.read_csv(data_folder/'cost_region1027.csv')
@@ -33,6 +33,7 @@ df1 = cost.melt(id_vars=['County', 'Region' ],
               value_vars=['WLD', 'CC', 'NM', 'ASC_obs'],
               var_name='Types', value_name='WTAs')
 
+df1 = df1[df1.Region != 'Northeast']
 df1.head(4)
 #df1[df1.Region == 'Southeast']
 
@@ -99,7 +100,7 @@ chart = alt.Chart(df1).transform_calculate(
      labelFontSize=14,
     titleFontSize=14
      )       
-#chart.show()
+chart.show()
 
 chart.save('countyWTAchart.png')
 
