@@ -1,6 +1,6 @@
 from pathlib import Path
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
-#data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
+#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,7 +22,6 @@ regionname = cost.Region.unique().tolist()
 regionname_sort = ['Northeast',
  'Northwest',
  'Westcentral',
- 'Southeast',
  'Southcentral',
  'Southwest',
  'Iowa',
