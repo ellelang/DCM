@@ -364,6 +364,10 @@ norm_control =~ valknowconservation + valsteward  + opwetlandfamiliar + opcoverc
 fa_5cfa <- cfa(model = fa5_CFAmodel,data = df_se)
 summary(fa_5cfa, standardized = T, fit.measures = T)
 reliability(fa_5cfa)
+fitMeasures(fa_5cfa)
+
+
+
 f5_scores <- as.data.frame(predict(fa_5cfa))
 daaa <-  read.csv("data_likertscale.csv", head = TRUE)
 daaa$id

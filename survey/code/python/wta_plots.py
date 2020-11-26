@@ -147,3 +147,14 @@ ttest_ind(wld_onlyatt['MEAN'],wld_origin['MEAN'])
 ttest_ind(cc_onlyatt['MEAN'],cc_origin['MEAN'])
 ttest_ind(nm_onlyatt['MEAN'],nm_origin['MEAN'])
 
+
+plt.figure(figsize=(30,10))
+g_org = sns.FacetGrid(whole_wta, col="Practice", hue="Model",sharey=False, sharex=False)
+g_org = g_org.map(sns.distplot, "MEAN", hist=False, rug= False, 
+                  kde_kws=dict(linewidth=1.2))
+
+g_org.axes[0,0].set_xlabel('')
+g_org.axes[0,1].set_xlabel('WTA estimates ($/acre)')
+g_org.axes[0,2].set_xlabel('')
+g_org.axes[0,0].set_ylabel('Probability')
+g_org.add_legend()

@@ -1,4 +1,8 @@
 rm(list = ls())
+library(dplyr)
+#install.packages("ggpubr")
+#library(ggpubr)
+
 setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 #setwd("~/Documents/github/DCM/survey/data")
 #data <- read.csv(file='merged_cluster.csv')
@@ -8,6 +12,30 @@ c0 <- data[data$Cluster == 0,]
 c1 <- data[data$Cluster == 1,]
 c2 <- data[data$Cluster == 2,]
 colnames(data)
+
+n <- 10
+mydata <- data %>% select(last_col(offset=0:(n-1), everything()))
+head(mydata)
+mydata$Cluster <- factor(mydata$Cluster)
+mydata$Cluster 
+res.ftest <- var.test(social ~ Cluster, data = mydata)
+res.ftest
+
+
+tables_summary <- mydata %>% group_by(Cluster) %>% 
+  summarise_at(.vars = names(.)[2:10],
+               .funs = c(Mean="mean", Sd="sd"))
+
+tables_summary
+write.csv(tables_summary, 'cluster_factorsummary.csv', row.names = FALSE)
+
+intend = read.csv("int_pred.csv")
+tables_summary_intend <- intend %>% group_by(cluster) %>% 
+  summarise_at(.vars = names(.)[1:3],
+               .funs = c(Mean="mean", Sd="sd"))
+
+tables_summary_intend
+#a paired sample t-test
 pairwise.t.test(data$social, cluster, p.adj = "bonf")
 pairwise.t.test(data$appreciate, cluster, p.adj = "bonf")
 pairwise.t.test(data$past, cluster,p.adj = "bonf")

@@ -154,7 +154,7 @@ datanormalized_melt = pd.melt(
                          ], 
                         
 # Name the variable and value
-                    var_name='Constructs', value_name ='Value'
+                    var_name='Constructs', value_name ='Log transformed factor scores'
 					)
 
 datanormalized_melt.columns
@@ -164,23 +164,23 @@ datanormalized_melt.head(3)
 #plt.title('Snake plot of normalized variables')
 
 # Add the x axis label
-plt.xlabel('Constructs Metrics')
+plt.xlabel('Constructs')
 
 # Add the y axis label
-plt.ylabel('Value')
+plt.ylabel('Log transformed factor scores')
 
 #current_palette = sns.color_palette()
 #sns.color_palette("tab10")
-
+#plt.figure(figsize=(10,8))
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
-             x='Constructs', y='Value', hue='Cluster' )
+             x='Constructs', y='Log transformed factor scores', hue='Cluster' )
 leg = g.axes.get_legend()
 leg.texts
 new_labels = ['Cluster', 'C0: Economics-leaning', 'C1: Oppose BMPs', 'C2: Environmental-Friendly']
 for t, l in zip(leg.texts, new_labels): t.set_text(l)
 #plt.show()
-plt.xticks(rotation=22)
+plt.xticks(rotation=19)
 plt.savefig(data_folder/'snakeplot.png',dpi=300)
 plt.show()
 
@@ -314,6 +314,121 @@ print df.groupby(['Type','Name'])['Type'].agg({'Frequency':'count'})
 pd.crosstab(df['Approved'],df['Gender']).apply(lambda r: r/r.sum(), axis=1)
 
 
+############
+data = pd.read_csv(data_folder/'merged_cluster_0504.csv')
+
+data.columns
+
+test_factors = ['concern', 'att_wld_unfav', 'att_nm_unfav',\
+                'comp', 'norm_control', 'aware','past', \
+                'appreciate', 'social']
+
+ans = [pd.DataFrame(y) for x, y in data.groupby('Cluster', as_index=False)]
+
+c0= ans[0][[test_factors]
+c1= ans[1][test_factors]
+c2= ans[2][test_factors]
+
+c0.columns
+
+c2.apply(stats.shapiro, axis=0) 
+    
+
+stats.levene(c2['concern'], c0['concern'])
+stats.levene(c2['att_wld_unfav'], c0['att_wld_unfav'])
+stats.levene(c2['att_nm_unfav'], c0['att_nm_unfav'])
+stats.levene(c2['comp'], c0['comp'])
+stats.levene(c2['norm_control'], c0['norm_control'])
+stats.levene(c2['aware'], c0['aware'])
+stats.levene(c2['past'], c0['past'])
+stats.levene(c2['appreciate'], c0['appreciate'])
+stats.levene(c2['social'], c0['social'])
+
+'''
+var equal test results:
+appreciation  c0 = c1, c2= c1, c2 = c0
+social: c0 = c1
+att_nm_unfav: c2= c1, c2= c0
+aware: c2 = c1
+past: c2 = c1
+'''
+#independent_ttest vs independent non-parametric test
+stats.mannwhitneyu(c0['concern'],c1['concern'])
+stats.mannwhitneyu(c0['att_wld_unfav'],c1['att_wld_unfav'])
+stats.mannwhitneyu(c0['att_nm_unfav'],c1['att_nm_unfav'])
+stats.mannwhitneyu(c0['comp'],c1['comp'])
+stats.mannwhitneyu(c0['norm_control'],c1['norm_control'])
+stats.mannwhitneyu(c0['aware'],c1['aware'])
+stats.mannwhitneyu(c0['past'],c1['past'])
+stats.mannwhitneyu(c0['appreciate'],c1['appreciate'])
+stats.mannwhitneyu(c0['social'],c1['social'])
+
+
+stats.mannwhitneyu(c2['concern'],c1['concern'])
+stats.mannwhitneyu(c2['att_wld_unfav'],c1['att_wld_unfav'])
+stats.mannwhitneyu(c2['att_nm_unfav'],c1['att_nm_unfav'])
+stats.mannwhitneyu(c2['comp'],c1['comp'])
+stats.mannwhitneyu(c2['norm_control'],c1['norm_control'])
+stats.mannwhitneyu(c2['aware'],c1['aware'])
+stats.mannwhitneyu(c2['past'],c1['past'])
+stats.mannwhitneyu(c2['appreciate'],c1['appreciate'])
+stats.mannwhitneyu(c2['social'],c1['social'])
+
+
+stats.mannwhitneyu(c2['concern'],c0['concern'])
+stats.mannwhitneyu(c2['att_wld_unfav'],c0['att_wld_unfav'])
+stats.mannwhitneyu(c2['att_nm_unfav'],c0['att_nm_unfav'])
+stats.mannwhitneyu(c2['comp'],c0['comp'])
+stats.mannwhitneyu(c2['norm_control'],c0['norm_control'])
+stats.mannwhitneyu(c2['aware'],c0['aware'])
+stats.mannwhitneyu(c2['past'],c0['past'])
+stats.mannwhitneyu(c2['appreciate'],c0['appreciate'])
+stats.mannwhitneyu(c2['social'],c0['social'])
+
+
+intend_pred = pd.read_csv(data_folder/'int_pred.csv')
+intend_pred.head(3)
+
+ans_int = [pd.DataFrame(y) for x, y in intend_pred.groupby('cluster', as_index=False)]
+c0_int= ans_int[0]
+c1_int= ans_int[1]
+c2_int= ans_int[2]
+c2_int.cluster
+#stats.shapiro(data.Control.dropna())
+c2_int.apply(stats.shapiro, axis=0) 
+   
+stats.mannwhitneyu(c0_int['int_wld'],c1_int['int_wld'])
+stats.mannwhitneyu(c0_int['int_cc'],c1_int['int_cc'])
+stats.mannwhitneyu(c0_int['int_nm'],c1_int['int_nm'])
+
+stats.mannwhitneyu(c2_int['int_wld'],c1_int['int_wld'])
+stats.mannwhitneyu(c2_int['int_cc'],c1_int['int_cc'])
+stats.mannwhitneyu(c2_int['int_nm'],c1_int['int_nm'])
+    
+stats.mannwhitneyu(c2_int['int_wld'],c0_int['int_wld'])
+stats.mannwhitneyu(c2_int['int_cc'],c0_int['int_cc'])
+stats.mannwhitneyu(c2_int['int_nm'],c0_int['int_nm'])
+   
+
+
+
+
+
+
+
+independent_ttest(c0['att_wld_unfav'],c1['att_wld_unfav'], 0.05)
+independent_ttest(Sample_0['past'],Sample_2['past'], 0.05)
+independent_ttest(Sample_0['social'],Sample_2['social'], 0.05)
+
+
+impaired = pd.read_csv(data_folder/'impairedwater.csv')
+imp_region = pd.merge(impaired, county_all, how = 'left', on = 'County')
+imp_region.groupby(['Region_y']).count()
+
+#######region compare
+
+
+
 
 import math
 from scipy.stats import t	
@@ -334,16 +449,4 @@ def independent_ttest(data1, data2, alpha):
 	p = (1.0 - t.cdf(abs(t_stat), df)) * 2.0
 	# return everything
 	return t_stat, df, cv, p
-
-independent_ttest(Sample_1['primaryrotation'],Sample_2['primaryrotation'], 0.05)
-independent_ttest(Sample_0['past'],Sample_2['past'], 0.05)
-independent_ttest(Sample_0['social'],Sample_2['social'], 0.05)
-
-
-impaired = pd.read_csv(data_folder/'impairedwater.csv')
-imp_region = pd.merge(impaired, county_all, how = 'left', on = 'County')
-imp_region.groupby(['Region_y']).count()
-
-#######region compare
-
 
