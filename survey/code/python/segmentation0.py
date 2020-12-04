@@ -154,7 +154,7 @@ datanormalized_melt = pd.melt(
                          ], 
                         
 # Name the variable and value
-                    var_name='Constructs', value_name ='Log transformed factor scores'
+                    var_name='Constructs', value_name ='Log transformed average factor scores'
 					)
 
 datanormalized_melt.columns
@@ -174,10 +174,10 @@ plt.ylabel('Log transformed factor scores')
 #plt.figure(figsize=(10,8))
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
-             x='Constructs', y='Log transformed factor scores', hue='Cluster' )
+             x='Constructs', y='Log transformed average factor scores', hue='Cluster' )
 leg = g.axes.get_legend()
 leg.texts
-new_labels = ['Cluster', 'C0: Economics-leaning', 'C1: Oppose BMPs', 'C2: Environmental-Friendly']
+new_labels = ['Cluster', 'C0: Engaging-absentee', 'C1: Adoptioin-averse', 'C2: Environmentally-conscious']
 for t, l in zip(leg.texts, new_labels): t.set_text(l)
 #plt.show()
 plt.xticks(rotation=19)
@@ -252,6 +252,7 @@ merge1.columns
 merge1.shape
 merge1.to_csv(data_folder/"merged_cluster_0504(1).csv", index = False)
 #merged.to_csv(data_folder/"merged_cluster_0504.csv", index = False)
+###0504(1) is not the dataset！
 merged.shape
 
 merged.columns
@@ -316,7 +317,10 @@ pd.crosstab(df['Approved'],df['Gender']).apply(lambda r: r/r.sum(), axis=1)
 
 ############
 data = pd.read_csv(data_folder/'merged_cluster_0504.csv')
-
+county_region =  pd.read_csv(data_folder/'county_region.csv')
+data.columns
+d_crg = pd.merge(data, county_region, how = 'left', left_on= 'countyresident', right_on = 'County')
+d_crg.to_csv(data_folder/'merged_cluster_region.csv')
 data.columns
 
 test_factors = ['concern', 'att_wld_unfav', 'att_nm_unfav',\
@@ -409,7 +413,10 @@ stats.mannwhitneyu(c2_int['int_wld'],c0_int['int_wld'])
 stats.mannwhitneyu(c2_int['int_cc'],c0_int['int_cc'])
 stats.mannwhitneyu(c2_int['int_nm'],c0_int['int_nm'])
    
-
+from scipy.stats import chisquare
+chisquare([1,0,0,0,0,1],[1,0,0,1])
+chisquare(c0_int['int_cc'],c1_int['int_cc'])
+chisquare(c0_int['int_nm'],c1_int['int_nm'])
 
 
 

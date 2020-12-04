@@ -8,6 +8,7 @@ import seaborn as sns
 from scipy import stats
 from pathlib import Path
 from scipy.stats import ttest_ind
+from scipy.stats import ttest_rel
 data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 
@@ -123,10 +124,10 @@ kind="box")
 plt.show()
 
 
-
-ttest_ind(wld_origin['MEAN'],wld_ba['MEAN'])
-ttest_ind(cc_origin['MEAN'],cc_ba['MEAN'])
-ttest_ind(nm_origin['MEAN'],nm_ba['MEAN'])
+#stats.mannwhitneyu(wld_origin['MEAN'],wld_ba['MEAN'])
+ttest_rel(wld_origin['MEAN'],wld_ba['MEAN'])
+ttest_rel(cc_origin['MEAN'],cc_ba['MEAN'])
+ttest_rel(nm_origin['MEAN'],nm_ba['MEAN'])
 
 ttest_ind(wld_origin['CI_L'],wld_ba['CI_L'])
 
@@ -138,14 +139,25 @@ data = wta_ba,
 kind = "box")
 plt.show()
 
+nm_onlyatt.quantile([.025, .975])
 
-ttest_ind(wld_onlyatt['MEAN'],wld_ba['MEAN'])
-ttest_ind(cc_onlyatt['MEAN'],cc_ba['MEAN'])
-ttest_ind(nm_onlyatt['MEAN'],nm_ba['MEAN'])
+nm_origin.quantile([.025, .975])
 
-ttest_ind(wld_onlyatt['MEAN'],wld_origin['MEAN'])
-ttest_ind(cc_onlyatt['MEAN'],cc_origin['MEAN'])
-ttest_ind(nm_onlyatt['MEAN'],nm_origin['MEAN'])
+nm_ba.quantile([.025, .975])
+
+ttest_rel(wld_origin['MEAN'],wld_ba['MEAN'])
+ttest_rel(cc_origin['MEAN'],cc_ba['MEAN'])
+ttest_rel(nm_origin['MEAN'],nm_ba['MEAN'])
+
+wld_ba['MEAN'].shape
+
+ttest_rel(wld_onlyatt['MEAN'],wld_ba['MEAN'])
+ttest_rel(cc_onlyatt['MEAN'],cc_ba['MEAN'])
+ttest_rel(nm_onlyatt['MEAN'],nm_ba['MEAN'])
+
+ttest_rel(wld_onlyatt['MEAN'],wld_origin['MEAN'])
+ttest_rel(cc_onlyatt['MEAN'],cc_origin['MEAN'])
+ttest_rel(nm_onlyatt['MEAN'],nm_origin['MEAN'])
 
 
 plt.figure(figsize=(30,10))

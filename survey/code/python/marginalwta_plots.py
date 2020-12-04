@@ -86,21 +86,21 @@ wta_onlyatt.shape
       
 whole_wta.head(4)   
 
-# plt.figure(figsize=(30,10))
-# g_org = sns.FacetGrid(whole_wta, col="Model", hue="Practice",sharey=False, sharex=False, palette="summer")
-# g_org = g_org.map(sns.distplot, "MEAN", hist=False, rug= False)
+plt.figure(figsize=(30,10))
+g_org = sns.FacetGrid(whole_wta, col="Model", hue="Practice",sharey=False, sharex=False, palette="summer")
+g_org = g_org.map(sns.distplot, "MEAN", hist=False, rug= False)
 
-# g_org.axes[0,0].set_xlabel('')
-# #g_org.axes[0,0].set(xticks= np.arange(0, 500, 50))
-# g_org.axes[0,1].set_xlabel('marginal WTA estimates ($/acre)')
-# g_org.axes[0,2].set_xlabel('')
-# g_org.axes[0,0].set_ylabel('Probability')
-# g_org.add_legend()      
+g_org.axes[0,0].set_xlabel('')
+#g_org.axes[0,0].set(xticks= np.arange(0, 500, 50))
+g_org.axes[0,1].set_xlabel('marginal WTA estimates ($/acre)')
+g_org.axes[0,2].set_xlabel('')
+g_org.axes[0,0].set_ylabel('Probability')
+g_org.add_legend()      
         
 
-# plt.figure(figsize=(30,10))
-# g_org = sns.FacetGrid(whole_wta, col="Model", hue="Practice",sharey=False, sharex=False, palette="summer")
-# g_org = g_org.map(sns.distplot, "MEAN", hist=False, rug= False)
+plt.figure(figsize=(30,10))
+g_org = sns.FacetGrid(whole_wta, col="Model", hue="Practice",sharey=False, sharex=False, palette="summer")
+g_org = g_org.map(sns.distplot, "MEAN", hist=False, rug= False)
 
 
 plt.figure(figsize=(30,10))
@@ -130,20 +130,20 @@ wld_onlyatt.mean()
 
 wld_origin.mean()
 
-nm_onlyatt.quantile([.25, .75])
+nm_onlyatt.quantile([.025, .975])
 
-nm_origin.quantile([.25, .75])
+nm_origin.quantile([.025, .975])
 
-nm_ba.quantile([.25, .75])
+nm_ba.quantile([.025, .975])
 
 
-ttest_rel(wld_origin['MEAN'],wld_ba['MEAN'])
+ttest_rel(wld_ba['MEAN'], wld_origin['MEAN'],)
 ttest_rel(cc_origin['MEAN'],cc_ba['MEAN'])
 ttest_rel(nm_origin['MEAN'],nm_ba['MEAN'])
 
-ttest_rel(wld_onlyatt['MEAN'],wld_origin['MEAN'])
-ttest_rel(cc_onlyatt['MEAN'],cc_origin['MEAN'])
-ttest_rel(nm_onlyatt['MEAN'],nm_origin['MEAN'])
+stats.mannwhitneyu(wld_origin['MEAN'],wld_onlyatt['MEAN'],)
+ttest_rel(cc_origin['MEAN'], cc_onlyatt['MEAN'],)
+ttest_rel(nm_origin['MEAN'], nm_onlyatt['MEAN'],)
 
 
 ttest_rel(wld_onlyatt['MEAN'],wld_ba['MEAN'])

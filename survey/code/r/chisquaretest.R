@@ -6,7 +6,7 @@ library(dplyr)
 setwd("C:/Users/langzx/Desktop/github/DCM/survey/data")
 #setwd("~/Documents/github/DCM/survey/data")
 #data <- read.csv(file='merged_cluster.csv')
-data <- read.csv(file='merged_cluster_0504.csv')
+data <- read.csv(file='merged_cluster_region.csv')
 cluster <- factor(data$Cluster)
 c0 <- data[data$Cluster == 0,]
 c1 <- data[data$Cluster == 1,]
@@ -149,7 +149,7 @@ c0.region = table(c0$Region_y);c1.region = table(c1$Region_y);c2.region = table(
 region01 = rbind(c0.region,c1.region) 
 region02 = rbind(c0.region,c2.region) 
 region12 = rbind(c1.region,c2.region) 
-
+region01
 chisq.test(region01)
 chisq.test(region02)
 chisq.test(region12)

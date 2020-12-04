@@ -8,8 +8,8 @@ from pathlib import Path
 import seaborn as sns
 import itertools
 
-#data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
-data_folder = Path('/Users/ellelang/Documents/github/DCM')
+data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
+#data_folder = Path('/Users/ellelang/Documents/github/DCM')
 MRB = gpd.read_file(data_folder/"shapefilesMRB/3statesMRBclipped.shp")
 MRB.crs
 MRB.plot(color='white', edgecolor='grey')
@@ -77,7 +77,7 @@ axarr.axis('off')
 
 import matplotlib.pylab as pylab
 params = {'legend.fontsize': 'x-large',
-          'figure.figsize': (15, 5),
+          'figure.figsize': (55, 55),
          'axes.labelsize': 'x-large',
          'axes.titlesize':'x-large',
          'xtick.labelsize':'x-large',
@@ -113,6 +113,30 @@ ax12.set_title('Subbasin-level WTA spatial distribution', size=36)
 ax13.imshow(MRBimage)
 fig1.tight_layout(pad=1.0)
 
-fig1.savefig(data_folder/'data/weightedcost.png' ,dpi = 300)
+#fig1.savefig(data_folder/'data/weightedcost.png' ,dpi = 300)
 
 #bbox_inches = 'tight'
+
+#fig, ((ax11, ax12)) = plt.subplots (nrows = 1, ncols = 2)
+fig1 = plt.figure(figsize=(35,35))
+ax11 = fig1.add_subplot(121)  # add subplot into first position in a 2x2 grid (upper left)
+ax12 = fig1.add_subplot(122)
+
+ax11.axis('off')
+ax12.axis('off')
+#ax12.legend(loc=2, prop={'size': 1})
+#ax11.legend(loc=2, prop={'size': 1})
+
+for idx, row in MRB_counties.iterrows():
+    ax11.annotate(s=row['County'], xy=row['coords'],
+                  verticalalignment='bottom',fontsize=17)
+
+MRB_counties.plot(ax = ax11, column = 'WLD', linewidth=1.8, cmap='summer_r',edgecolor='#B3B3B3')
+ax11.set_title('County-level wetland WTA spatial distribution ($/acre)', size=36)
+
+MRB_sub_weighted.plot(ax = ax12, column = 'WLD_w', linewidth=1.8, cmap='summer_r',edgecolor='#B3B3B3')
+ax12.set_title('Subbasin-level wetland WTA spatial distribution ($/acre)', size=36)
+#fontweight="bold",
+#fig.tight_layout(pad=1.0)
+
+fig1.savefig(data_folder/'data/weightedcost_horiz.png' ,dpi = 300)
