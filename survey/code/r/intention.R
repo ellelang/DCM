@@ -70,9 +70,6 @@ int_nm
 
 
 
-
-
-
 clusterdata <- read.csv(file='merged_cluster.csv')
 dim(clusterdata)
 cluster <- factor(clusterdata$Cluster)
