@@ -8,8 +8,8 @@ from pathlib import Path
 import seaborn as sns
 import itertools
 
-#data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
-data_folder = Path('/Users/ellelang/Documents/github/DCM')
+data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
+#data_folder = Path('/Users/ellelang/Documents/github/DCM')
 MRB = gpd.read_file(data_folder/"shapefilesMRB/3statesMRBclipped.shp")
 MRB.crs
 MRB.plot(color='white', edgecolor='grey')
@@ -86,6 +86,7 @@ plt.savefig(data_folder/'regioncompare.png', bbox_inches='tight', dpi=200)
 
 
 ######
+
 intention = pd.read_csv(data_folder/'survey/data/cluster_intention.csv')
 intention.columns
 intmelt = pd.melt(intention, id_vars=["Cluster"], value_vars=[
@@ -98,7 +99,7 @@ x="variable",
 hue="Cluster")
 
 
-intmelt.groupby(['cluster']).mean()
+intmelt.groupby(['Cluster']).mean()
 
 int_pred = pd.read_csv(data_folder/'survey/data/int_pred.csv')
 
@@ -119,7 +120,7 @@ y="value",
 x="variable",
 hue="Cluster",
 ax = ax1)
-ax1.set_title("Percentage of positive responses to BMPs adoption")
+ax1.set_title("A. Percentage of positive responses to BMPs adoption")
 ax1.set(xlabel='BMPs', ylabel='Percentage')
 
 sns.boxplot(data=int_pred_melt, 
@@ -128,7 +129,7 @@ x="variable",
 hue="cluster",
 ax = ax2)
 ax2.legend().set_visible(False)
-ax2.set_title("Predicted probability of BMPs adoption")
+ax2.set_title("B. Predicted probability of BMPs adoption")
 ax2.set(xlabel='BMPs', ylabel='Probability')
 
 plt.savefig(data_folder/'intentioncompare.png', bbox_inches='tight', dpi=300)

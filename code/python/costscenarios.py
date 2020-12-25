@@ -1,20 +1,20 @@
 from pathlib import Path
-#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
-data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
+data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+#data_folder = Path('/Users/ellelang/Documents/github/DCM/data')
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import altair as alt
 
-cost_mn = pd.read_csv(data_folder/'wtas_countyMN.csv')
-cost_others = pd.read_csv(data_folder/'wtas_countyothers.csv')
-cost_mn.head(3)
-cost_others.head(3)
-cost = pd.concat([cost_mn, cost_others], axis = 0)
+# cost_mn = pd.read_csv(data_folder/'wtas_countyMN.csv')
+# cost_others = pd.read_csv(data_folder/'wtas_countyothers.csv')
+# cost_mn.head(3)
+# cost_others.head(3)
+# cost = pd.concat([cost_mn, cost_others], axis = 0)
 
-cost.to_csv(data_folder/'cost_region1027.csv', index = False)
-####################
+# cost.to_csv(data_folder/'cost_region1027.csv', index = False)
+# ####################
 
 cost = pd.read_csv(data_folder/'cost_region1027.csv')
 cost.columns
@@ -49,13 +49,6 @@ for i, g in enumerate(df1.groupby("Types")):
                      zorder=-i, # so first bars stay on top
                      edgecolor="k")
 ax.legend_.remove() # remove the redundant legends 
-
-
-
-
-
-
-
 
 
 

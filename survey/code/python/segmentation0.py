@@ -154,7 +154,7 @@ datanormalized_melt = pd.melt(
                          ], 
                         
 # Name the variable and value
-                    var_name='Constructs', value_name ='Log transformed average factor scores'
+                    var_name='Constructs', value_name ='Log(ln) transformed average factor scores'
 					)
 
 datanormalized_melt.columns
@@ -174,7 +174,7 @@ plt.ylabel('Log transformed factor scores')
 #plt.figure(figsize=(10,8))
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
-             x='Constructs', y='Log transformed average factor scores', hue='Cluster' )
+             x='Constructs', y='Log(ln) transformed average factor scores', hue='Cluster' )
 leg = g.axes.get_legend()
 leg.texts
 new_labels = ['Cluster', 'C0: Engaging-absentee', 'C1: Adoptioin-averse', 'C2: Environmentally-conscious']

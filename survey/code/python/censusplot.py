@@ -48,6 +48,10 @@ dat['income'].cat.reorder_categories(['$1 -$24,999','$25,000 - $99,999',
 dat['education'].cat.reorder_categories(['High school diploma','Some college degree',
    'B.A., B.S., or equivalent','Graduate degree' ],inplace=True)
 
+dat.head(2)
+dat.groupby(['gender']).size()/441
+dat.groupby(['income']).size()
+532
 
 fig, axes = plt.subplots(nrows = 1, ncols = 3, figsize = (20,8))
 dat.groupby(['gender','age','education']).size().unstack().plot(ax=axes[0],kind='bar',  stacked=True)

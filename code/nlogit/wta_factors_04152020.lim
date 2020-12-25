@@ -18,7 +18,10 @@ sample; ALL$
 CALC ; Ran(123) $
 ? create negative of wetland attribute to estimate lognormal rpl
 CREATE ; lake1000 = implakes/1000
-       ; agv1000 = landvalu/1000 $
+       ; agv1000 = landvalu/1000 
+       ; wldcc = Wetland * Covercrop 
+       ; wldnm = Wetland * NuMgt
+       ; ccnm = Covercrop * NuMgt $
 SETPANEL ; Group = ID $
 SKIP $
 
