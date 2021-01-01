@@ -8,6 +8,7 @@ import seaborn as sns
 from pathlib import Path
 from scipy.stats import ttest_ind
 data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+data_folder2 = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 
 plt.rcParams['axes.labelsize'] = 14
@@ -21,11 +22,17 @@ merg = pd.read_csv(data_folder/'data_demo.csv', encoding = "ISO-8859-1")
 merg.columns
 merg.shape
 merg['gender']
+county_region =  pd.read_csv(data_folder2/'county_region.csv')
+
+merg = pd.merge(merg, county_region, how = 'left', left_on= 'countyresident', right_on = 'County')
+
+merg.columns
+
 merg.groupby(['gender']).size()
 datt = merg.loc[(merg['gender'] =='Male') | (merg['gender'] =='Female')]
 datt.shape
 dat = datt[['gender', 'age', 'education',
-       'income',  'landarea','countyresident']]
+       'income',  'landarea','countyresident', 'Region_y']]
 
 dat.groupby(['gender']).size()
 dat.groupby(['countyresident']).size()
@@ -96,3 +103,5 @@ fdat.columns
 ff = fdat[['concern','past', 'appreciate', 'social']]
 ff.std()
 sns.violinplot(data=ff)
+
+dat.groupby('Region_y')['income'].mean()

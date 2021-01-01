@@ -290,6 +290,9 @@ rotation.to_csv(data_folder/"primaryrotation_compare.csv", index = True)
 
 
 region_water = pd.read_csv(data_folder/"merged_cluster_0504.csv")
+region_water.shape
+region_water.head(3)
+
 pd.crosstab(merge1 ['Cluster'],merge1['Region_y']).apply(lambda r: round(r/r.sum(),3), axis=1)
 pd.crosstab(merge1 ['Cluster'],merge1['Watershed']).apply(lambda r: round(r/r.sum(),3), axis=1)
 
@@ -321,7 +324,12 @@ county_region =  pd.read_csv(data_folder/'county_region.csv')
 data.columns
 d_crg = pd.merge(data, county_region, how = 'left', left_on= 'countyresident', right_on = 'County')
 d_crg.to_csv(data_folder/'merged_cluster_region.csv')
-data.columns
+d_crg.shape
+d_crg.head(3)
+
+d_crg.income
+d_crg.groupby(['Region_y'])["income"].mean()
+
 
 test_factors = ['concern', 'att_wld_unfav', 'att_nm_unfav',\
                 'comp', 'norm_control', 'aware','past', \
