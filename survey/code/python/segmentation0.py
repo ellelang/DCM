@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from pathlib import Path
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
-#data_folder = Path('/Users/ellelang/Documents/github/DCM/survey/data')
+#data_folder = Path('C:/Users/langzx/Desktop/github/DCM/survey/data')
+data_folder = Path('/Users/ellelang/Desktop/github/DCM/survey/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 dat0 = pd.read_csv(data_folder/'scoresall_0501.csv')
 
@@ -145,13 +145,8 @@ datanormalized_melt = pd.melt(
 
 # Assign RFM values as value variables
                     value_vars=[ 
-                                'aware', 'past',
-'app', 'social_norm',
-'concern','behavior_ctrl',
-'wld_unfav', 'nm_unfav', 'fav'
-                               
-                                
-                         ], 
+                                'app', 'aware','behavior_ctrl','concern',
+'fav','nm_unfav', 'past','social_norm','wld_unfav'], 
                         
 # Name the variable and value
                     var_name='Constructs', value_name ='Log(ln) transformed average factor scores'
@@ -162,7 +157,9 @@ datanormalized_melt.head(3)
 
 # Add the plot title
 #plt.title('Snake plot of normalized variables')
-
+colors = ['#C0C0C0','#696969', "#000000"]
+# Set your custom color palette
+sns.set_palette(sns.color_palette(colors))
 # Add the x axis label
 plt.xlabel('Constructs')
 
@@ -174,14 +171,15 @@ plt.ylabel('Log transformed factor scores')
 #plt.figure(figsize=(10,8))
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
-             x='Constructs', y='Log(ln) transformed average factor scores', hue='Cluster' )
+             x='Constructs', y='Log(ln) transformed average factor scores', hue='Cluster'
+             , palette=sns.color_palette(colors))
 leg = g.axes.get_legend()
 leg.texts
-new_labels = ['Cluster', 'C0: Engaging-absentee', 'C1: Adoptioin-averse', 'C2: Environmentally-conscious']
+new_labels = ['C0: Engaging-absentee', 'C1: Adoptioin-averse', 'C2: Environmentally-conscious']
 for t, l in zip(leg.texts, new_labels): t.set_text(l)
 #plt.show()
 plt.xticks(rotation=19)
-plt.savefig(data_folder/'snakeplot.png',dpi=300)
+plt.savefig(data_folder/'snakeplot_greyscale.png',dpi=300)
 plt.show()
 
 

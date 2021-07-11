@@ -6,10 +6,19 @@ import geopandas as gpd
 from geopandas import GeoSeries, GeoDataFrame
 from pathlib import Path
 import seaborn as sns
+import cmasher as cmr
+import matplotlib.colors
+
 import itertools
 
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
-#data_folder = Path('/Users/ellelang/Documents/github/DCM')
+#colors_3 = cmr.take_cmap_colors('gray', 3, cmap_range=(0.25, 0.85), return_fmt='hex')
+colors_3 = ['#696969','#A9A9A9', '#C0C0C0']
+cmap_3= matplotlib.colors.ListedColormap(colors_3)
+matplotlib.colors.cnames
+
+
+#data_folder = Path('C:/Users/langzx/Desktop/github/DCM')
+data_folder = Path('/Users/ellelang/Desktop/github/DCM')
 MRB = gpd.read_file(data_folder/"shapefilesMRB/3statesMRBclipped.shp")
 MRB.crs
 MRB.plot(color='white', edgecolor='grey')
@@ -21,8 +30,8 @@ mn = gpd.read_file(data_folder/"shapefilesMRB/MNcounties.shp")
 mn.plot(color='grey', edgecolor= None)
 mrb_region = pd.merge(MRB_mn, county_all,how='left',left_on='NAME', right_on='County')
 mrb_region.plot(color='grey', edgecolor= None)
-
-
+mrb_region.loc[mrb_region['County'] =="Dakota", 'Region_y'] = "Southcentral"
+mrb_region.loc[mrb_region['County'] =="Otter Tail", 'Region_y'] = "Westcentral"
 
 
 ##region compare
@@ -40,11 +49,19 @@ regmelt2 = pd.melt(r3_2, id_vars=["Region"], value_vars=['Living Cost','LandValu
 
 
 regmelt.head(5)
+# Wanted palette details
+#enmax_palette = ["#808282", "#C2CD23", "#918BC3"]
+
+#sns.set_palette(palette=enmax_palette)
+
+colors = ['#C0C0C0','#696969', "#000000"]
+# Set your custom color palette
+sns.set_palette(sns.color_palette(colors))
 
 fig, (ax1, ax2) = plt.subplots(1, 2 ,figsize=(10, 4))
 
-mn.plot(ax=ax1,color='lightgrey', linewidth=0.08 ,edgecolor='#B3B3B3')
-mrb_region.plot(ax=ax1, column = 'Region_y', linewidth=0.8, cmap='summer_r',edgecolor='#B3B3B3', legend = True)
+mn.plot(ax=ax1,color='gainsboro', linewidth=0.08 ,edgecolor='#B3B3B3')
+mrb_region.plot(ax=ax1, column = 'Region_y', linewidth=0.8, cmap= matplotlib.colors.ListedColormap(colors), edgecolor='#B3B3B3', legend = True)
 ax1.set(xlabel='Longitude', ylabel= 'Latitude')
 ax1.legend(prop=dict(size=7))  
              
@@ -52,11 +69,11 @@ sns.barplot(data=regmelt,
 y="value",
 x="variable",
 hue="Region",
-palette="summer_r",
+palette= sns.color_palette(colors),
 ax = ax2)
 ax2.set(xlabel='Regional characteristics')
 
-plt.savefig(data_folder/'regioncompare.png', bbox_inches='tight', dpi=300)
+plt.savefig(data_folder/'regioncompare_greyscale.png', bbox_inches='tight', dpi=300)
 
                
 #plt.savefig(data_folder/'regionmap.png', bbox_inches='tight', dpi=200)
@@ -119,6 +136,7 @@ sns.barplot(data=intmelt,
 y="value",
 x="variable",
 hue="Cluster",
+palette = "Greys",
 ax = ax1)
 ax1.set_title("A. Percentage of positive responses to BMPs adoption")
 ax1.set(xlabel='BMPs', ylabel='Percentage')
@@ -127,9 +145,10 @@ sns.boxplot(data=int_pred_melt,
 y="value",
 x="variable",
 hue="cluster",
+palette = "Greys",
 ax = ax2)
 ax2.legend().set_visible(False)
 ax2.set_title("B. Predicted probability of BMPs adoption")
 ax2.set(xlabel='BMPs', ylabel='Probability')
 
-plt.savefig(data_folder/'intentioncompare.png', bbox_inches='tight', dpi=300)
+plt.savefig(data_folder/'intentioncompare_greyscale.png', bbox_inches='tight', dpi=300)
