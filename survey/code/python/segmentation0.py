@@ -38,24 +38,24 @@ comp_log= np.log(dat['comp']-minlist['comp'] + 1).astype('float64')
 sns.distplot(app_log)
 dat_log = pd.DataFrame({
                         
-                        'aware': aware_log,
-                        'past': past_log,
-                        'app': app_log,
-                        'social_norm': social_log,
-                        'concern': concern_log,
-                        'behavior_ctrl': norm_log,
-                        'wld_unfav': wldunfav_log,
-                        'nm_unfav': nmunfav_log,
-                        'fav': comp_log
+                        'Aware': aware_log,
+                        'Past_experience': past_log,
+                        'Appreciation': app_log,
+                        'Social_norms': social_log,
+                        'Concern': concern_log,
+                        'Behavior_control': norm_log,
+                        'Attitude_unfavorable_wld': wldunfav_log,
+                        'Attitude_unfavorable_nm': nmunfav_log,
+                        'Attitude_favorable': comp_log
                         })
 
 dat_log.columns
-data_log_sel = dat_log[['aware','past','app','social_norm']]
+data_log_sel = dat_log[['Aware','Past_experience','Appreciation','Social_norms']]
 data_log_sel.mean()
 data_log_sel.std()
 sns.violinplot(data = data_log_sel)
 sns.violinplot(data = data_log_sel)
-dataaaa = dat_log[['concern', 'social_norm', 'wld_unfav','nm_unfav', 'fav']]
+dataaaa = dat_log[['Concern', 'Social_norms', 'Attitude_unfavorable_wld','Attitude_unfavorable_nm', 'Attitude_favorable']]
 sns.violinplot(data = dataaaa)
 
 
@@ -134,9 +134,10 @@ grouped.agg('mean').round(3)
 #''''''
 ## already save the cluster files. assign the cluster values 
 data_k3 = pd.read_csv(data_folder/"fscore_0504_9_cluster.csv")
-
+data_k3.columns
 data_normalized['Cluster'] = data_k3['Cluster']
 data_normalized['id'] = dat0['id']
+data_normalized.columns
 datanormalized_melt = pd.melt(
   					data_normalized, 
                         
@@ -145,8 +146,8 @@ datanormalized_melt = pd.melt(
 
 # Assign RFM values as value variables
                     value_vars=[ 
-                                'app', 'aware','behavior_ctrl','concern',
-'fav','nm_unfav', 'past','social_norm','wld_unfav'], 
+                                'Appreciation', 'Aware','Behavior_control','Concern',
+'Attitude_unfavorable_wld','Attitude_unfavorable_nm', 'Past_experience','Social_norms','Attitude_favorable'], 
                         
 # Name the variable and value
                     var_name='Constructs', value_name ='Log(ln) transformed average factor scores'
@@ -168,18 +169,19 @@ plt.ylabel('Log transformed factor scores')
 
 #current_palette = sns.color_palette()
 #sns.color_palette("tab10")
-#plt.figure(figsize=(10,8))
+plt.figure(figsize=(10,7))
 # Plot a line for each value of the cluster variable
 g= sns.lineplot(data=datanormalized_melt,
              x='Constructs', y='Log(ln) transformed average factor scores', hue='Cluster'
              , palette=sns.color_palette(colors))
 leg = g.axes.get_legend()
 leg.texts
-new_labels = ['C0: Engaging-absentee', 'C1: Adoptioin-averse', 'C2: Environmentally-conscious']
+new_labels = ['C0: Engaging-absentee', 'C1: Adoption-averse', 'C2: Environmentally-conscious']
 for t, l in zip(leg.texts, new_labels): t.set_text(l)
 #plt.show()
-plt.xticks(rotation=19)
-plt.savefig(data_folder/'snakeplot_greyscale.png',dpi=300)
+plt.xticks(rotation=30, fontsize = 10)
+#plt.legend(loc = 3, fontsize = 12)
+plt.savefig(data_folder/'snakeplot_greyscale.png',dpi=300, bbox_inches = "tight")
 plt.show()
 
 
