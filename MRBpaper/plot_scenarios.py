@@ -1,20 +1,19 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
-import numpy as np
+from scipy import stats
 import pandas as pd
-import json
+import numpy as np
+from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy import stats
+from pathlib import Path
+# In[1]:
+
+data_folder = Path('Users/ellelang/Desktop/github/DCM/MRBpaper')
 
 
-# In[2]:
-
-
-df_results  = pd.read_csv('MRB_20240311.csv')
+df_results  = pd.read_csv(data_folder/'MRB_20240311.csv')
 
 
 # In[3]:

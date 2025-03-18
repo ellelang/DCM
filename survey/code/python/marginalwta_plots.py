@@ -9,7 +9,7 @@ from scipy import stats
 from pathlib import Path
 from scipy.stats import ttest_ind
 from scipy.stats import ttest_rel
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+data_folder = Path('/Users/ellelang/Desktop/github/DCM/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 wld_origin = pd.read_csv(data_folder/'WLD_wta_originmarginal.csv')
 cc_origin = pd.read_csv(data_folder/'CC_wta_originmarginal.csv')

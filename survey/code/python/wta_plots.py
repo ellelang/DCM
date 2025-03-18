@@ -9,7 +9,7 @@ from scipy import stats
 from pathlib import Path
 from scipy.stats import ttest_ind
 from scipy.stats import ttest_rel
-data_folder = Path('C:/Users/langzx/Desktop/github/DCM/data')
+data_folder = Path('/Users/ellelang/Desktop/github/DCM/data')
 #dat0 =  pd.read_csv(data_folder/'factors7_0415.csv')
 
 cluster = pd.read_csv(data_folder/'merged_cluster_0504.csv')
@@ -48,9 +48,9 @@ wld_origin['Practice']="WLD"
 cc_origin['Practice']="CC"
 nm_origin['Practice']="NM"
 
-wld_origin['Model'] = 'Model2'
-cc_origin['Model'] = 'Model2'
-nm_origin['Model'] = 'Model2'
+wld_origin['Model'] = 'Model(CH+SD)'
+cc_origin['Model'] = 'Model(CH+SD)'
+nm_origin['Model'] = 'Model(CH+SD)'
 
 wld_origin['Cluster']= cluster.Cluster
 cc_origin['Cluster']= cluster.Cluster
@@ -63,9 +63,9 @@ nm_origin['Id']=cluster.id
 wld_ba['Practice']="WLD"
 cc_ba['Practice']="CC"
 nm_ba['Practice']="NM"
-wld_ba['Model']="Model3"
-cc_ba['Model']="Model3"
-nm_ba['Model']="Model3"
+wld_ba['Model']='Model(CH+SD+SP)'
+cc_ba['Model']='Model(CH+SD+SP)'
+nm_ba['Model']='Model(CH+SD+SP)'
 
 wld_ba['Cluster']= cluster.Cluster
 cc_ba['Cluster']= cluster.Cluster
@@ -77,9 +77,9 @@ nm_ba['Id']=cluster.id
 wld_onlyatt['Practice']="WLD"
 cc_onlyatt['Practice']="CC"
 nm_onlyatt['Practice']="NM"
-wld_onlyatt['Model']="Model1"
-cc_onlyatt['Model']="Model1"
-nm_onlyatt['Model']="Model1"
+wld_onlyatt['Model']="Model(CH)"
+cc_onlyatt['Model']="Model(CH)"
+nm_onlyatt['Model']="Model(CH)"
 
 wld_onlyatt['Cluster']= cluster.Cluster
 cc_onlyatt['Cluster']= cluster.Cluster
@@ -95,10 +95,10 @@ frames = [wld_onlyatt,cc_onlyatt,nm_onlyatt,
 whole_wta = pd.concat(frames)
 whole_wta.columns
 whole_wta.head(5)
-wta_origin = whole_wta.loc[whole_wta['Model'] == 'Model2']
+wta_origin = whole_wta.loc[whole_wta['Model'] == 'Model(CH+SD)']
 #wta_origin.shape
-wta_ba = whole_wta.loc[whole_wta['Model'] == 'Model3']
-wta_onlyatt = whole_wta.loc[whole_wta['Model'] == 'Model1']
+wta_ba = whole_wta.loc[whole_wta['Model'] == 'Model(CH+SD+SP)']
+wta_onlyatt = whole_wta.loc[whole_wta['Model'] == 'Model(CH)']
 wta_onlyatt.shape
       
         
